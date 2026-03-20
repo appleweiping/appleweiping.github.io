@@ -1,0 +1,8 @@
+title: Weiping Yan
+description: Personal Academic Website
+theme: minima
+
+header_pages:
+  - about.md
+  - cv.md
+  - projects.md
