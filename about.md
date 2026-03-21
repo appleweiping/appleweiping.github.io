@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-# About
-
 I am an undergraduate student in a joint program between **TU Delft** and **Eindhoven University of Technology**, pursuing an interdisciplinary curriculum in **Computer Science, Electrical Engineering, and Applied Physics**.
 
 My work focuses on **AI for Science, foundation models, and machine learning for analog circuit design and optimization**. I am particularly interested in developing data-driven approaches to model, optimize, and automate analog circuits, as well as in exploring how modern AI systems interact with complex physical and engineering systems.

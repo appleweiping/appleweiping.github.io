@@ -4,7 +4,6 @@ title: CV
 permalink: /cv/
 ---
 
-# CV
 
 ## Education
 

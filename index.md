@@ -3,7 +3,6 @@ layout: home
 title: Home
 ---
 
-# Weiping Yan
 
 Undergraduate at TU Delft & Eindhoven University of Technology  
 **AI for Science | Foundation Models | AI for Analog Circuit Design**
