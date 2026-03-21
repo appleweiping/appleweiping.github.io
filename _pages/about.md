@@ -22,7 +22,7 @@ My research focuses on **AI for Science, foundation models, and machine learning
 
 - Exploring **LLM for Recommendation (LLM4Rec)**  
 - Studying machine learning methods for physical systems  
-- Preparing for implementation and experimental research  
+- Preparing for implementation and experiments  
 
 ---
 
