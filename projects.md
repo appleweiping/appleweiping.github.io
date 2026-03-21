@@ -1,4 +1,3 @@
-# Projects
 
 ## LLM for Recommendation (LLM4Rec)
 
