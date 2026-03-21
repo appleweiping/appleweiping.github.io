@@ -1,7 +1,28 @@
-description: AI for Science | Foundation Models | Analog Circuit Design
-theme: minima
+title: Weiping Yan
+first_name: Weiping
+last_name: Yan
 
-header_pages:
-  - about.md
-  - cv.md
-  - projects.md
+email: vipinapple986@gmail.com
+
+description: >
+  AI for Science | Foundation Models | Analog Circuit Design
+
+baseurl: ""
+url: "https://appleweiping.github.io"
+
+theme: null
+
+markdown: kramdown
+
+navbar:
+  - title: About
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: CV
+    url: /cv/
+
+github_username: appleweiping
+linkedin_username: weiping-yan-b62567383
+
+enable_darkmode: true
