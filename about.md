@@ -4,38 +4,40 @@ title: About
 permalink: /about/
 ---
 
-# About Me
+# About
 
-Hi, I’m Weiping Yan.
+I am an undergraduate student in a joint program between **TU Delft** and **Eindhoven University of Technology**, pursuing an interdisciplinary curriculum in **Computer Science, Electrical Engineering, and Applied Physics**.
 
-I am currently an undergraduate student in a joint program between **TU Delft** and **Eindhoven University of Technology**, studying Computer Science, Electrical Engineering, and Applied Physics.
+My work focuses on **AI for Science, foundation models, and machine learning for analog circuit design and optimization**. I am particularly interested in developing data-driven approaches to model, optimize, and automate analog circuits, as well as in exploring how modern AI systems interact with complex physical and engineering systems.
 
-My work focuses on the intersection of:
-
-- Artificial Intelligence systems  
-- Electronic circuit design  
-- Data-driven scientific research  
-
-I am particularly interested in **AI for Science**, exploring how machine learning models can interact with complex physical systems and real-world engineering environments.
-
-With an interdisciplinary background across software, hardware, and applied physics, I enjoy working on problems that bridge intelligent algorithms with real-world systems.
+With a background spanning software, hardware, and applied physics, I work at the intersection of intelligent algorithms and real-world engineering systems.
 
 ---
 
 ## Current Focus
 
-- LLM-based systems (LLM4Rec)
-- AI + hardware interaction
-- Scientific data analysis & modeling
+- **LLM for Recommendation (LLM4Rec)**  
+- Machine learning methods for physical and engineering systems  
+- AI-driven approaches to analog circuit design  
 
 ---
 
-## Looking For
+## Research Direction
 
-I am currently seeking:
+I am interested in advancing the integration of **machine learning and physical systems**, particularly:
 
-- Research opportunities  
-- Internships in AI systems / IC design  
-- Collaborations in AI for Science  
+- AI for Science  
+- Foundation models for engineering applications  
+- Data-driven modeling and design automation  
 
-I am also planning to continue my studies in the United States.
+---
+
+## Collaboration
+
+I am open to research collaborations in:
+
+- AI for Science  
+- AI-driven analog circuit design and optimization  
+- Foundation models and AI systems  
+
+I plan to continue my studies in the United States, with a focus on research in AI and engineering systems.
