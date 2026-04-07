@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weiping Yan | Resume</title>
+  <meta
+    name="description"
+    content="Resume page for Weiping Yan, including academic summary, selected experience, and embedded PDF resume."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="site-shell resume-shell">
+  <div class="page-aura page-aura-left" aria-hidden="true"></div>
+  <div class="page-aura page-aura-right" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="wordmark" href="index.html">Weiping Yan</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="index.html">Profile</a>
+        <a class="is-active" href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container resume-layout">
+      <section class="resume-summary">
+        <p class="section-kicker">Resume</p>
+        <h2>Academic summary</h2>
+        <p class="hero-description">
+          This page provides a concise structured summary together with the
+          original PDF resume. The PDF remains the canonical document for formal
+          applications and sharing.
+        </p>
+
+        <div class="resume-summary-grid">
+          <article class="resume-block">
+            <p class="resume-meta">Education</p>
+            <h3>TU Delft & Eindhoven University of Technology</h3>
+            <p>
+              B.Sc. in Computer Science, Electrical Engineering and Applied
+              Physics (joint program), Sep 2024 - Jun 2028.
+            </p>
+          </article>
+
+          <article class="resume-block">
+            <p class="resume-meta">Research Direction</p>
+            <h3>AI for Science, foundation models, analog design</h3>
+            <p>
+              Focused on technically grounded research connecting learning
+              systems with scientific reasoning, engineering workflows, and
+              circuit optimization.
+            </p>
+          </article>
+
+          <article class="resume-block">
+            <p class="resume-meta">Selected Experience</p>
+            <h3>Research across ML and semiconductor systems</h3>
+            <ul class="resume-bullets">
+              <li>LLM for Recommendation research</li>
+              <li>Zhangjiang Laboratory semiconductor workflow training</li>
+              <li>Environmental data research using Python</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume-viewer">
+        <div class="resume-toolbar">
+          <div>
+            <p class="section-kicker">PDF Resume</p>
+            <h2>Document viewer</h2>
+          </div>
+          <a class="resume-inline-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Open or download the PDF
+          </a>
+        </div>
+
+        <iframe
+          class="resume-frame"
+          src="assets/resume.pdf#view=FitH"
+          title="Weiping Yan resume PDF"
+        ></iframe>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Weiping Yan</p>
+      <p>Minimal static resume page designed for direct GitHub Pages deployment.</p>
+    </div>
+  </footer>
+</body>
+</html>
