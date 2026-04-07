@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,97 +6,107 @@
   <title>Weiping Yan | Resume</title>
   <meta
     name="description"
-    content="Resume page for Weiping Yan, including academic summary, selected experience, and embedded PDF resume."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
-    rel="stylesheet"
+    content="Resume and academic summary for Weiping Yan."
   />
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-<body class="site-shell resume-shell">
-  <div class="page-aura page-aura-left" aria-hidden="true"></div>
-  <div class="page-aura page-aura-right" aria-hidden="true"></div>
+<body class="page resume-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-mist page-mist-left" aria-hidden="true"></div>
+  <div class="page-mist page-mist-right" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <div class="container topbar-inner">
+  <header class="site-header">
+    <div class="shell header-inner">
       <a class="wordmark" href="index.html">Weiping Yan</a>
-      <nav class="primary-nav" aria-label="Primary">
+      <nav class="site-nav" aria-label="Primary">
         <a href="index.html">Profile</a>
-        <a class="is-active" href="resume.html">Resume</a>
+        <a class="is-current" href="resume.html" aria-current="page">Resume</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <div class="container resume-layout">
-      <section class="resume-summary">
-        <p class="section-kicker">Resume</p>
-        <h2>Academic summary</h2>
-        <p class="hero-description">
-          This page provides a concise structured summary together with the
-          original PDF resume. The PDF remains the canonical document for formal
-          applications and sharing.
+  <main id="main" class="resume-main shell">
+    <section class="page-intro" data-reveal>
+      <p class="section-tag">Resume</p>
+      <h1 class="page-title">Formal record, kept simple.</h1>
+      <p class="page-lede">
+        This page provides a short structured summary above the PDF. The PDF
+        remains the canonical document for applications and direct sharing.
+      </p>
+    </section>
+
+    <section class="resume-summary" aria-label="Resume summary">
+      <article class="summary-block" data-reveal>
+        <p class="summary-label">Education</p>
+        <h2>TU Delft x Eindhoven University of Technology</h2>
+        <p>
+          B.Sc. in Computer Science, Electrical Engineering and Applied Physics,
+          Sep 2024 - Jun 2028.
         </p>
+      </article>
 
-        <div class="resume-summary-grid">
-          <article class="resume-block">
-            <p class="resume-meta">Education</p>
-            <h3>TU Delft & Eindhoven University of Technology</h3>
-            <p>
-              B.Sc. in Computer Science, Electrical Engineering and Applied
-              Physics (joint program), Sep 2024 - Jun 2028.
-            </p>
-          </article>
+      <article class="summary-block" data-reveal>
+        <p class="summary-label">Research direction</p>
+        <h2>AI for Science, foundation models, analog design</h2>
+        <p>
+          Focused on technically grounded research linking machine learning with
+          scientific reasoning, engineering workflows, and circuit optimization.
+        </p>
+      </article>
 
-          <article class="resume-block">
-            <p class="resume-meta">Research Direction</p>
-            <h3>AI for Science, foundation models, analog design</h3>
-            <p>
-              Focused on technically grounded research connecting learning
-              systems with scientific reasoning, engineering workflows, and
-              circuit optimization.
-            </p>
-          </article>
+      <article class="summary-block" data-reveal>
+        <p class="summary-label">Selected experience</p>
+        <h2>Research across ML and semiconductor systems</h2>
+        <ul class="resume-points">
+          <li>LLM for Recommendation research</li>
+          <li>Zhangjiang Laboratory semiconductor workflow training</li>
+          <li>Environmental data research using Python</li>
+        </ul>
+      </article>
 
-          <article class="resume-block">
-            <p class="resume-meta">Selected Experience</p>
-            <h3>Research across ML and semiconductor systems</h3>
-            <ul class="resume-bullets">
-              <li>LLM for Recommendation research</li>
-              <li>Zhangjiang Laboratory semiconductor workflow training</li>
-              <li>Environmental data research using Python</li>
-            </ul>
-          </article>
+      <article class="summary-block" data-reveal>
+        <p class="summary-label">Links</p>
+        <h2>Direct contact and files</h2>
+        <div class="resume-links">
+          <a href="mailto:vipinapple986@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/appleweiping" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Open PDF directly</a>
         </div>
-      </section>
+      </article>
+    </section>
 
-      <section class="resume-viewer">
-        <div class="resume-toolbar">
-          <div>
-            <p class="section-kicker">PDF Resume</p>
-            <h2>Document viewer</h2>
-          </div>
-          <a class="resume-inline-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Open or download the PDF
-          </a>
+    <section class="resume-document" data-reveal>
+      <div class="document-header">
+        <div>
+          <p class="section-tag">PDF</p>
+          <h2 class="document-title">Embedded resume viewer</h2>
         </div>
+        <a class="document-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+          Open or download the PDF
+        </a>
+      </div>
 
+      <div class="document-frame">
         <iframe
           class="resume-frame"
           src="assets/resume.pdf#view=FitH"
           title="Weiping Yan resume PDF"
+          loading="lazy"
         ></iframe>
-      </section>
-    </div>
+      </div>
+
+      <p class="document-note">
+        If the embedded viewer does not render in your browser, use the direct PDF link above.
+      </p>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
+  <footer class="site-footer">
+    <div class="shell footer-inner">
       <p>&copy; 2026 Weiping Yan</p>
-      <p>Minimal static resume page designed for direct GitHub Pages deployment.</p>
+      <p>Minimal academic site designed for direct GitHub Pages deployment.</p>
     </div>
   </footer>
 </body>
