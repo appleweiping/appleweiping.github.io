@@ -25,34 +25,36 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="tag">Academic Homepage</p>
-        <h1>Weiping Yan</h1>
-        <h2>
-          Undergraduate Researcher in AI for Science, Foundation Models,
-          and AI-Driven Analog Circuit Design
-        </h2>
-        <p class="hero-desc">
-          I am an undergraduate student in the joint program of TU Delft and
-          Eindhoven University of Technology, with interdisciplinary training in
-          computer science, electrical engineering, and applied physics.
-        </p>
+    <!-- Canvas Background Animation -->
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    
+    <div class="hero-overlay">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="tag">Academic Homepage</p>
+          <h1>Weiping Yan</h1>
+          <h2>
+            Undergraduate Researcher in AI for Science, Foundation Models,<br/>and AI-Driven Analog Circuit Design
+          </h2>
+          <p class="hero-desc">
+            Joint program undergraduate researcher from TU Delft and Eindhoven University of Technology. Research interests span computer science, electrical engineering, and applied physics at the intersection of machine learning and real-world engineering systems.
+          </p>
 
-        <div class="hero-buttons">
-          <a class="btn primary" href="#contact">Contact</a>
-          <a class="btn secondary" href="assets/resume.pdf" target="_blank">CV / Resume</a>
+          <div class="hero-buttons">
+            <a class="btn primary" href="#contact">Contact</a>
+            <a class="btn secondary" href="assets/resume.pdf" target="_blank">CV / Resume</a>
+          </div>
+
+          <div class="socials">
+            <a href="mailto:vipinapple986@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank">LinkedIn</a>
+            <a href="https://github.com/appleweiping" target="_blank">GitHub</a>
+          </div>
         </div>
 
-        <div class="socials">
-          <a href="mailto:vipinapple986@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank">LinkedIn</a>
-          <a href="https://github.com/appleweiping" target="_blank">GitHub</a>
+        <div class="hero-image">
+          <img src="assets/profile.jpg" alt="Weiping Yan portrait" />
         </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="assets/profile.jpg" alt="Weiping Yan portrait" />
       </div>
     </div>
   </section>
@@ -221,6 +223,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

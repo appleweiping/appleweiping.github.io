@@ -63,8 +63,40 @@ a:hover {
 }
 
 .hero {
+  position: relative;
   padding: 90px 0 70px;
   background: linear-gradient(to bottom, #f8fafc, #ffffff);
+  overflow: hidden;
+  min-height: 600px;
+}
+
+/* Canvas 容器样式 */
+.hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  will-change: transform;
+}
+
+/* 内容覆盖层 */
+.hero-overlay {
+  position: relative;
+  z-index: 10;
+  pointer-events: none;  /* 允许点击穿过到Canvas */
+}
+
+.hero-overlay .container {
+  pointer-events: auto;  /* 但内容本身可以交互 */
+}
+
+/* 响应式调整 */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 500px;
+  }
 }
 
 .hero-grid {
