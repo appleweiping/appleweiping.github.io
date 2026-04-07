@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.7;
@@ -79,6 +85,7 @@ a:hover {
   height: 100%;
   display: block;
   will-change: transform;
+  pointer-events: none;
 }
 
 /* 内容覆盖层 */
@@ -197,6 +204,8 @@ a:hover {
 
 .section {
   padding: 80px 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 
 .alt-bg {
@@ -262,6 +271,20 @@ a:hover {
   text-align: center;
   color: #6b7280;
   font-size: 0.95rem;
+}
+
+.hero-fallback {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 20;
+  max-width: min(520px, calc(100% - 48px));
+  padding: 12px 16px;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f2937;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
 }
 
 @media (max-width: 900px) {
