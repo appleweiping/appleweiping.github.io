@@ -36,12 +36,66 @@ function showFallbackMessage(message) {
   hero.appendChild(fallback);
 }
 
+function cleanVisibleCopy() {
+  const replacements = [
+    {
+      selector: '#experience .timeline-item:nth-of-type(1) h3',
+      text: 'Research Assistant Intern - AI Research Group'
+    },
+    {
+      selector: '#experience .timeline-item:nth-of-type(1) .time',
+      text: 'Mar 2026 - Present - Shenzhen'
+    },
+    {
+      selector: '#experience .timeline-item:nth-of-type(2) h3',
+      text: 'Research Assistant - Zhangjiang Laboratory'
+    },
+    {
+      selector: '#experience .timeline-item:nth-of-type(2) .time',
+      text: 'Jul 2025 - Sep 2025 - Shanghai, China'
+    },
+    {
+      selector: '#experience .timeline-item:nth-of-type(3) h3',
+      text: 'Student Researcher - Carnegie Mellon University'
+    },
+    {
+      selector: '#experience .timeline-item:nth-of-type(3) .time',
+      text: 'Sep 2023 - Feb 2024 - Beijing, China'
+    },
+    {
+      selector: 'body > section:nth-of-type(6) .timeline-item:nth-of-type(1) .time',
+      text: 'B.Sc. in Computer Science, Electrical Engineering and Applied Physics (triple degree program) - Sep 2024 - Jun 2028'
+    },
+    {
+      selector: 'body > section:nth-of-type(6) .timeline-item:nth-of-type(2) .time',
+      text: 'B.Sc. in Computer Science, Electrical Engineering and Applied Physics (triple degree program) - Sep 2024 - Jun 2028'
+    },
+    {
+      selector: '.footer p',
+      text: '© 2026 Weiping Yan. Built with GitHub Pages.'
+    }
+  ];
+
+  replacements.forEach(({ selector, text }) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.textContent = text;
+    }
+  });
+
+  const footer = document.querySelector('.footer p');
+  if (footer) {
+    footer.textContent = 'Copyright 2026 Weiping Yan. Built with GitHub Pages.';
+  }
+}
+
 // Page initialization
 (async function initHomepage() {
   let scene = null;
   try {
     // Wait for DOM to be ready
     await waitForDomReady();
+    cleanVisibleCopy();
     
     // Initialize Canvas
     const heroCanvas = document.getElementById('heroCanvas');
