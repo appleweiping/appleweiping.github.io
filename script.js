@@ -193,10 +193,101 @@ function initSignalMap() {
   schedule()
 }
 
+function initSpirit() {
+  const canUseSpirit =
+    !prefersReducedMotion.matches &&
+    window.matchMedia('(pointer: fine)').matches &&
+    window.innerWidth > 760
+
+  if (!canUseSpirit) return
+
+  const spirit = document.createElement('div')
+  spirit.className = 'spirit'
+  spirit.setAttribute('aria-hidden', 'true')
+  spirit.innerHTML = `
+    <svg viewBox="0 0 44 92" role="presentation">
+      <path class="spirit-tail" d="M 23 79 C 17 69, 16 57, 20 45 C 23 35, 24 25, 21 14" />
+      <path class="spirit-aura" d="M 17 26 C 17 19, 21 12, 27 12 C 31 12, 34 16, 34 22 C 34 29, 29 36, 24 42 C 20 38, 17 32, 17 26 Z" />
+      <path class="spirit-core" d="M 19 25 C 19 18, 23 13, 28 13 C 31 13, 33 16, 33 20 C 33 27, 28 33, 23 38 C 20 35, 19 30, 19 25 Z" />
+      <path class="spirit-edge" d="M 26 14 C 29 17, 30 21, 29 27 C 28 31, 26 34, 23 37 C 24 29, 23 21, 26 14 Z" />
+    </svg>
+  `
+  document.body.appendChild(spirit)
+
+  let rafId = 0
+  let pointerX = window.innerWidth * 0.64
+  let pointerY = window.innerHeight * 0.24
+  let targetX = pointerX
+  let targetY = pointerY
+  let currentX = targetX
+  let currentY = targetY
+  let lastMoveTime = performance.now()
+  let isVisible = false
+
+  function animate(now) {
+    const idleFor = now - lastMoveTime
+    const isIdle = idleFor > 1200
+    const driftX = Math.sin(now * 0.00115) * 4 + Math.sin(now * 0.00043) * 2.6
+    const driftY = Math.cos(now * 0.001) * 6.5 + Math.sin(now * 0.00058) * 1.8
+    const desiredX = targetX + 24 + driftX
+    const desiredY = targetY - 40 + driftY
+    const easing = isIdle ? 0.034 : 0.055
+
+    currentX += (desiredX - currentX) * easing
+    currentY += (desiredY - currentY) * easing
+
+    const angle = Math.max(-9, Math.min(9, (desiredX - currentX) * 0.1))
+    const scale = isIdle ? 0.97 : 1
+    spirit.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) rotate(${angle}deg) scale(${scale})`
+
+    if (isVisible || Math.abs(desiredX - currentX) > 0.2 || Math.abs(desiredY - currentY) > 0.2) {
+      rafId = requestAnimationFrame(animate)
+      return
+    }
+
+    rafId = 0
+  }
+
+  function schedule() {
+    if (rafId !== 0) return
+    rafId = requestAnimationFrame(animate)
+  }
+
+  function showSpirit() {
+    if (isVisible) return
+    isVisible = true
+    spirit.classList.add('is-visible')
+    schedule()
+  }
+
+  function hideSpirit() {
+    if (!isVisible) return
+    isVisible = false
+    spirit.classList.remove('is-visible')
+    schedule()
+  }
+
+  document.addEventListener('pointermove', (event) => {
+    if (event.pointerType && event.pointerType !== 'mouse' && event.pointerType !== 'pen') return
+    targetX = event.clientX
+    targetY = event.clientY
+    lastMoveTime = performance.now()
+    showSpirit()
+  }, { passive: true })
+
+  document.addEventListener('mouseout', (event) => {
+    if (event.relatedTarget !== null) return
+    hideSpirit()
+  })
+
+  window.addEventListener('blur', hideSpirit)
+}
+
 function init() {
   initReveals()
   initHeroPointer()
   initSignalMap()
+  initSpirit()
 }
 
 if (document.readyState === 'loading') {

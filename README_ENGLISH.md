@@ -44,6 +44,7 @@ The current interactions are intentionally light:
 - a subtle pointer-responsive light wash in the hero area
 - an SVG signal path that guides the reading sequence through the Profile page
 - active section highlighting tied to scroll position
+- a tiny spirit-like companion that drifts near the cursor on desktop with strong delay and low visual priority
 
 These interactions are there to support reading structure, not to dominate attention.
 
@@ -113,6 +114,7 @@ Responsible for:
 - hero pointer response
 - signal path geometry and scroll progress behavior
 - active section highlighting
+- the floating spirit companion behavior
 
 ## Editing Guide
 

@@ -70,3 +70,4 @@ Then open `http://localhost:8000`.
 
 - The `src/` directory contains older experimental code and is not required by the current live site.
 - The current website is designed for GitHub Pages and does not depend on Node or a bundler.
+- The current desktop experience includes a very subtle floating spirit-like companion implemented as a lightweight DOM/SVG layer.

@@ -61,6 +61,7 @@ Includes:
 - hero pointer response
 - SVG signal path generation
 - scroll-linked active section highlighting
+- a subtle floating spirit companion for desktop pointer environments
 
 ## Design Decisions
 

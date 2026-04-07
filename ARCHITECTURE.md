@@ -97,6 +97,17 @@ Uses `IntersectionObserver` to reveal selected sections as they enter the viewpo
 
 Tracks pointer position over the hero section and updates CSS variables that shift the soft radial light wash.
 
+#### Floating spirit companion
+
+Creates a very small fixed visual layer that behaves like an ambient spirit fragment rather than a mascot.
+
+Responsibilities:
+
+- inject a lightweight DOM/SVG node only on desktop-class pointer devices
+- follow the cursor with strong delay
+- keep motion drifting and quiet instead of reactive or playful
+- disable itself for reduced-motion users and smaller screens
+
 #### Signal map
 
 Builds and updates the SVG reading path for the Profile page.

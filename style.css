@@ -119,6 +119,63 @@ dl {
   background: rgba(170, 188, 205, 0.2);
 }
 
+.spirit {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 2.4rem;
+  height: 4.9rem;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+  will-change: transform, opacity;
+  transition: opacity 420ms ease;
+}
+
+.spirit::before {
+  content: "";
+  position: absolute;
+  inset: 0.7rem 0.6rem 1.35rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(213, 233, 236, 0.66) 0%, rgba(213, 233, 236, 0.1) 64%, transparent 100%);
+  filter: blur(9px);
+  opacity: 0.9;
+}
+
+.spirit svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.spirit-aura {
+  fill: rgba(189, 220, 225, 0.22);
+  filter: blur(4px);
+}
+
+.spirit-tail {
+  fill: none;
+  stroke: rgba(113, 149, 155, 0.34);
+  stroke-linecap: round;
+  stroke-width: 1.35;
+}
+
+.spirit-core {
+  fill: rgba(243, 249, 250, 0.96);
+  stroke: rgba(126, 165, 171, 0.34);
+  stroke-width: 0.9;
+}
+
+.spirit-edge {
+  fill: rgba(197, 225, 229, 0.76);
+}
+
+.spirit.is-visible {
+  opacity: 0.7;
+}
+
 .shell {
   width: min(var(--shell), calc(100% - 2rem));
   margin: 0 auto;
@@ -802,6 +859,10 @@ dl {
   .signal-progress {
     transition: none;
   }
+
+  .spirit {
+    display: none;
+  }
 }
 
 @media (max-width: 980px) {
@@ -887,6 +948,10 @@ dl {
 
   .resume-frame {
     min-height: 70vh;
+  }
+
+  .spirit {
+    display: none;
   }
 }
 

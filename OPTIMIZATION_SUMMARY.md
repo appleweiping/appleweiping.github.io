@@ -57,6 +57,7 @@ Most of the visual system is handled by CSS rather than JavaScript.
 - pointer-responsive hero wash
 - SVG signal path updates
 - active section highlighting
+- the floating spirit companion, implemented as a tiny DOM/SVG layer instead of a heavy rendering system
 
 ### 5. Static assets only where needed
 
@@ -101,6 +102,7 @@ Recommended checks:
 - sticky header behavior
 - PDF embed behavior across browsers
 - readability on high-resolution and low-resolution screens
+- whether the spirit companion remains subtle enough on different desktop displays
 
 ## Ongoing Optimization Principles
 
