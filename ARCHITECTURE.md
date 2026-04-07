@@ -17,6 +17,12 @@ The architecture is intentionally simple:
 - static assets for portrait and resume
 - direct deployment through GitHub Pages
 
+The current implementation also supports a three-language interface:
+
+- English
+- Chinese
+- Japanese
+
 ## 2. Production Surface
 
 ### Main files
@@ -108,6 +114,17 @@ Responsibilities:
 - keep motion drifting and quiet instead of reactive or playful
 - disable itself for reduced-motion users and smaller screens
 
+#### Language switching
+
+Maintains interface localization without adding a framework or build pipeline.
+
+Responsibilities:
+
+- store the selected language in `localStorage`
+- infer a default language from the browser when possible
+- replace text and selected attributes through `data-i18n` hooks
+- keep the two static HTML pages synchronized with one shared translation table
+
 #### Signal map
 
 Builds and updates the SVG reading path for the Profile page.
@@ -131,6 +148,8 @@ This makes updates easy because:
 - there is no CMS dependency
 - there is no content build step
 - text edits are transparent in git diffs
+
+Localized interface strings are stored in `script.js` so that both pages can share one small translation source.
 
 ### Asset flow
 

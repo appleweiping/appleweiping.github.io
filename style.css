@@ -203,6 +203,12 @@ dl {
   box-shadow: 0 14px 36px rgba(19, 39, 43, 0.06);
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
 .wordmark,
 .hero-name,
 .page-title,
@@ -243,6 +249,42 @@ dl {
 .site-nav a:hover,
 .site-nav a:focus-visible {
   transform: translateY(-1px);
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.22rem;
+  border-radius: 999px;
+  border: 1px solid rgba(54, 83, 86, 0.1);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.lang-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  min-width: 3.1rem;
+  padding: 0.72rem 0.82rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.lang-button:hover,
+.lang-button:focus-visible {
+  color: var(--text);
+  background: rgba(86, 127, 132, 0.1);
+}
+
+.lang-button[aria-pressed="true"] {
+  color: var(--text);
+  background: rgba(86, 127, 132, 0.12);
 }
 
 .section-tag,
@@ -902,6 +944,11 @@ dl {
     border-radius: 28px;
   }
 
+  .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .site-nav {
     width: 100%;
     justify-content: space-between;
@@ -910,6 +957,15 @@ dl {
   .site-nav a {
     flex: 1 1 0;
     text-align: center;
+  }
+
+  .lang-switcher {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lang-button {
+    flex: 1 1 0;
   }
 
   .hero {

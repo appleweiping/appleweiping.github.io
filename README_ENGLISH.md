@@ -9,6 +9,12 @@ The current version is deliberately focused, with only two public-facing pages:
 - `Profile`
 - `Resume`
 
+It also includes a built-in three-language interface:
+
+- English
+- Chinese
+- Japanese
+
 The design direction is editorial, calm, and academically serious. It avoids heavy animation systems and instead uses typography, spacing, and a small amount of SVG- and CSS-driven interaction to guide reading.
 
 ## Current Site Goals
@@ -47,6 +53,8 @@ The current interactions are intentionally light:
 - a tiny spirit-like companion that drifts near the cursor on desktop with strong delay and low visual priority
 
 These interactions are there to support reading structure, not to dominate attention.
+
+The language switcher is treated as part of this same lightweight layer and swaps page copy without introducing a build step or framework runtime.
 
 ## File Structure
 
@@ -115,6 +123,7 @@ Responsible for:
 - signal path geometry and scroll progress behavior
 - active section highlighting
 - the floating spirit companion behavior
+- tri-language interface switching and text replacement
 
 ## Editing Guide
 
@@ -124,6 +133,14 @@ Edit the copy directly in:
 
 - `index.html`
 - `resume.html`
+
+### Update translations
+
+Edit:
+
+- `script.js`
+
+The `translations` object contains the English, Chinese, and Japanese interface strings.
 
 ### Update links
 

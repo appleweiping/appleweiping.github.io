@@ -13,6 +13,12 @@ The site is intentionally compact and keeps only two main pages:
 - `Profile`: identity, academic direction, research interests, selected experience, and contact
 - `Resume`: a structured summary plus an embedded PDF resume viewer
 
+The current production version also supports three interface languages:
+
+- English
+- Chinese
+- Japanese
+
 ## Tech Stack
 
 - Semantic HTML
@@ -62,7 +68,7 @@ Then open `http://localhost:8000`.
 - Update homepage text in `index.html`
 - Update resume-page summary in `resume.html`
 - Update the visual system in `style.css`
-- Update small interactions in `script.js`
+- Update small interactions and translations in `script.js`
 - Replace portrait in `assets/profile.jpg`
 - Replace resume in `assets/resume.pdf`
 

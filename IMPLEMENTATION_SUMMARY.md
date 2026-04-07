@@ -7,6 +7,12 @@ The project is currently implemented as a lightweight static academic website wi
 - `Profile`
 - `Resume`
 
+The current production site also supports three interface languages:
+
+- English
+- Chinese
+- Japanese
+
 The present version has already replaced the earlier heavier visual experiments with a much simpler, faster structure.
 
 ## What Is Implemented
@@ -62,6 +68,7 @@ Includes:
 - SVG signal path generation
 - scroll-linked active section highlighting
 - a subtle floating spirit companion for desktop pointer environments
+- a lightweight tri-language interface switcher shared by both pages
 
 ## Design Decisions
 
@@ -89,6 +96,10 @@ The site can be deployed directly to GitHub Pages without a build pipeline.
 - `style.css`
 
 ### Interaction behavior
+
+- `script.js`
+
+### Translation strings
 
 - `script.js`
 

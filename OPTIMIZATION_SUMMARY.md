@@ -58,6 +58,7 @@ Most of the visual system is handled by CSS rather than JavaScript.
 - SVG signal path updates
 - active section highlighting
 - the floating spirit companion, implemented as a tiny DOM/SVG layer instead of a heavy rendering system
+- tri-language text switching with a shared translation table and `localStorage` persistence
 
 ### 5. Static assets only where needed
 
@@ -113,6 +114,7 @@ When extending this project, prefer:
 - SVG and transforms over heavy rendering pipelines
 - narrow scope over unnecessary new pages
 - direct editability over clever but fragile tooling
+- multilingual support without introducing a framework or client-side router
 
 Avoid reintroducing:
 

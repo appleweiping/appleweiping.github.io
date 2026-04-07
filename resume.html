@@ -3,76 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weiping Yan | Resume</title>
+  <title data-i18n="metaTitleResume">Weiping Yan | Resume</title>
   <meta
     name="description"
+    data-i18n-attr="content:metaDescriptionResume"
     content="Resume and academic summary for Weiping Yan."
   />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body class="page resume-page">
-  <a class="skip-link" href="#main">Skip to content</a>
+<body class="page resume-page" data-page="resume">
+  <a class="skip-link" href="#main" data-i18n="skipToContent">Skip to content</a>
   <div class="page-mist page-mist-left" aria-hidden="true"></div>
   <div class="page-mist page-mist-right" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="wordmark" href="index.html">Academic Profile</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Profile</a>
-        <a class="is-current" href="resume.html" aria-current="page">Resume</a>
-      </nav>
+      <a class="wordmark" href="index.html" data-i18n="siteLabel">Academic Profile</a>
+      <div class="header-controls">
+        <nav class="site-nav" aria-label="Primary" data-i18n-attr="aria-label:navPrimaryLabel">
+          <a href="index.html" data-i18n="navProfile">Profile</a>
+          <a class="is-current" href="resume.html" aria-current="page" data-i18n="navResume">Resume</a>
+        </nav>
+        <div class="lang-switcher" role="group" aria-label="Language selector" data-i18n-attr="aria-label:langGroupLabel">
+          <button type="button" class="lang-button" data-lang-button="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-button" data-lang-button="zh" aria-pressed="false">中文</button>
+          <button type="button" class="lang-button" data-lang-button="ja" aria-pressed="false">日本語</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main id="main" class="resume-main shell">
     <section class="page-intro" data-reveal>
-      <p class="section-tag">Resume</p>
-      <h1 class="page-title">Formal record, kept simple.</h1>
-      <p class="page-lede">
+      <p class="section-tag" data-i18n="navResume">Resume</p>
+      <h1 class="page-title" data-i18n="resumePageTitle">Formal record, kept simple.</h1>
+      <p class="page-lede" data-i18n="resumePageLede">
         This page provides a short structured summary above the PDF. The PDF
         remains the canonical document for applications and direct sharing.
       </p>
     </section>
 
-    <section class="resume-summary" aria-label="Resume summary">
+    <section class="resume-summary" aria-label="Resume summary" data-i18n-attr="aria-label:resumeSummaryLabel">
       <article class="summary-block" data-reveal>
-        <p class="summary-label">Education</p>
-        <h2>TU Delft x Eindhoven University of Technology</h2>
-        <p>
+        <p class="summary-label" data-i18n="resumeEducationLabel">Education</p>
+        <h2 data-i18n="resumeEducationTitle">TU Delft x Eindhoven University of Technology</h2>
+        <p data-i18n="resumeEducationBody">
           B.Sc. in Computer Science, Electrical Engineering and Applied Physics,
           Sep 2024 - Jun 2028.
         </p>
       </article>
 
       <article class="summary-block" data-reveal>
-        <p class="summary-label">Research direction</p>
-        <h2>AI for Science, foundation models, analog design</h2>
-        <p>
+        <p class="summary-label" data-i18n="resumeResearchLabel">Research direction</p>
+        <h2 data-i18n="resumeResearchTitle">AI for Science, foundation models, analog design</h2>
+        <p data-i18n="resumeResearchBody">
           Focused on technically grounded research linking machine learning with
           scientific reasoning, engineering workflows, and circuit optimization.
         </p>
       </article>
 
       <article class="summary-block" data-reveal>
-        <p class="summary-label">Selected experience</p>
-        <h2>Research across ML and semiconductor systems</h2>
+        <p class="summary-label" data-i18n="resumeExperienceLabel">Selected experience</p>
+        <h2 data-i18n="resumeExperienceTitle">Research across ML and semiconductor systems</h2>
         <ul class="resume-points">
-          <li>LLM for Recommendation research</li>
-          <li>Zhangjiang Laboratory semiconductor workflow training</li>
-          <li>Environmental data research using Python</li>
+          <li data-i18n="resumeExperiencePoint1">LLM for Recommendation research</li>
+          <li data-i18n="resumeExperiencePoint2">Zhangjiang Laboratory semiconductor workflow training</li>
+          <li data-i18n="resumeExperiencePoint3">Environmental data research using Python</li>
         </ul>
       </article>
 
       <article class="summary-block" data-reveal>
-        <p class="summary-label">Links</p>
-        <h2>Direct contact and files</h2>
+        <p class="summary-label" data-i18n="resumeLinksLabel">Links</p>
+        <h2 data-i18n="resumeLinksTitle">Direct contact and files</h2>
         <div class="resume-links">
-          <a href="mailto:vipinapple986@gmail.com">Email</a>
+          <a href="mailto:vipinapple986@gmail.com" data-i18n="contactEmail">Email</a>
           <a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/appleweiping" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Open PDF directly</a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" data-i18n="openPdfDirectly">Open PDF directly</a>
         </div>
       </article>
     </section>
@@ -80,10 +88,10 @@
     <section class="resume-document" data-reveal>
       <div class="document-header">
         <div>
-          <p class="section-tag">PDF</p>
-          <h2 class="document-title">Embedded resume viewer</h2>
+          <p class="section-tag" data-i18n="pdfLabel">PDF</p>
+          <h2 class="document-title" data-i18n="embeddedResumeViewer">Embedded resume viewer</h2>
         </div>
-        <a class="document-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a class="document-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" data-i18n="openOrDownloadPdf">
           Open or download the PDF
         </a>
       </div>
@@ -93,11 +101,12 @@
           class="resume-frame"
           src="assets/resume.pdf#view=FitH"
           title="Weiping Yan resume PDF"
+          data-i18n-attr="title:resumeFrameTitle"
           loading="lazy"
         ></iframe>
       </div>
 
-      <p class="document-note">
+      <p class="document-note" data-i18n="resumeDocumentNote">
         If the embedded viewer does not render in your browser, use the direct PDF link above.
       </p>
     </section>
@@ -106,7 +115,7 @@
   <footer class="site-footer">
     <div class="shell footer-inner">
       <p>&copy; 2026 Weiping Yan</p>
-      <p>Minimal academic site designed for direct GitHub Pages deployment.</p>
+      <p data-i18n="footerNote">Minimal academic site designed for direct GitHub Pages deployment.</p>
     </div>
   </footer>
 </body>
