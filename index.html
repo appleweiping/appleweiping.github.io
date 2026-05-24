@@ -1,292 +1,213 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="metaTitleProfile">Weiping Yan | Profile</title>
-  <meta
-    name="description"
-    data-i18n-attr="content:metaDescriptionProfile"
-    content="Weiping Yan is an AI4X undergraduate researcher working across AI for Science, foundation models, and AI-driven analog circuit design and optimization."
-  />
-  <link rel="preload" href="assets/profile.jpg" as="image" />
+  <title>Weiping Yan</title>
+  <meta name="description" content="Weiping Yan — AI4X undergraduate researcher at TU Delft × Eindhoven University of Technology." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
-<body class="page profile-page" data-page="profile">
-  <a class="skip-link" href="#main" data-i18n="skipToContent">Skip to content</a>
-  <div class="page-mist page-mist-left" aria-hidden="true"></div>
-  <div class="page-mist page-mist-right" aria-hidden="true"></div>
+<body>
 
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="wordmark" href="index.html" data-i18n="siteLabel">Academic Profile</a>
-      <div class="header-controls">
-        <nav class="site-nav" aria-label="Primary" data-i18n-attr="aria-label:navPrimaryLabel">
-          <a class="is-current" href="index.html" aria-current="page" data-i18n="navProfile">Profile</a>
-          <a href="resume.html" data-i18n="navResume">Resume</a>
-        </nav>
-        <div class="lang-switcher" role="group" aria-label="Language selector" data-i18n-attr="aria-label:langGroupLabel">
-          <button type="button" class="lang-button" data-lang-button="en" aria-pressed="false">EN</button>
-          <button type="button" class="lang-button" data-lang-button="zh" aria-pressed="false">中文</button>
-          <button type="button" class="lang-button" data-lang-button="ja" aria-pressed="false">日本語</button>
-        </div>
+<!-- ── Skip link ─────────────────────────────────────────────────── -->
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ── Header ────────────────────────────────────────────────────── -->
+<header class="hdr" id="hdr">
+  <div class="hdr-inner">
+    <a class="hdr-mark" href="index.html">Weiping Yan</a>
+    <nav class="hdr-nav" aria-label="Primary">
+      <a href="index.html" class="nav-a is-cur" aria-current="page">Profile</a>
+      <a href="resume.html" class="nav-a">Resume</a>
+    </nav>
+    <div class="hdr-right">
+      <div class="lang-group" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="zh" aria-pressed="false">中</button>
+        <button class="lang-btn" data-lang="ja" aria-pressed="false">日</button>
       </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero shell" data-hero>
-      <div class="hero-copy">
-        <p class="section-tag" data-i18n="navProfile">Profile</p>
-        <h1 class="hero-name">
-          <span>Weiping</span>
-          <span>Yan</span>
-        </h1>
-        <p class="hero-title" data-i18n="profileHeroTitle">
-          AI4X undergraduate researcher in the joint program between TU Delft and
-          Eindhoven University of Technology.
-        </p>
-        <p class="hero-lede" data-i18n="profileHeroLede">
-          I work across computer science, electrical engineering, and applied
-          physics, with a primary interest in AI for Science, foundation models,
-          and AI-driven analog circuit design and optimization.
-        </p>
-        <p class="hero-note" data-i18n="profileHeroNote">
-          I am interested in research where learning systems have to remain
-          accountable to scientific structure, technical constraints, and real
-          engineering design decisions.
-        </p>
-
-        <div class="hero-actions">
-          <a class="action-link action-link-primary" href="resume.html" data-i18n="readResume">Read resume</a>
-          <a class="action-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" data-i18n="openPdf">Open PDF</a>
-        </div>
-
-        <ul class="contact-inline" aria-label="Contact links" data-i18n-attr="aria-label:contactLinksLabel">
-          <li><a href="mailto:vipinapple986@gmail.com" data-i18n="contactEmail">Email</a></li>
-          <li><a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/appleweiping" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
-      </div>
-
-      <aside class="hero-aside">
-        <figure class="portrait-card">
-          <div class="portrait-wrap">
-            <img
-              src="assets/profile.jpg"
-              alt="Portrait of Weiping Yan"
-              data-i18n-attr="alt:portraitAlt"
-              width="760"
-              height="950"
-              fetchpriority="high"
-              decoding="async"
-            />
-          </div>
-          <figcaption data-i18n="portraitCaption">AI4X undergraduate researcher.</figcaption>
-        </figure>
-
-        <dl class="identity-grid" aria-label="Academic summary" data-i18n-attr="aria-label:academicSummaryLabel">
-          <div>
-            <dt data-i18n="identityProgram">Program</dt>
-            <dd data-i18n="identityProgramValue">TU Delft x Eindhoven University of Technology</dd>
-          </div>
-          <div>
-            <dt data-i18n="identityBackground">Background</dt>
-            <dd data-i18n="identityBackgroundValue">Computer science, electrical engineering, applied physics</dd>
-          </div>
-          <div>
-            <dt data-i18n="identityDirection">Direction</dt>
-            <dd data-i18n="identityDirectionValue">AI for Science, foundation models, analog circuit optimization</dd>
-          </div>
-        </dl>
-      </aside>
-    </section>
-
-    <section class="narrative shell" aria-label="Profile narrative" data-i18n-attr="aria-label:profileNarrativeLabel">
-      <header class="narrative-header" data-reveal>
-        <p class="section-tag" data-i18n="readingPath">Reading Path</p>
-        <p class="narrative-lede" data-i18n="narrativeLede">
-          A compact academic profile, organized as a guided line from identity to
-          research direction, selected experience, and contact.
-        </p>
-      </header>
-
-      <div class="signal-shell" data-signal-shell>
-        <svg class="signal-map" data-signal-svg aria-hidden="true">
-          <path class="signal-track" data-signal-track></path>
-          <path class="signal-progress" data-signal-progress></path>
-          <g class="signal-dots" data-signal-dots></g>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="8" cy="8" r="3.5" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.05 3.05l1.06 1.06M11.89 11.89l1.06 1.06M3.05 12.95l1.06-1.06M11.89 4.11l1.06-1.06" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
         </svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-        <section class="story-row" id="about" data-story-section>
-          <div class="story-signal">
-            <span class="signal-anchor" data-signal-anchor style="--anchor-shift: -16px;"></span>
-          </div>
-          <div class="story-panel" data-reveal>
-            <header class="story-meta">
-              <p class="story-index">01</p>
-              <h2 data-i18n="aboutHeading">About</h2>
-            </header>
-            <div class="story-body">
-              <p class="story-intro" data-i18n="aboutIntro">
-                I am an undergraduate student in the joint program between Delft
-                University of Technology and Eindhoven University of Technology.
-              </p>
-              <p data-i18n="aboutBody1">
-                My training spans computer science, electrical engineering, and
-                applied physics, which shapes how I approach research problems:
-                not as isolated software tasks, but as questions about
-                representation, system behavior, and design under constraints.
-              </p>
-              <p data-i18n="aboutBody2">
-                I am moving toward research that connects modern machine learning
-                with scientific understanding and engineering automation, especially
-                in domains where physical structure still has to remain legible.
-              </p>
-            </div>
-          </div>
-        </section>
+<!-- ── Main ──────────────────────────────────────────────────────── -->
+<main id="main">
 
-        <section class="story-row" id="research" data-story-section>
-          <div class="story-signal">
-            <span class="signal-anchor" data-signal-anchor style="--anchor-shift: 18px;"></span>
-          </div>
-          <div class="story-panel" data-reveal>
-            <header class="story-meta">
-              <p class="story-index">02</p>
-              <h2 data-i18n="researchHeading">Research directions</h2>
-            </header>
-            <div class="story-body">
-              <p class="story-intro" data-i18n="researchIntro">
-                The problems that interest me sit where model capability meets
-                scientific or engineering structure.
-              </p>
-              <ol class="research-list">
-                <li>
-                  <span class="list-marker">01</span>
-                  <div>
-                    <h3 data-i18n="researchAi4ScienceTitle">AI for Science</h3>
-                    <p data-i18n="researchAi4ScienceBody">
-                      Applying learning systems to scientific and technical
-                      problems where domain constraints, structure, and usefulness
-                      matter more than generic benchmark performance.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <span class="list-marker">02</span>
-                  <div>
-                    <h3 data-i18n="researchFoundationTitle">Foundation models</h3>
-                    <p data-i18n="researchFoundationBody">
-                      Interested in foundation models as reasoning tools for
-                      technical workflows, structured knowledge, and complex design
-                      tasks rather than only conversational interfaces.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <span class="list-marker">03</span>
-                  <div>
-                    <h3 data-i18n="researchAnalogTitle">Analog circuit design and optimization</h3>
-                    <p data-i18n="researchAnalogBody">
-                      Exploring AI-driven methods for analog circuit modeling,
-                      optimization, and design automation in physically constrained
-                      environments.
-                    </p>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </section>
+  <!-- Hero -->
+  <section class="hero" data-reveal-group>
+    <div class="hero-text" data-reveal>
+      <p class="hero-eyebrow" data-i18n="eyebrow">Profile</p>
+      <h1 class="hero-name" id="heroName" aria-label="Weiping Yan">
+        <!-- filled by pretext engine -->
+      </h1>
+      <p class="hero-role" data-i18n="role">AI4X Undergraduate Researcher</p>
+      <p class="hero-sub" data-i18n="sub">TU Delft × Eindhoven University of Technology</p>
+      <p class="hero-body" data-i18n="body">
+        Working across computer science, electrical engineering, and applied physics.
+        Primary interest in AI for Science, foundation models, and AI-driven analog circuit design.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="resume.html" data-i18n="btnResume">Resume</a>
+        <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener" data-i18n="btnPdf">PDF</a>
+      </div>
+      <ul class="contact-row" aria-label="Contact">
+        <li><a href="mailto:vipinapple986@gmail.com" data-i18n="email">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/appleweiping" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
 
-        <section class="story-row" id="experience" data-story-section>
-          <div class="story-signal">
-            <span class="signal-anchor" data-signal-anchor style="--anchor-shift: -10px;"></span>
-          </div>
-          <div class="story-panel" data-reveal>
-            <header class="story-meta">
-              <p class="story-index">03</p>
-              <h2 data-i18n="experienceHeading">Selected experience</h2>
-            </header>
-            <div class="story-body">
-              <p class="story-intro" data-i18n="experienceIntro">
-                Recent work has moved between machine learning research,
-                semiconductor workflows, and data-driven scientific analysis.
-              </p>
-              <div class="experience-list">
-                <article class="experience-item">
-                  <p class="experience-date" data-i18n="exp1Date">Mar 2026 - Present</p>
-                  <div>
-                    <h3 data-i18n="exp1Title">Research Assistant Intern, AI Research Group</h3>
-                    <p data-i18n="exp1Body">
-                      Working on LLM for Recommendation (LLM4Rec).
-                    </p>
-                  </div>
-                </article>
+    <div class="hero-photo" data-reveal>
+      <div class="photo-frame">
+        <img src="assets/profile.jpg" alt="Weiping Yan" width="480" height="600" fetchpriority="high" decoding="async" />
+      </div>
+      <dl class="id-card">
+        <div>
+          <dt data-i18n="cardProgram">Program</dt>
+          <dd data-i18n="cardProgramVal">TU Delft × TU/e Joint</dd>
+        </div>
+        <div>
+          <dt data-i18n="cardField">Field</dt>
+          <dd data-i18n="cardFieldVal">CS · EE · Applied Physics</dd>
+        </div>
+        <div>
+          <dt data-i18n="cardFocus">Focus</dt>
+          <dd data-i18n="cardFocusVal">AI4Science · Foundation Models · Analog EDA</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 
-                <article class="experience-item">
-                  <p class="experience-date" data-i18n="exp2Date">Jul 2025 - Sep 2025</p>
-                  <div>
-                    <h3 data-i18n="exp2Title">Research Assistant, Zhangjiang Laboratory</h3>
-                    <p data-i18n="exp2Body">
-                      Studied semiconductor IC design workflows and EDA toolchains,
-                      including schematic design, pre-layout simulation, layout
-                      verification, DRC/LVS, and MPW-oriented tape-out preparation.
-                    </p>
-                  </div>
-                </article>
+  <!-- Sections -->
+  <div class="sections">
 
-                <article class="experience-item">
-                  <p class="experience-date" data-i18n="exp3Date">Sep 2023 - Feb 2024</p>
-                  <div>
-                    <h3 data-i18n="exp3Title">Student Researcher, Carnegie Mellon University</h3>
-                    <p data-i18n="exp3Body">
-                      Conducted an environmental data research project on the
-                      relation between PM2.5 air pollution and respiratory disease
-                      incidence using Python for exploratory analysis, statistical
-                      inference, and visualization.
-                    </p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="story-row" id="contact" data-story-section>
-          <div class="story-signal">
-            <span class="signal-anchor" data-signal-anchor style="--anchor-shift: 20px;"></span>
-          </div>
-          <div class="story-panel" data-reveal>
-            <header class="story-meta">
-              <p class="story-index">04</p>
-              <h2 data-i18n="contactHeading">Contact</h2>
-            </header>
-            <div class="story-body">
-              <p class="story-intro" data-i18n="contactIntro">
-                Open to research conversations, academic collaborations, and
-                future opportunities aligned with these directions.
-              </p>
-              <div class="contact-stack">
-                <a href="mailto:vipinapple986@gmail.com">vipinapple986@gmail.com</a>
-                <a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/appleweiping" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="resume.html" data-i18n="resumePageLink">Resume page</a>
-              </div>
-            </div>
-          </div>
-        </section>
+    <section class="sec" id="about" data-reveal>
+      <header class="sec-hd">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title" data-i18n="aboutTitle">About</h2>
+      </header>
+      <div class="sec-body">
+        <p class="sec-lead" data-i18n="aboutLead">
+          Undergraduate in the joint program between Delft University of Technology and Eindhoven University of Technology.
+        </p>
+        <p data-i18n="aboutP1">
+          My training spans computer science, electrical engineering, and applied physics — which shapes how I approach research: not as isolated software tasks, but as questions about representation, system behavior, and design under constraints.
+        </p>
+        <p data-i18n="aboutP2">
+          I am moving toward research that connects modern machine learning with scientific understanding and engineering automation, especially in domains where physical structure still has to remain legible.
+        </p>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <p>&copy; 2026 Weiping Yan</p>
-      <p data-i18n="footerNote">Minimal academic site designed for direct GitHub Pages deployment.</p>
-    </div>
-  </footer>
+    <section class="sec" id="research" data-reveal>
+      <header class="sec-hd">
+        <span class="sec-num">02</span>
+        <h2 class="sec-title" data-i18n="researchTitle">Research directions</h2>
+      </header>
+      <div class="sec-body">
+        <p class="sec-lead" data-i18n="researchLead">
+          Problems that sit where model capability meets scientific or engineering structure.
+        </p>
+        <ol class="dir-list">
+          <li>
+            <span class="dir-n">01</span>
+            <div>
+              <h3 data-i18n="dir1Title">AI for Science</h3>
+              <p data-i18n="dir1Body">Applying learning systems to scientific and technical problems where domain constraints, structure, and usefulness matter more than generic benchmark performance.</p>
+            </div>
+          </li>
+          <li>
+            <span class="dir-n">02</span>
+            <div>
+              <h3 data-i18n="dir2Title">Foundation models</h3>
+              <p data-i18n="dir2Body">Foundation models as reasoning tools for technical workflows, structured knowledge, and complex design tasks rather than only conversational interfaces.</p>
+            </div>
+          </li>
+          <li>
+            <span class="dir-n">03</span>
+            <div>
+              <h3 data-i18n="dir3Title">Analog circuit design</h3>
+              <p data-i18n="dir3Body">AI-driven methods for analog circuit modeling, optimization, and design automation in physically constrained environments.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="sec" id="experience" data-reveal>
+      <header class="sec-hd">
+        <span class="sec-num">03</span>
+        <h2 class="sec-title" data-i18n="expTitle">Selected experience</h2>
+      </header>
+      <div class="sec-body">
+        <p class="sec-lead" data-i18n="expLead">Recent work across machine learning research, semiconductor workflows, and data-driven scientific analysis.</p>
+        <div class="exp-list">
+          <article class="exp-item">
+            <p class="exp-date" data-i18n="exp1Date">Mar 2026 – Present</p>
+            <div>
+              <h3 data-i18n="exp1Title">Research Assistant Intern, AI Research Group</h3>
+              <p data-i18n="exp1Body">Working on LLM for Recommendation (LLM4Rec).</p>
+            </div>
+          </article>
+          <article class="exp-item">
+            <p class="exp-date" data-i18n="exp2Date">Jul 2025 – Sep 2025</p>
+            <div>
+              <h3 data-i18n="exp2Title">Research Assistant, Zhangjiang Laboratory</h3>
+              <p data-i18n="exp2Body">Semiconductor IC design workflows and EDA toolchains — schematic design, pre-layout simulation, layout verification, DRC/LVS, and MPW-oriented tape-out preparation.</p>
+            </div>
+          </article>
+          <article class="exp-item">
+            <p class="exp-date" data-i18n="exp3Date">Sep 2023 – Feb 2024</p>
+            <div>
+              <h3 data-i18n="exp3Title">Student Researcher, Carnegie Mellon University</h3>
+              <p data-i18n="exp3Body">Environmental data research on PM2.5 air pollution and respiratory disease incidence using Python for exploratory analysis, statistical inference, and visualization.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="contact" data-reveal>
+      <header class="sec-hd">
+        <span class="sec-num">04</span>
+        <h2 class="sec-title" data-i18n="contactTitle">Contact</h2>
+      </header>
+      <div class="sec-body">
+        <p class="sec-lead" data-i18n="contactLead">Open to research conversations, academic collaborations, and future opportunities.</p>
+        <div class="contact-grid">
+          <a href="mailto:vipinapple986@gmail.com">vipinapple986@gmail.com</a>
+          <a href="https://www.linkedin.com/in/weiping-yan-b62567383" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/appleweiping" target="_blank" rel="noopener">GitHub</a>
+          <a href="resume.html" data-i18n="contactResume">Resume page</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────────────── -->
+<footer class="ftr">
+  <p>© 2026 Weiping Yan</p>
+  <p data-i18n="ftrNote">Academic site · GitHub Pages</p>
+</footer>
+
+<!-- ── Character ──────────────────────────────────────────────────── -->
+<div id="char" class="char" aria-hidden="true" role="presentation">
+  <canvas id="charCanvas" width="64" height="80"></canvas>
+  <div class="char-bubble" id="charBubble"></div>
+</div>
+
+<!-- ── Scripts ────────────────────────────────────────────────────── -->
+<script type="module" src="script.js"></script>
 </body>
 </html>
