@@ -437,8 +437,8 @@ p, h1, h2, h3, ul, ol, dl { margin: 0; }
   display: block;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  width: 96px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   pointer-events: auto;
   cursor: pointer;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,.18));

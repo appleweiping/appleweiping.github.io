@@ -265,529 +265,201 @@ buildHeroName();
 
 
 // ── Character Engine ──────────────────────────────────────────────────────────
-// A full desktop-pet style character with:
-//   States: IDLE, WALK, JUMP, DRAG, FALL, WAVE, SIT
-//   Behaviors: auto-walk, proximity jump, drag & throw, idle animations
-//   Rendering: canvas sprite animation with fallback procedural art
+// 10 frames: idle(2), walk(3), run(1), jump(2), wave(1), sit(1)
+// All images 1254x1254 square — displayed at 90x90px
 
 const CHAR = (() => {
-  // ── Config ──────────────────────────────────────────────────────────────────
-  const SCALE = 2;           // render scale
-  const FRAME_W = 48;        // sprite frame width (source)
-  const FRAME_H = 64;        // sprite frame height (source)
-  // When individual frame images are loaded, use larger display size
-  const DISPLAY_W = 96;      // character display width px
-  const DISPLAY_H = 120;     // character display height px
-  const FLOOR_OFFSET = 0;    // px above bottom of viewport
-  const WALK_SPEED = 1.4;    // px per frame
-  const GRAVITY = 0.55;
-  const JUMP_FORCE = -13;
-  const PROXIMITY_DIST = 120;
+  const SIZE = 90;
+  const WALK_SPEED = 1.6, RUN_SPEED = 3.2;
+  const GRAVITY = 0.55, JUMP_FORCE = -14;
+  const PROX_DIST = 130;
 
-  // ── State ───────────────────────────────────────────────────────────────────
-  let x = 120, y = 0;
-  let vx = 0, vy = 0;
-  let facingRight = true;
-  let state = 'IDLE';
-  let frame = 0;
-  let frameTimer = 0;
-  let idleTimer = 0;
-  let walkTarget = -1;
-  let isDragging = false;
-  let dragOffX = 0, dragOffY = 0;
-  let lastMouseX = 0, lastMouseY = 0;
-  let throwVX = 0, throwVY = 0;
-  let bubbleTimer = 0;
-  let onGround = false;
-  let animFrame = 0;
-
-  // Sprite sheet: 6 frames per row
-  // Row 0: idle (frames 0-1), walk (frames 2-4), jump (frame 5)
-  // Row 1: wave (frames 0-2), sit (frames 3-4), fall (frame 5)
-  const ANIM = {
-    IDLE:  { row: 0, frames: [0, 1],       fps: 2  },
-    WALK:  { row: 0, frames: [2, 3, 4],    fps: 8  },
-    JUMP:  { row: 0, frames: [5],           fps: 4  },
-    FALL:  { row: 1, frames: [5],           fps: 4  },
-    WAVE:  { row: 1, frames: [0, 1, 2, 1], fps: 6  },
-    SIT:   { row: 1, frames: [3, 4, 4, 3], fps: 3  },
-    DRAG:  { row: 0, frames: [5],           fps: 4  },
+  const ANIMS = {
+    IDLE: { files: ['char-idle1.png','char-idle2.png'], fps: 1.5 },
+    WALK: { files: ['char-walk1.png','char-walk2.png','char-walk3.png'], fps: 6 },
+    RUN:  { files: ['char-run.png','char-walk1.png','char-run.png','char-walk3.png'], fps: 9 },
+    JUMP: { files: ['char-jump1.png','char-jump2.png'], fps: 5 },
+    FALL: { files: ['char-jump2.png'], fps: 5 },
+    WAVE: { files: ['char-wave.png','char-idle1.png','char-wave.png','char-idle2.png'], fps: 4 },
+    SIT:  { files: ['char-sit.png'], fps: 1 },
+    DRAG: { files: ['char-jump1.png'], fps: 5 },
   };
 
-  // ── DOM ─────────────────────────────────────────────────────────────────────
+  const imgs = {};
+  const allFiles = [...new Set(Object.values(ANIMS).flatMap(a => a.files))];
+  let loadedCount = 0;
+  allFiles.forEach(name => {
+    const img = new Image();
+    img.onload  = () => { imgs[name] = img; loadedCount++; };
+    img.onerror = () => { loadedCount++; };
+    img.src = `assets/${name}`;
+  });
+
   const charEl = document.getElementById('char');
   const canvas = document.getElementById('charCanvas');
-  const ctx = canvas.getContext('2d');
+  const ctx    = canvas.getContext('2d');
   const bubble = document.getElementById('charBubble');
+  canvas.width = SIZE; canvas.height = SIZE;
+  canvas.style.width = SIZE + 'px'; canvas.style.height = SIZE + 'px';
 
-  canvas.width = DISPLAY_W;
-  canvas.height = DISPLAY_H;
-  canvas.style.width = DISPLAY_W + 'px';
-  canvas.style.height = DISPLAY_H + 'px';
+  let x = 120, y = 0, vx = 0, vy = 0;
+  let facingRight = true, state = 'IDLE', frameIdx = 0, frameTimer = 0;
+  let idleTimer = 200, walkTarget = -1, onGround = false;
+  let isDragging = false, dragOffX = 0, dragOffY = 0;
+  let lastMX = 0, lastMY = 0, throwVX = 0, throwVY = 0;
+  let bubbleTimer = 0, rafId = 0, lastTime = 0;
 
-  // ── Sprite loading — supports individual frame files ───────────────────────
-  // If you provide char-idle.png, char-walk1.png, char-walk2.png, char-jump.png
-  // in assets/, they will be used. Otherwise falls back to procedural art.
-  const frameImages = {};
-  const frameFiles = {
-    idle:  'assets/char-idle.png',
-    walk1: 'assets/char-walk1.png',
-    walk2: 'assets/char-walk2.png',
-    jump:  'assets/char-jump.png',
+  const floorY = () => window.innerHeight - SIZE;
+  const clampX = v => Math.max(0, Math.min(window.innerWidth - SIZE, v));
+  const setPos = (nx, ny) => { x = nx; y = ny; charEl.style.transform = `translate(${x}px,${y}px)`; };
+
+  const MSGS = {
+    en: ['Hello! 👋','Nice to meet you!','AI4Science~','(◕‿◕)','TU Delft!','Keep going!'],
+    zh: ['你好！👋','很高兴认识你！','AI4Science！','(◕‿◕)','代尔夫特！','加油！'],
+    ja: ['こんにちは！👋','よろしく！','AI4Science！','(◕‿◕)','デルフト！','頑張って！'],
   };
-  let framesLoaded = 0;
-  let framesAttempted = 0;
-  Object.entries(frameFiles).forEach(([key, src]) => {
-    framesAttempted++;
-    const img = new Image();
-    img.onload = () => { frameImages[key] = img; framesLoaded++; };
-    img.onerror = () => { framesLoaded++; }; // count failures too
-    img.src = src;
-  });
-  function hasFrames() { return framesLoaded >= framesAttempted && Object.keys(frameImages).length > 0; }
-
-  // Legacy sprite sheet fallback
-  let spriteLoaded = false;
-  const sprite = new Image();
-  sprite.onload = () => { spriteLoaded = true; };
-  sprite.onerror = () => { spriteLoaded = false; };
-  sprite.src = 'assets/char-sprite.png';
-
-  // ── Procedural fallback art ──────────────────────────────────────────────────
-  // Draws a cute chibi character using canvas 2D primitives
-  function drawProcedural(anim, frameIdx, flip) {
-    ctx.clearRect(0, 0, DISPLAY_W, DISPLAY_H);
-    ctx.save();
-    if (flip) {
-      ctx.translate(DISPLAY_W, 0);
-      ctx.scale(-1, 1);
-    }
-
-    const cx = DISPLAY_W / 2;
-    const t = frameIdx;
-
-    // Body bounce
-    const bounce = (anim === 'WALK') ? Math.sin(t * Math.PI) * 2 : 0;
-    const jumpOff = (anim === 'JUMP' || anim === 'DRAG') ? -6 : 0;
-    const sitOff = (anim === 'SIT') ? 8 : 0;
-    const baseY = DISPLAY_H - 8 + bounce + jumpOff + sitOff;
-
-    // Legs
-    ctx.fillStyle = '#5a7a8a';
-    if (anim === 'WALK') {
-      const legSwing = Math.sin(t * Math.PI) * 6;
-      ctx.fillRect(cx - 10, baseY - 22 + legSwing, 8, 14);
-      ctx.fillRect(cx + 2, baseY - 22 - legSwing, 8, 14);
-    } else if (anim === 'SIT') {
-      ctx.fillRect(cx - 14, baseY - 10, 10, 8);
-      ctx.fillRect(cx + 4, baseY - 10, 10, 8);
-    } else {
-      ctx.fillRect(cx - 10, baseY - 22, 8, 14);
-      ctx.fillRect(cx + 2, baseY - 22, 8, 14);
-    }
-
-    // Shoes
-    ctx.fillStyle = '#2d3a42';
-    ctx.beginPath();
-    ctx.ellipse(cx - 6, baseY - 8, 7, 4, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(cx + 6, baseY - 8, 7, 4, 0, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Skirt / body
-    ctx.fillStyle = '#7eb8c9';
-    ctx.beginPath();
-    ctx.moveTo(cx - 16, baseY - 22);
-    ctx.lineTo(cx + 16, baseY - 22);
-    ctx.lineTo(cx + 20, baseY - 38);
-    ctx.lineTo(cx - 20, baseY - 38);
-    ctx.closePath();
-    ctx.fill();
-
-    // Torso
-    ctx.fillStyle = '#d4eaf0';
-    ctx.beginPath();
-    ctx.roundRect(cx - 13, baseY - 52, 26, 16, 4);
-    ctx.fill();
-
-    // Ribbon
-    ctx.fillStyle = '#e8a0b0';
-    ctx.beginPath();
-    ctx.moveTo(cx - 6, baseY - 44);
-    ctx.lineTo(cx - 12, baseY - 48);
-    ctx.lineTo(cx - 6, baseY - 46);
-    ctx.lineTo(cx, baseY - 50);
-    ctx.lineTo(cx + 6, baseY - 46);
-    ctx.lineTo(cx + 12, baseY - 48);
-    ctx.lineTo(cx + 6, baseY - 44);
-    ctx.closePath();
-    ctx.fill();
-
-    // Arms
-    ctx.fillStyle = '#d4eaf0';
-    const armSwing = (anim === 'WAVE') ? Math.sin(t * Math.PI * 0.8) * 12 - 8 : 0;
-    ctx.beginPath();
-    ctx.roundRect(cx - 20, baseY - 52 + armSwing, 8, 14, 4);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.roundRect(cx + 12, baseY - 52, 8, 14, 4);
-    ctx.fill();
-
-    // Head
-    const headBob = (anim === 'IDLE') ? Math.sin(Date.now() * 0.002) * 1.5 : 0;
-    const headY = baseY - 72 + headBob;
-    ctx.fillStyle = '#f5e6d8';
-    ctx.beginPath();
-    ctx.ellipse(cx, headY, 18, 20, 0, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Hair
-    ctx.fillStyle = '#4a3728';
-    ctx.beginPath();
-    ctx.ellipse(cx, headY - 8, 19, 14, 0, 0, Math.PI * 2);
-    ctx.fill();
-    // Side hair
-    ctx.beginPath();
-    ctx.ellipse(cx - 16, headY + 4, 6, 14, -0.3, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(cx + 16, headY + 4, 6, 14, 0.3, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Beret
-    ctx.fillStyle = '#7eb8c9';
-    ctx.beginPath();
-    ctx.ellipse(cx + 4, headY - 16, 16, 8, 0.2, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(cx + 6, headY - 20, 8, 6, 0.1, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Eyes
-    const eyeOpen = (anim === 'SIT') ? 0.4 : 1;
-    ctx.fillStyle = '#2a1f1a';
-    ctx.beginPath();
-    ctx.ellipse(cx - 7, headY + 2, 4, 5 * eyeOpen, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(cx + 7, headY + 2, 4, 5 * eyeOpen, 0, 0, Math.PI * 2);
-    ctx.fill();
-    // Eye shine
-    ctx.fillStyle = 'white';
-    ctx.beginPath();
-    ctx.ellipse(cx - 5, headY, 1.5, 1.5, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(cx + 9, headY, 1.5, 1.5, 0, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Mouth
-    ctx.strokeStyle = '#c0826a';
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    if (anim === 'JUMP' || anim === 'DRAG') {
-      ctx.arc(cx, headY + 9, 4, 0, Math.PI);
-    } else {
-      ctx.arc(cx, headY + 8, 3, 0.1, Math.PI - 0.1);
-    }
-    ctx.stroke();
-
-    // Blush
-    ctx.fillStyle = 'rgba(255,160,140,0.35)';
-    ctx.beginPath();
-    ctx.ellipse(cx - 12, headY + 6, 5, 3, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(cx + 12, headY + 6, 5, 3, 0, 0, Math.PI * 2);
-    ctx.fill();
-
-    ctx.restore();
-  }
-
-  // ── Sprite rendering ─────────────────────────────────────────────────────────
-  function drawSprite(anim, frameIdx, flip) {
-    // Try individual frame images first (highest quality)
-    if (hasFrames()) {
-      let frameKey = 'idle';
-      if (anim === 'WALK') frameKey = frameIdx % 2 === 0 ? 'walk1' : 'walk2';
-      else if (anim === 'JUMP' || anim === 'DRAG' || anim === 'FALL') frameKey = 'jump';
-      const img = frameImages[frameKey] || frameImages['idle'];
-      if (img) {
-        ctx.clearRect(0, 0, DISPLAY_W, DISPLAY_H);
-        ctx.save();
-        if (flip) { ctx.translate(DISPLAY_W, 0); ctx.scale(-1, 1); }
-        ctx.drawImage(img, 0, 0, DISPLAY_W, DISPLAY_H);
-        ctx.restore();
-        // Remove white background: set white/near-white pixels to transparent
-        const imageData = ctx.getImageData(0, 0, DISPLAY_W, DISPLAY_H);
-        const d = imageData.data;
-        for (let i = 0; i < d.length; i += 4) {
-          const r = d[i], g = d[i+1], b = d[i+2];
-          // If pixel is near-white (all channels > 230), make transparent
-          if (r > 230 && g > 230 && b > 230) {
-            d[i+3] = 0;
-          }
-        }
-        ctx.putImageData(imageData, 0, 0);
-        return;
-      }
-    }
-    // Try sprite sheet
-    if (spriteLoaded) {
-      const a = ANIM[anim] || ANIM.IDLE;
-      const srcFrame = a.frames[frameIdx % a.frames.length];
-      const srcX = srcFrame * FRAME_W;
-      const srcY = a.row * FRAME_H;
-      ctx.clearRect(0, 0, DISPLAY_W, DISPLAY_H);
-      ctx.save();
-      if (flip) { ctx.translate(DISPLAY_W, 0); ctx.scale(-1, 1); }
-      ctx.drawImage(sprite, srcX, srcY, FRAME_W, FRAME_H, 0, 0, DISPLAY_W, DISPLAY_H);
-      ctx.restore();
-      return;
-    }
-    // Procedural fallback
-    drawProcedural(anim, frameIdx, flip);
-  }
-
-  // ── Bubble messages ──────────────────────────────────────────────────────────
-  const MESSAGES = {
-    en: ['Hello! 👋', 'Nice to meet you!', 'I love research~', 'AI4Science!', 'Let\'s explore!', '(◕‿◕)', 'Analog circuits~', 'TU Delft!', 'Keep going!'],
-    zh: ['你好！👋', '很高兴认识你！', '我喜欢研究~', 'AI4Science！', '一起探索吧！', '(◕‿◕)', '模拟电路~', '代尔夫特！', '加油！'],
-    ja: ['こんにちは！👋', 'よろしく！', '研究が好き~', 'AI4Science！', '一緒に探索しよう！', '(◕‿◕)', 'アナログ回路~', 'デルフト！', '頑張って！'],
-  };
-
   function showBubble(msg) {
-    bubble.textContent = msg || MESSAGES[currentLang][Math.floor(Math.random() * MESSAGES[currentLang].length)];
+    const list = MSGS[currentLang] || MSGS.en;
+    bubble.textContent = msg || list[Math.floor(Math.random()*list.length)];
     bubble.classList.add('show');
     clearTimeout(bubbleTimer);
     bubbleTimer = setTimeout(() => bubble.classList.remove('show'), 2800);
   }
 
-  // ── Position helpers ─────────────────────────────────────────────────────────
-  function getFloorY() {
-    return window.innerHeight - DISPLAY_H - FLOOR_OFFSET;
-  }
-
-  function clampX(val) {
-    return Math.max(0, Math.min(window.innerWidth - DISPLAY_W, val));
-  }
-
-  function setPos(nx, ny) {
-    x = nx; y = ny;
-    charEl.style.transform = `translate(${x}px, ${y}px)`;
-  }
-
-  // ── Walk target ──────────────────────────────────────────────────────────────
-  function pickNewTarget() {
-    const margin = 60;
-    walkTarget = margin + Math.random() * (window.innerWidth - DISPLAY_W - margin * 2);
-  }
-
-  // ── Idle behaviors ───────────────────────────────────────────────────────────
-  const IDLE_BEHAVIORS = ['IDLE', 'WAVE', 'SIT', 'WALK'];
-  let idleBehaviorTimer = 0;
-
-  function pickIdleBehavior() {
-    const r = Math.random();
-    if (r < 0.35) {
-      state = 'WALK';
-      pickNewTarget();
-    } else if (r < 0.55) {
-      state = 'WAVE';
-      showBubble();
-    } else if (r < 0.7) {
-      state = 'SIT';
-    } else {
-      state = 'IDLE';
+  function draw() {
+    const anim = ANIMS[state] || ANIMS.IDLE;
+    const file = anim.files[frameIdx % anim.files.length];
+    const img  = imgs[file];
+    ctx.clearRect(0, 0, SIZE, SIZE);
+    if (!img) { drawFallback(); return; }
+    ctx.save();
+    if (!facingRight) { ctx.translate(SIZE, 0); ctx.scale(-1, 1); }
+    ctx.drawImage(img, 0, 0, SIZE, SIZE);
+    ctx.restore();
+    const id = ctx.getImageData(0, 0, SIZE, SIZE);
+    const d = id.data;
+    for (let i = 0; i < d.length; i += 4) {
+      if (d[i] > 228 && d[i+1] > 228 && d[i+2] > 228) d[i+3] = 0;
     }
-    frame = 0;
-    idleBehaviorTimer = 180 + Math.random() * 300;
+    ctx.putImageData(id, 0, 0);
   }
 
-  // ── Main loop ────────────────────────────────────────────────────────────────
-  function tick() {
-    animFrame = requestAnimationFrame(tick);
-    const floorY = getFloorY();
+  function drawFallback() {
+    const cx = SIZE/2, cy = SIZE*0.55;
+    ctx.fillStyle = '#f5e6d8';
+    ctx.beginPath(); ctx.ellipse(cx, cy-18, 14, 16, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = '#4a3728';
+    ctx.beginPath(); ctx.ellipse(cx, cy-24, 15, 10, 0, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = '#7eb8c9'; ctx.fillRect(cx-10, cy-4, 20, 14);
+    ctx.fillStyle = '#5a7a8a'; ctx.fillRect(cx-8, cy+10, 7, 12); ctx.fillRect(cx+1, cy+10, 7, 12);
+  }
+
+  function pickIdle() {
+    const r = Math.random();
+    if      (r < 0.30) { state = 'WALK'; walkTarget = 60 + Math.random()*(window.innerWidth-SIZE-120); }
+    else if (r < 0.45) { state = 'RUN';  walkTarget = 60 + Math.random()*(window.innerWidth-SIZE-120); }
+    else if (r < 0.60) { state = 'WAVE'; showBubble(); }
+    else if (r < 0.72) { state = 'SIT'; }
+    else               { state = 'IDLE'; }
+    frameIdx = 0;
+    idleTimer = 150 + Math.random()*350;
+  }
+
+  function tick(ts) {
+    rafId = requestAnimationFrame(tick);
+    const dt = Math.min(ts - lastTime, 50);
+    lastTime = ts;
+    const fy = floorY();
 
     if (!isDragging) {
-      // Gravity
-      if (y < floorY) {
-        vy += GRAVITY;
-        y += vy;
-        if (y >= floorY) {
-          y = floorY;
-          if (vy > 3) {
-            // Landing
-            state = 'IDLE';
-            frame = 0;
-          }
-          vy = 0;
-          onGround = true;
-        } else {
-          onGround = false;
-          state = vy < 0 ? 'JUMP' : 'FALL';
-        }
-      } else {
-        y = floorY;
-        onGround = true;
-        vy = 0;
-      }
+      if (y < fy) {
+        vy += GRAVITY; y += vy;
+        if (y >= fy) {
+          y = fy; vy = 0; onGround = true;
+          if (state === 'JUMP' || state === 'FALL') { state = 'IDLE'; frameIdx = 0; }
+        } else { onGround = false; state = vy < 0 ? 'JUMP' : 'FALL'; }
+      } else { y = fy; vy = 0; onGround = true; }
 
-      // Horizontal throw momentum
       if (Math.abs(vx) > 0.1) {
-        x = clampX(x + vx);
-        vx *= 0.88;
+        x = clampX(x + vx); vx *= 0.88;
         if (Math.abs(vx) < 0.2) vx = 0;
-        if (onGround && state !== 'JUMP') {
-          state = Math.abs(vx) > 0.5 ? 'WALK' : 'IDLE';
-          facingRight = vx > 0;
-        }
+        if (onGround) { facingRight = vx > 0; state = Math.abs(vx) > 0.5 ? 'WALK' : 'IDLE'; }
       }
 
-      // State machine
-      if (onGround && Math.abs(vx) < 0.2) {
-        idleBehaviorTimer--;
-        if (idleBehaviorTimer <= 0) pickIdleBehavior();
+      if (onGround && Math.abs(vx) < 0.2 && (state === 'WALK' || state === 'RUN') && walkTarget >= 0) {
+        const speed = state === 'RUN' ? RUN_SPEED : WALK_SPEED;
+        const dx = walkTarget - (x + SIZE/2);
+        if (Math.abs(dx) < 4) { state = 'IDLE'; walkTarget = -1; idleTimer = 100 + Math.random()*200; }
+        else { facingRight = dx > 0; x = clampX(x + (facingRight ? speed : -speed)); }
+      }
 
-        if (state === 'WALK' && walkTarget >= 0) {
-          const dx = walkTarget - (x + DISPLAY_W / 2);
-          if (Math.abs(dx) < 3) {
-            state = 'IDLE';
-            walkTarget = -1;
-            idleBehaviorTimer = 120 + Math.random() * 200;
-          } else {
-            facingRight = dx > 0;
-            x = clampX(x + (facingRight ? WALK_SPEED : -WALK_SPEED));
-          }
-        }
+      if (onGround && Math.abs(vx) < 0.2 && state !== 'WALK' && state !== 'RUN') {
+        if (--idleTimer <= 0) pickIdle();
       }
     }
 
-    // Animate frames
-    frameTimer++;
-    const anim = ANIM[state] || ANIM.IDLE;
-    const fpsInterval = Math.round(60 / anim.fps);
-    if (frameTimer >= fpsInterval) {
-      frameTimer = 0;
-      frame = (frame + 1) % anim.frames.length;
-    }
+    const anim = ANIMS[state] || ANIMS.IDLE;
+    frameTimer += dt / 1000;
+    const interval = 1 / anim.fps;
+    if (frameTimer >= interval) { frameTimer -= interval; frameIdx = (frameIdx + 1) % anim.files.length; }
 
-    // Render
-    drawSprite(state, frame, !facingRight);
+    draw();
     setPos(x, y);
   }
 
-  // ── Drag ─────────────────────────────────────────────────────────────────────
-  canvas.addEventListener('mousedown', (e) => {
-    e.preventDefault();
-    isDragging = true;
-    state = 'DRAG';
-    frame = 0;
-    dragOffX = e.clientX - x;
-    dragOffY = e.clientY - y;
-    lastMouseX = e.clientX;
-    lastMouseY = e.clientY;
-    vx = 0; vy = 0;
+  function startDrag(cx, cy) {
+    isDragging = true; state = 'DRAG'; frameIdx = 0;
+    dragOffX = cx - x; dragOffY = cy - y;
+    lastMX = cx; lastMY = cy; vx = 0; vy = 0;
     charEl.classList.add('dragging');
     showBubble('Wheee~! 🌟');
-  });
-
-  canvas.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    const t = e.touches[0];
-    isDragging = true;
-    state = 'DRAG';
-    frame = 0;
-    dragOffX = t.clientX - x;
-    dragOffY = t.clientY - y;
-    lastMouseX = t.clientX;
-    lastMouseY = t.clientY;
-    vx = 0; vy = 0;
-    charEl.classList.add('dragging');
-  }, { passive: false });
-
-  function onMove(cx, cy) {
+  }
+  function moveDrag(cx, cy) {
     if (!isDragging) return;
-    throwVX = cx - lastMouseX;
-    throwVY = cy - lastMouseY;
-    lastMouseX = cx;
-    lastMouseY = cy;
-    x = cx - dragOffX;
-    y = cy - dragOffY;
-    setPos(x, y);
+    throwVX = cx - lastMX; throwVY = cy - lastMY;
+    lastMX = cx; lastMY = cy;
+    x = cx - dragOffX; y = cy - dragOffY; setPos(x, y);
+  }
+  function endDrag() {
+    if (!isDragging) return;
+    isDragging = false; charEl.classList.remove('dragging');
+    vx = throwVX * 0.55; vy = throwVY * 0.55;
+    state = vy < 0 ? 'JUMP' : 'FALL'; frameIdx = 0;
   }
 
-  function onRelease() {
-    if (!isDragging) return;
-    isDragging = false;
-    charEl.classList.remove('dragging');
-    vx = throwVX * 0.6;
-    vy = throwVY * 0.6;
-    state = vy < 0 ? 'JUMP' : 'FALL';
-    frame = 0;
-  }
+  canvas.addEventListener('mousedown',  e => { e.preventDefault(); startDrag(e.clientX, e.clientY); });
+  canvas.addEventListener('touchstart', e => { e.preventDefault(); const t=e.touches[0]; startDrag(t.clientX, t.clientY); }, {passive:false});
+  document.addEventListener('mousemove', e => moveDrag(e.clientX, e.clientY));
+  document.addEventListener('mouseup',   endDrag);
+  document.addEventListener('touchmove', e => { const t=e.touches[0]; moveDrag(t.clientX, t.clientY); }, {passive:true});
+  document.addEventListener('touchend',  endDrag);
 
-  document.addEventListener('mousemove', (e) => onMove(e.clientX, e.clientY));
-  document.addEventListener('mouseup', onRelease);
-  document.addEventListener('touchmove', (e) => {
-    const t = e.touches[0];
-    onMove(t.clientX, t.clientY);
-  }, { passive: true });
-  document.addEventListener('touchend', onRelease);
-
-  // ── Proximity jump ────────────────────────────────────────────────────────────
-  let proximityJumpCooldown = 0;
-  document.addEventListener('mousemove', (e) => {
-    if (isDragging) return;
-    proximityJumpCooldown--;
-    if (proximityJumpCooldown > 0) return;
-
-    const charCX = x + DISPLAY_W / 2;
-    const charCY = y + DISPLAY_H / 2;
-    const dx = e.clientX - charCX;
-    const dy = e.clientY - charCY;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-
-    if (dist < PROXIMITY_DIST && onGround) {
-      vy = JUMP_FORCE;
-      vx = -dx * 0.08;
-      state = 'JUMP';
-      frame = 0;
-      onGround = false;
-      proximityJumpCooldown = 90;
+  let proxCooldown = 0;
+  document.addEventListener('mousemove', e => {
+    if (isDragging || --proxCooldown > 0) return;
+    const dx = e.clientX - (x + SIZE/2), dy = e.clientY - (y + SIZE/2);
+    if (Math.sqrt(dx*dx+dy*dy) < PROX_DIST && onGround) {
+      vy = JUMP_FORCE; vx = -dx*0.07;
+      state = 'JUMP'; frameIdx = 0; onGround = false; proxCooldown = 80;
       if (Math.random() < 0.4) showBubble('Eek! 😳');
     }
   });
 
-  // ── Click to wave ─────────────────────────────────────────────────────────────
-  canvas.addEventListener('click', (e) => {
+  canvas.addEventListener('click', () => {
     if (Math.abs(throwVX) > 1 || Math.abs(throwVY) > 1) return;
-    state = 'WAVE';
-    frame = 0;
-    idleBehaviorTimer = 120;
-    showBubble();
+    state = 'WAVE'; frameIdx = 0; idleTimer = 120; showBubble();
   });
 
-  // ── Init ──────────────────────────────────────────────────────────────────────
   function initChar() {
-    x = 120;
-    y = getFloorY();
-    setPos(x, y);
-    idleBehaviorTimer = 200;
-    if (!animFrame) tick();
+    x = 120; y = floorY(); setPos(x, y); idleTimer = 200;
+    if (!rafId) requestAnimationFrame(tick);
   }
-
-  // Wait for full page load so window.innerHeight is stable
-  if (document.readyState === 'complete') {
-    initChar();
-  } else {
-    window.addEventListener('load', initChar, { once: true });
-  }
+  if (document.readyState === 'complete') initChar();
+  else window.addEventListener('load', initChar, {once:true});
 
   window.addEventListener('resize', () => {
-    const newFloor = getFloorY();
-    if (y > newFloor || y < newFloor - 10) { y = newFloor; setPos(x, y); }
+    const fy = floorY();
+    if (Math.abs(y - fy) > 5) { y = fy; setPos(x, y); }
     x = clampX(x);
   });
 
