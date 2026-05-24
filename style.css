@@ -426,11 +426,11 @@ p, h1, h2, h3, ul, ol, dl { margin: 0; }
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 200;
+  z-index: 9999;
   pointer-events: none;
   user-select: none;
-  will-change: transform;
-  /* JS controls position entirely via transform: translate(x, y) */
+  /* will-change removed — causes compositing issues on scroll in some browsers */
+  transform: translate(120px, 0);  /* initial position overridden by JS */
 }
 .char.dragging { cursor: grabbing; }
 #charCanvas {

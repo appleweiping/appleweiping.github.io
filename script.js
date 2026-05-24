@@ -324,7 +324,28 @@ const CHAR = (() => {
   canvas.style.width = DISPLAY_W + 'px';
   canvas.style.height = DISPLAY_H + 'px';
 
-  // ── Sprite loading ───────────────────────────────────────────────────────────
+  // ── Sprite loading — supports individual frame files ───────────────────────
+  // If you provide char-idle.png, char-walk1.png, char-walk2.png, char-jump.png
+  // in assets/, they will be used. Otherwise falls back to procedural art.
+  const frameImages = {};
+  const frameFiles = {
+    idle:  'assets/char-idle.png',
+    walk1: 'assets/char-walk1.png',
+    walk2: 'assets/char-walk2.png',
+    jump:  'assets/char-jump.png',
+  };
+  let framesLoaded = 0;
+  let framesAttempted = 0;
+  Object.entries(frameFiles).forEach(([key, src]) => {
+    framesAttempted++;
+    const img = new Image();
+    img.onload = () => { frameImages[key] = img; framesLoaded++; };
+    img.onerror = () => { framesLoaded++; }; // count failures too
+    img.src = src;
+  });
+  function hasFrames() { return framesLoaded >= framesAttempted && Object.keys(frameImages).length > 0; }
+
+  // Legacy sprite sheet fallback
   let spriteLoaded = false;
   const sprite = new Image();
   sprite.onload = () => { spriteLoaded = true; };
@@ -485,23 +506,37 @@ const CHAR = (() => {
 
   // ── Sprite rendering ─────────────────────────────────────────────────────────
   function drawSprite(anim, frameIdx, flip) {
-    if (!spriteLoaded) {
-      drawProcedural(anim, frameIdx, flip);
+    // Try individual frame images first (highest quality)
+    if (hasFrames()) {
+      let frameKey = 'idle';
+      if (anim === 'WALK') frameKey = frameIdx % 2 === 0 ? 'walk1' : 'walk2';
+      else if (anim === 'JUMP' || anim === 'DRAG' || anim === 'FALL') frameKey = 'jump';
+      const img = frameImages[frameKey] || frameImages['idle'];
+      if (img) {
+        ctx.clearRect(0, 0, DISPLAY_W, DISPLAY_H);
+        ctx.save();
+        if (flip) { ctx.translate(DISPLAY_W, 0); ctx.scale(-1, 1); }
+        // White-to-transparent: draw on white bg then use destination-out for white pixels
+        ctx.drawImage(img, 0, 0, DISPLAY_W, DISPLAY_H);
+        ctx.restore();
+        return;
+      }
+    }
+    // Try sprite sheet
+    if (spriteLoaded) {
+      const a = ANIM[anim] || ANIM.IDLE;
+      const srcFrame = a.frames[frameIdx % a.frames.length];
+      const srcX = srcFrame * FRAME_W;
+      const srcY = a.row * FRAME_H;
+      ctx.clearRect(0, 0, DISPLAY_W, DISPLAY_H);
+      ctx.save();
+      if (flip) { ctx.translate(DISPLAY_W, 0); ctx.scale(-1, 1); }
+      ctx.drawImage(sprite, srcX, srcY, FRAME_W, FRAME_H, 0, 0, DISPLAY_W, DISPLAY_H);
+      ctx.restore();
       return;
     }
-    const a = ANIM[anim] || ANIM.IDLE;
-    const srcFrame = a.frames[frameIdx % a.frames.length];
-    const srcX = srcFrame * FRAME_W;
-    const srcY = a.row * FRAME_H;
-
-    ctx.clearRect(0, 0, DISPLAY_W, DISPLAY_H);
-    ctx.save();
-    if (flip) {
-      ctx.translate(DISPLAY_W, 0);
-      ctx.scale(-1, 1);
-    }
-    ctx.drawImage(sprite, srcX, srcY, FRAME_W, FRAME_H, 0, 0, DISPLAY_W, DISPLAY_H);
-    ctx.restore();
+    // Procedural fallback
+    drawProcedural(anim, frameIdx, flip);
   }
 
   // ── Bubble messages ──────────────────────────────────────────────────────────
@@ -724,14 +759,24 @@ const CHAR = (() => {
   });
 
   // ── Init ──────────────────────────────────────────────────────────────────────
-  x = 120;
-  y = getFloorY();
-  setPos(x, y);
-  idleBehaviorTimer = 200;
-  tick();
+  function initChar() {
+    x = 120;
+    y = getFloorY();
+    setPos(x, y);
+    idleBehaviorTimer = 200;
+    if (!animFrame) tick();
+  }
+
+  // Wait for full page load so window.innerHeight is stable
+  if (document.readyState === 'complete') {
+    initChar();
+  } else {
+    window.addEventListener('load', initChar, { once: true });
+  }
 
   window.addEventListener('resize', () => {
-    if (y > getFloorY()) { y = getFloorY(); setPos(x, y); }
+    const newFloor = getFloorY();
+    if (y > newFloor || y < newFloor - 10) { y = newFloor; setPos(x, y); }
     x = clampX(x);
   });
 
