@@ -429,7 +429,7 @@ p, h1, h2, h3, ul, ol, dl { margin: 0; }
   z-index: 9999;
   pointer-events: none;
   user-select: none;
-  /* will-change removed â€” causes compositing issues on scroll in some browsers */
+  /* will-change removed â€?causes compositing issues on scroll in some browsers */
   transform: translate(120px, 0);  /* initial position overridden by JS */
 }
 .char.dragging { cursor: grabbing; }
@@ -437,8 +437,8 @@ p, h1, h2, h3, ul, ol, dl { margin: 0; }
   display: block;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  width: 64px;
-  height: 80px;
+  width: 96px;
+  height: 120px;
   pointer-events: auto;
   cursor: pointer;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,.18));

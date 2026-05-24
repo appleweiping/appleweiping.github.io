@@ -275,8 +275,9 @@ const CHAR = (() => {
   const SCALE = 2;           // render scale
   const FRAME_W = 48;        // sprite frame width (source)
   const FRAME_H = 64;        // sprite frame height (source)
-  const DISPLAY_W = FRAME_W * SCALE;
-  const DISPLAY_H = FRAME_H * SCALE;
+  // When individual frame images are loaded, use larger display size
+  const DISPLAY_W = 96;      // character display width px
+  const DISPLAY_H = 120;     // character display height px
   const FLOOR_OFFSET = 0;    // px above bottom of viewport
   const WALK_SPEED = 1.4;    // px per frame
   const GRAVITY = 0.55;
@@ -516,9 +517,19 @@ const CHAR = (() => {
         ctx.clearRect(0, 0, DISPLAY_W, DISPLAY_H);
         ctx.save();
         if (flip) { ctx.translate(DISPLAY_W, 0); ctx.scale(-1, 1); }
-        // White-to-transparent: draw on white bg then use destination-out for white pixels
         ctx.drawImage(img, 0, 0, DISPLAY_W, DISPLAY_H);
         ctx.restore();
+        // Remove white background: set white/near-white pixels to transparent
+        const imageData = ctx.getImageData(0, 0, DISPLAY_W, DISPLAY_H);
+        const d = imageData.data;
+        for (let i = 0; i < d.length; i += 4) {
+          const r = d[i], g = d[i+1], b = d[i+2];
+          // If pixel is near-white (all channels > 230), make transparent
+          if (r > 230 && g > 230 && b > 230) {
+            d[i+3] = 0;
+          }
+        }
+        ctx.putImageData(imageData, 0, 0);
         return;
       }
     }
