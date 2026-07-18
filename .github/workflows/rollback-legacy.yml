@@ -1,0 +1,91 @@
+name: Restore pre-v3 legacy portfolio
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: Type RESTORE LEGACY a41ac30
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-pages-production
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    name: Verify, deploy, and smoke-test the immutable legacy archive
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Require the exact recovery confirmation
+        shell: bash
+        env:
+          RECOVERY_CONFIRMATION: ${{ inputs.confirmation }}
+        run: |
+          if [[ "$RECOVERY_CONFIRMATION" != "RESTORE LEGACY a41ac30" ]]; then
+            echo "Confirmation must be exactly: RESTORE LEGACY a41ac30"
+            exit 1
+          fi
+
+      - name: Download and verify the signed-off legacy archive
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LEGACY_ARCHIVE_SHA256: E2D3F4F76E09B06419F459A134E81818C0F045445BF00199ED4E67E3894CFEDA
+          LEGACY_COMMIT: a41ac3094ca6e5ff5c92c46a731933039927cf3f
+        run: |
+          gh release download portfolio-v2-rollback-20260718 --pattern legacy-site-a41ac30.zip --dir "$RUNNER_TEMP/legacy-recovery"
+          echo "$LEGACY_ARCHIVE_SHA256  $RUNNER_TEMP/legacy-recovery/legacy-site-a41ac30.zip" | sha256sum --check
+          mkdir dist
+          unzip -q "$RUNNER_TEMP/legacy-recovery/legacy-site-a41ac30.zip" -d dist
+          node --input-type=module -e "import { writeFileSync } from 'node:fs'; const marker = { schemaVersion: 1, release: 'legacy-v2', commit: process.env.LEGACY_COMMIT, archiveSha256: process.env.LEGACY_ARCHIVE_SHA256, recoveryRunId: process.env.GITHUB_RUN_ID }; writeFileSync('dist/legacy-release.json', JSON.stringify(marker, null, 2) + '\n');"
+
+      - name: Read the GitHub Pages configuration
+        uses: actions/configure-pages@v5
+
+      - name: Package the legacy site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Restore the legacy site
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Verify the restored legacy identity and smoke-test its routes
+        env:
+          LEGACY_ARCHIVE_SHA256: E2D3F4F76E09B06419F459A134E81818C0F045445BF00199ED4E67E3894CFEDA
+          LEGACY_COMMIT: a41ac3094ca6e5ff5c92c46a731933039927cf3f
+        run: |
+          marker_ok=false
+          for attempt in {1..18}; do
+            rm -f "$RUNNER_TEMP/legacy-marker.json"
+            curl --fail --silent --show-error --location --header "Cache-Control: no-cache" "https://appleweiping.github.io/legacy-release.json?run=$GITHUB_RUN_ID&attempt=$attempt&t=$(date +%s)" --output "$RUNNER_TEMP/legacy-marker.json" || true
+            if node --input-type=module -e "import { readFileSync } from 'node:fs'; const marker = JSON.parse(readFileSync(process.env.RUNNER_TEMP + '/legacy-marker.json', 'utf8')); if (marker.release !== 'legacy-v2' || marker.commit !== process.env.LEGACY_COMMIT || marker.archiveSha256 !== process.env.LEGACY_ARCHIVE_SHA256 || marker.recoveryRunId !== process.env.GITHUB_RUN_ID) process.exit(1);"; then
+              marker_ok=true
+              break
+            fi
+            sleep 5
+          done
+          if [[ "$marker_ok" != "true" ]]; then
+            echo "The legacy release marker did not reach the production CDN."
+            exit 1
+          fi
+          curl --fail --location --retry 8 --retry-delay 5 https://appleweiping.github.io/ > /dev/null
+          curl --fail --location --retry 8 --retry-delay 5 https://appleweiping.github.io/resume.html > /dev/null
+
+      - name: Record the restored source
+        run: |
+          echo "## Legacy portfolio restored" >> "$GITHUB_STEP_SUMMARY"
+          echo "Archive commit: a41ac3094ca6e5ff5c92c46a731933039927cf3f" >> "$GITHUB_STEP_SUMMARY"
+          echo "Archive SHA-256: E2D3F4F76E09B06419F459A134E81818C0F045445BF00199ED4E67E3894CFEDA" >> "$GITHUB_STEP_SUMMARY"
