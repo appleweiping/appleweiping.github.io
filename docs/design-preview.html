@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio v3 design tokens</title>
+  <style>
+    :root { --ivory:#f3efe5;--paper:#fbf8f0;--ink:#171815;--muted:#55584f;--jade:#315b4d;--brass:#765426;--cinnabar:#8a4236;--line:#d7cfbd; }
+    *{box-sizing:border-box} body{margin:0;background:var(--ivory);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;padding:6vw}
+    h1,h2{font-family:Georgia,serif;font-weight:400} h1{font-size:clamp(3rem,9vw,7rem);line-height:.9;margin:0 0 2rem}
+    .swatches,.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0 4rem}
+    .swatch,.card{border:1px solid var(--line);background:var(--paper);padding:1rem}.chip{height:5rem;margin:-1rem -1rem 1rem}
+    .card{min-height:12rem}.label{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--jade)}
+    a{color:var(--jade);text-underline-offset:.2em} a:focus-visible{outline:3px solid var(--cinnabar);outline-offset:4px}
+  </style>
+</head>
+<body>
+  <p class="label">Cabinet of Inquiry</p><h1>Academic evidence,<br>carefully exhibited.</h1>
+  <div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#171815"></div>Ink</div>
+    <div class="swatch"><div class="chip" style="background:#315b4d"></div>Jade</div>
+    <div class="swatch"><div class="chip" style="background:#765426"></div>Brass</div>
+    <div class="swatch"><div class="chip" style="background:#8a4236"></div>Cinnabar</div>
+  </div>
+  <h2>Exhibit language</h2>
+  <div class="cards">
+    <article class="card"><p class="label">Research / 01</p><h2>AI for Science</h2><p>Structure, evidence, and reproducible technical work take priority over decoration.</p><a href="#">View record</a></article>
+    <article class="card"><p class="label">Collection / 02</p><h2>Equal display</h2><p>Every public repository receives the same information and interaction surface.</p><a href="#">Enter the cabinet</a></article>
+  </div>
+</body>
+</html>

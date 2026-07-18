@@ -1,0 +1,21 @@
+---
+import HomePageContent from "@/components/content/HomePageContent.astro";
+import { identity } from "@/data/profile";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/pages.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: identity.name,
+  url: "https://appleweiping.github.io/zh/",
+  email: `mailto:${identity.email}`,
+  jobTitle: identity.title.zh,
+  sameAs: [identity.github, identity.linkedin],
+  knowsAbout: ["AI for Science", "基础模型", "AI 驱动的模拟 EDA"],
+};
+---
+
+<BaseLayout title="闫伟平" description="AI for Science 本科研究者，关注基础模型、科学机器学习与 AI 辅助模拟 EDA。" locale="zh" jsonLd={jsonLd}>
+  <HomePageContent locale="zh" />
+</BaseLayout>

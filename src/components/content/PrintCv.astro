@@ -1,0 +1,147 @@
+---
+import { earlierEducation, higherEducation, homeEvidenceSlugs, identity, researchDirections, skills, timeline } from "@/data/profile";
+import { getProjects } from "@/lib/projects";
+
+const researchItems = timeline.filter((item) => item.kind === "research");
+const teachingItems = timeline.filter((item) => item.kind === "teaching");
+const entrepreneurshipItems = timeline.filter((item) => item.kind === "entrepreneurship");
+const projects = getProjects();
+const evidenceNames: Record<string, string> = {
+  "topo-flow-limits": "topo-flow-limits",
+  "inr-aliasing-limits": "inr-aliasing-limits",
+  "lumen-rec": "Lumen-Rec",
+  "truce-rec": "TRUCE-Rec",
+  "venus-basestation": "venus-basestation",
+  "art-history-museum": "art-history-museum",
+};
+const selectedEvidence = homeEvidenceSlugs.map((slug) => {
+  const project = projects.find((item) => item.slug.toLowerCase() === slug);
+  return {
+    slug,
+    name: project?.title ?? evidenceNames[slug] ?? slug,
+    repository: project?.repository ?? `appleweiping/${evidenceNames[slug] ?? slug}`,
+    summary: project?.summary.en ?? "Public project record; see the repository for the authoritative scope and evidence.",
+  };
+});
+---
+
+<article class="cv-print-document" aria-label="Weiping Yan academic curriculum vitae">
+  <section class="cv-sheet cv-page" aria-labelledby="cv-name">
+    <header class="cv-header">
+      <div>
+        <h1 id="cv-name">{identity.name}</h1>
+        <p>{identity.title.en}</p>
+      </div>
+      <address>
+        <a href={`mailto:${identity.email}`}>{identity.email}</a>
+        <a href={identity.github}>github.com/appleweiping</a>
+        <a href={identity.linkedin}>LinkedIn</a>
+      </address>
+    </header>
+
+    <section class="cv-section" aria-labelledby="cv-profile">
+      <h2 id="cv-profile">Profile</h2>
+      <p>{identity.summary.en}</p>
+    </section>
+
+    <section class="cv-section" aria-labelledby="cv-education">
+      <h2 id="cv-education">Higher Education</h2>
+      <div class="cv-records">
+        {higherEducation.map((item) => (
+          <article class="cv-record">
+            <div class="cv-record-heading"><h3>{item.institution}</h3><p>{item.dates.en}</p></div>
+            <p>{item.program.en}</p>
+            {item.note && <p class="cv-note">{item.note.en}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="cv-section" aria-labelledby="cv-research">
+      <h2 id="cv-research">Research Experience</h2>
+      <div class="cv-records">
+        {researchItems.map((item) => (
+          <article class="cv-record">
+            <div class="cv-record-heading"><h3>{item.role.en} · {item.organization}</h3><p>{item.dates.en}</p></div>
+            <p>{item.summary.en}</p>
+            {item.details && item.details.length > 0 && <ul>{item.details.map((detail) => <li>{detail.en}</li>)}</ul>}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <footer class="cv-page-footer"><span>Weiping Yan · Academic CV</span><span>1 / 2</span></footer>
+  </section>
+
+  <section class="cv-sheet cv-page" aria-label="Academic curriculum vitae, page two">
+    <div class="cv-page-two-grid">
+      <div>
+        <section class="cv-section" aria-labelledby="cv-teaching">
+          <h2 id="cv-teaching">Teaching</h2>
+          <div class="cv-records">
+            {teachingItems.map((item) => (
+              <article class="cv-record">
+                <div class="cv-record-heading"><h3>{item.role.en} · {item.organization}</h3><p>{item.dates.en}</p></div>
+                <p>{item.summary.en}</p>
+                {item.details && <ul>{item.details.map((detail) => <li>{detail.en}</li>)}</ul>}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="cv-section" aria-labelledby="cv-entrepreneurship">
+          <h2 id="cv-entrepreneurship">Entrepreneurship</h2>
+          <div class="cv-records">
+            {entrepreneurshipItems.map((item) => (
+              <article class="cv-record">
+                <div class="cv-record-heading"><h3>{item.role.en} · {item.organization}</h3><p>{item.dates.en}</p></div>
+                <p>{item.summary.en}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="cv-section" aria-labelledby="cv-interests">
+          <h2 id="cv-interests">Research Interests</h2>
+          <ul class="cv-interest-list">
+            {researchDirections.map((direction) => <li><strong>{direction.title.en}:</strong> {direction.summary.en}</li>)}
+          </ul>
+        </section>
+      </div>
+
+      <div>
+        <section class="cv-section" aria-labelledby="cv-evidence">
+          <h2 id="cv-evidence">Selected Public Evidence</h2>
+          <ol class="cv-evidence-list">
+            {selectedEvidence.map((record) => (
+              <li>
+                <a href={`https://github.com/${record.repository}`}>{record.name}</a>
+                <span>{record.repository}</span>
+                <p>{record.summary}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section class="cv-section" aria-labelledby="cv-skills">
+          <h2 id="cv-skills">Methods & Skills</h2>
+          <ul class="cv-skill-list">{skills.en.map((skill) => <li>{skill}</li>)}</ul>
+        </section>
+
+        <section class="cv-section" aria-labelledby="cv-earlier-education">
+          <h2 id="cv-earlier-education">Earlier Education</h2>
+          <div class="cv-records">
+            {earlierEducation.map((item) => (
+              <article class="cv-record">
+                <div class="cv-record-heading"><h3>{item.institution}</h3><p>{item.dates.en}</p></div>
+                <p>{item.program.en}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="cv-page-footer"><span>Weiping Yan · Academic CV</span><span>2 / 2</span></footer>
+  </section>
+</article>

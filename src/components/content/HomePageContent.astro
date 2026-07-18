@@ -1,0 +1,129 @@
+---
+import EvidenceGrid from "@/components/content/EvidenceGrid.astro";
+import SectionHeading from "@/components/content/SectionHeading.astro";
+import { higherEducation, homeEvidenceSlugs, identity, researchDirections, timeline } from "@/data/profile";
+import { getProjects } from "@/lib/projects";
+import { localizePath, ui } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const copy = ui[locale];
+const projects = getProjects();
+const currentEducation = higherEducation[0]!;
+const currentResearch = timeline.filter((item) => ["umn-nlp", "cuhk"].includes(item.id));
+const evidenceNames: Record<string, string> = {
+  "topo-flow-limits": "topo-flow-limits",
+  "inr-aliasing-limits": "inr-aliasing-limits",
+  "lumen-rec": "Lumen-Rec",
+  "truce-rec": "TRUCE-Rec",
+  "venus-basestation": "venus-basestation",
+  "art-history-museum": "art-history-museum",
+};
+const evidence = homeEvidenceSlugs.map((slug) => ({ slug, repositoryName: evidenceNames[slug] ?? slug }));
+const text = locale === "en" ? {
+  heroEyebrow: "Research portfolio · 2026",
+  title: "Learning systems for scientific questions.",
+  intro: identity.summary.en,
+  researchAction: "Explore research",
+  register: "Current record",
+  studies: "Undergraduate studies",
+  focusEyebrow: "Research directions",
+  focusTitle: "Three connected lines of inquiry",
+  focusDescription: "The portfolio is organized around research questions, technical evidence, and systems that can be inspected—not around unsupported claims.",
+  evidenceEyebrow: "Selected evidence",
+  evidenceTitle: "Six public records that anchor the research narrative",
+  evidenceDescription: "These repositories are fixed editorial selections. Their order reflects the research story rather than popularity metrics.",
+  cabinetEyebrow: "Cabinet of Inquiry",
+  cabinetTitle: "A museum-scale index of every public project.",
+  cabinetText: "Enter a classical digital gallery where each public repository receives an equal exhibit, a factual description, source attribution, and an honest demo status.",
+  cabinetNote: "A complete two-dimensional catalogue remains available on every device.",
+} : {
+  heroEyebrow: "研究档案 · 2026",
+  title: "为科学问题构建学习系统。",
+  intro: identity.summary.zh,
+  researchAction: "查看研究经历",
+  register: "当前档案",
+  studies: "本科阶段学习",
+  focusEyebrow: "研究方向",
+  focusTitle: "三条彼此关联的探索线索",
+  focusDescription: "本站以研究问题、技术证据和可检查的系统组织内容，不使用缺乏依据的成果表述。",
+  evidenceEyebrow: "代表性证据",
+  evidenceTitle: "支撑研究叙事的六项公开记录",
+  evidenceDescription: "这六个仓库是固定的编辑选择；排序服务于研究主线，不依据热度指标。",
+  cabinetEyebrow: "格物馆",
+  cabinetTitle: "以博物馆尺度索引每一个公开项目。",
+  cabinetText: "进入一座古典数字展馆：每个公开仓库均拥有同规格展位、事实性简介、来源标注与如实的 Demo 状态。",
+  cabinetNote: "所有设备均可访问完整的二维项目目录。",
+};
+---
+
+<section class="home-hero container" aria-labelledby="home-title">
+  <div class="home-hero-copy">
+    <p class="eyebrow">{text.heroEyebrow}</p>
+    <h1 id="home-title">{identity.name}</h1>
+    <p class="hero-statement">{text.title}</p>
+    <p class="hero-role">{identity.title[locale]}</p>
+    <p class="lede">{text.intro}</p>
+    <div class="button-row">
+      <a class="button primary" href={localizePath("/research/", locale)}>{text.researchAction}</a>
+      <a class="button" href={localizePath("/cabinet/", locale)}>{copy.enterCabinet}</a>
+    </div>
+  </div>
+
+  <aside class="current-register" aria-labelledby="current-register-title">
+    <p class="record-number" aria-hidden="true">01 / 03</p>
+    <h2 id="current-register-title">{text.register}</h2>
+    <dl>
+      <div>
+        <dt>{currentEducation.institution}</dt>
+        <dd>{currentEducation.program[locale]}</dd>
+        <dd>{currentEducation.dates[locale]}</dd>
+      </div>
+      {currentResearch.map((item) => (
+        <div>
+          <dt>{item.organization}</dt>
+          <dd>{item.role[locale]}</dd>
+          <dd>{item.dates[locale]}</dd>
+        </div>
+      ))}
+    </dl>
+  </aside>
+</section>
+
+<section class="section section-rule container" aria-labelledby="directions-title">
+  <SectionHeading eyebrow={text.focusEyebrow} title={text.focusTitle} description={text.focusDescription} headingId="directions-title" />
+  <ol class="direction-grid">
+    {researchDirections.map((direction, index) => (
+      <li>
+        <article>
+          <p class="record-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</p>
+          <h3>{direction.title[locale]}</h3>
+          <p>{direction.summary[locale]}</p>
+        </article>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<section class="section section-rule container" aria-labelledby="evidence-title">
+  <SectionHeading eyebrow={text.evidenceEyebrow} title={text.evidenceTitle} description={text.evidenceDescription} headingId="evidence-title" />
+  <EvidenceGrid projects={projects} evidence={evidence} locale={locale} />
+  <p class="section-action"><a class="text-link" href={localizePath("/works/", locale)}>{copy.viewWorks}<span aria-hidden="true"> →</span></a></p>
+</section>
+
+<section class="section container" aria-labelledby="cabinet-callout-title">
+  <div class="cabinet-callout">
+    <div class="cabinet-glyph" aria-hidden="true"><span>格</span><span>物</span></div>
+    <div>
+      <p class="eyebrow">{text.cabinetEyebrow}</p>
+      <h2 id="cabinet-callout-title">{text.cabinetTitle}</h2>
+      <p class="lede">{text.cabinetText}</p>
+      <div class="button-row">
+        <a class="button primary" href={localizePath("/cabinet/", locale)}>{copy.enterCabinet}</a>
+        <a class="button" href={localizePath("/works/", locale)}>{copy.viewWorks}</a>
+      </div>
+      <p class="cabinet-note">{text.cabinetNote}</p>
+    </div>
+  </div>
+</section>

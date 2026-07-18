@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#8a4236"/>
+  <path d="M16 14h32v36H16z" fill="none" stroke="#f3efe5" stroke-width="2"/>
+  <text x="32" y="41" text-anchor="middle" font-size="27" font-family="serif" fill="#f3efe5">研</text>
+</svg>

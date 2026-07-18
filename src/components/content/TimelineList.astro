@@ -1,0 +1,35 @@
+---
+import type { Locale, TimelineItem } from "@/types/content";
+
+interface Props {
+  items: TimelineItem[];
+  locale: Locale;
+  compact?: boolean;
+}
+
+const { items, locale, compact = false } = Astro.props;
+---
+
+<ol class:list={["timeline-list", { compact }]}>
+  {items.map((item) => (
+    <li>
+      <article aria-labelledby={`timeline-${item.id}-${locale}`}>
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <div class="timeline-meta">
+          <p class="timeline-date">{item.dates[locale]}</p>
+          <p class="timeline-kind">{item.kind}</p>
+        </div>
+        <div class="timeline-body">
+          <h3 id={`timeline-${item.id}-${locale}`}>{item.role[locale]}</h3>
+          <p class="timeline-organization">{item.organization}</p>
+          <p>{item.summary[locale]}</p>
+          {item.details && item.details.length > 0 && (
+            <ul class="detail-list">
+              {item.details.map((detail) => <li>{detail[locale]}</li>)}
+            </ul>
+          )}
+        </div>
+      </article>
+    </li>
+  ))}
+</ol>

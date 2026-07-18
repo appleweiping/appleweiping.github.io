@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3efe5"/>
+  <rect x="42" y="42" width="1116" height="546" fill="none" stroke="#d7cfbd" stroke-width="2"/>
+  <rect x="67" y="67" width="1066" height="496" fill="none" stroke="#765426"/>
+  <rect x="82" y="82" width="60" height="60" fill="#8a4236"/>
+  <text x="112" y="124" text-anchor="middle" font-size="38" font-family="serif" fill="#f3efe5">研</text>
+  <text x="82" y="238" font-size="28" font-family="Arial, sans-serif" letter-spacing="6" fill="#315b4d">CABINET OF INQUIRY</text>
+  <text x="82" y="365" font-size="92" font-family="Georgia, serif" fill="#171815">Weiping Yan</text>
+  <text x="86" y="430" font-size="30" font-family="Arial, sans-serif" fill="#55584f">AI for Science Undergraduate Researcher</text>
+  <line x1="86" y1="484" x2="1110" y2="484" stroke="#d7cfbd"/>
+  <text x="86" y="526" font-size="19" font-family="Arial, sans-serif" letter-spacing="3" fill="#765426">RESEARCH · ENGINEERING · PUBLIC WORK</text>
+</svg>

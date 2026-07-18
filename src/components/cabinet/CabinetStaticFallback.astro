@@ -1,0 +1,29 @@
+---
+import { getWing } from "@/data/wings";
+import { localizePath } from "@/lib/i18n";
+import type { ProjectRecord } from "@/types/project";
+
+interface Props { projects: ProjectRecord[]; locale: "en" | "zh" }
+const { projects, locale } = Astro.props;
+---
+
+<section class="cabinet-static-fallback container" aria-labelledby="cabinet-static-title">
+  <p class="eyebrow">{locale === "en" ? "Complete two-dimensional collection" : "完整二维馆藏"}</p>
+  <h1 id="cabinet-static-title">{locale === "en" ? "Cabinet of Inquiry" : "格物馆"}</h1>
+  <p class="lede">
+    {locale === "en"
+      ? `The interactive galleries are preparing. All ${projects.length} public records remain available below.`
+      : `交互展厅正在准备中；下方仍可访问全部 ${projects.length} 条公开记录。`}
+  </p>
+  <ol class="cabinet-static-grid">
+    {projects.map((project, index) => (
+      <li data-static-project={project.slug}>
+        <span aria-hidden="true">{String(index + 1).padStart(3, "0")}</span>
+        <div>
+          <small>{locale === "en" ? getWing(project.wing).en : getWing(project.wing).zh} · {project.sourceKind}</small>
+          <a href={localizePath(`/works/${project.slug}/`, locale)}>{project.title}</a>
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>

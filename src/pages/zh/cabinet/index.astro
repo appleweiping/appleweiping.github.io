@@ -1,0 +1,29 @@
+---
+import CabinetApp from "@/components/cabinet/CabinetApp";
+import CabinetStaticFallback from "@/components/cabinet/CabinetStaticFallback.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getProjects } from "@/lib/projects";
+
+const projects = getProjects();
+const description = `格物馆：以可访问的三维展馆与二维目录完整呈现闫伟平的 ${projects.length} 个公开 GitHub 仓库。`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "格物馆",
+  alternateName: "Cabinet of Inquiry",
+  description,
+  url: "https://appleweiping.github.io/zh/cabinet/",
+  numberOfItems: projects.length,
+  isPartOf: { "@type": "WebSite", name: "Weiping Yan", url: "https://appleweiping.github.io/" },
+};
+---
+
+<BaseLayout title="格物馆" description={description} locale="zh" jsonLd={jsonLd}>
+  <div id="cabinet-hydration-fallback"><CabinetStaticFallback projects={projects} locale="zh" /></div>
+  <CabinetApp projects={projects} locale="zh" client:only="react" />
+  <script>
+    const fallback = document.querySelector<HTMLElement>("#cabinet-hydration-fallback");
+    const island = fallback?.nextElementSibling;
+    island?.addEventListener("astro:hydrate", () => { if (fallback) fallback.hidden = true; }, { once: true });
+  </script>
+</BaseLayout>

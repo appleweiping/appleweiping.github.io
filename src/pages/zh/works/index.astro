@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import WorksIndex from "@/components/projects/WorksIndex.astro";
+import { getProjects } from "@/lib/projects";
+import "@/styles/projects.css";
+const projects = getProjects();
+---
+<BaseLayout title="作品" description="闫伟平全部公开 GitHub 仓库的可搜索档案。" locale="zh">
+  <WorksIndex projects={projects} locale="zh" />
+</BaseLayout>

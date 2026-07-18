@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://appleweiping.github.io/sitemap-index.xml

@@ -1,0 +1,67 @@
+---
+import ContactLinks from "@/components/content/ContactLinks.astro";
+import { identity, researchDirections } from "@/data/profile";
+import { localizePath } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const text = locale === "en" ? {
+  eyebrow: "Contact",
+  title: "Start with the research question.",
+  intro: "I welcome thoughtful messages about research collaboration, reproducible scientific software, foundation models for technical work, and AI-assisted analog design.",
+  prompt: "A useful first message",
+  promptText: "Please include the question or project context, why you think our interests connect, and any relevant public material. I read every concise, specific note with care.",
+  areas: "Conversation areas",
+  availability: "Current focus",
+  availabilityText: "I am prioritizing research and collaboration opportunities connected to AI for Science and technically grounded machine learning.",
+  works: "Browse public work before writing",
+} : {
+  eyebrow: "联系",
+  title: "从研究问题开始对话。",
+  intro: "欢迎就科研合作、可复现科学软件、面向技术工作的基础模型，以及 AI 辅助模拟电路设计进行具体交流。",
+  prompt: "一封有效的初次来信",
+  promptText: "请简要说明问题或项目背景、你认为双方兴趣相连的原因，并附上相关公开材料。我会认真阅读每一封简洁而具体的来信。",
+  areas: "交流方向",
+  availability: "当前重点",
+  availabilityText: "目前优先考虑与 AI for Science 和具有技术依据的机器学习相关的研究及合作机会。",
+  works: "联系前浏览公开作品",
+};
+---
+
+<header class="page-intro contact-intro container">
+  <p class="eyebrow">{text.eyebrow}</p>
+  <h1>{text.title}</h1>
+  <p class="lede">{text.intro}</p>
+</header>
+
+<section class="contact-stage container" aria-label={locale === "en" ? "Contact methods" : "联系方式"}>
+  <ContactLinks locale={locale} />
+  <aside class="contact-note-card" aria-labelledby="first-message-title">
+    <p class="record-number" aria-hidden="true">01</p>
+    <h2 id="first-message-title">{text.prompt}</h2>
+    <p>{text.promptText}</p>
+    <a class="button primary" href={`mailto:${identity.email}`}>{locale === "en" ? "Write an email" : "发送邮件"}</a>
+  </aside>
+</section>
+
+<section class="section section-rule container contact-details" aria-labelledby="conversation-areas-title">
+  <div>
+    <p class="eyebrow">02</p>
+    <h2 id="conversation-areas-title">{text.areas}</h2>
+    <ul class="contact-area-list">
+      {researchDirections.map((direction) => (
+        <li>
+          <h3>{direction.title[locale]}</h3>
+          <p>{direction.summary[locale]}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <aside>
+    <p class="eyebrow">03</p>
+    <h2>{text.availability}</h2>
+    <p>{text.availabilityText}</p>
+    <a class="text-link" href={localizePath("/works/", locale)}>{text.works}<span aria-hidden="true"> →</span></a>
+  </aside>
+</section>

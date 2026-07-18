@@ -1,0 +1,124 @@
+---
+import ContactLinks from "@/components/content/ContactLinks.astro";
+import EducationList from "@/components/content/EducationList.astro";
+import SectionHeading from "@/components/content/SectionHeading.astro";
+import TimelineList from "@/components/content/TimelineList.astro";
+import { earlierEducation, higherEducation, identity, researchDirections, skills, timeline } from "@/data/profile";
+import { localizePath } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const researchItems = timeline.filter((item) => item.kind === "research");
+const teachingItems = timeline.filter((item) => item.kind === "teaching");
+const entrepreneurshipItems = timeline.filter((item) => item.kind === "entrepreneurship");
+const text = locale === "en" ? {
+  eyebrow: "Curriculum vitae",
+  title: "Academic record",
+  intro: "A structured account of education, research, teaching, entrepreneurship, and technical practice. The downloadable CV is generated from the same factual source as this page.",
+  download: "Download two-page CV",
+  print: "Open print version",
+  formatNote: "PDF is provided as a direct file rather than an embedded viewer, keeping the resume usable on small screens and assistive technologies.",
+  profile: "Research profile",
+  profileDescription: "Current research identity and areas of inquiry.",
+  experience: "Research experience",
+  experienceDescription: "Confirmed appointments and independent research activity.",
+  teaching: "Teaching",
+  teachingDescription: "Undergraduate mathematical instruction and tutorial support.",
+  entrepreneurship: "Entrepreneurship",
+  entrepreneurshipDescription: "Company-building activity, kept distinct from research affiliations.",
+  education: "Higher education",
+  educationDescription: "Current undergraduate study and prior concurrent degree study.",
+  earlier: "Earlier education",
+  earlierDescription: "Secondary education retained in the complete record.",
+  skillsTitle: "Methods & skills",
+  contact: "Contact",
+} : {
+  eyebrow: "个人履历",
+  title: "学术档案",
+  intro: "系统呈现教育、研究、教学、创业与技术实践。可下载的英文 CV 与本页使用同一事实数据源生成。",
+  download: "下载两页英文 CV",
+  print: "打开打印版本",
+  formatNote: "PDF 采用直接文件链接，不嵌入移动端查看器，以提升小屏设备与辅助技术的可用性。",
+  profile: "研究概况",
+  profileDescription: "当前研究身份与持续探索方向。",
+  experience: "研究经历",
+  experienceDescription: "经确认的科研岗位与独立研究活动。",
+  teaching: "教学经历",
+  teachingDescription: "本科数学教学与习题课支持。",
+  entrepreneurship: "创业经历",
+  entrepreneurshipDescription: "公司建设活动，与学术从属关系分别记录。",
+  education: "高等教育",
+  educationDescription: "当前本科阶段学习与此前的并行学位学习。",
+  earlier: "早期教育",
+  earlierDescription: "完整履历中保留的高中阶段教育记录。",
+  skillsTitle: "方法与技能",
+  contact: "联系方式",
+};
+---
+
+<header class="page-intro resume-intro container">
+  <p class="eyebrow">{text.eyebrow}</p>
+  <h1>{text.title}</h1>
+  <p class="hero-role">{identity.title[locale]}</p>
+  <p class="lede">{text.intro}</p>
+  <div class="button-row">
+    <a class="button primary" href="/resume.pdf">{text.download}</a>
+    <a class="button" href={localizePath("/resume/print/", locale)} lang="en">{text.print}</a>
+  </div>
+  <p class="format-note">{text.formatNote}</p>
+</header>
+
+<section class="section section-rule container" aria-labelledby="resume-profile">
+  <SectionHeading eyebrow="01" title={text.profile} description={text.profileDescription} headingId="resume-profile" />
+  <div class="resume-profile-grid">
+    <p class="lede">{identity.summary[locale]}</p>
+    <ul class="resume-directions">
+      {researchDirections.map((direction) => (
+        <li><strong>{direction.title[locale]}</strong><span>{direction.summary[locale]}</span></li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-rule container" aria-labelledby="resume-research">
+  <SectionHeading eyebrow="02" title={text.experience} description={text.experienceDescription} headingId="resume-research" />
+  <TimelineList items={researchItems} locale={locale} />
+</section>
+
+<section class="section section-rule container" aria-labelledby="resume-teaching">
+  <SectionHeading eyebrow="03" title={text.teaching} description={text.teachingDescription} headingId="resume-teaching" />
+  <TimelineList items={teachingItems} locale={locale} />
+</section>
+
+<section class="section section-rule container" aria-labelledby="resume-entrepreneurship">
+  <SectionHeading eyebrow="04" title={text.entrepreneurship} description={text.entrepreneurshipDescription} headingId="resume-entrepreneurship" />
+  <TimelineList items={entrepreneurshipItems} locale={locale} />
+</section>
+
+<section class="section section-rule container" aria-labelledby="resume-education">
+  <SectionHeading eyebrow="05" title={text.education} description={text.educationDescription} headingId="resume-education" />
+  <EducationList items={higherEducation} locale={locale} />
+</section>
+
+<section class="section section-rule container" aria-labelledby="resume-earlier">
+  <SectionHeading eyebrow="06" title={text.earlier} description={text.earlierDescription} headingId="resume-earlier" />
+  <EducationList items={earlierEducation} locale={locale} />
+</section>
+
+<section class="section section-rule container resume-closing-grid" aria-label={locale === "en" ? "Skills and contact" : "技能与联系方式"}>
+  <div>
+    <p class="eyebrow">07</p>
+    <h2>{text.skillsTitle}</h2>
+    <ul class="skill-list">{skills[locale].map((skill) => <li>{skill}</li>)}</ul>
+  </div>
+  <div>
+    <p class="eyebrow">08</p>
+    <h2>{text.contact}</h2>
+    <ContactLinks locale={locale} compact />
+  </div>
+</section>
+
+<div class="container resume-bottom-action">
+  <a class="text-link" href={localizePath("/contact/", locale)}>{locale === "en" ? "Research and collaboration enquiries" : "研究与合作联系"}<span aria-hidden="true"> →</span></a>
+</div>

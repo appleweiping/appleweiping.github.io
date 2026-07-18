@@ -1,0 +1,5964 @@
+{
+  "owner": "appleweiping",
+  "expectedPublicCount": 160,
+  "syncedAt": "2026-07-18T19:05:39.796Z",
+  "projects": [
+    {
+      "repoId": 1266023784,
+      "slug": "acecue",
+      "repository": "appleweiping/acecue",
+      "title": "acecue",
+      "summary": {
+        "en": "A real-time interview copilot that detects questions and streams tailored answers through a web app and Chrome extension.",
+        "zh": "实时面试辅助工具，可识别问题，并通过网页应用与 Chrome 扩展持续生成针对性回答。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://acecue.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-11T09:04:37Z",
+      "updatedAt": "2026-06-12T12:13:29Z"
+    },
+    {
+      "repoId": 1259316708,
+      "slug": "agentic-science",
+      "repository": "appleweiping/AGENTIC_SCIENCE",
+      "title": "AGENTIC_SCIENCE",
+      "summary": {
+        "en": "Reusable agent workflows for research, writing, iterative review, and evidence-gated project improvement.",
+        "zh": "用于研究、写作、迭代评审与证据门控项目改进的可复用智能体工作流。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "Python",
+        "Shell",
+        "TeX"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-04T11:43:42Z",
+      "updatedAt": "2026-06-15T10:59:38Z"
+    },
+    {
+      "repoId": 1245644492,
+      "slug": "agent-resource",
+      "repository": "appleweiping/AGENT_RESOURCE",
+      "title": "AGENT_RESOURCE",
+      "summary": {
+        "en": "A public-safe library of reusable agent skills, workflow templates, references, and routing guidance.",
+        "zh": "面向公开使用的智能体资源库，汇集可复用技能、工作流模板、参考资料与路由指南。"
+      },
+      "sourceKind": "meta",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "Python",
+        "HTML",
+        "JavaScript",
+        "TypeScript",
+        "Shell",
+        "PowerShell",
+        "CSS",
+        "YARA",
+        "Swift",
+        "CodeQL",
+        "C",
+        "TeX",
+        "C#",
+        "Ruby",
+        "Java",
+        "Kotlin",
+        "Rust",
+        "PHP",
+        "Dockerfile",
+        "Go",
+        "LLVM",
+        "Assembly"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-21T12:19:24Z",
+      "updatedAt": "2026-07-18T16:20:39Z"
+    },
+    {
+      "repoId": 1265974349,
+      "slug": "ai-mirror",
+      "repository": "appleweiping/ai-mirror",
+      "title": "ai-mirror",
+      "summary": {
+        "en": "A multilingual, multi-model AI chat interface for users in China, deployed on Vercel with bring-your-own-key support.",
+        "zh": "面向中国用户的多语言、多模型 AI 对话界面，部署于 Vercel，并支持用户自带密钥。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://ai-mirror-dusky.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-11T08:17:55Z",
+      "updatedAt": "2026-06-11T13:51:52Z"
+    },
+    {
+      "repoId": 1288970370,
+      "slug": "aics-labs",
+      "repository": "appleweiping/aics-labs",
+      "title": "aics-labs",
+      "summary": {
+        "en": "Self-study implementations based on the AI Computing Systems labs, covering operators, a compact deep-learning framework, and style transfer.",
+        "zh": "基于“智能计算系统”公开实验材料的自学实现，涵盖算子、小型深度学习框架与图像风格迁移。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "ai-computing-systems",
+        "aics",
+        "csdiy",
+        "deep-learning-framework",
+        "mlsys",
+        "operators",
+        "style-transfer"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T07:14:43Z",
+      "updatedAt": "2026-07-04T08:29:37Z"
+    },
+    {
+      "repoId": 1247460531,
+      "slug": "aide-dev",
+      "repository": "appleweiping/AIDE_DEV",
+      "title": "AIDE_DEV",
+      "summary": {
+        "en": "A desktop AI development environment for coding with Chinese large-language-model providers.",
+        "zh": "面向中文大模型服务商的桌面 AI 开发与编码环境。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "TypeScript",
+        "Rust",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-23T10:52:03Z",
+      "updatedAt": "2026-06-13T09:30:40Z"
+    },
+    {
+      "repoId": 724199548,
+      "slug": "appleweiping",
+      "repository": "appleweiping/appleweiping",
+      "title": "appleweiping",
+      "summary": {
+        "en": "Configuration and profile content for the appleweiping GitHub account.",
+        "zh": "appleweiping GitHub 账户的配置与个人资料内容。"
+      },
+      "sourceKind": "meta",
+      "wing": "products-tools",
+      "topics": [
+        "config",
+        "github-config"
+      ],
+      "languages": [],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2023-11-27T15:42:55Z",
+      "updatedAt": "2026-07-04T14:25:46Z"
+    },
+    {
+      "repoId": 1187607346,
+      "slug": "appleweiping-github-io",
+      "repository": "appleweiping/appleweiping.github.io",
+      "title": "appleweiping.github.io",
+      "summary": {
+        "en": "The source repository for Weiping Yan's personal portfolio website.",
+        "zh": "Weiping Yan 个人作品集网站的源码仓库。"
+      },
+      "sourceKind": "meta",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Python"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-03-20T23:29:21Z",
+      "updatedAt": "2026-05-24T15:31:45Z"
+    },
+    {
+      "repoId": 1286743025,
+      "slug": "art-history-museum",
+      "repository": "appleweiping/art-history-museum",
+      "title": "art-history-museum",
+      "summary": {
+        "en": "A browser-based interactive 3D art museum with a navigable history timeline and first-person galleries.",
+        "zh": "浏览器端交互式 3D 艺术博物馆，提供可导航的艺术史时间线与第一人称展厅。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [],
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://art-history-museum-nine.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-02T04:04:21Z",
+      "updatedAt": "2026-07-02T08:23:55Z"
+    },
+    {
+      "repoId": 1294911661,
+      "slug": "asu-cse365",
+      "repository": "appleweiping/asu-cse365",
+      "title": "asu-cse365",
+      "summary": {
+        "en": "Self-study security exercises based on ASU CSE365 and pwn.college materials, spanning Linux permissions, shellcode, debugging, and web vulnerabilities.",
+        "zh": "基于 ASU CSE365 与 pwn.college 公开材料的安全自学练习，涵盖 Linux 权限、Shellcode、调试与 Web 漏洞。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "binary-exploitation",
+        "csdiy",
+        "cse365",
+        "ctf",
+        "cybersecurity",
+        "pwn-college",
+        "pwntools",
+        "reverse-engineering",
+        "web-security",
+        "wsl2"
+      ],
+      "languages": [
+        "Python",
+        "Shell",
+        "C",
+        "Assembly",
+        "GDB"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T08:38:06Z",
+      "updatedAt": "2026-07-09T08:38:44Z"
+    },
+    {
+      "repoId": 1294841584,
+      "slug": "asu-cse466",
+      "repository": "appleweiping/asu-cse466",
+      "title": "asu-cse466",
+      "summary": {
+        "en": "Self-study systems-security exercises based on ASU CSE466 and pwn.college materials, covering reverse engineering, memory corruption, and sandboxing.",
+        "zh": "基于 ASU CSE466 与 pwn.college 公开材料的系统安全自学练习，涵盖逆向工程、内存破坏与沙箱机制。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "binary-exploitation",
+        "computer-security",
+        "csdiy",
+        "cse466",
+        "pwn-college",
+        "pwntools",
+        "reverse-engineering",
+        "rop",
+        "seccomp",
+        "shellcode",
+        "srop"
+      ],
+      "languages": [
+        "Python",
+        "C",
+        "Shell",
+        "Assembly"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T07:47:47Z",
+      "updatedAt": "2026-07-09T07:48:39Z"
+    },
+    {
+      "repoId": 1290102530,
+      "slug": "aut-ap1400",
+      "repository": "appleweiping/aut-ap1400",
+      "title": "aut-ap1400",
+      "summary": {
+        "en": "Self-study C++ assignments based on Amirkabir University AP1400-2, covering object-oriented programming and data structures.",
+        "zh": "基于阿米尔卡比尔理工大学 AP1400-2 公开材料的 C++ 自学作业，涵盖面向对象编程与数据结构。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "advanced-programming",
+        "aut",
+        "cpp",
+        "csdiy",
+        "googletest"
+      ],
+      "languages": [
+        "C++",
+        "Dockerfile",
+        "Shell",
+        "CMake"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-05T15:26:42Z",
+      "updatedAt": "2026-07-05T15:27:07Z"
+    },
+    {
+      "repoId": 1243756673,
+      "slug": "auto-claude-code-research-in-sleep",
+      "repository": "appleweiping/Auto-claude-code-research-in-sleep",
+      "title": "Auto-claude-code-research-in-sleep",
+      "summary": {
+        "en": "A public fork of ARIS, a Markdown-based workflow for autonomous machine-learning research and cross-model review.",
+        "zh": "ARIS 的公开分叉版本：以 Markdown 工作流支持自主机器学习研究与跨模型评审。"
+      },
+      "sourceKind": "fork",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "Python",
+        "Shell",
+        "PowerShell",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Public fork; no original authorship of the upstream project is claimed.",
+        "zh": "公开分叉版本，不主张对上游项目的原始作者身份。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-19T16:26:55Z",
+      "updatedAt": "2026-05-19T16:26:56Z"
+    },
+    {
+      "repoId": 1188059488,
+      "slug": "autonomous-robotics-project",
+      "repository": "appleweiping/Autonomous-Robotics-Project",
+      "title": "Autonomous-Robotics-Project",
+      "summary": {
+        "en": "A coursework project on mobile-robot perception, sensor-driven navigation, and decision logic.",
+        "zh": "围绕移动机器人感知、传感器导航与决策逻辑的课程项目。"
+      },
+      "sourceKind": "coursework",
+      "wing": "robotics-hardware",
+      "topics": [],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+        "zh": "课程项目记录；团队与模块归属以仓库文档为准。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-03-21T15:06:45Z",
+      "updatedAt": "2026-06-13T07:53:05Z"
+    },
+    {
+      "repoId": 1304208565,
+      "slug": "blockverse",
+      "repository": "appleweiping/blockverse",
+      "title": "blockverse",
+      "summary": {
+        "en": "An original browser-based voxel sandbox with procedural worlds, lighting, crafting, creatures, and local saves.",
+        "zh": "原创浏览器体素沙盒，包含程序化世界、体素光照、制作系统、生物与本地存档。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [
+        "game",
+        "javascript",
+        "procedural-generation",
+        "sandbox",
+        "threejs",
+        "voxel",
+        "webgl"
+      ],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/blockverse/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-17T16:56:12Z",
+      "updatedAt": "2026-07-17T16:57:08Z"
+    },
+    {
+      "repoId": 1304004928,
+      "slug": "cadenza",
+      "repository": "appleweiping/cadenza",
+      "title": "cadenza",
+      "summary": {
+        "en": "An open-source browser rhythm game with public-domain music and a dependency-free Web Audio piano.",
+        "zh": "使用公版音乐与 Web Audio 钢琴的开源浏览器节奏游戏，无运行时依赖。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/cadenza/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-17T13:07:06Z",
+      "updatedAt": "2026-07-17T13:07:50Z"
+    },
+    {
+      "repoId": 1292802552,
+      "slug": "caltech-cs122-nanodb",
+      "repository": "appleweiping/caltech-cs122-nanodb",
+      "title": "caltech-cs122-nanodb",
+      "summary": {
+        "en": "A self-study NanoDB implementation based on Caltech CS122, covering storage, buffer management, B+ trees, query planning, and transactions.",
+        "zh": "基于加州理工学院 CS122 公开材料的 NanoDB 自学实现，涵盖存储、缓冲管理、B+ 树、查询规划与事务。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "caltech",
+        "cs122",
+        "csdiy",
+        "database",
+        "java",
+        "nanodb",
+        "query-optimization"
+      ],
+      "languages": [
+        "Java",
+        "HTML",
+        "ANTLR",
+        "Shell",
+        "Python",
+        "Batchfile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T21:31:48Z",
+      "updatedAt": "2026-07-07T21:43:49Z"
+    },
+    {
+      "repoId": 1292884332,
+      "slug": "cambridge-semantics",
+      "repository": "appleweiping/cambridge-semantics",
+      "title": "cambridge-semantics",
+      "summary": {
+        "en": "Self-study exercises based on Cambridge programming-language semantics materials, including operational and mechanized treatments of small languages.",
+        "zh": "基于剑桥大学编程语言语义公开材料的自学练习，涉及小型语言的操作语义与机械化表述。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "cambridge",
+        "csdiy",
+        "interpreter",
+        "ocaml",
+        "operational-semantics",
+        "semantics",
+        "theory",
+        "type-systems",
+        "typechecker"
+      ],
+      "languages": [
+        "OCaml",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T23:53:17Z",
+      "updatedAt": "2026-07-07T23:53:50Z"
+    },
+    {
+      "repoId": 1266768005,
+      "slug": "claudeseek",
+      "repository": "appleweiping/claudeseek",
+      "title": "claudeseek",
+      "summary": {
+        "en": "A local-first AI coding agent that combines a command-line interface, local web UI, and DeepSeek model support.",
+        "zh": "本地优先的 AI 编码智能体，结合命令行、本地网页界面与 DeepSeek 模型支持。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "Python"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-11T23:54:43Z",
+      "updatedAt": "2026-06-13T09:16:30Z"
+    },
+    {
+      "repoId": 1292235810,
+      "slug": "cmu-15445-bustub",
+      "repository": "appleweiping/cmu-15445-bustub",
+      "title": "cmu-15445-bustub",
+      "summary": {
+        "en": "A self-study BusTub database implementation based on CMU 15-445, covering buffer management, B+ trees, query execution, and concurrency.",
+        "zh": "基于卡内基梅隆大学 15-445 公开材料的 BusTub 数据库自学实现，涵盖缓冲管理、B+ 树、查询执行与并发。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "btree",
+        "bustub",
+        "cmu-15445",
+        "cpp",
+        "csdiy",
+        "database"
+      ],
+      "languages": [
+        "C++",
+        "CMake",
+        "Python",
+        "HTML",
+        "Shell",
+        "C"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T11:33:22Z",
+      "updatedAt": "2026-07-07T15:38:14Z"
+    },
+    {
+      "repoId": 1294694855,
+      "slug": "cmu-15462-scotty3d",
+      "repository": "appleweiping/cmu-15462-scotty3d",
+      "title": "cmu-15462-scotty3d",
+      "summary": {
+        "en": "A CPU-oriented Python and NumPy reimplementation based on CMU 15-462/662 Scotty3D, covering rasterization, mesh processing, path tracing, and animation.",
+        "zh": "基于卡内基梅隆大学 15-462/662 Scotty3D 公开材料的 Python/NumPy 自学复现，涵盖光栅化、网格处理、路径追踪与动画。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "bvh",
+        "cmu-15462",
+        "computer-graphics",
+        "csdiy",
+        "mesh-processing",
+        "numpy",
+        "path-tracer",
+        "python",
+        "rasterizer",
+        "scotty3d"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T06:04:33Z",
+      "updatedAt": "2026-07-09T06:05:17Z"
+    },
+    {
+      "repoId": 1292875041,
+      "slug": "cmu-15799",
+      "repository": "appleweiping/cmu-15799",
+      "title": "cmu-15799",
+      "summary": {
+        "en": "Self-study work based on CMU 15-799 database-systems materials, focused on query optimization and DBMS internals.",
+        "zh": "基于卡内基梅隆大学 15-799 数据库系统公开材料的自学实现，聚焦查询优化与数据库内部机制。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "advanced",
+        "cmu-15799",
+        "csdiy",
+        "database",
+        "query-optimizer"
+      ],
+      "languages": [
+        "Python",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T23:35:47Z",
+      "updatedAt": "2026-07-07T23:36:19Z"
+    },
+    {
+      "repoId": 1290460972,
+      "slug": "cmu-17803-empirical",
+      "repository": "appleweiping/cmu-17803-empirical",
+      "title": "cmu-17803-empirical",
+      "summary": {
+        "en": "Self-study analyses based on CMU 17-803 materials, covering empirical study design, statistics, and reproducible software-engineering research.",
+        "zh": "基于卡内基梅隆大学 17-803 公开材料的自学分析，涵盖实证研究设计、统计方法与软件工程研究复现。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "cmu-17803",
+        "csdiy",
+        "data-analysis",
+        "empirical-methods",
+        "software-engineering-research",
+        "statistics"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T01:02:04Z",
+      "updatedAt": "2026-07-06T01:15:37Z"
+    },
+    {
+      "repoId": 1288825584,
+      "slug": "cmu10708-pgm",
+      "repository": "appleweiping/cmu10708-pgm",
+      "title": "cmu10708-pgm",
+      "summary": {
+        "en": "Self-study implementations based on CMU 10-708, covering inference, parameter learning, and structured probabilistic models.",
+        "zh": "基于卡内基梅隆大学 10-708 公开材料的自学实现，涵盖概率推断、参数学习与结构化概率模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "bayesian",
+        "cmu-10708",
+        "csdiy",
+        "mcmc",
+        "probabilistic-graphical-models",
+        "variational-inference"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T02:38:36Z",
+      "updatedAt": "2026-07-04T04:06:13Z"
+    },
+    {
+      "repoId": 1289330069,
+      "slug": "cmu11667-llms",
+      "repository": "appleweiping/cmu11667-llms",
+      "title": "cmu11667-llms",
+      "summary": {
+        "en": "Self-study implementations based on CMU 11-667, covering transformers, retrieval and tool use, in-context learning, calibration, and efficiency.",
+        "zh": "基于卡内基梅隆大学 11-667 公开材料的自学实现，涵盖 Transformer、检索与工具调用、上下文学习、校准及效率。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "cmu-11667",
+        "csdiy",
+        "in-context-learning",
+        "large-language-models",
+        "lora",
+        "peft",
+        "transformers"
+      ],
+      "languages": [
+        "Python",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T15:59:17Z",
+      "updatedAt": "2026-07-06T18:06:06Z"
+    },
+    {
+      "repoId": 1288841266,
+      "slug": "cmu11711-anlp",
+      "repository": "appleweiping/cmu11711-anlp",
+      "title": "cmu11711-anlp",
+      "summary": {
+        "en": "Self-study assignments based on CMU 11-711, including a compact BERT implementation for sentiment, paraphrase, and similarity tasks.",
+        "zh": "基于卡内基梅隆大学 11-711 公开材料的自学作业，包括面向情感、复述与相似度任务的小型 BERT 实现。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "bert",
+        "cmu-11711",
+        "csdiy",
+        "deep-learning",
+        "fine-tuning",
+        "large-language-models",
+        "minbert",
+        "nlp",
+        "pytorch",
+        "transformers"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T03:13:04Z",
+      "updatedAt": "2026-07-04T09:01:58Z"
+    },
+    {
+      "repoId": 1288592892,
+      "slug": "cmu11785-idl",
+      "repository": "appleweiping/cmu11785-idl",
+      "title": "cmu11785-idl",
+      "summary": {
+        "en": "Self-study deep-learning systems based on CMU 11-785, including automatic differentiation, neural-network components, sequence models, and attention.",
+        "zh": "基于卡内基梅隆大学 11-785 公开材料的深度学习自学实现，涵盖自动微分、神经网络组件、序列模型与注意力。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "attention",
+        "autograd",
+        "cmu-11785",
+        "cnn",
+        "csdiy",
+        "ctc",
+        "deep-learning",
+        "from-scratch",
+        "mytorch",
+        "numpy",
+        "pytorch",
+        "rnn"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T18:58:58Z",
+      "updatedAt": "2026-07-03T21:48:21Z"
+    },
+    {
+      "repoId": 1289185846,
+      "slug": "cmu11868-llm-systems",
+      "repository": "appleweiping/cmu11868-llm-systems",
+      "title": "cmu11868-llm-systems",
+      "summary": {
+        "en": "Self-study systems work based on CMU 11-868, covering attention kernels, memory and quantization techniques, and parallel training and serving.",
+        "zh": "基于卡内基梅隆大学 11-868 公开材料的系统自学实现，涵盖注意力内核、内存与量化技术，以及并行训练和推理服务。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "autodiff",
+        "cmu-11868",
+        "csdiy",
+        "cuda",
+        "distributed-training",
+        "kv-cache",
+        "llm-systems",
+        "lora",
+        "pipeline-parallelism",
+        "pytorch",
+        "quantization",
+        "transformer"
+      ],
+      "languages": [
+        "Python",
+        "Cuda"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T12:34:11Z",
+      "updatedAt": "2026-07-04T13:52:55Z"
+    },
+    {
+      "repoId": 1269400041,
+      "slug": "content-flywheel",
+      "repository": "appleweiping/content-flywheel",
+      "title": "content-flywheel",
+      "summary": {
+        "en": "A local-first content workflow for scoring posts, making blind predictions, reviewing outcomes, and evolving a rubric from evidence.",
+        "zh": "本地优先的内容实验工作流，用于评分、盲测预测、结果复盘，并依据证据迭代评价标准。"
+      },
+      "sourceKind": "original",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://content-flywheel-delta.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-14T17:04:13Z",
+      "updatedAt": "2026-06-14T19:41:58Z"
+    },
+    {
+      "repoId": 1290896068,
+      "slug": "cornell-cs3110-ocaml",
+      "repository": "appleweiping/cornell-cs3110-ocaml",
+      "title": "cornell-cs3110-ocaml",
+      "summary": {
+        "en": "Self-study OCaml assignments based on Cornell CS3110, covering functional programming, modules, testing, and a course-scale final project.",
+        "zh": "基于康奈尔大学 CS3110 公开材料的 OCaml 自学作业，涵盖函数式编程、模块、测试与综合项目。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "cornell",
+        "cs3110",
+        "csdiy",
+        "dune",
+        "functional-programming",
+        "ocaml"
+      ],
+      "languages": [
+        "OCaml",
+        "Dune"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T10:21:15Z",
+      "updatedAt": "2026-07-06T10:21:43Z"
+    },
+    {
+      "repoId": 1290531620,
+      "slug": "cs106b",
+      "repository": "appleweiping/cs106b",
+      "title": "cs106b",
+      "summary": {
+        "en": "Self-study C++ assignments based on Stanford CS106B, covering recursion, backtracking, abstract data types, trees, graphs, and algorithms.",
+        "zh": "基于斯坦福大学 CS106B 公开材料的 C++ 自学作业，涵盖递归、回溯、抽象数据类型、树、图与算法。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "algorithms",
+        "cpp",
+        "cs106b",
+        "csdiy",
+        "data-structures",
+        "recursion",
+        "stanford"
+      ],
+      "languages": [
+        "C++",
+        "C",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T02:58:52Z",
+      "updatedAt": "2026-07-06T16:23:56Z"
+    },
+    {
+      "repoId": 1290514699,
+      "slug": "cs106l",
+      "repository": "appleweiping/cs106l",
+      "title": "cs106l",
+      "summary": {
+        "en": "Self-study assignments based on Stanford CS106L, focused on modern C++ including the STL, RAII, templates, iterators, and move semantics.",
+        "zh": "基于斯坦福大学 CS106L 公开材料的自学作业，聚焦 STL、RAII、模板、迭代器与移动语义等现代 C++ 主题。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "cpp",
+        "cs106l",
+        "csdiy",
+        "modern-cpp",
+        "stanford",
+        "stl",
+        "templates"
+      ],
+      "languages": [
+        "Python",
+        "C++",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T02:32:51Z",
+      "updatedAt": "2026-07-06T02:33:44Z"
+    },
+    {
+      "repoId": 1290545659,
+      "slug": "cs110l-rust",
+      "repository": "appleweiping/cs110l-rust",
+      "title": "cs110l-rust",
+      "summary": {
+        "en": "Self-study Rust exercises based on Stanford CS110L, including systems-programming practice, a ptrace debugger, and an asynchronous load balancer.",
+        "zh": "基于斯坦福大学 CS110L 公开材料的 Rust 自学练习，包括系统编程、ptrace 调试器与异步负载均衡器。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "concurrency",
+        "cs110l",
+        "csdiy",
+        "rust",
+        "stanford",
+        "systems-programming",
+        "tokio"
+      ],
+      "languages": [
+        "Rust",
+        "C",
+        "Dockerfile",
+        "Shell",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T03:20:40Z",
+      "updatedAt": "2026-07-06T17:25:46Z"
+    },
+    {
+      "repoId": 1292219074,
+      "slug": "cs144-tcp",
+      "repository": "appleweiping/cs144-tcp",
+      "title": "cs144-tcp",
+      "summary": {
+        "en": "A self-study TCP/IP stack based on Stanford CS144, covering byte streams, reassembly, TCP send and receive paths, network interfaces, and routing.",
+        "zh": "基于斯坦福大学 CS144 公开材料的 TCP/IP 协议栈自学实现，涵盖字节流、重组、TCP 收发、网络接口与路由。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "cpp",
+        "cs144",
+        "csdiy",
+        "networking",
+        "stanford",
+        "tcp"
+      ],
+      "languages": [
+        "C++",
+        "CMake",
+        "Python",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T11:18:49Z",
+      "updatedAt": "2026-07-07T12:13:40Z"
+    },
+    {
+      "repoId": 1292808106,
+      "slug": "cs149-parallel",
+      "repository": "appleweiping/cs149-parallel",
+      "title": "cs149-parallel",
+      "summary": {
+        "en": "Self-study parallel-computing assignments based on CMU 15-418 and Stanford CS149, using ISPC, pthreads, OpenMP, and CUDA.",
+        "zh": "基于卡内基梅隆大学 15-418 与斯坦福大学 CS149 公开材料的并行计算自学作业，涉及 ISPC、pthreads、OpenMP 与 CUDA。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "cs149",
+        "csdiy",
+        "cuda",
+        "ispc",
+        "openmp",
+        "parallel-computing",
+        "pthreads"
+      ],
+      "languages": [
+        "C++",
+        "Cuda",
+        "Python",
+        "Makefile",
+        "ISPC",
+        "Shell",
+        "C"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T21:40:49Z",
+      "updatedAt": "2026-07-09T17:37:38Z"
+    },
+    {
+      "repoId": 1291902964,
+      "slug": "cs162-pintos",
+      "repository": "appleweiping/cs162-pintos",
+      "title": "cs162-pintos",
+      "summary": {
+        "en": "Self-study Pintos operating-system projects based on UC Berkeley CS162, covering scheduling, system calls, user programs, and file systems.",
+        "zh": "基于加州大学伯克利分校 CS162 公开材料的 Pintos 操作系统自学项目，涵盖调度、系统调用、用户程序与文件系统。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "berkeley",
+        "c",
+        "cs162",
+        "csdiy",
+        "operating-systems",
+        "pintos",
+        "scheduling",
+        "syscalls",
+        "x86"
+      ],
+      "languages": [
+        "C",
+        "Perl",
+        "Makefile",
+        "Assembly",
+        "Shell",
+        "Linker Script",
+        "C++",
+        "Raku"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T07:00:20Z",
+      "updatedAt": "2026-07-07T12:20:06Z"
+    },
+    {
+      "repoId": 1293226519,
+      "slug": "cs168-internet",
+      "repository": "appleweiping/cs168-internet",
+      "title": "cs168-internet",
+      "summary": {
+        "en": "Self-study networking projects based on UC Berkeley CS168, covering reliable transport, routing, and traceroute.",
+        "zh": "基于加州大学伯克利分校 CS168 公开材料的网络自学项目，涵盖可靠传输、路由与 Traceroute。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "berkeley",
+        "cs168",
+        "csdiy",
+        "networking",
+        "python",
+        "reliable-transport",
+        "routing"
+      ],
+      "languages": [
+        "Python",
+        "Java",
+        "Processing",
+        "Shell",
+        "C++",
+        "HTML",
+        "CSS",
+        "Batchfile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T07:31:41Z",
+      "updatedAt": "2026-07-08T07:32:26Z"
+    },
+    {
+      "repoId": 1290756701,
+      "slug": "cs169-agile",
+      "repository": "appleweiping/cs169-agile",
+      "title": "cs169-agile",
+      "summary": {
+        "en": "Self-study web-engineering assignments based on UC Berkeley CS169, using Ruby on Rails with behavior- and test-driven development.",
+        "zh": "基于加州大学伯克利分校 CS169 公开材料的 Web 工程自学作业，使用 Ruby on Rails 实践行为驱动与测试驱动开发。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "bdd",
+        "berkeley",
+        "cs169",
+        "csdiy",
+        "cucumber",
+        "rails",
+        "rspec",
+        "ruby",
+        "software-engineering",
+        "tdd"
+      ],
+      "languages": [
+        "Ruby",
+        "HTML",
+        "Gherkin",
+        "Dockerfile",
+        "JavaScript",
+        "CSS",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T08:02:23Z",
+      "updatedAt": "2026-07-09T17:29:52Z"
+    },
+    {
+      "repoId": 1290142233,
+      "slug": "cs170",
+      "repository": "appleweiping/cs170",
+      "title": "cs170",
+      "summary": {
+        "en": "Self-study work based on UC Berkeley CS170, combining written analysis with implementations of algorithms for tractable and intractable problems.",
+        "zh": "基于加州大学伯克利分校 CS170 公开材料的算法自学项目，结合书面分析与可计算、难解问题的算法实现。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "algorithms",
+        "berkeley",
+        "complexity",
+        "cs170",
+        "csdiy",
+        "dynamic-programming",
+        "graph-algorithms"
+      ],
+      "languages": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-05T16:18:03Z",
+      "updatedAt": "2026-07-05T16:18:27Z"
+    },
+    {
+      "repoId": 1292240187,
+      "slug": "cs186-rookiedb",
+      "repository": "appleweiping/cs186-rookiedb",
+      "title": "cs186-rookiedb",
+      "summary": {
+        "en": "A self-study RookieDB implementation based on UC Berkeley CS186, covering B+ trees, joins, query optimization, concurrency, and recovery.",
+        "zh": "基于加州大学伯克利分校 CS186 公开材料的 RookieDB 自学实现，涵盖 B+ 树、连接、查询优化、并发与恢复。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "berkeley",
+        "btree",
+        "cs186",
+        "csdiy",
+        "database",
+        "java",
+        "query-optimization"
+      ],
+      "languages": [
+        "Java",
+        "Python",
+        "Shell",
+        "Dockerfile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T11:36:24Z",
+      "updatedAt": "2026-07-07T15:19:36Z"
+    },
+    {
+      "repoId": 1287545416,
+      "slug": "cs188-pacman-ai",
+      "repository": "appleweiping/cs188-pacman-ai",
+      "title": "cs188-pacman-ai",
+      "summary": {
+        "en": "Self-study Pacman AI projects based on UC Berkeley CS188, covering search, games, reinforcement learning, probabilistic inference, and ML.",
+        "zh": "基于加州大学伯克利分校 CS188 公开材料的 Pacman AI 自学项目，涵盖搜索、对抗博弈、强化学习、概率推断与机器学习。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "artificial-intelligence",
+        "bayes-nets",
+        "cs188",
+        "csdiy",
+        "pacman",
+        "reinforcement-learning",
+        "search"
+      ],
+      "languages": [
+        "Python",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-02T19:39:51Z",
+      "updatedAt": "2026-07-02T19:42:14Z"
+    },
+    {
+      "repoId": 1288210011,
+      "slug": "cs189-ml",
+      "repository": "appleweiping/cs189-ml",
+      "title": "cs189-ml",
+      "summary": {
+        "en": "Self-study machine-learning assignments based on UC Berkeley CS189, covering classification, regression, trees, neural networks, clustering, PCA, and kernels.",
+        "zh": "基于加州大学伯克利分校 CS189 公开材料的机器学习自学作业，涵盖分类、回归、树模型、神经网络、聚类、PCA 与核方法。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "cs189",
+        "csdiy",
+        "machine-learning",
+        "neural-network",
+        "numpy",
+        "pca",
+        "random-forest"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T11:27:32Z",
+      "updatedAt": "2026-07-09T13:27:15Z"
+    },
+    {
+      "repoId": 1287945561,
+      "slug": "cs224n-nlp",
+      "repository": "appleweiping/cs224n-nlp",
+      "title": "cs224n-nlp",
+      "summary": {
+        "en": "Self-study NLP assignments based on Stanford CS224N, covering word vectors, dependency parsing, neural machine translation, and Transformer pretraining.",
+        "zh": "基于斯坦福大学 CS224N 公开材料的自然语言处理自学作业，涵盖词向量、依存句法分析、神经机器翻译与 Transformer 预训练。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "cs224n",
+        "csdiy",
+        "deep-learning",
+        "machine-translation",
+        "nlp",
+        "transformers",
+        "word2vec"
+      ],
+      "languages": [
+        "Python",
+        "Jupyter Notebook",
+        "Erlang",
+        "Shell",
+        "Batchfile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T06:22:11Z",
+      "updatedAt": "2026-07-09T17:30:05Z"
+    },
+    {
+      "repoId": 1288199805,
+      "slug": "cs224w-graph-ml",
+      "repository": "appleweiping/cs224w-graph-ml",
+      "title": "cs224w-graph-ml",
+      "summary": {
+        "en": "Self-study graph-learning assignments based on Stanford CS224W, covering node embeddings, message-passing networks, classification, and link prediction.",
+        "zh": "基于斯坦福大学 CS224W 公开材料的图机器学习自学作业，涵盖节点嵌入、消息传递网络、分类与链接预测。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "cs224w",
+        "csdiy",
+        "gnn",
+        "graph-neural-networks",
+        "link-prediction",
+        "node2vec",
+        "pytorch-geometric"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T11:14:36Z",
+      "updatedAt": "2026-07-03T11:15:02Z"
+    },
+    {
+      "repoId": 1287989306,
+      "slug": "cs229-machine-learning",
+      "repository": "appleweiping/cs229-machine-learning",
+      "title": "cs229-machine-learning",
+      "summary": {
+        "en": "Self-study programming assignments based on Stanford CS229, covering regression, generative classifiers, SVMs, clustering, PCA, and reinforcement learning.",
+        "zh": "基于斯坦福大学 CS229 公开材料的机器学习自学作业，涵盖回归、生成式分类器、支持向量机、聚类、PCA 与强化学习。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "cs229",
+        "csdiy",
+        "em-algorithm",
+        "machine-learning",
+        "numpy",
+        "pca",
+        "svm"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T07:13:31Z",
+      "updatedAt": "2026-07-03T07:42:29Z"
+    },
+    {
+      "repoId": 1289268759,
+      "slug": "cs229m-ml-theory",
+      "repository": "appleweiping/cs229m-ml-theory",
+      "title": "cs229m-ml-theory",
+      "summary": {
+        "en": "Self-study theory exercises based on Stanford STATS 214 and CS229M, covering concentration, complexity, margins, kernels, and online learning.",
+        "zh": "基于斯坦福大学 STATS 214 与 CS229M 公开材料的机器学习理论自学练习，涵盖集中不等式、复杂度、间隔、核方法与在线学习。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "cs229m",
+        "csdiy",
+        "generalization",
+        "machine-learning-theory",
+        "rademacher-complexity",
+        "statistical-learning"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T14:32:11Z",
+      "updatedAt": "2026-07-04T14:33:22Z"
+    },
+    {
+      "repoId": 1287794952,
+      "slug": "cs231n-assignments",
+      "repository": "appleweiping/cs231n-assignments",
+      "title": "cs231n-assignments",
+      "summary": {
+        "en": "Self-study computer-vision assignments based on Stanford CS231N, covering classifiers, convolutional networks, captioning, and generative models.",
+        "zh": "基于斯坦福大学 CS231N 公开材料的计算机视觉自学作业，涵盖分类器、卷积网络、序列模型、图像描述与生成模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "cnn",
+        "computer-vision",
+        "cs231n",
+        "csdiy",
+        "deep-learning",
+        "numpy",
+        "pytorch"
+      ],
+      "languages": [
+        "Jupyter Notebook",
+        "Python",
+        "Shell",
+        "Cython"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T02:36:39Z",
+      "updatedAt": "2026-07-03T02:37:14Z"
+    },
+    {
+      "repoId": 1287919422,
+      "slug": "cs285-deep-rl",
+      "repository": "appleweiping/cs285-deep-rl",
+      "title": "cs285-deep-rl",
+      "summary": {
+        "en": "Self-study deep-RL assignments based on UC Berkeley CS285, covering imitation, policy gradients, value methods, model-based learning, and offline RL.",
+        "zh": "基于加州大学伯克利分校 CS285 公开材料的深度强化学习自学作业，涵盖模仿学习、策略梯度、价值方法、模型式学习与离线强化学习。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "actor-critic",
+        "cs285",
+        "csdiy",
+        "deep-rl",
+        "policy-gradient",
+        "q-learning",
+        "reinforcement-learning"
+      ],
+      "languages": [
+        "Jupyter Notebook",
+        "Python",
+        "TeX",
+        "Shell",
+        "Awk"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T05:48:56Z",
+      "updatedAt": "2026-07-06T17:39:28Z"
+    },
+    {
+      "repoId": 1288149664,
+      "slug": "cs50-ai",
+      "repository": "appleweiping/cs50-ai",
+      "title": "cs50-ai",
+      "summary": {
+        "en": "Self-study projects based on Harvard CS50 AI, covering search, logic, probabilistic inference, optimization, machine learning, computer vision, and NLP.",
+        "zh": "基于哈佛大学 CS50 AI 公开材料的自学项目，涵盖搜索、逻辑、概率推断、优化、机器学习、计算机视觉与自然语言处理。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "artificial-intelligence",
+        "cnn",
+        "cs50",
+        "csdiy",
+        "machine-learning",
+        "nlp",
+        "search"
+      ],
+      "languages": [
+        "Python",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T10:14:57Z",
+      "updatedAt": "2026-07-03T10:15:23Z"
+    },
+    {
+      "repoId": 1289477811,
+      "slug": "cs50p",
+      "repository": "appleweiping/cs50p",
+      "title": "cs50p",
+      "summary": {
+        "en": "Self-study Python exercises based on Harvard CS50P, spanning core language features, testing, file handling, regular expressions, and object-oriented design.",
+        "zh": "基于哈佛大学 CS50P 公开材料的 Python 自学练习，涵盖语言基础、测试、文件处理、正则表达式与面向对象设计。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "cs50",
+        "csdiy",
+        "harvard",
+        "pytest",
+        "python"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T19:59:24Z",
+      "updatedAt": "2026-07-04T20:01:25Z"
+    },
+    {
+      "repoId": 1289465432,
+      "slug": "cs50x",
+      "repository": "appleweiping/cs50x",
+      "title": "cs50x",
+      "summary": {
+        "en": "Self-study projects based on Harvard CS50x, using C, Python, SQL, and web technologies across introductory computer-science topics.",
+        "zh": "基于哈佛大学 CS50x 公开材料的计算机科学自学项目，使用 C、Python、SQL 与 Web 技术。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "c",
+        "cs50",
+        "csdiy",
+        "data-structures",
+        "harvard",
+        "python",
+        "sql"
+      ],
+      "languages": [
+        "C",
+        "Python",
+        "HTML",
+        "Makefile",
+        "JavaScript",
+        "Shell",
+        "CSS"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T19:36:15Z",
+      "updatedAt": "2026-07-04T20:45:11Z"
+    },
+    {
+      "repoId": 1294573699,
+      "slug": "cs571-react-native",
+      "repository": "appleweiping/cs571-react-native",
+      "title": "cs571-react-native",
+      "summary": {
+        "en": "A self-study full-stack chat application based on UW–Madison CS571, with a REST API and React web and React Native clients.",
+        "zh": "基于威斯康星大学麦迪逊分校 CS571 公开材料的全栈聊天应用自学实现，包括 REST API、React 网页端与 React Native 移动端。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "building-user-interfaces",
+        "cs571",
+        "csdiy",
+        "expo",
+        "express",
+        "full-stack",
+        "javascript",
+        "jwt",
+        "react",
+        "react-native",
+        "rest-api",
+        "uw-madison"
+      ],
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T02:59:09Z",
+      "updatedAt": "2026-07-09T02:59:38Z"
+    },
+    {
+      "repoId": 1289353138,
+      "slug": "cs61a-sicp",
+      "repository": "appleweiping/cs61a-sicp",
+      "title": "cs61a-sicp",
+      "summary": {
+        "en": "Self-study projects based on UC Berkeley CS61A, covering functional abstraction, data structures, interpreters, and a Scheme implementation in Python.",
+        "zh": "基于加州大学伯克利分校 CS61A 公开材料的自学项目，涵盖函数抽象、数据结构、解释器与 Python 实现的 Scheme。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "berkeley",
+        "cs61a",
+        "csdiy",
+        "interpreter",
+        "python",
+        "scheme",
+        "sicp"
+      ],
+      "languages": [
+        "Python",
+        "Tree-sitter Query",
+        "Scheme"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T16:33:36Z",
+      "updatedAt": "2026-07-04T18:52:13Z"
+    },
+    {
+      "repoId": 1289389684,
+      "slug": "cs61b",
+      "repository": "appleweiping/cs61b",
+      "title": "cs61b",
+      "summary": {
+        "en": "Self-study Java projects based on UC Berkeley CS61B, covering data structures, algorithms, a version-control system, and a tile-based world generator.",
+        "zh": "基于加州大学伯克利分校 CS61B 公开材料的 Java 自学项目，涵盖数据结构、算法、版本控制系统与瓦片世界生成。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "berkeley",
+        "cs61b",
+        "csdiy",
+        "data-structures",
+        "gitlet",
+        "java",
+        "version-control"
+      ],
+      "languages": [
+        "Java",
+        "Python",
+        "Makefile",
+        "BitBake"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T17:28:37Z",
+      "updatedAt": "2026-07-05T03:55:57Z"
+    },
+    {
+      "repoId": 1291218564,
+      "slug": "cs61c",
+      "repository": "appleweiping/cs61c",
+      "title": "cs61c",
+      "summary": {
+        "en": "Self-study computer-architecture projects based on UC Berkeley CS61C, covering C, RISC-V, pipelined processors, and parallel matrix computation.",
+        "zh": "基于加州大学伯克利分校 CS61C 公开材料的计算机体系结构自学项目，涵盖 C、RISC-V、流水线处理器与并行矩阵计算。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "robotics-hardware",
+      "topics": [
+        "berkeley",
+        "c",
+        "computer-architecture",
+        "cs61c",
+        "csdiy",
+        "logisim",
+        "risc-v",
+        "simd"
+      ],
+      "languages": [
+        "Assembly",
+        "Python",
+        "C",
+        "Shell",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T15:54:17Z",
+      "updatedAt": "2026-07-06T20:02:36Z"
+    },
+    {
+      "repoId": 1291278546,
+      "slug": "csapp-labs",
+      "repository": "appleweiping/csapp-labs",
+      "title": "csapp-labs",
+      "summary": {
+        "en": "Self-study systems exercises based on CMU 15-213 and CS:APP, covering data representation, assembly, caching, shells, memory allocation, and network proxies.",
+        "zh": "基于卡内基梅隆大学 15-213 与《深入理解计算机系统》公开材料的系统自学练习，涵盖数据表示、汇编、缓存、Shell、内存分配与网络代理。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "c",
+        "cmu-15213",
+        "csapp",
+        "csdiy",
+        "gdb",
+        "systems-programming",
+        "x86-64"
+      ],
+      "languages": [
+        "C",
+        "Perl",
+        "Shell",
+        "Makefile",
+        "Python",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T16:55:56Z",
+      "updatedAt": "2026-07-06T16:56:21Z"
+    },
+    {
+      "repoId": 1289007340,
+      "slug": "cse234-ml-data-systems",
+      "repository": "appleweiping/cse234-ml-data-systems",
+      "title": "cse234-ml-data-systems",
+      "summary": {
+        "en": "Self-study assignments based on UC San Diego CSE234, covering automatic differentiation, graph and operator optimization, and parallel machine-learning systems.",
+        "zh": "基于加州大学圣迭戈分校 CSE234 公开材料的自学作业，涵盖自动微分、计算图与算子优化，以及并行机器学习系统。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "automatic-differentiation",
+        "csdiy",
+        "cse234",
+        "mixture-of-experts",
+        "ml-systems",
+        "mpi",
+        "parallelism",
+        "pytorch",
+        "speculative-decoding",
+        "systems-for-ml",
+        "ucsd"
+      ],
+      "languages": [
+        "Python",
+        "Jupyter Notebook",
+        "Shell",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T08:16:57Z",
+      "updatedAt": "2026-07-04T13:29:56Z"
+    },
+    {
+      "repoId": 1288402433,
+      "slug": "deep-learning-specialization",
+      "repository": "appleweiping/deep-learning-specialization",
+      "title": "deep-learning-specialization",
+      "summary": {
+        "en": "Self-study implementations based on the DeepLearning.AI Deep Learning Specialization, covering optimization, convolutional networks, and sequence models.",
+        "zh": "基于 DeepLearning.AI 深度学习专项课程公开材料的自学实现，涵盖优化、卷积网络与序列模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "andrew-ng",
+        "attention",
+        "cnn",
+        "coursera",
+        "csdiy",
+        "deep-learning",
+        "from-scratch",
+        "lstm",
+        "machine-learning",
+        "neural-networks",
+        "numpy",
+        "pytorch",
+        "rnn",
+        "transformer"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T15:06:22Z",
+      "updatedAt": "2026-07-03T22:38:15Z"
+    },
+    {
+      "repoId": 1255869500,
+      "slug": "delvtools-public",
+      "repository": "appleweiping/DELVTOOLS_PUBLIC",
+      "title": "DELVTOOLS_PUBLIC",
+      "summary": {
+        "en": "Public-safe Windows workstation scripts and examples for a D-drive-first, agentmemory-first development setup.",
+        "zh": "面向 Windows 智能体工作站的公开安全脚本与示例，采用 D 盘优先和 agentmemory 优先的配置方式。"
+      },
+      "sourceKind": "original",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "PowerShell",
+        "Batchfile"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-01T08:45:34Z",
+      "updatedAt": "2026-06-12T18:23:52Z"
+    },
+    {
+      "repoId": 1289692920,
+      "slug": "duke-intro-c",
+      "repository": "appleweiping/duke-intro-c",
+      "title": "duke-intro-c",
+      "summary": {
+        "en": "Self-study C projects based on Duke University’s Introductory C Programming Specialization, including card-game and image-data exercises.",
+        "zh": "基于杜克大学 C 语言入门专项课程公开材料的自学项目，包括纸牌游戏与图像数据练习。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "c",
+        "coursera",
+        "csdiy",
+        "duke",
+        "programming-fundamentals"
+      ],
+      "languages": [
+        "C",
+        "Python",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-05T04:42:29Z",
+      "updatedAt": "2026-07-05T04:43:18Z"
+    },
+    {
+      "repoId": 1296858100,
+      "slug": "ecg-recoverability",
+      "repository": "appleweiping/ecg-recoverability",
+      "title": "ecg-recoverability",
+      "summary": {
+        "en": "Research code examining reduced-lead ECG reconstruction through feature-level recoverability and distribution-free calibration.",
+        "zh": "研究降导联心电重建中的特征级可恢复性与分布无关校准。"
+      },
+      "sourceKind": "research",
+      "wing": "ai4s-research",
+      "topics": [
+        "conformal-prediction",
+        "ecg",
+        "electrocardiography",
+        "icassp",
+        "identifiability",
+        "inverse-problems",
+        "ptb-xl",
+        "signal-processing",
+        "trustworthy-ml",
+        "uncertainty-quantification"
+      ],
+      "languages": [
+        "Python",
+        "TeX",
+        "BibTeX Style"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-10T19:54:32Z",
+      "updatedAt": "2026-07-12T09:05:47Z"
+    },
+    {
+      "repoId": 1288195012,
+      "slug": "eecs498-deep-vision",
+      "repository": "appleweiping/eecs498-deep-vision",
+      "title": "eecs498-deep-vision",
+      "summary": {
+        "en": "Self-study vision assignments based on Michigan EECS 498/598, covering classifiers, convolutional and recurrent networks, detection, and generative models.",
+        "zh": "基于密歇根大学 EECS 498/598 公开材料的计算机视觉自学作业，涵盖分类器、卷积与循环网络、目标检测和生成模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "computer-vision",
+        "csdiy",
+        "deep-learning",
+        "eecs498",
+        "gan",
+        "object-detection",
+        "pytorch"
+      ],
+      "languages": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T11:08:58Z",
+      "updatedAt": "2026-07-03T12:31:37Z"
+    },
+    {
+      "repoId": 1188028769,
+      "slug": "embedded-cry-detection-and-soothing-system",
+      "repository": "appleweiping/Embedded-Cry-Detection-and-Soothing-System",
+      "title": "Embedded-Cry-Detection-and-Soothing-System",
+      "summary": {
+        "en": "A coursework prototype for embedded infant-cry detection and motor-controlled soothing logic.",
+        "zh": "用于婴儿哭声检测与电机安抚控制逻辑的嵌入式课程原型。"
+      },
+      "sourceKind": "coursework",
+      "wing": "robotics-hardware",
+      "topics": [],
+      "languages": [
+        "C",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+        "zh": "课程项目记录；团队与模块归属以仓库文档为准。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-03-21T14:20:14Z",
+      "updatedAt": "2026-05-23T17:55:02Z"
+    },
+    {
+      "repoId": 1293256133,
+      "slug": "ethz-computer-architecture",
+      "repository": "appleweiping/ethz-computer-architecture",
+      "title": "ethz-computer-architecture",
+      "summary": {
+        "en": "Self-study simulator exercises based on ETH Zürich computer-architecture materials, covering caches, branch prediction, prefetching, and memory systems.",
+        "zh": "基于苏黎世联邦理工学院计算机体系结构公开材料的模拟器自学练习，涵盖缓存、分支预测、预取与内存系统。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "robotics-hardware",
+      "topics": [
+        "branch-prediction",
+        "caching",
+        "computer-architecture",
+        "csdiy",
+        "ethz",
+        "simulator"
+      ],
+      "languages": [
+        "C++",
+        "Assembly",
+        "C",
+        "Shell",
+        "Python",
+        "Makefile",
+        "Batchfile",
+        "Dockerfile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T07:54:44Z",
+      "updatedAt": "2026-07-08T07:55:52Z"
+    },
+    {
+      "repoId": 1292638677,
+      "slug": "ethz-ddca",
+      "repository": "appleweiping/ethz-ddca",
+      "title": "ethz-ddca",
+      "summary": {
+        "en": "Self-study SystemVerilog labs based on ETH Zürich digital-design materials, focused on constructing and simulating MIPS and RISC-V processors.",
+        "zh": "基于苏黎世联邦理工学院数字设计公开材料的 SystemVerilog 自学实验，聚焦 MIPS 与 RISC-V 处理器的构建和仿真。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "digital-design",
+        "ethz",
+        "processor",
+        "riscv",
+        "systemverilog",
+        "verilog"
+      ],
+      "languages": [
+        "SystemVerilog",
+        "Shell",
+        "Assembly",
+        "Python",
+        "Tcl"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T17:48:17Z",
+      "updatedAt": "2026-07-07T18:23:46Z"
+    },
+    {
+      "repoId": 1288410694,
+      "slug": "flow-matching-6s184",
+      "repository": "appleweiping/flow-matching-6s184",
+      "title": "flow-matching-6s184",
+      "summary": {
+        "en": "Self-study generative-model implementations based on MIT 6.S184 materials, covering flow matching and score-based diffusion.",
+        "zh": "基于麻省理工学院 6.S184 公开材料的生成模型自学实现，涵盖流匹配与基于分数的扩散模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "csdiy",
+        "diffusion",
+        "flow-matching",
+        "generative-models",
+        "mit-6s184",
+        "score-based",
+        "sde"
+      ],
+      "languages": [
+        "Jupyter Notebook",
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T15:15:28Z",
+      "updatedAt": "2026-07-03T18:38:57Z"
+    },
+    {
+      "repoId": 1294557430,
+      "slug": "full-stack-open",
+      "repository": "appleweiping/full-stack-open",
+      "title": "full-stack-open",
+      "summary": {
+        "en": "Self-study applications based on Helsinki’s Full Stack Open course: a React and Express blog app and an Apollo GraphQL library service.",
+        "zh": "基于赫尔辛基大学 Full Stack Open 公开材料的自学应用，包括 React/Express 博客系统与 Apollo GraphQL 图书服务。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "apollo-server",
+        "csdiy",
+        "express",
+        "full-stack-open",
+        "graphql",
+        "jest",
+        "mongodb",
+        "nodejs",
+        "react",
+        "react-query"
+      ],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T02:32:29Z",
+      "updatedAt": "2026-07-09T02:33:13Z"
+    },
+    {
+      "repoId": 1294700517,
+      "slug": "games101",
+      "repository": "appleweiping/games101",
+      "title": "games101",
+      "summary": {
+        "en": "Self-study graphics assignments based on GAMES101, covering rasterization, shading, Bézier curves, ray tracing, acceleration structures, and path tracing.",
+        "zh": "基于 GAMES101 公开材料的计算机图形学自学作业，涵盖光栅化、着色、贝塞尔曲线、光线追踪、加速结构与路径追踪。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "bvh",
+        "computer-graphics",
+        "cpp",
+        "csdiy",
+        "eigen",
+        "games101",
+        "path-tracing",
+        "rasterization",
+        "ray-tracing",
+        "rendering"
+      ],
+      "languages": [
+        "C++",
+        "Shell",
+        "Makefile",
+        "PowerShell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T06:09:27Z",
+      "updatedAt": "2026-07-09T13:58:26Z"
+    },
+    {
+      "repoId": 1294664161,
+      "slug": "games103",
+      "repository": "appleweiping/games103",
+      "title": "games103",
+      "summary": {
+        "en": "Self-study GAMES103 implementations covering rigid bodies, mass-spring cloth, finite-element elasticity, and shallow-water simulation.",
+        "zh": "基于 GAMES103 公开材料的物理动画自学实现，涵盖刚体、质点弹簧布料、有限元弹性体与浅水模拟。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "cloth-simulation",
+        "computer-graphics",
+        "csdiy",
+        "fem",
+        "fluid-simulation",
+        "games103",
+        "numpy",
+        "physics-based-animation",
+        "physics-simulation",
+        "rigid-body"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T05:23:47Z",
+      "updatedAt": "2026-07-09T07:33:33Z"
+    },
+    {
+      "repoId": 1294662965,
+      "slug": "games202",
+      "repository": "appleweiping/games202",
+      "title": "games202",
+      "summary": {
+        "en": "Self-study GAMES202 rendering work covering soft shadows, radiance transfer, screen-space effects, energy compensation, and denoising.",
+        "zh": "基于 GAMES202 公开材料的渲染自学实现，涵盖软阴影、预计算辐射传输、屏幕空间效果、能量补偿与降噪。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "computer-graphics",
+        "csdiy",
+        "denoising",
+        "games202",
+        "path-tracing",
+        "pbr",
+        "real-time-rendering",
+        "shadow-mapping",
+        "spherical-harmonics",
+        "ssao"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T05:22:07Z",
+      "updatedAt": "2026-07-09T05:22:53Z"
+    },
+    {
+      "repoId": 1290805389,
+      "slug": "haskell-mooc",
+      "repository": "appleweiping/haskell-mooc",
+      "title": "haskell-mooc",
+      "summary": {
+        "en": "Self-study functional-programming exercises based on the University of Helsinki Haskell MOOC, spanning the course’s sixteen topic sets.",
+        "zh": "基于赫尔辛基大学 Haskell MOOC 公开材料的函数式编程自学练习，覆盖课程的十六组主题。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "functional-programming",
+        "haskell",
+        "haskell-mooc",
+        "helsinki",
+        "stack"
+      ],
+      "languages": [
+        "Haskell",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T08:52:05Z",
+      "updatedAt": "2026-07-06T10:22:42Z"
+    },
+    {
+      "repoId": 1294654931,
+      "slug": "hit-os",
+      "repository": "appleweiping/hit-os",
+      "title": "hit-os",
+      "summary": {
+        "en": "Self-study operating-system labs based on HIT materials, modifying Linux 0.11 components such as boot, system calls, scheduling, IPC, terminals, and procfs.",
+        "zh": "基于哈尔滨工业大学操作系统公开材料的自学实验，修改 Linux 0.11 的启动、系统调用、调度、进程通信、终端与 procfs 等组件。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "bochs",
+        "csdiy",
+        "hit",
+        "kernel",
+        "linux-0-11",
+        "operating-system"
+      ],
+      "languages": [
+        "C",
+        "Assembly",
+        "Makefile",
+        "Python",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T05:09:44Z",
+      "updatedAt": "2026-07-09T05:10:39Z"
+    },
+    {
+      "repoId": 1295550556,
+      "slug": "hotwire-city",
+      "repository": "appleweiping/hotwire-city",
+      "title": "hotwire-city",
+      "summary": {
+        "en": "A dependency-free, top-down open-city browser game inspired by classic crime-action games.",
+        "zh": "受经典犯罪动作游戏启发的零依赖俯视角开放城市浏览器游戏。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/hotwire-city/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T16:43:22Z",
+      "updatedAt": "2026-07-15T23:35:43Z"
+    },
+    {
+      "repoId": 1303550151,
+      "slug": "hungry-fin",
+      "repository": "appleweiping/hungry-fin",
+      "title": "hungry-fin",
+      "summary": {
+        "en": "A procedural Three.js shark-survival arcade game delivered from a single HTML file without a build step.",
+        "zh": "基于 Three.js 的程序化鲨鱼生存街机游戏，单个 HTML 文件即可运行，无需构建。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/hungry-fin/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-17T04:21:13Z",
+      "updatedAt": "2026-07-17T04:21:23Z"
+    },
+    {
+      "repoId": 1294425912,
+      "slug": "info-theory-mackay",
+      "repository": "appleweiping/info-theory-mackay",
+      "title": "info-theory-mackay",
+      "summary": {
+        "en": "Self-study Python implementations based on David MacKay’s information-theory text, covering coding, channels, error correction, MCMC, and EM.",
+        "zh": "基于 David MacKay 信息论教材的 Python 自学实现，涵盖编码、信道、纠错、MCMC 与期望最大化。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "arithmetic-coding",
+        "belief-propagation",
+        "csdiy",
+        "error-correcting-codes",
+        "expectation-maximization",
+        "huffman-coding",
+        "information-theory",
+        "itila",
+        "ldpc",
+        "mackay",
+        "mcmc"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:09:51Z",
+      "updatedAt": "2026-07-09T00:11:00Z"
+    },
+    {
+      "repoId": 1296789623,
+      "slug": "inr-aliasing-limits",
+      "repository": "appleweiping/inr-aliasing-limits",
+      "title": "inr-aliasing-limits",
+      "summary": {
+        "en": "Research code examining identifiability and anti-aliasing sample design for implicit neural representations with fixed Fourier features.",
+        "zh": "研究固定傅里叶特征隐式神经表示的可识别性与抗混叠采样设计。"
+      },
+      "sourceKind": "research",
+      "wing": "ai4s-research",
+      "topics": [
+        "aliasing",
+        "fourier-features",
+        "icassp",
+        "implicit-neural-representation",
+        "neural-fields",
+        "reproducible-research",
+        "sampling-theory",
+        "signal-processing"
+      ],
+      "languages": [
+        "Python",
+        "TeX",
+        "BibTeX Style",
+        "Shell"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-10T18:19:33Z",
+      "updatedAt": "2026-07-16T21:29:09Z"
+    },
+    {
+      "repoId": 1290514941,
+      "slug": "kaist-cs220-rust",
+      "repository": "appleweiping/kaist-cs220-rust",
+      "title": "kaist-cs220-rust",
+      "summary": {
+        "en": "Self-study Rust assignments based on KAIST CS220, focused on programming-language principles and functional abstraction.",
+        "zh": "基于 KAIST CS220 公开材料的 Rust 自学作业，聚焦编程语言原理与函数式抽象。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "cs220",
+        "csdiy",
+        "kaist",
+        "programming-principles",
+        "rust"
+      ],
+      "languages": [
+        "Rust",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T02:33:13Z",
+      "updatedAt": "2026-07-06T02:33:47Z"
+    },
+    {
+      "repoId": 1292760260,
+      "slug": "kaist-cs420",
+      "repository": "appleweiping/kaist-cs420",
+      "title": "kaist-cs420",
+      "summary": {
+        "en": "A self-study Rust compiler based on KAIST CS420, covering intermediate representation, optimization, and assembly generation for C.",
+        "zh": "基于 KAIST CS420 公开材料的 Rust 编译器自学实现，涵盖 C 语言的中间表示、优化与汇编生成。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "c",
+        "compilers",
+        "cs420",
+        "csdiy",
+        "ir",
+        "kaist",
+        "kecc",
+        "rust"
+      ],
+      "languages": [
+        "Rust",
+        "C",
+        "Python",
+        "Shell",
+        "C++",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T20:30:58Z",
+      "updatedAt": "2026-07-07T20:31:47Z"
+    },
+    {
+      "repoId": 1290515851,
+      "slug": "kaist-cs431-concurrent-rust",
+      "repository": "appleweiping/kaist-cs431-concurrent-rust",
+      "title": "kaist-cs431-concurrent-rust",
+      "summary": {
+        "en": "Self-study Rust assignments based on KAIST CS431, covering lock-based and lock-free structures, hazard pointers, and concurrent hash maps.",
+        "zh": "基于 KAIST CS431 公开材料的 Rust 自学作业，涵盖有锁与无锁数据结构、危险指针及并发哈希表。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "concurrency",
+        "cs431",
+        "csdiy",
+        "hazard-pointers",
+        "kaist",
+        "lock-free",
+        "rust"
+      ],
+      "languages": [
+        "Rust",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T02:34:35Z",
+      "updatedAt": "2026-07-06T02:35:04Z"
+    },
+    {
+      "repoId": 1265440203,
+      "slug": "kbuilt",
+      "repository": "appleweiping/kbuilt",
+      "title": "kbuilt",
+      "summary": {
+        "en": "A zero-install browser video-downloader interface backed by a Cobalt engine on Hugging Face Spaces.",
+        "zh": "免安装浏览器视频下载界面，后端使用部署于 Hugging Face Spaces 的 Cobalt 引擎。"
+      },
+      "sourceKind": "original",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Python",
+        "PowerShell",
+        "Dockerfile"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://kbuilt.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-10T19:23:07Z",
+      "updatedAt": "2026-06-12T12:13:59Z"
+    },
+    {
+      "repoId": 1294497803,
+      "slug": "kurose-wireshark-labs",
+      "repository": "appleweiping/kurose-wireshark-labs",
+      "title": "kurose-wireshark-labs",
+      "summary": {
+        "en": "Self-study packet-analysis labs based on Kurose and Ross networking materials, using Python and Scapy across common Internet protocols.",
+        "zh": "基于 Kurose 与 Ross 计算机网络公开材料的数据包分析自学实验，使用 Python 与 Scapy 观察常见互联网协议。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "computer-networks",
+        "csdiy",
+        "kurose-ross",
+        "packet-analysis",
+        "scapy",
+        "wireshark"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T01:25:17Z",
+      "updatedAt": "2026-07-09T01:25:49Z"
+    },
+    {
+      "repoId": 1268466001,
+      "slug": "legal-case-automation",
+      "repository": "appleweiping/legal-case-automation",
+      "title": "legal-case-automation",
+      "summary": {
+        "en": "A local-first tool that organizes Chinese consumer-dispute materials into evidence, missing-item checks, and reviewable draft documents.",
+        "zh": "本地优先的法律材料工具，将中国消费者纠纷资料整理为证据、缺失项清单与可审阅文书初稿。"
+      },
+      "sourceKind": "original",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "Python",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://legal-case-automation.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-13T15:09:07Z",
+      "updatedAt": "2026-06-13T15:36:26Z"
+    },
+    {
+      "repoId": 1288588570,
+      "slug": "lhy-ml-homeworks",
+      "repository": "appleweiping/lhy-ml-homeworks",
+      "title": "lhy-ml-homeworks",
+      "summary": {
+        "en": "Self-study machine-learning assignments based on Hung-yi Lee’s public course materials, spanning supervised, generative, and reinforcement-learning topics.",
+        "zh": "基于李宏毅机器学习公开课程材料的自学作业，涵盖监督学习、生成模型与强化学习等主题。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "ai-agents",
+      "topics": [
+        "bert",
+        "cnn",
+        "csdiy",
+        "deep-learning",
+        "gan",
+        "hung-yi-lee",
+        "machine-learning",
+        "meta-learning",
+        "ntu",
+        "pytorch",
+        "reinforcement-learning",
+        "transformer"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T18:54:31Z",
+      "updatedAt": "2026-07-04T06:55:10Z"
+    },
+    {
+      "repoId": 1224880499,
+      "slug": "lumen-rec",
+      "repository": "appleweiping/Lumen-Rec",
+      "title": "Lumen-Rec",
+      "summary": {
+        "en": "Research code for comparing pointwise LLM relevance estimates and uncertainty-aware reranking under a shared candidate protocol.",
+        "zh": "在统一候选集协议下比较逐点大模型相关性估计与不确定性感知重排的研究代码。"
+      },
+      "sourceKind": "research",
+      "wing": "models-data",
+      "topics": [],
+      "languages": [
+        "Python",
+        "Shell",
+        "TeX",
+        "PowerShell"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-04-29T18:14:07Z",
+      "updatedAt": "2026-06-22T12:33:30Z"
+    },
+    {
+      "repoId": 1268465835,
+      "slug": "medora",
+      "repository": "appleweiping/medora",
+      "title": "medora",
+      "summary": {
+        "en": "A local-first personal health-record prototype that organizes source-grounded longitudinal data, beginning with glucose and metabolic records.",
+        "zh": "本地优先的个人健康记录原型，将来源可追溯的数据整理为纵向档案，首个方向为血糖与代谢记录。"
+      },
+      "sourceKind": "original",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://medora-phr.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-13T15:08:55Z",
+      "updatedAt": "2026-06-13T15:36:21Z"
+    },
+    {
+      "repoId": 1290394586,
+      "slug": "missing-semester",
+      "repository": "appleweiping/missing-semester",
+      "title": "missing-semester",
+      "summary": {
+        "en": "Self-study exercises based on MIT’s Missing Semester, covering shell tools, editors, data wrangling, version control, debugging, build systems, and security.",
+        "zh": "基于麻省理工学院 Missing Semester 公开材料的自学练习，涵盖 Shell、编辑器、数据处理、版本控制、调试、构建系统与安全。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "bash",
+        "command-line",
+        "csdiy",
+        "git",
+        "missing-semester",
+        "mit",
+        "shell",
+        "vim"
+      ],
+      "languages": [
+        "Shell",
+        "Python",
+        "Vim Script",
+        "TeX",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/missing-semester/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-05T22:52:52Z",
+      "updatedAt": "2026-07-05T23:54:25Z"
+    },
+    {
+      "repoId": 1294638076,
+      "slug": "mit-1801-1802-calculus",
+      "repository": "appleweiping/mit-1801-1802-calculus",
+      "title": "mit-1801-1802-calculus",
+      "summary": {
+        "en": "Self-study numerical checks and worked exercises based on MIT 18.01 and 18.02, covering single- and multivariable calculus.",
+        "zh": "基于麻省理工学院 18.01 与 18.02 公开材料的微积分自学练习与数值核验，涵盖单变量和多变量微积分。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "calculus",
+        "csdiy",
+        "mit-18-01",
+        "mit-18-02",
+        "mit-ocw",
+        "multivariable-calculus",
+        "numerical-methods",
+        "numpy",
+        "python",
+        "vector-calculus"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T04:44:05Z",
+      "updatedAt": "2026-07-09T04:44:43Z"
+    },
+    {
+      "repoId": 1294659713,
+      "slug": "mit-1806-linear-algebra",
+      "repository": "appleweiping/mit-1806-linear-algebra",
+      "title": "mit-1806-linear-algebra",
+      "summary": {
+        "en": "Self-study NumPy implementations based on MIT 18.06, covering matrix factorizations, least squares, eigenvalue methods, SVD, PageRank, and the DFT.",
+        "zh": "基于麻省理工学院 18.06 公开材料的 NumPy 自学实现，涵盖矩阵分解、最小二乘、特征值方法、SVD、PageRank 与离散傅里叶变换。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "eigenvalues",
+        "gilbert-strang",
+        "linear-algebra",
+        "math",
+        "mit-18-06",
+        "numerical-linear-algebra",
+        "numpy",
+        "pagerank",
+        "python",
+        "qr-algorithm",
+        "svd"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T05:17:18Z",
+      "updatedAt": "2026-07-09T05:18:31Z"
+    },
+    {
+      "repoId": 1294448497,
+      "slug": "mit-18330-numerical",
+      "repository": "appleweiping/mit-18330-numerical",
+      "title": "mit-18330-numerical",
+      "summary": {
+        "en": "Self-study Julia exercises based on MIT 18.330, covering foundational numerical-analysis methods and convergence behavior.",
+        "zh": "基于麻省理工学院 18.330 公开材料的 Julia 数值分析自学练习，涵盖基础数值方法与收敛行为。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "finite-differences",
+        "julia",
+        "linear-algebra",
+        "mit-18330",
+        "numerical-analysis",
+        "quadrature",
+        "root-finding",
+        "runge-kutta",
+        "scientific-computing"
+      ],
+      "languages": [
+        "Julia"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:29:09Z",
+      "updatedAt": "2026-07-09T00:29:49Z"
+    },
+    {
+      "repoId": 1295033747,
+      "slug": "mit-6-1600",
+      "repository": "appleweiping/mit-6.1600",
+      "title": "mit-6.1600",
+      "summary": {
+        "en": "Self-study security labs based on MIT 6.1600, covering hashing, Merkle trees, cryptographic attacks, side channels, sandboxing, and fuzzing.",
+        "zh": "基于麻省理工学院 6.1600 公开材料的安全自学实验，涵盖哈希、Merkle 树、密码攻击、侧信道、沙箱与模糊测试。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "computer-security",
+        "cryptography",
+        "csdiy",
+        "educational",
+        "fuzzing",
+        "mit-6-1600",
+        "sandbox-escape",
+        "side-channel-attacks"
+      ],
+      "languages": [
+        "Python",
+        "TeX",
+        "C",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T10:03:29Z",
+      "updatedAt": "2026-07-09T10:04:19Z"
+    },
+    {
+      "repoId": 1289556033,
+      "slug": "mit-6006",
+      "repository": "appleweiping/mit-6006",
+      "title": "mit-6006",
+      "summary": {
+        "en": "Self-study programming exercises based on MIT 6.006, covering data structures, graph algorithms, dynamic programming, and related algorithmic problems.",
+        "zh": "基于麻省理工学院 6.006 公开材料的算法自学练习，涵盖数据结构、图算法、动态规划及相关问题。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "algorithms",
+        "csdiy",
+        "data-structures",
+        "mit-6006",
+        "python"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T22:53:53Z",
+      "updatedAt": "2026-07-04T22:54:27Z"
+    },
+    {
+      "repoId": 1294427320,
+      "slug": "mit-6007-signals",
+      "repository": "appleweiping/mit-6007-signals",
+      "title": "mit-6007-signals",
+      "summary": {
+        "en": "Self-study Python work based on MIT 6.007, covering LTI systems, Fourier analysis, sampling, transforms, filtering, modulation, and feedback.",
+        "zh": "基于麻省理工学院 6.007 公开材料的 Python 信号与系统自学实现，涵盖 LTI 系统、傅里叶分析、采样、变换、滤波、调制与反馈。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "robotics-hardware",
+      "topics": [
+        "convolution",
+        "csdiy",
+        "dsp",
+        "fourier-transform",
+        "laplace-transform",
+        "mit-ocw",
+        "python",
+        "sampling",
+        "scipy",
+        "signals-and-systems",
+        "z-transform"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:11:07Z",
+      "updatedAt": "2026-07-09T00:11:58Z"
+    },
+    {
+      "repoId": 1289460466,
+      "slug": "mit-6031-software-construction",
+      "repository": "appleweiping/mit-6031-software-construction",
+      "title": "mit-6031-software-construction",
+      "summary": {
+        "en": "Self-study Java projects based on MIT 6.031, focused on specifications, abstract data types, testing, parsers, graphs, and collaborative applications.",
+        "zh": "基于麻省理工学院 6.031 公开材料的 Java 自学项目，聚焦规格说明、抽象数据类型、测试、解析器、图与协作应用。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "abstract-data-types",
+        "concurrency",
+        "csdiy",
+        "java",
+        "junit",
+        "mit-6005",
+        "mit-6031",
+        "software-construction",
+        "testing"
+      ],
+      "languages": [
+        "Java",
+        "Shell",
+        "ANTLR"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T19:27:10Z",
+      "updatedAt": "2026-07-04T20:19:21Z"
+    },
+    {
+      "repoId": 1294419634,
+      "slug": "mit-6042j",
+      "repository": "appleweiping/mit-6042j",
+      "title": "mit-6042j",
+      "summary": {
+        "en": "Self-study code and proof notes based on MIT 6.042J, covering number theory, graphs, counting, generating functions, probability, and random walks.",
+        "zh": "基于麻省理工学院 6.042J 公开材料的代码与证明笔记，涵盖数论、图、计数、生成函数、概率与随机游走。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "combinatorics",
+        "csdiy",
+        "discrete-mathematics",
+        "generating-functions",
+        "graph-theory",
+        "mathematics-for-computer-science",
+        "mit-6042j",
+        "number-theory",
+        "probability",
+        "rsa"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:03:43Z",
+      "updatedAt": "2026-07-09T17:31:12Z"
+    },
+    {
+      "repoId": 1289683220,
+      "slug": "mit-6046",
+      "repository": "appleweiping/mit-6046",
+      "title": "mit-6046",
+      "summary": {
+        "en": "Self-study written and programming exercises based on MIT 6.046, focused on algorithm design, analysis, and implementation.",
+        "zh": "基于麻省理工学院 6.046 公开材料的算法自学练习，结合书面分析、算法设计与实现。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "algorithms",
+        "csdiy",
+        "design-and-analysis",
+        "mit-6046",
+        "python"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-05T04:19:46Z",
+      "updatedAt": "2026-07-05T06:28:49Z"
+    },
+    {
+      "repoId": 1294416618,
+      "slug": "mit-6050j-info-theory",
+      "repository": "appleweiping/mit-6050j-info-theory",
+      "title": "mit-6050j-info-theory",
+      "summary": {
+        "en": "Self-study Python work based on MIT 6.050J, covering entropy, mutual information, coding, channel capacity, error correction, and maximum entropy.",
+        "zh": "基于麻省理工学院 6.050J 公开材料的 Python 信息论自学实现，涵盖熵、互信息、信源编码、信道容量、纠错与最大熵。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "arithmetic-coding",
+        "channel-capacity",
+        "csdiy",
+        "entropy",
+        "error-correcting-codes",
+        "huffman-coding",
+        "information-theory",
+        "mit-6050j",
+        "numpy",
+        "python"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:00:28Z",
+      "updatedAt": "2026-07-09T00:01:29Z"
+    },
+    {
+      "repoId": 1290463937,
+      "slug": "mit-6092-java",
+      "repository": "appleweiping/mit-6092-java",
+      "title": "mit-6092-java",
+      "summary": {
+        "en": "Self-study Java exercises based on MIT 6.092, covering introductory programming, object-oriented design, collections, and basic application development.",
+        "zh": "基于麻省理工学院 6.092 公开材料的 Java 自学练习，涵盖编程基础、面向对象设计、集合与基础应用开发。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "java",
+        "mit-6092",
+        "programming-fundamentals"
+      ],
+      "languages": [
+        "Java",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T01:08:11Z",
+      "updatedAt": "2026-07-06T01:08:58Z"
+    },
+    {
+      "repoId": 1290091937,
+      "slug": "mit-6100l",
+      "repository": "appleweiping/mit-6100l",
+      "title": "mit-6100l",
+      "summary": {
+        "en": "Self-study Python exercises based on MIT 6.100L, covering introductory programming, problem decomposition, algorithms, and data structures.",
+        "zh": "基于麻省理工学院 6.100L 公开材料的 Python 自学练习，涵盖编程基础、问题分解、算法与数据结构。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "algorithms",
+        "csdiy",
+        "mit-6100l",
+        "programming-fundamentals",
+        "python"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-05T15:12:24Z",
+      "updatedAt": "2026-07-05T15:13:02Z"
+    },
+    {
+      "repoId": 1291472496,
+      "slug": "mit-6824-raft",
+      "repository": "appleweiping/mit-6824-raft",
+      "title": "mit-6824-raft",
+      "summary": {
+        "en": "Self-study distributed-systems labs based on MIT 6.824/6.5840, covering MapReduce, Raft, fault-tolerant key-value services, and sharding.",
+        "zh": "基于麻省理工学院 6.824/6.5840 公开材料的分布式系统自学实验，涵盖 MapReduce、Raft、容错键值服务与分片。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "consensus",
+        "csdiy",
+        "distributed-systems",
+        "go",
+        "mapreduce",
+        "mit-6824",
+        "raft"
+      ],
+      "languages": [
+        "Go",
+        "Shell",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T20:45:52Z",
+      "updatedAt": "2026-07-09T17:28:24Z"
+    },
+    {
+      "repoId": 1295030450,
+      "slug": "mit-6858",
+      "repository": "appleweiping/mit-6858",
+      "title": "mit-6858",
+      "summary": {
+        "en": "Self-study MIT 6.858 labs using Zoobar to explore memory safety, isolation, symbolic execution, browser security, and secure storage.",
+        "zh": "基于麻省理工学院 6.858 公开材料的系统安全自学实验，以 Zoobar 应用探索内存安全、隔离、符号执行、浏览器安全与安全存储。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "buffer-overflow",
+        "computer-systems-security",
+        "csdiy",
+        "mit-6858",
+        "privilege-separation",
+        "secfs",
+        "security",
+        "symbolic-execution",
+        "xss",
+        "zoobar"
+      ],
+      "languages": [
+        "Python",
+        "C",
+        "JavaScript",
+        "Shell",
+        "HTML",
+        "Makefile",
+        "CSS",
+        "Assembly",
+        "Vim Script",
+        "GDB"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T10:01:11Z",
+      "updatedAt": "2026-07-09T10:02:20Z"
+    },
+    {
+      "repoId": 1288706926,
+      "slug": "mit-6s7960-dl",
+      "repository": "appleweiping/mit-6s7960-dl",
+      "title": "mit-6s7960-dl",
+      "summary": {
+        "en": "Self-study deep-learning assignments based on MIT 6.S7960, focused on implementing and analyzing neural-network components and training methods.",
+        "zh": "基于麻省理工学院 6.S7960 公开材料的深度学习自学作业，聚焦神经网络组件与训练方法的实现和分析。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "csdiy",
+        "deep-learning",
+        "mit-6s7960",
+        "neural-networks",
+        "pytorch"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T22:08:12Z",
+      "updatedAt": "2026-07-04T02:20:49Z"
+    },
+    {
+      "repoId": 1294550922,
+      "slug": "mit-web",
+      "repository": "appleweiping/mit-web",
+      "title": "mit-web",
+      "summary": {
+        "en": "A self-study MERN social application based on MIT web.lab materials, with authentication, real-time chat, and a React, Express, MongoDB, and Socket.IO stack.",
+        "zh": "基于麻省理工学院 web.lab 公开材料的 MERN 社交应用自学实现，包含身份验证、实时聊天与前后端服务。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "express",
+        "fullstack",
+        "mern",
+        "mit",
+        "mongodb",
+        "react",
+        "socketio",
+        "web-development",
+        "weblab"
+      ],
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T02:22:35Z",
+      "updatedAt": "2026-07-09T02:27:46Z"
+    },
+    {
+      "repoId": 1288086873,
+      "slug": "ml-specialization-labs",
+      "repository": "appleweiping/ml-specialization-labs",
+      "title": "ml-specialization-labs",
+      "summary": {
+        "en": "Self-study Machine Learning Specialization work covering regression, neural networks, trees, clustering, anomaly detection, recommendation, and deep Q-learning.",
+        "zh": "基于机器学习专项课程公开材料的自学实现，涵盖回归、神经网络、树模型、聚类、异常检测、推荐与深度 Q 学习。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "andrew-ng",
+        "csdiy",
+        "machine-learning",
+        "numpy",
+        "recommender-systems",
+        "reinforcement-learning",
+        "tensorflow"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T09:05:06Z",
+      "updatedAt": "2026-07-03T09:05:29Z"
+    },
+    {
+      "repoId": 1288650128,
+      "slug": "mlc-exercises",
+      "repository": "appleweiping/mlc-exercises",
+      "title": "mlc-exercises",
+      "summary": {
+        "en": "Self-study exercises based on the MLC course, covering TensorIR, model compilation, program optimization, and Apache TVM integration.",
+        "zh": "基于 MLC 公开课程材料的机器学习编译自学练习，涵盖 TensorIR、模型编译、程序优化与 Apache TVM 集成。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "compiler",
+        "csdiy",
+        "machine-learning-compilation",
+        "mlc",
+        "mlsys",
+        "tensor-ir",
+        "tvm"
+      ],
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T20:23:57Z",
+      "updatedAt": "2026-07-03T21:11:38Z"
+    },
+    {
+      "repoId": 1291118506,
+      "slug": "nand2tetris",
+      "repository": "appleweiping/nand2tetris",
+      "title": "nand2tetris",
+      "summary": {
+        "en": "Self-study implementations based on Nand2Tetris, progressing from logic gates and a CPU to an assembler, virtual machine, Jack compiler, and operating system.",
+        "zh": "基于 Nand2Tetris 公开材料的自学实现，从逻辑门与 CPU 延伸至汇编器、虚拟机、Jack 编译器和操作系统。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "robotics-hardware",
+      "topics": [
+        "assembler",
+        "compiler",
+        "computer-architecture",
+        "csdiy",
+        "hdl",
+        "nand2tetris",
+        "vm"
+      ],
+      "languages": [
+        "Assembly",
+        "Scilab",
+        "Python",
+        "HTML",
+        "Shell",
+        "Batchfile",
+        "Hack"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T14:19:26Z",
+      "updatedAt": "2026-07-06T17:14:59Z"
+    },
+    {
+      "repoId": 1287859146,
+      "slug": "needle-dl-system",
+      "repository": "appleweiping/needle-dl-system",
+      "title": "needle-dl-system",
+      "summary": {
+        "en": "A self-study Needle framework based on CMU 10-414/714, covering autodiff, neural-network modules, optimization, array backends, and sequence models.",
+        "zh": "基于卡内基梅隆大学 10-414/714 公开材料的 Needle 深度学习框架自学实现，涵盖自动微分、网络模块、优化、数组后端与序列模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "autodiff",
+        "cmu",
+        "csdiy",
+        "deep-learning-systems",
+        "machine-learning-systems"
+      ],
+      "languages": [
+        "Python",
+        "Jupyter Notebook",
+        "C++",
+        "Cuda",
+        "CMake",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T04:17:18Z",
+      "updatedAt": "2026-07-03T04:18:14Z"
+    },
+    {
+      "repoId": 1287450215,
+      "slug": "neural-networks-zero-to-hero",
+      "repository": "appleweiping/neural-networks-zero-to-hero",
+      "title": "neural-networks-zero-to-hero",
+      "summary": {
+        "en": "Self-study implementations based on Andrej Karpathy’s Neural Networks: Zero to Hero series, including micrograd, makemore, a compact GPT, and BPE tokenization.",
+        "zh": "基于 Karpathy《Zero to Hero》公开材料的自学实现，包括 micrograd、makemore、小型 GPT 与 BPE 分词。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "autograd",
+        "csdiy",
+        "deep-learning",
+        "gpt",
+        "karpathy",
+        "pytorch",
+        "tokenizer"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-02T17:42:33Z",
+      "updatedAt": "2026-07-02T17:42:57Z"
+    },
+    {
+      "repoId": 1270564169,
+      "slug": "neurotrace-it",
+      "repository": "appleweiping/neurotrace-it",
+      "title": "neurotrace-it",
+      "summary": {
+        "en": "Research code exploring trajectory- and layer-aware data selection for instruction tuning.",
+        "zh": "探索面向指令微调的轨迹感知与层感知数据选择。"
+      },
+      "sourceKind": "research",
+      "wing": "models-data",
+      "topics": [],
+      "languages": [
+        "Python",
+        "TeX"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-15T20:51:57Z",
+      "updatedAt": "2026-06-23T12:54:40Z"
+    },
+    {
+      "repoId": 1250365222,
+      "slug": "newroad-valley",
+      "repository": "appleweiping/newroad-valley",
+      "title": "newroad-valley",
+      "summary": {
+        "en": "A Stardew-inspired pixel town that presents a local agent workspace through Phaser, React, and FastAPI.",
+        "zh": "受《星露谷物语》启发的像素小镇，以 Phaser、React 与 FastAPI 呈现本地智能体工作区。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [
+        "ai-agents",
+        "gamification",
+        "phaser3",
+        "pixel-art",
+        "stardew-valley"
+      ],
+      "languages": [
+        "Python",
+        "TypeScript",
+        "PowerShell",
+        "CSS",
+        "JavaScript",
+        "HTML",
+        "Batchfile"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://newroad-valley.vercel.app/play.html",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-26T14:59:45Z",
+      "updatedAt": "2026-06-12T18:41:28Z"
+    },
+    {
+      "repoId": 1292647186,
+      "slug": "nju-compilers",
+      "repository": "appleweiping/nju-compilers",
+      "title": "nju-compilers",
+      "summary": {
+        "en": "A self-study compiler based on Nanjing University materials, covering lexing, parsing, semantics, IR, and code generation.",
+        "zh": "基于南京大学编译原理公开材料的编译器自学实现，涵盖词法、语法、语义分析、中间表示与代码生成。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "bison",
+        "c",
+        "compilers",
+        "csdiy",
+        "flex",
+        "nju"
+      ],
+      "languages": [
+        "C",
+        "Yacc",
+        "Lex",
+        "Python",
+        "Assembly",
+        "Shell",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T17:59:30Z",
+      "updatedAt": "2026-07-07T18:00:14Z"
+    },
+    {
+      "repoId": 1292437959,
+      "slug": "nju-os",
+      "repository": "appleweiping/nju-os",
+      "title": "nju-os",
+      "summary": {
+        "en": "Self-study operating-system labs based on Nanjing University materials, spanning host-side tools, concurrency, process management, memory, and file systems.",
+        "zh": "基于南京大学操作系统公开材料的自学实验，涵盖宿主工具、并发、进程管理、内存与文件系统。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "c",
+        "concurrency",
+        "csdiy",
+        "jyy",
+        "nju-os",
+        "operating-systems"
+      ],
+      "languages": [
+        "C",
+        "C++",
+        "Makefile",
+        "Assembly",
+        "Shell",
+        "Python",
+        "Linker Script"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T14:24:14Z",
+      "updatedAt": "2026-07-09T17:17:34Z"
+    },
+    {
+      "repoId": 1294157548,
+      "slug": "nju-software-analysis",
+      "repository": "appleweiping/nju-software-analysis",
+      "title": "nju-software-analysis",
+      "summary": {
+        "en": "Self-study static analysis based on Nanjing University materials and Tai-e, covering dataflow, call graphs, pointers, and taint analysis.",
+        "zh": "基于南京大学软件分析公开材料与 Tai-e 框架的自学作业，涵盖数据流、调用图、指针与污点分析。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "dataflow-analysis",
+        "java",
+        "nju",
+        "pointer-analysis",
+        "program-analysis",
+        "static-analysis",
+        "tai-e",
+        "taint-analysis"
+      ],
+      "languages": [
+        "Java"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T19:58:21Z",
+      "updatedAt": "2026-07-08T23:33:34Z"
+    },
+    {
+      "repoId": 1288281593,
+      "slug": "nyu-dl-2021",
+      "repository": "appleweiping/nyu-dl-2021",
+      "title": "nyu-dl-2021",
+      "summary": {
+        "en": "Self-study work based on NYU’s 2021 deep-learning course, covering backpropagation, CNNs, RNNs, attention, and energy-based models.",
+        "zh": "基于纽约大学 2021 年深度学习公开课程材料的自学作业，涵盖反向传播、卷积与循环网络、注意力和能量模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "backpropagation",
+        "cnn",
+        "csdiy",
+        "deep-learning",
+        "energy-based-models",
+        "nyu",
+        "pytorch"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T12:52:29Z",
+      "updatedAt": "2026-07-03T14:38:15Z"
+    },
+    {
+      "repoId": 1192521976,
+      "slug": "os-project",
+      "repository": "appleweiping/OS-project",
+      "title": "OS-project",
+      "summary": {
+        "en": "A coursework operating-systems project covering threads, interprocess communication, and condition variables.",
+        "zh": "涵盖线程、进程间通信与条件变量的操作系统课程项目。"
+      },
+      "sourceKind": "coursework",
+      "wing": "coursework-notes",
+      "topics": [],
+      "languages": [
+        "C",
+        "Shell",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+        "zh": "课程项目记录；团队与模块归属以仓库文档为准。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-03-26T09:52:21Z",
+      "updatedAt": "2026-05-23T17:55:05Z"
+    },
+    {
+      "repoId": 1303536141,
+      "slug": "overdrive-city",
+      "repository": "appleweiping/overdrive-city",
+      "title": "overdrive-city",
+      "summary": {
+        "en": "An original browser-based 3D open-world driving sandbox built with procedural systems and a minimal dependency footprint.",
+        "zh": "原创浏览器 3D 开放世界驾驶沙盒，以程序化系统和极少依赖实现。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [
+        "driving-game",
+        "game",
+        "javascript",
+        "no-build",
+        "open-world",
+        "procedural-generation",
+        "threejs",
+        "webgl"
+      ],
+      "languages": [
+        "JavaScript",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/overdrive-city/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-17T04:03:23Z",
+      "updatedAt": "2026-07-17T04:04:03Z"
+    },
+    {
+      "repoId": 1304248330,
+      "slug": "paradise-isle",
+      "repository": "appleweiping/paradise-isle",
+      "title": "paradise-isle",
+      "summary": {
+        "en": "An original browser island life simulation with farming, fishing, combat, customization, and procedural art.",
+        "zh": "原创浏览器海岛生活模拟，包含种植、钓鱼、战斗、装扮与程序化美术。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [
+        "canvas",
+        "farming-game",
+        "game",
+        "isometric",
+        "remake",
+        "simulation-game",
+        "typescript"
+      ],
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/paradise-isle/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-17T17:41:45Z",
+      "updatedAt": "2026-07-17T17:42:29Z"
+    },
+    {
+      "repoId": 1293067178,
+      "slug": "pku-software-analysis",
+      "repository": "appleweiping/pku-software-analysis",
+      "title": "pku-software-analysis",
+      "summary": {
+        "en": "Self-study assignments based on Peking University software-analysis materials, covering static and dynamic analysis, dataflow, and symbolic execution.",
+        "zh": "基于北京大学软件分析公开材料的自学作业，涵盖静态与动态分析、数据流和符号执行。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "pku",
+        "pointer-analysis",
+        "program-synthesis",
+        "software-analysis",
+        "soot",
+        "static-analysis",
+        "sygus",
+        "symbolic-execution",
+        "z3"
+      ],
+      "languages": [
+        "Slash",
+        "Python",
+        "Java"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T04:49:49Z",
+      "updatedAt": "2026-07-08T04:50:43Z"
+    },
+    {
+      "repoId": 1292370731,
+      "slug": "pku-sysy-compiler",
+      "repository": "appleweiping/pku-sysy-compiler",
+      "title": "pku-sysy-compiler",
+      "summary": {
+        "en": "A self-study SysY compiler based on Peking University materials, lowering a C-like language through Koopa IR to RISC-V assembly.",
+        "zh": "基于北京大学编译实践公开材料的 SysY 编译器自学实现，将类 C 语言经 Koopa IR 降至 RISC-V 汇编。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "compilers",
+        "csdiy",
+        "koopa-ir",
+        "pku",
+        "riscv",
+        "rust",
+        "sysy"
+      ],
+      "languages": [
+        "Rust",
+        "Assembly",
+        "C",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T13:27:22Z",
+      "updatedAt": "2026-07-07T13:28:43Z"
+    },
+    {
+      "repoId": 1266683356,
+      "slug": "pokeverse",
+      "repository": "appleweiping/pokeverse",
+      "title": "pokeverse",
+      "summary": {
+        "en": "A fan-made browser pixel RPG with a large creature index, turn-based battles, peer-to-peer multiplayer, and original chiptune music.",
+        "zh": "粉丝创作的浏览器像素角色扮演游戏，包含大型生物图鉴、回合战斗、点对点联机与原创芯片音乐。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [],
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-11T21:21:45Z",
+      "updatedAt": "2026-06-12T18:07:28Z"
+    },
+    {
+      "repoId": 1289349256,
+      "slug": "princeton-algorithms",
+      "repository": "appleweiping/princeton-algorithms",
+      "title": "princeton-algorithms",
+      "summary": {
+        "en": "Self-study Java assignments based on Princeton Algorithms I and II, spanning union-find, sorting, graphs, string algorithms, and compression.",
+        "zh": "基于普林斯顿大学 Algorithms I 与 II 公开材料的 Java 自学作业，涵盖并查集、排序、图、字符串算法与压缩。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "algorithms",
+        "csdiy",
+        "data-structures",
+        "java",
+        "princeton",
+        "sedgewick"
+      ],
+      "languages": [
+        "Java",
+        "PowerShell",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T16:27:53Z",
+      "updatedAt": "2026-07-04T17:22:51Z"
+    },
+    {
+      "repoId": 1304237972,
+      "slug": "red-horizon-rts",
+      "repository": "appleweiping/red-horizon-rts",
+      "title": "red-horizon-rts",
+      "summary": {
+        "en": "An original isometric real-time strategy game with a deterministic simulation core and procedural art and audio.",
+        "zh": "原创等距视角即时战略游戏，采用确定性模拟核心与程序化美术、音频。"
+      },
+      "sourceKind": "original",
+      "wing": "creative-computing",
+      "topics": [],
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-17T17:29:56Z",
+      "updatedAt": "2026-07-17T17:30:25Z"
+    },
+    {
+      "repoId": 1298028405,
+      "slug": "resynthesis-watermark-limits",
+      "repository": "appleweiping/resynthesis-watermark-limits",
+      "title": "resynthesis-watermark-limits",
+      "summary": {
+        "en": "Research code examining speech-watermark robustness under generative resynthesis and laundering transformations.",
+        "zh": "研究生成式重合成与清洗变换下的语音水印稳健性。"
+      },
+      "sourceKind": "research",
+      "wing": "ai4s-research",
+      "topics": [
+        "audio-watermarking",
+        "data-processing-inequality",
+        "deepfake",
+        "generative-ai",
+        "icassp",
+        "information-theory",
+        "neural-vocoder",
+        "provenance",
+        "signal-processing",
+        "voice-conversion"
+      ],
+      "languages": [
+        "Python",
+        "TeX",
+        "BibTeX Style",
+        "Shell"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-12T06:07:10Z",
+      "updatedAt": "2026-07-17T19:02:54Z"
+    },
+    {
+      "repoId": 1270564108,
+      "slug": "riskcal-rlvr",
+      "repository": "appleweiping/riskcal-rlvr",
+      "title": "riskcal-rlvr",
+      "summary": {
+        "en": "Research code exploring risk-sensitive calibration rewards for RLVR reasoning models.",
+        "zh": "探索 RLVR 推理模型中的风险敏感校准奖励。"
+      },
+      "sourceKind": "research",
+      "wing": "models-data",
+      "topics": [],
+      "languages": [
+        "Python",
+        "TeX"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-15T20:51:51Z",
+      "updatedAt": "2026-06-23T12:54:37Z"
+    },
+    {
+      "repoId": 1232419699,
+      "slug": "security-helper",
+      "repository": "appleweiping/Security-helper",
+      "title": "Security-helper",
+      "summary": {
+        "en": "A small coursework utility that derives a token from a supplied student number.",
+        "zh": "根据输入学号生成令牌的小型课程工具。"
+      },
+      "sourceKind": "coursework",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+        "zh": "课程项目记录；团队与模块归属以仓库文档为准。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/Security-helper/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-07T23:12:05Z",
+      "updatedAt": "2026-05-23T16:11:02Z"
+    },
+    {
+      "repoId": 1294910939,
+      "slug": "seed-labs",
+      "repository": "appleweiping/seed-labs",
+      "title": "seed-labs",
+      "summary": {
+        "en": "Self-study security exercises based on Syracuse SEED Labs, covering selected software, cryptography, network, and web-security topics.",
+        "zh": "基于雪城大学 SEED Labs 公开材料的安全自学练习，涵盖部分软件、密码学、网络与 Web 安全主题。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "buffer-overflow",
+        "cryptography",
+        "csdiy",
+        "ethical-hacking",
+        "network-security",
+        "scapy",
+        "security",
+        "seed-labs",
+        "web-security",
+        "wsl2"
+      ],
+      "languages": [
+        "Python",
+        "Shell",
+        "C",
+        "HTML",
+        "GDB"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T08:37:33Z",
+      "updatedAt": "2026-07-09T08:38:12Z"
+    },
+    {
+      "repoId": 1292851299,
+      "slug": "sjtu-compilers",
+      "repository": "appleweiping/sjtu-compilers",
+      "title": "sjtu-compilers",
+      "summary": {
+        "en": "A self-study compiler based on Shanghai Jiao Tong University materials, covering the standard stages for a C-like language.",
+        "zh": "基于上海交通大学编译原理公开材料的编译器自学实现，覆盖类 C 语言编译流程的主要阶段。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "bison",
+        "codegen",
+        "compilers",
+        "csdiy",
+        "flex",
+        "llvm",
+        "sjtu",
+        "tiger"
+      ],
+      "languages": [
+        "C++",
+        "Yacc",
+        "Shell",
+        "Lex",
+        "C",
+        "CMake",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T22:53:23Z",
+      "updatedAt": "2026-07-08T00:13:00Z"
+    },
+    {
+      "repoId": 1289089085,
+      "slug": "sta4273-min-expectations",
+      "repository": "appleweiping/sta4273-min-expectations",
+      "title": "sta4273-min-expectations",
+      "summary": {
+        "en": "Self-study work based on University of Toronto STA4273, covering variational methods, gradient estimators, and latent-variable models.",
+        "zh": "基于多伦多大学 STA4273 公开材料的自学项目，涵盖变分方法、梯度估计与潜变量模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "csdiy",
+        "gradient-estimators",
+        "latent-variable-models",
+        "probabilistic-ml",
+        "sta4273",
+        "variational-inference"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T10:27:40Z",
+      "updatedAt": "2026-07-04T10:28:16Z"
+    },
+    {
+      "repoId": 1293102196,
+      "slug": "stanford-cs110-syscore",
+      "repository": "appleweiping/stanford-cs110-syscore",
+      "title": "stanford-cs110-syscore",
+      "summary": {
+        "en": "Self-study C++ systems projects based on Stanford CS110, including filesystems, processes, shells, thread pools, proxies, and MapReduce.",
+        "zh": "基于斯坦福大学 CS110 公开材料的 C++ 系统自学项目，包括文件系统、进程、Shell、线程池、代理与 MapReduce。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "concurrency",
+        "cpp",
+        "csdiy",
+        "networking",
+        "operating-systems",
+        "stanford-cs110",
+        "systems-programming"
+      ],
+      "languages": [
+        "C++",
+        "C",
+        "Shell",
+        "Python",
+        "Makefile",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T05:34:09Z",
+      "updatedAt": "2026-07-09T00:12:08Z"
+    },
+    {
+      "repoId": 1294555537,
+      "slug": "stanford-cs142",
+      "repository": "appleweiping/stanford-cs142",
+      "title": "stanford-cs142",
+      "summary": {
+        "en": "A self-study MERN photo application based on Stanford CS142, covering sessions, registration, uploads, comments, and activity feeds.",
+        "zh": "基于斯坦福大学 CS142 公开材料的 MERN 照片应用自学实现，涵盖会话、注册、上传、评论与动态流。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "csdiy",
+        "express",
+        "full-stack",
+        "mern",
+        "mongodb",
+        "mongoose",
+        "nodejs",
+        "photoapp",
+        "react",
+        "stanford-cs142",
+        "vite",
+        "web-applications"
+      ],
+      "languages": [
+        "JavaScript",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T02:29:35Z",
+      "updatedAt": "2026-07-09T02:30:31Z"
+    },
+    {
+      "repoId": 1292509831,
+      "slug": "stanford-cs143-cool",
+      "repository": "appleweiping/stanford-cs143-cool",
+      "title": "stanford-cs143-cool",
+      "summary": {
+        "en": "A self-study Cool compiler based on Stanford CS143, covering lexical analysis, parsing, semantic analysis, and MIPS code generation.",
+        "zh": "基于斯坦福大学 CS143 公开材料的 Cool 编译器自学实现，涵盖词法、语法、语义分析与 MIPS 代码生成。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "bison",
+        "compilers",
+        "cool",
+        "cs143",
+        "csdiy",
+        "flex",
+        "stanford"
+      ],
+      "languages": [
+        "C++",
+        "Lex",
+        "Yacc",
+        "Cool",
+        "Assembly",
+        "C",
+        "Makefile",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T15:28:51Z",
+      "updatedAt": "2026-07-07T15:30:13Z"
+    },
+    {
+      "repoId": 1294668633,
+      "slug": "stanford-cs148",
+      "repository": "appleweiping/stanford-cs148",
+      "title": "stanford-cs148",
+      "summary": {
+        "en": "A self-study CPU renderer based on Stanford CS148, covering rasterization, Whitted ray tracing, bounding-volume hierarchies, and Monte Carlo path tracing.",
+        "zh": "基于斯坦福大学 CS148 公开材料的 CPU 渲染器自学实现，涵盖光栅化、Whitted 光线追踪、层次包围盒与蒙特卡洛路径追踪。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "bvh",
+        "computer-graphics",
+        "cs148",
+        "csdiy",
+        "numpy",
+        "path-tracing",
+        "rasterization",
+        "ray-tracing",
+        "rendering",
+        "stanford"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T05:30:13Z",
+      "updatedAt": "2026-07-09T05:31:06Z"
+    },
+    {
+      "repoId": 1292858143,
+      "slug": "stanford-cs242",
+      "repository": "appleweiping/stanford-cs242",
+      "title": "stanford-cs242",
+      "summary": {
+        "en": "Self-study assignments based on Stanford CS242, covering lambda calculus, type systems, and programming-language implementation.",
+        "zh": "基于斯坦福大学 CS242 公开材料的编程语言自学作业，涵盖 Lambda 演算、类型系统与语言实现。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "cs242",
+        "csdiy",
+        "lambda-calculus",
+        "programming-languages",
+        "stanford",
+        "type-systems"
+      ],
+      "languages": [
+        "Python",
+        "OCaml",
+        "Rust",
+        "TeX",
+        "JavaScript",
+        "F*",
+        "WebAssembly",
+        "Lean",
+        "Makefile",
+        "HTML",
+        "Shell",
+        "Assembly",
+        "C"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T23:05:47Z",
+      "updatedAt": "2026-07-09T01:21:26Z"
+    },
+    {
+      "repoId": 1294157481,
+      "slug": "stanford-cs346-db",
+      "repository": "appleweiping/stanford-cs346-db",
+      "title": "stanford-cs346-db",
+      "summary": {
+        "en": "A self-study RedBase relational database based on Stanford CS346, covering paged storage, B+ trees, catalogs, query execution, optimization, and aggregation.",
+        "zh": "基于斯坦福大学 CS346 公开材料的 RedBase 关系数据库自学实现，涵盖分页存储、B+ 树、目录、查询执行、优化与聚合。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "bplus-tree",
+        "cpp",
+        "csdiy",
+        "database",
+        "dbms",
+        "query-engine",
+        "redbase",
+        "stanford-cs346"
+      ],
+      "languages": [
+        "C++",
+        "C",
+        "Makefile",
+        "Shell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T19:58:18Z",
+      "updatedAt": "2026-07-08T23:16:14Z"
+    },
+    {
+      "repoId": 1294359575,
+      "slug": "stanford-ee364a-convex",
+      "repository": "appleweiping/stanford-ee364a-convex",
+      "title": "stanford-ee364a-convex",
+      "summary": {
+        "en": "Self-study numerical exercises based on Stanford EE364A, using CVXPY for linear, quadratic, second-order-cone, and semidefinite optimization.",
+        "zh": "基于斯坦福大学 EE364A 公开材料的凸优化自学练习，使用 CVXPY 处理线性、二次、二阶锥与半正定优化问题。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "boyd",
+        "convex-optimization",
+        "csdiy",
+        "cvxpy",
+        "ee364a",
+        "math",
+        "optimization",
+        "semidefinite-programming"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T22:58:00Z",
+      "updatedAt": "2026-07-08T22:58:36Z"
+    },
+    {
+      "repoId": 1289055179,
+      "slug": "stat8201-dgm",
+      "repository": "appleweiping/stat8201-dgm",
+      "title": "stat8201-dgm",
+      "summary": {
+        "en": "Self-study assignments based on Columbia STAT8201, covering variational autoencoders, normalizing flows, GANs, autoregressive models, and diffusion.",
+        "zh": "基于哥伦比亚大学 STAT8201 公开材料的深度生成模型自学作业，涵盖变分自编码器、归一化流、GAN、自回归模型与扩散模型。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "csdiy",
+        "deep-generative-models",
+        "diffusion",
+        "gan",
+        "normalizing-flows",
+        "stat8201",
+        "vae"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-04T09:33:19Z",
+      "updatedAt": "2026-07-04T12:12:55Z"
+    },
+    {
+      "repoId": 1294594773,
+      "slug": "sysadmin-decal",
+      "repository": "appleweiping/sysadmin-decal",
+      "title": "sysadmin-decal",
+      "summary": {
+        "en": "Self-study work based on Berkeley OCF’s Linux System Administration DeCal, covering command-line operations, services, networks, and security.",
+        "zh": "基于加州大学伯克利分校 OCF Linux 系统管理 DeCal 公开材料的自学练习，涵盖命令行、服务、网络、安全与故障排查。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "bash",
+        "berkeley",
+        "csdiy",
+        "devops",
+        "docker",
+        "linux",
+        "nginx",
+        "ssh",
+        "sysadmin",
+        "system-administration"
+      ],
+      "languages": [
+        "Shell",
+        "Python",
+        "Nix",
+        "C",
+        "Dockerfile",
+        "HTML",
+        "Makefile"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T03:33:52Z",
+      "updatedAt": "2026-07-09T03:52:14Z"
+    },
+    {
+      "repoId": 1240017640,
+      "slug": "terraria-doc",
+      "repository": "appleweiping/TERRARIA_DOC",
+      "title": "TERRARIA_DOC",
+      "summary": {
+        "en": "An experimental collection of Terraria documentation and agent-oriented tooling.",
+        "zh": "围绕《泰拉瑞亚》文档与智能体工具的实验性集合。"
+      },
+      "sourceKind": "experiment",
+      "wing": "creative-computing",
+      "topics": [],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-15T17:22:36Z",
+      "updatedAt": "2026-06-04T13:01:18Z"
+    },
+    {
+      "repoId": 1224703742,
+      "slug": "tgl-rec",
+      "repository": "appleweiping/TGL-Rec",
+      "title": "TGL-Rec",
+      "summary": {
+        "en": "Research code exploring temporal graph-to-language retrieval for sequence and time understanding in LLM-based recommendation.",
+        "zh": "探索面向大模型推荐的时间图到语言检索，以及序列与时间信息理解。"
+      },
+      "sourceKind": "research",
+      "wing": "models-data",
+      "topics": [],
+      "languages": [
+        "Python",
+        "Shell",
+        "TeX",
+        "PowerShell"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-04-29T14:42:05Z",
+      "updatedAt": "2026-06-10T18:25:22Z"
+    },
+    {
+      "repoId": 1288424356,
+      "slug": "tinyml-efficient-dl",
+      "repository": "appleweiping/tinyml-efficient-dl",
+      "title": "tinyml-efficient-dl",
+      "summary": {
+        "en": "Self-study labs based on MIT 6.5940, covering pruning, quantization, neural-architecture search, and efficient deep-learning techniques.",
+        "zh": "基于麻省理工学院 6.5940 公开材料的高效深度学习自学实验，涵盖剪枝、量化、神经架构搜索与模型效率技术。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "robotics-hardware",
+      "topics": [
+        "csdiy",
+        "efficient-deep-learning",
+        "mit-6540",
+        "model-compression",
+        "pruning",
+        "quantization",
+        "tinyml"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-03T15:31:06Z",
+      "updatedAt": "2026-07-03T18:27:50Z"
+    },
+    {
+      "repoId": 1292867539,
+      "slug": "top-down-labs",
+      "repository": "appleweiping/top-down-labs",
+      "title": "top-down-labs",
+      "summary": {
+        "en": "Self-study networking labs based on USTC materials and a top-down networking curriculum, covering sockets, protocols, and Mininet experiments.",
+        "zh": "基于中国科学技术大学公开材料与自顶向下网络课程体系的自学实验，涵盖套接字、协议与 Mininet。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "csdiy",
+        "mininet",
+        "networking",
+        "sockets",
+        "top-down",
+        "ustc"
+      ],
+      "languages": [
+        "Python",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-07T23:22:32Z",
+      "updatedAt": "2026-07-07T23:23:25Z"
+    },
+    {
+      "repoId": 1296066358,
+      "slug": "topo-flow-limits",
+      "repository": "appleweiping/topo-flow-limits",
+      "title": "topo-flow-limits",
+      "summary": {
+        "en": "Research code examining when latent higher-order network structure can be identified from edge-flow observations.",
+        "zh": "研究从边流观测中识别潜在高阶网络结构的条件。"
+      },
+      "sourceKind": "research",
+      "wing": "ai4s-research",
+      "topics": [
+        "detection-theory",
+        "hodge-laplacian",
+        "icassp",
+        "identifiability",
+        "information-theory",
+        "phase-transition",
+        "reproducible-research",
+        "signal-processing",
+        "simplicial-complex",
+        "topological-signal-processing"
+      ],
+      "languages": [
+        "Python",
+        "TeX",
+        "BibTeX Style"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-10T04:58:05Z",
+      "updatedAt": "2026-07-18T09:38:34Z"
+    },
+    {
+      "repoId": 1270564041,
+      "slug": "tracecausal",
+      "repository": "appleweiping/tracecausal",
+      "title": "tracecausal",
+      "summary": {
+        "en": "Research code exploring causal-propagation audits of hallucination traces across LLM decoding paradigms.",
+        "zh": "探索不同大模型解码范式中幻觉痕迹的因果传播审计。"
+      },
+      "sourceKind": "research",
+      "wing": "models-data",
+      "topics": [],
+      "languages": [
+        "Python",
+        "TeX"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-15T20:51:45Z",
+      "updatedAt": "2026-06-23T12:54:37Z"
+    },
+    {
+      "repoId": 1195226736,
+      "slug": "truce-rec",
+      "repository": "appleweiping/TRUCE-Rec",
+      "title": "TRUCE-Rec",
+      "summary": {
+        "en": "Research code for uncertainty-aware generative recommendation, organized around shared data, baselines, evaluation, and reproducibility utilities.",
+        "zh": "面向不确定性感知生成式推荐的研究代码，统一组织数据、基线、评估与复现工具。"
+      },
+      "sourceKind": "research",
+      "wing": "models-data",
+      "topics": [],
+      "languages": [
+        "Python",
+        "Shell",
+        "TeX"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-03-29T12:01:06Z",
+      "updatedAt": "2026-07-07T11:05:09Z"
+    },
+    {
+      "repoId": 1294369749,
+      "slug": "ucb-cs126",
+      "repository": "appleweiping/ucb-cs126",
+      "title": "ucb-cs126",
+      "summary": {
+        "en": "Self-study exercises based on UC Berkeley EECS 126, covering probability, coding, random graphs, stochastic processes, detection, and filtering.",
+        "zh": "基于加州大学伯克利分校 EECS 126 公开材料的概率自学练习，涵盖编码、随机图、随机过程、检测与滤波。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "cs126",
+        "csdiy",
+        "ee126",
+        "math",
+        "probability",
+        "random-processes"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T23:08:21Z",
+      "updatedAt": "2026-07-08T23:08:56Z"
+    },
+    {
+      "repoId": 1294857181,
+      "slug": "ucb-cs161",
+      "repository": "appleweiping/ucb-cs161",
+      "title": "ucb-cs161",
+      "summary": {
+        "en": "Self-study security projects based on UC Berkeley CS161, covering memory safety, cryptography, network security, and vulnerable web applications.",
+        "zh": "基于加州大学伯克利分校 CS161 公开材料的安全自学项目，涵盖内存安全、密码学、网络安全与 Web 漏洞。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "berkeley",
+        "buffer-overflow",
+        "computer-security",
+        "cryptography",
+        "cs161",
+        "csdiy",
+        "memory-safety",
+        "web-security"
+      ],
+      "languages": [
+        "Python",
+        "C",
+        "Shell",
+        "HTML"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T07:58:56Z",
+      "updatedAt": "2026-07-09T08:00:19Z"
+    },
+    {
+      "repoId": 1294406480,
+      "slug": "ucb-cs70",
+      "repository": "appleweiping/ucb-cs70",
+      "title": "ucb-cs70",
+      "summary": {
+        "en": "Self-study code and notes based on UC Berkeley CS70, covering discrete mathematics, number theory, coding, matching, probability, and Markov chains.",
+        "zh": "基于加州大学伯克利分校 CS70 公开材料的代码与笔记，涵盖离散数学、数论、编码、匹配、概率与马尔可夫链。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "coursework-notes",
+      "topics": [
+        "berlekamp-welch",
+        "cs70",
+        "csdiy",
+        "discrete-mathematics",
+        "error-correcting-codes",
+        "markov-chains",
+        "probability",
+        "rsa",
+        "secret-sharing",
+        "uc-berkeley"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T23:48:30Z",
+      "updatedAt": "2026-07-08T23:49:37Z"
+    },
+    {
+      "repoId": 1294453856,
+      "slug": "ucb-data100",
+      "repository": "appleweiping/ucb-data100",
+      "title": "ucb-data100",
+      "summary": {
+        "en": "Self-study Data 100 labs covering regression, optimization, classification, dimensionality reduction, clustering, and applied projects.",
+        "zh": "基于加州大学伯克利分校 Data 100 公开材料的数据科学自学实验，涵盖回归、优化、分类、降维、聚类与应用项目。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "models-data",
+      "topics": [
+        "berkeley",
+        "csdiy",
+        "data-science",
+        "data100",
+        "machine-learning",
+        "pandas",
+        "regression"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:34:05Z",
+      "updatedAt": "2026-07-09T00:34:33Z"
+    },
+    {
+      "repoId": 1294428262,
+      "slug": "ucb-ee120-signals",
+      "repository": "appleweiping/ucb-ee120-signals",
+      "title": "ucb-ee120-signals",
+      "summary": {
+        "en": "Self-study Python labs based on UC Berkeley EE120, covering convolution, LTI systems, sampling, Fourier analysis, biomedical signals, denoising, and feedback.",
+        "zh": "基于加州大学伯克利分校 EE120 公开材料的 Python 信号自学实验，涵盖卷积、LTI 系统、采样、傅里叶分析、生物信号、降噪与反馈。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "robotics-hardware",
+      "topics": [
+        "berkeley",
+        "control-systems",
+        "csdiy",
+        "dsp",
+        "ee120",
+        "fft",
+        "numpy",
+        "python",
+        "signal-processing",
+        "signals-and-systems"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:12:00Z",
+      "updatedAt": "2026-07-09T00:12:49Z"
+    },
+    {
+      "repoId": 1294422710,
+      "slug": "ucb-ee16ab",
+      "repository": "appleweiping/ucb-ee16ab",
+      "title": "ucb-ee16ab",
+      "summary": {
+        "en": "Self-study Python labs based on UC Berkeley EE16A and EE16B, covering imaging, localization, classification, dynamics, estimation, control, and matrix methods.",
+        "zh": "基于加州大学伯克利分校 EE16A 与 EE16B 公开材料的 Python 自学实验，涵盖成像、定位、分类、动力学、估计、控制与矩阵方法。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "robotics-hardware",
+      "topics": [
+        "control-systems",
+        "csdiy",
+        "ee16a",
+        "ee16b",
+        "eecs16a",
+        "eecs16b",
+        "kalman-filter",
+        "linear-algebra",
+        "localization",
+        "svd-pca"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T00:06:53Z",
+      "updatedAt": "2026-07-09T00:07:47Z"
+    },
+    {
+      "repoId": 1188046836,
+      "slug": "uml-class-diagram-tool",
+      "repository": "appleweiping/uml-class-diagram-tool",
+      "title": "uml-class-diagram-tool",
+      "summary": {
+        "en": "A coursework UML class-diagram editor with validation, undo and redo, and export support.",
+        "zh": "具备校验、撤销与重做、导出功能的 UML 类图课程项目。"
+      },
+      "sourceKind": "coursework",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "Java"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+        "zh": "课程项目记录；团队与模块归属以仓库文档为准。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-03-21T14:47:14Z",
+      "updatedAt": "2026-05-23T17:55:08Z"
+    },
+    {
+      "repoId": 1259381747,
+      "slug": "undergraduate-study-netherlands",
+      "repository": "appleweiping/UNDERGRADUATE_STUDY_NETHERLANDS",
+      "title": "UNDERGRADUATE_STUDY_NETHERLANDS",
+      "summary": {
+        "en": "Undergraduate study notes and course materials from the Netherlands.",
+        "zh": "荷兰本科阶段的学习笔记与课程资料。"
+      },
+      "sourceKind": "meta",
+      "wing": "coursework-notes",
+      "topics": [],
+      "languages": [],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-04T13:00:25Z",
+      "updatedAt": "2026-06-04T13:27:31Z"
+    },
+    {
+      "repoId": 1294664281,
+      "slug": "ustc-cg",
+      "repository": "appleweiping/ustc-cg",
+      "title": "ustc-cg",
+      "summary": {
+        "en": "Self-study USTC graphics work covering image and mesh processing, parameterization, deformation, simplification, rasterization, and path tracing.",
+        "zh": "基于中国科学技术大学计算机图形学公开材料的自学实现，涵盖图像与网格处理、参数化、变形、简化、光栅化与路径追踪。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "creative-computing",
+      "topics": [
+        "arap",
+        "computer-graphics",
+        "csdiy",
+        "geometry-processing",
+        "mesh-parameterization",
+        "mesh-simplification",
+        "path-tracing",
+        "poisson-image-editing",
+        "rasterizer",
+        "ustc"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-09T05:23:58Z",
+      "updatedAt": "2026-07-09T05:24:44Z"
+    },
+    {
+      "repoId": 1293368139,
+      "slug": "ustc-compilers",
+      "repository": "appleweiping/ustc-compilers",
+      "title": "ustc-compilers",
+      "summary": {
+        "en": "A self-study Cminus-f compiler based on USTC materials, covering lexical and syntax analysis, LightIR and LLVM IR, and code generation.",
+        "zh": "基于中国科学技术大学编译原理公开材料的 Cminus-f 编译器自学实现，涵盖词法、语法分析、LightIR/LLVM IR 与代码生成。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [
+        "cminus",
+        "compilers",
+        "csdiy",
+        "ir",
+        "llvm",
+        "ustc"
+      ],
+      "languages": [
+        "C++",
+        "LLVM",
+        "Shell",
+        "Yacc",
+        "CMake",
+        "Python",
+        "C",
+        "Assembly",
+        "Lex"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-08T09:21:05Z",
+      "updatedAt": "2026-07-08T09:21:40Z"
+    },
+    {
+      "repoId": 1218129553,
+      "slug": "venus-basestation",
+      "repository": "appleweiping/venus-basestation",
+      "title": "venus-basestation",
+      "summary": {
+        "en": "Coursework base-station software with a live visualization dashboard for a multi-robot planetary-exploration project.",
+        "zh": "面向多机器人行星探索项目的课程基站软件与实时可视化仪表盘。"
+      },
+      "sourceKind": "coursework",
+      "wing": "robotics-hardware",
+      "topics": [],
+      "languages": [
+        "C",
+        "Python",
+        "Makefile",
+        "Shell",
+        "PowerShell"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+        "zh": "课程项目记录；团队与模块归属以仓库文档为准。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-04-22T15:03:21Z",
+      "updatedAt": "2026-06-19T09:14:59Z"
+    },
+    {
+      "repoId": 1263413833,
+      "slug": "visa-lark",
+      "repository": "appleweiping/visa-lark",
+      "title": "visa-lark",
+      "summary": {
+        "en": "An open-source U.S. visa-appointment monitor designed around account safety, local credentials, and an optional control plane.",
+        "zh": "开源美国签证预约监控工具，以账户安全、本地凭证与可选控制平面为设计原则。"
+      },
+      "sourceKind": "original",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Shell",
+        "Dockerfile"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://visa-lark.vercel.app",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-06-08T23:54:42Z",
+      "updatedAt": "2026-06-12T12:10:17Z"
+    },
+    {
+      "repoId": 1242994017,
+      "slug": "weiping-council",
+      "repository": "appleweiping/WEIPING_COUNCIL",
+      "title": "WEIPING_COUNCIL",
+      "summary": {
+        "en": "A multi-model deliberation system supporting council, debate, red-team, consensus, specialist, and tournament protocols.",
+        "zh": "多模型协商系统，支持议会、辩论、红队、共识、专家与锦标赛六种协议。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "Python",
+        "CSS",
+        "JavaScript",
+        "Batchfile",
+        "PowerShell",
+        "HTML"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-19T00:38:23Z",
+      "updatedAt": "2026-06-04T16:18:23Z"
+    },
+    {
+      "repoId": 1248166324,
+      "slug": "weiping-lab",
+      "repository": "appleweiping/WEIPING_LAB",
+      "title": "WEIPING_LAB",
+      "summary": {
+        "en": "An autonomous research workflow centered on phenomenon-driven discovery, early falsification, and evidence-gated progression.",
+        "zh": "围绕现象驱动发现、尽早证伪与证据门控推进构建的自主研究工作流。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "Python",
+        "JavaScript",
+        "CSS",
+        "Makefile",
+        "Batchfile",
+        "HTML",
+        "PowerShell"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-24T09:19:49Z",
+      "updatedAt": "2026-06-04T16:18:13Z"
+    },
+    {
+      "repoId": 1245101224,
+      "slug": "weiping-whale",
+      "repository": "appleweiping/WEIPING_WHALE",
+      "title": "WEIPING_WHALE",
+      "summary": {
+        "en": "A terminal-native DeepSeek coding agent with snapshots, session branching, model routing, sub-agents, diagnostics, and cost tracking, based on CodeWhale.",
+        "zh": "基于 CodeWhale 的终端 DeepSeek 编码智能体，支持快照、会话分支、模型路由、子智能体、诊断与成本跟踪。"
+      },
+      "sourceKind": "original",
+      "wing": "ai-agents",
+      "topics": [],
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "Batchfile"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-05-20T23:05:41Z",
+      "updatedAt": "2026-06-10T04:41:21Z"
+    },
+    {
+      "repoId": 1217236784,
+      "slug": "weiping-wiki",
+      "repository": "appleweiping/WEIPING_WIKI",
+      "title": "WEIPING_WIKI",
+      "summary": {
+        "en": "A personal knowledge base maintained through an LLM-assisted workflow.",
+        "zh": "通过大模型辅助工作流维护的个人知识库。"
+      },
+      "sourceKind": "meta",
+      "wing": "products-tools",
+      "topics": [],
+      "languages": [
+        "HTML",
+        "TypeScript",
+        "Python",
+        "JavaScript",
+        "PowerShell",
+        "Shell",
+        "CSS",
+        "TeX",
+        "SCSS"
+      ],
+      "status": "active",
+      "media": [],
+      "demo": {
+        "kind": "external",
+        "url": "https://appleweiping.github.io/WEIPING_WIKI/",
+        "embedAllowed": false,
+        "verifiedAt": "2026-07-18"
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-04-21T17:23:39Z",
+      "updatedAt": "2026-06-19T19:02:45Z"
+    },
+    {
+      "repoId": 1291392136,
+      "slug": "xv6-labs",
+      "repository": "appleweiping/xv6-labs",
+      "title": "xv6-labs",
+      "summary": {
+        "en": "Self-study xv6 labs based on MIT 6.S081/6.1810, covering system calls, virtual memory, traps, copy-on-write, networking, synchronization, filesystems, and mmap.",
+        "zh": "基于麻省理工学院 6.S081/6.1810 与 xv6 公开材料的操作系统自学实验，涵盖系统调用、虚拟内存、陷阱、写时复制、网络、同步、文件系统与 mmap。"
+      },
+      "sourceKind": "reproduction",
+      "wing": "systems-security",
+      "topics": [],
+      "languages": [
+        "C",
+        "Assembly",
+        "Makefile",
+        "Linker Script",
+        "Perl",
+        "Emacs Lisp"
+      ],
+      "status": "active",
+      "contribution": {
+        "en": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+        "zh": "基于所列公开课程或资料的自学复现；上游教学材料的署名保留在仓库中。"
+      },
+      "media": [],
+      "demo": {
+        "kind": "none",
+        "embedAllowed": false
+      },
+      "curationStatus": "curated",
+      "createdAt": "2026-07-06T18:59:10Z",
+      "updatedAt": "2026-07-09T15:41:44Z"
+    }
+  ]
+}
