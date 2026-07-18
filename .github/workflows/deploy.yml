@@ -206,6 +206,9 @@ jobs:
           name: portfolio-dist
           path: dist
 
+      - name: Install Playwright's CI video helper
+        run: pnpm exec playwright install ffmpeg
+
       - name: Compare the eight galleries and representative project dialogs
         run: pnpm test:visual
         env:

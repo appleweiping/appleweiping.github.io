@@ -6,15 +6,12 @@ test.describe.configure({ timeout: 90_000 });
 
 test("Cabinet supports search, project deep links, and focus restoration", async ({ page }) => {
   await page.goto("/cabinet/?project=art-history-museum", { waitUntil: "domcontentloaded" });
-  const fallback = page.getByTestId("cabinet-fallback");
   const app = page.getByTestId("cabinet-app");
-  await expect(app.or(fallback)).toBeVisible();
-  if (await app.isVisible()) {
-    await expect(page.getByRole("dialog")).toContainText("art-history-museum");
-    await page.keyboard.press("Escape");
-    await expect(page.getByRole("dialog")).toBeHidden();
-    await expect(page.locator('[data-project-trigger="art-history-museum"]').first()).toBeFocused();
-  }
+  await expect(app).toBeVisible({ timeout: 30_000 });
+  await expect(page.getByRole("dialog")).toContainText("art-history-museum");
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toBeHidden();
+  await expect(page.locator('[data-project-trigger="art-history-museum"]').first()).toBeFocused();
 });
 
 test("Cabinet language switching preserves a project deep link", async ({ page }) => {
