@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Page not found" description="The requested portfolio record could not be found." locale="en" noindex showLanguageSwitch={false}>
+  <section class="container" style="padding-block:clamp(5rem,15vw,12rem);max-width:820px">
+    <p class="eyebrow">404 · Archive reference missing</p>
+    <h1 style="font-size:clamp(3.4rem,9vw,7rem)">This record is not in the cabinet.</h1>
+    <p class="lede">The repository may have moved, become private, or the address may be incomplete. The public catalogue always reflects the latest successful synchronization.</p>
+    <div class="button-row">
+      <a class="button primary" href="/works/">Browse all works</a>
+      <a class="button" href="/">Return home</a>
+      <a class="button" href="/zh/">中文首页</a>
+    </div>
+  </section>
+</BaseLayout>

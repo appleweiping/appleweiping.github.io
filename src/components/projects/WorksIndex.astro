@@ -1,0 +1,79 @@
+---
+import type { Locale } from "@/types/content";
+import type { ProjectRecord } from "@/types/project";
+import ProjectCard from "./ProjectCard.astro";
+import { wings } from "@/data/wings";
+
+interface Props { projects: ProjectRecord[]; locale: Locale }
+const { projects, locale } = Astro.props;
+const sourceKinds = [...new Set(projects.map((project) => project.sourceKind))].sort();
+---
+<section class="works-hero container">
+  <p class="eyebrow">{locale === "en" ? "Complete public record" : "完整公开档案"}</p>
+  <h1>{locale === "en" ? "Works" : "作品"}</h1>
+  <p class="lede">
+    {locale === "en"
+      ? `${projects.length} public repositories, presented without hiding coursework, experiments, forks, or unfinished records.`
+      : `${projects.length} 个公开仓库，课程、实验、复现、fork 与未完成记录均如实呈现。`}
+  </p>
+</section>
+
+<section class="works-browser container" aria-labelledby="works-results-heading">
+  <form class="works-filters" role="search" onsubmit="return false">
+    <div class="field wide">
+      <label for="project-search">{locale === "en" ? "Search the collection" : "搜索馆藏"}</label>
+      <input id="project-search" type="search" autocomplete="off" placeholder={locale === "en" ? "Project, topic, language…" : "项目、主题、语言……"} data-project-search />
+    </div>
+    <div class="field">
+      <label for="wing-filter">{locale === "en" ? "Gallery" : "分馆"}</label>
+      <select id="wing-filter" data-wing-filter>
+        <option value="">{locale === "en" ? "All galleries" : "全部分馆"}</option>
+        {wings.map((wing) => <option value={wing.id}>{locale === "en" ? wing.en : wing.zh}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="kind-filter">{locale === "en" ? "Record type" : "记录类型"}</label>
+      <select id="kind-filter" data-kind-filter>
+        <option value="">{locale === "en" ? "All types" : "全部类型"}</option>
+        {sourceKinds.map((kind) => <option value={kind}>{kind}</option>)}
+      </select>
+    </div>
+  </form>
+  <div class="works-status" aria-live="polite" data-works-status>
+    <h2 id="works-results-heading">{locale === "en" ? "Collection records" : "馆藏记录"}</h2>
+    <span>{projects.length}</span>
+  </div>
+  <div class="projects-grid" data-project-grid>
+    {projects.map((project, index) => <ProjectCard project={project} locale={locale} index={index} />)}
+  </div>
+  <p class="empty-state" data-empty-state hidden>{locale === "en" ? "No records match these filters." : "没有符合当前筛选条件的记录。"}</p>
+</section>
+
+<script>
+  const search = document.querySelector<HTMLInputElement>("[data-project-search]");
+  const wing = document.querySelector<HTMLSelectElement>("[data-wing-filter]");
+  const kind = document.querySelector<HTMLSelectElement>("[data-kind-filter]");
+  const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-project-card]"));
+  const status = document.querySelector<HTMLElement>("[data-works-status] span");
+  const empty = document.querySelector<HTMLElement>("[data-empty-state]");
+
+  function applyFilters() {
+    const query = search?.value.trim().toLowerCase() ?? "";
+    const selectedWing = wing?.value ?? "";
+    const selectedKind = kind?.value ?? "";
+    let visible = 0;
+    for (const card of cards) {
+      const matches = (!query || card.dataset.search?.includes(query))
+        && (!selectedWing || card.dataset.wing === selectedWing)
+        && (!selectedKind || card.dataset.kind === selectedKind);
+      card.hidden = !matches;
+      if (matches) visible += 1;
+    }
+    if (status) status.textContent = String(visible);
+    if (empty) empty.hidden = visible !== 0;
+  }
+
+  search?.addEventListener("input", applyFilters);
+  wing?.addEventListener("change", applyFilters);
+  kind?.addEventListener("change", applyFilters);
+</script>

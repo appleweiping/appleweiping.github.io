@@ -1,0 +1,458 @@
+name: Validate and deploy portfolio
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "portfolio-v3-candidate-*"
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy the selected main commit after every gate passes
+        required: true
+        default: false
+        type: boolean
+      confirmation_sha:
+        description: Full 40-character commit SHA (required when deploy is true)
+        required: false
+        type: string
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' && !startsWith(github.ref, 'refs/tags/portfolio-v3-candidate-') }}
+
+env:
+  NODE_VERSION: "22"
+  PNPM_VERSION: "9.15.0"
+
+jobs:
+  build:
+    name: Build and acceptance gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    outputs:
+      deploy_eligible: ${{ steps.release_policy.outputs.deploy_eligible }}
+    steps:
+      - name: Check out the candidate
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Evaluate the release policy
+        id: release_policy
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_DELETED: ${{ github.event.deleted || false }}
+          GIT_REF: ${{ github.ref }}
+          COMMIT_SHA: ${{ github.sha }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+          DISPATCH_DEPLOY: ${{ inputs.deploy || false }}
+          DISPATCH_CONFIRMATION_SHA: ${{ inputs.confirmation_sha || '' }}
+        run: |
+          eligible=false
+
+          if [[ ( "$EVENT_NAME" == "push" || "$EVENT_NAME" == "schedule" ) && "$GIT_REF" == "refs/heads/main" ]]; then
+            eligible=true
+          elif [[ "$EVENT_NAME" == "push" && "$EVENT_DELETED" != "true" && "$GIT_REF" == refs/tags/portfolio-v3-candidate-* && "$RUN_ATTEMPT" == "1" ]]; then
+            eligible=true
+          elif [[ "$EVENT_NAME" == "workflow_dispatch" && "$GIT_REF" == "refs/heads/main" && "$DISPATCH_DEPLOY" == "true" ]]; then
+            if [[ ! "$DISPATCH_CONFIRMATION_SHA" =~ ^[0-9a-f]{40}$ || "$DISPATCH_CONFIRMATION_SHA" != "$COMMIT_SHA" ]]; then
+              echo "A manual production deployment requires the exact 40-character main commit SHA."
+              exit 1
+            fi
+            eligible=true
+          elif [[ "$EVENT_NAME" == "workflow_dispatch" && "$DISPATCH_DEPLOY" == "true" ]]; then
+            echo "Manual production deployment is restricted to refs/heads/main."
+            exit 1
+          fi
+
+          echo "deploy_eligible=$eligible" >> "$GITHUB_OUTPUT"
+          echo "Deployment eligible: $eligible" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Sync all public GitHub repositories
+        run: pnpm sync:github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate the public project catalogue
+        run: pnpm validate:data
+
+      - name: Type-check Astro and TypeScript
+        run: pnpm typecheck
+
+      - name: Lint source and tests
+        run: pnpm lint
+
+      - name: Run unit tests
+        run: pnpm test
+
+      - name: Install browser engines
+        run: pnpm exec playwright install --with-deps chromium firefox webkit
+
+      - name: Build the static site
+        run: pnpm build
+
+      - name: Validate generated routes, locale mirrors, and privacy invariants
+        run: pnpm validate:dist
+
+      - name: Enforce static and 3D performance budgets
+        run: pnpm check:budget
+
+      - name: Generate the two-page CV
+        run: pnpm cv:build
+        env:
+          CV_OUTPUT: dist/resume.pdf
+
+      - name: Validate CV page count, selectable text, links, and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          pnpm cv:verify -- dist/resume.pdf
+
+      - name: Run browser acceptance tests
+        run: pnpm test:e2e
+
+      - name: Enforce mobile Lighthouse thresholds on content pages
+        run: pnpm check:lighthouse
+
+      - name: Add immutable release metadata
+        env:
+          DEPLOY_ELIGIBLE: ${{ steps.release_policy.outputs.deploy_eligible }}
+          RELEASE_SHA: ${{ github.sha }}
+          RELEASE_REF: ${{ github.ref }}
+          RELEASE_EVENT: ${{ github.event_name }}
+          RELEASE_RUN_ID: ${{ github.run_id }}
+          RELEASE_RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          node --input-type=module -e "import { writeFileSync } from 'node:fs'; const release = { schemaVersion: 1, commit: process.env.RELEASE_SHA, ref: process.env.RELEASE_REF, event: process.env.RELEASE_EVENT, runId: process.env.RELEASE_RUN_ID, runAttempt: process.env.RELEASE_RUN_ATTEMPT, deployEligible: process.env.DEPLOY_ELIGIBLE === 'true', builtAt: new Date().toISOString() }; writeFileSync('dist/release.json', JSON.stringify(release, null, 2) + '\n');"
+          cd dist
+          find . -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS
+
+      - name: Preserve the successful immutable site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-dist
+          path: dist
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 9
+          include-hidden-files: true
+
+      - name: Preserve diagnostics when a gate fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-test-artifacts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            playwright-report
+            test-results
+            lighthouse-report
+          if-no-files-found: ignore
+          retention-days: 30
+
+  visual_regression:
+    name: Windows Chromium visual regression
+    needs: build
+    runs-on: windows-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the candidate
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download the accepted static site
+        uses: actions/download-artifact@v4
+        with:
+          name: portfolio-dist
+          path: dist
+
+      - name: Install Playwright's CI video helper
+        run: pnpm exec playwright install ffmpeg
+
+      - name: Compare the eight galleries and representative project dialogs
+        run: pnpm test:visual
+        env:
+          PLAYWRIGHT_CHANNEL: chrome
+          VISUAL_REGRESSION: "1"
+
+      - name: Preserve visual diagnostics when the comparison fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-visual-artifacts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+          retention-days: 30
+
+  deploy:
+    name: Deploy and smoke-test production
+    if: needs.build.outputs.deploy_eligible == 'true'
+    needs:
+      - build
+      - visual_regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      actions: read
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: portfolio-pages-production
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      deployment_attempted: ${{ steps.deployment_state.outputs.attempted }}
+    steps:
+      - name: Refuse to deploy an untrusted or stale ref
+        uses: actions/github-script@v7
+        with:
+          script: |
+            if (context.ref === "refs/heads/main") {
+              const { data: main } = await github.rest.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: "heads/main",
+              });
+              if (main.object.sha !== context.sha) {
+                core.setFailed(`Refusing stale deployment ${context.sha}; main is now ${main.object.sha}.`);
+              }
+            } else if (context.ref.startsWith("refs/tags/portfolio-v3-candidate-")) {
+              const tagName = context.ref.slice("refs/tags/".length);
+              const { data: tagRef } = await github.rest.git.getRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `tags/${tagName}`,
+              });
+              let target = tagRef.object;
+              while (target.type === "tag") {
+                const { data: annotatedTag } = await github.rest.git.getTag({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  tag_sha: target.sha,
+                });
+                target = annotatedTag.object;
+              }
+              if (target.type !== "commit" || target.sha !== context.sha) {
+                core.setFailed(`Candidate tag ${tagName} no longer resolves to ${context.sha}.`);
+              }
+            } else {
+              core.setFailed(`Refusing deployment from untrusted ref ${context.ref}.`);
+            }
+
+      - name: Check out the deployed source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Download the immutable site artifact for smoke-test support
+        uses: actions/download-artifact@v4
+        with:
+          name: portfolio-dist
+          path: dist
+
+      - name: Verify the deployment artifact identity and checksums
+        env:
+          EXPECTED_RUN_ID: ${{ github.run_id }}
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          node --input-type=module -e "import { readFileSync } from 'node:fs'; const release = JSON.parse(readFileSync('dist/release.json', 'utf8')); if (release.runId !== process.env.EXPECTED_RUN_ID || release.commit !== process.env.EXPECTED_SHA || release.deployEligible !== true) { throw new Error('Artifact release metadata does not match this eligible deployment run.'); }"
+          cd dist
+          sha256sum --check SHA256SUMS
+
+      - name: Verify the immutable legacy recovery release
+        if: startsWith(github.ref, 'refs/tags/portfolio-v3-candidate-')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LEGACY_ARCHIVE_SHA256: E2D3F4F76E09B06419F459A134E81818C0F045445BF00199ED4E67E3894CFEDA
+        run: |
+          gh release download portfolio-v2-rollback-20260718 --pattern legacy-site-a41ac30.zip --dir "$RUNNER_TEMP/legacy-recovery"
+          echo "$LEGACY_ARCHIVE_SHA256  $RUNNER_TEMP/legacy-recovery/legacy-site-a41ac30.zip" | sha256sum --check
+
+      - name: Verify GitHub Pages uses the Actions publishing source
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pages } = await github.request("GET /repos/{owner}/{repo}/pages", {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            if (pages.build_type !== "workflow") {
+              core.setFailed("GitHub Pages Source must be set to GitHub Actions in repository Settings > Pages before production deployment.");
+            }
+
+      - name: Read the GitHub Pages configuration
+        uses: actions/configure-pages@v5
+
+      - name: Package the Pages deployment artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Record the production mutation attempt
+        id: deployment_state
+        run: echo "attempted=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy the immutable Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Smoke-test the real production domain
+        run: pnpm exec playwright test tests/e2e/production.spec.ts --project=chromium
+        env:
+          BASE_URL: https://appleweiping.github.io
+          PRODUCTION_BASE_URL: https://appleweiping.github.io
+          PRODUCTION_SMOKE: "1"
+          EXPECTED_RELEASE_SHA: ${{ github.sha }}
+          EXPECTED_RELEASE_RUN_ID: ${{ github.run_id }}
+
+      - name: Preserve production smoke diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-smoke-artifacts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Explain manual recovery after a smoke failure
+        if: failure()
+        run: |
+          echo "## Production smoke failed after deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "Candidate-tag failures trigger the automatic legacy recovery job. For main releases, run the **Roll back portfolio Pages artifact** workflow with a known-good run ID." >> "$GITHUB_STEP_SUMMARY"
+
+  recover_candidate:
+    name: Restore the immutable legacy site after a candidate failure
+    needs: deploy
+    if: ${{ always() && github.event.deleted != true && (needs.deploy.result == 'failure' || needs.deploy.result == 'cancelled') && needs.deploy.outputs.deployment_attempted == 'true' && startsWith(github.ref, 'refs/tags/portfolio-v3-candidate-') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: portfolio-pages-production
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.recovery.outputs.page_url }}
+    steps:
+      - name: Download and verify the immutable legacy archive
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LEGACY_ARCHIVE_SHA256: E2D3F4F76E09B06419F459A134E81818C0F045445BF00199ED4E67E3894CFEDA
+          LEGACY_COMMIT: a41ac3094ca6e5ff5c92c46a731933039927cf3f
+        run: |
+          gh release download portfolio-v2-rollback-20260718 --pattern legacy-site-a41ac30.zip --dir "$RUNNER_TEMP/legacy-recovery"
+          echo "$LEGACY_ARCHIVE_SHA256  $RUNNER_TEMP/legacy-recovery/legacy-site-a41ac30.zip" | sha256sum --check
+          mkdir dist
+          unzip -q "$RUNNER_TEMP/legacy-recovery/legacy-site-a41ac30.zip" -d dist
+          node --input-type=module -e "import { writeFileSync } from 'node:fs'; const marker = { schemaVersion: 1, release: 'legacy-v2', commit: process.env.LEGACY_COMMIT, archiveSha256: process.env.LEGACY_ARCHIVE_SHA256, recoveryRunId: process.env.GITHUB_RUN_ID }; writeFileSync('dist/legacy-release.json', JSON.stringify(marker, null, 2) + '\n');"
+
+      - name: Read the GitHub Pages configuration
+        uses: actions/configure-pages@v5
+
+      - name: Package the legacy recovery artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          name: github-pages-legacy-${{ github.run_id }}
+          path: dist
+
+      - name: Restore the legacy release
+        id: recovery
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-legacy-${{ github.run_id }}
+
+      - name: Verify the restored legacy identity and smoke-test its routes
+        env:
+          LEGACY_ARCHIVE_SHA256: E2D3F4F76E09B06419F459A134E81818C0F045445BF00199ED4E67E3894CFEDA
+          LEGACY_COMMIT: a41ac3094ca6e5ff5c92c46a731933039927cf3f
+        run: |
+          marker_ok=false
+          for attempt in {1..18}; do
+            rm -f "$RUNNER_TEMP/legacy-marker.json"
+            curl --fail --silent --show-error --location --header "Cache-Control: no-cache" "https://appleweiping.github.io/legacy-release.json?run=$GITHUB_RUN_ID&attempt=$attempt&t=$(date +%s)" --output "$RUNNER_TEMP/legacy-marker.json" || true
+            if node --input-type=module -e "import { readFileSync } from 'node:fs'; const marker = JSON.parse(readFileSync(process.env.RUNNER_TEMP + '/legacy-marker.json', 'utf8')); if (marker.release !== 'legacy-v2' || marker.commit !== process.env.LEGACY_COMMIT || marker.archiveSha256 !== process.env.LEGACY_ARCHIVE_SHA256 || marker.recoveryRunId !== process.env.GITHUB_RUN_ID) process.exit(1);"; then
+              marker_ok=true
+              break
+            fi
+            sleep 5
+          done
+          if [[ "$marker_ok" != "true" ]]; then
+            echo "The legacy release marker did not reach the production CDN."
+            exit 1
+          fi
+          curl --fail --location --retry 8 --retry-delay 5 https://appleweiping.github.io/ > /dev/null
+          curl --fail --location --retry 8 --retry-delay 5 https://appleweiping.github.io/resume.html > /dev/null
+
+      - name: Record the automatic recovery
+        run: |
+          echo "## Candidate deployment recovered" >> "$GITHUB_STEP_SUMMARY"
+          echo "The immutable legacy archive from commit a41ac3094ca6e5ff5c92c46a731933039927cf3f was restored after the candidate failed." >> "$GITHUB_STEP_SUMMARY"

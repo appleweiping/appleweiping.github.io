@@ -1,0 +1,18 @@
+---
+import ContactPageContent from "@/components/content/ContactPageContent.astro";
+import { identity } from "@/data/profile";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/pages.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Weiping Yan",
+  url: "https://appleweiping.github.io/contact/",
+  mainEntity: { "@type": "Person", name: identity.name, email: `mailto:${identity.email}` },
+};
+---
+
+<BaseLayout title="Contact" description="Contact Weiping Yan about AI for Science research and technically grounded machine-learning collaboration." locale="en" jsonLd={jsonLd}>
+  <ContactPageContent locale="en" />
+</BaseLayout>

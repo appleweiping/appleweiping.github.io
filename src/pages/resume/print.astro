@@ -1,0 +1,19 @@
+---
+import PrintCv from "@/components/content/PrintCv.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/pages.css";
+---
+
+<BaseLayout title="Academic CV — Print" description="Print-ready two-page academic CV for Weiping Yan." locale="en" noindex>
+  <div class="print-route">
+    <div class="print-route-controls container">
+      <p>This page is formatted as a two-page A4 academic CV.</p>
+      <button class="button primary" type="button" data-print-cv>Print or save as PDF</button>
+      <a class="button" href="/resume/">Return to resume</a>
+    </div>
+    <PrintCv />
+  </div>
+  <script>
+    document.querySelector<HTMLButtonElement>("[data-print-cv]")?.addEventListener("click", () => window.print());
+  </script>
+</BaseLayout>

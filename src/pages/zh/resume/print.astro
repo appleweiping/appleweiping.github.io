@@ -1,0 +1,19 @@
+---
+import PrintCv from "@/components/content/PrintCv.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/pages.css";
+---
+
+<BaseLayout title="英文 CV 打印版" description="闫伟平的两页英文 A4 学术 CV 打印版本。" locale="zh" noindex>
+  <div class="print-route">
+    <div class="print-route-controls container">
+      <p>此页面已按两页 A4 英文学术 CV 排版。</p>
+      <button class="button primary" type="button" data-print-cv>打印或另存为 PDF</button>
+      <a class="button" href="/zh/resume/">返回履历</a>
+    </div>
+    <PrintCv />
+  </div>
+  <script>
+    document.querySelector<HTMLButtonElement>("[data-print-cv]")?.addEventListener("click", () => window.print());
+  </script>
+</BaseLayout>

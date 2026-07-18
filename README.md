@@ -1,79 +1,39 @@
-﻿# Weiping Yan Academic Website
+# Weiping Yan — Portfolio v3
 
-This repository contains the source for Weiping Yan's personal academic website, deployed with GitHub Pages.
+Research-first bilingual portfolio for Weiping Yan, built as a static Astro site and published at [appleweiping.github.io](https://appleweiping.github.io/).
 
-## Live Site
+## Architecture
 
-https://appleweiping.github.io/
+- English is canonical; complete Chinese routes live under `/zh/`.
+- Astro renders every content route and all public project records at build time.
+- React and Three.js are isolated to the lazy `/cabinet/` island.
+- `src/data/projects.snapshot.json` contains the curated public repository record. Build-time GitHub synchronization updates facts without overwriting bilingual summaries.
+- `/resume/print/` generates the authoritative two-page selectable-text PDF with Playwright.
+- Browsers never receive a GitHub token or call the GitHub API.
 
-## Current Scope
-
-The site is intentionally compact and keeps only two main pages:
-
-- `Profile`: identity, academic direction, research interests, selected experience, and contact
-- `Resume`: a structured summary plus an embedded PDF resume viewer
-
-The current production version also supports three interface languages:
-
-- English
-- Chinese
-- Japanese
-
-## Tech Stack
-
-- Semantic HTML
-- Hand-written CSS
-- Small vanilla JavaScript for lightweight interaction
-- Static assets for portrait and resume
-- No build step required
-
-## Project Structure
-
-```text
-.
-|-- index.html
-|-- resume.html
-|-- style.css
-|-- script.js
-|-- assets/
-|   |-- profile.jpg
-|   `-- resume.pdf
-|-- server.py
-|-- ARCHITECTURE.md
-|-- IMPLEMENTATION_SUMMARY.md
-|-- OPTIMIZATION_SUMMARY.md
-|-- README_ENGLISH.md
-|-- README_PROJECT_HANDOFF.md
-`-- src/
-```
-
-## Local Preview
-
-You can preview locally with either command:
+## Local development
 
 ```bash
-python server.py
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-or
+The full release gate is:
 
 ```bash
-python -m http.server 8000
+pnpm verify
 ```
 
-Then open `http://localhost:8000`.
+Individual checks are available through `lint`, `typecheck`, `test`, `validate:data`, `build`, `validate:dist`, `check:budget`, `cv:build`, `cv:verify`, `test:e2e`, `test:visual`, and `check:lighthouse`.
 
-## Where To Edit
+## GitHub synchronization
 
-- Update homepage text in `index.html`
-- Update resume-page summary in `resume.html`
-- Update the visual system in `style.css`
-- Update small interactions and translations in `script.js`
-- Replace portrait in `assets/profile.jpg`
-- Replace resume in `assets/resume.pdf`
+`pnpm sync:github` retrieves every public repository with paginated GitHub REST requests, verifies the public count, refreshes stable GitHub facts by `repoId`, removes records only after a complete successful sync, and gives newly public repositories a truthful `metadata-only` New Acquisitions record. Private repositories are explicitly rejected by validation.
 
-## Notes
+## Deployment
 
-- The `src/` directory contains older experimental code and is not required by the current live site.
-- The current website is designed for GitHub Pages and does not depend on Node or a bundler.
-- The current desktop experience includes a very subtle floating spirit-like companion implemented as a lightweight DOM/SVG layer.
+GitHub Actions validates the schema, TypeScript, unit tests, production build, performance budgets, two-page CV, accessibility, and Playwright browser suite before uploading an immutable Pages artifact. Failed builds never invoke Pages deployment. See `.github/workflows/` for deployment and artifact rollback procedures.
+
+## Content policy
+
+Confirmed user-provided facts take precedence over the source profile PDF, verified GitHub data, and legacy copy. Coursework, reproductions, experiments, forks, and incomplete repositories remain visibly attributed; the catalogue does not infer publications, awards, performance metrics, affiliations, or fabrication outcomes.

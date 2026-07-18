@@ -1,0 +1,53 @@
+---
+import type { Locale } from "@/types/content";
+import { counterpartPath, localizePath, ui } from "@/lib/i18n";
+
+interface Props { locale: Locale; showLanguageSwitch?: boolean }
+const { locale, showLanguageSwitch = true } = Astro.props;
+const labels = ui[locale];
+const current = Astro.url.pathname;
+const counterparts = counterpartPath(current);
+const links = [
+  ["/", labels.nav.home],
+  ["/research/", labels.nav.research],
+  ["/works/", labels.nav.works],
+  ["/cabinet/", labels.nav.cabinet],
+  ["/resume/", labels.nav.resume],
+  ["/contact/", labels.nav.contact],
+] as const;
+const normalizedCurrent = current.replace(/^\/zh(?=\/|$)/, "") || "/";
+---
+
+<header class="site-header">
+  <a class="site-mark" href={localizePath("/", locale)} aria-label={locale === "en" ? "Weiping Yan home" : "闫伟平首页"}>
+    <span class="site-seal" aria-hidden="true">研</span>
+    <span>Weiping Yan</span>
+  </a>
+
+  <nav class="desktop-nav" aria-label={locale === "en" ? "Primary navigation" : "主导航"}>
+    {links.map(([href, label]) => (
+      <a href={localizePath(href, locale)} aria-current={normalizedCurrent === href ? "page" : undefined}>{label}</a>
+    ))}
+  </nav>
+
+  <div class="header-actions">
+    {showLanguageSwitch && <a class:list={["language-link", { active: locale === "en" }]} href={counterparts.en} lang="en" hreflang="en" data-language-switch>EN</a>}
+    {showLanguageSwitch && <a class:list={["language-link", { active: locale === "zh" }]} href={counterparts.zh} lang="zh-Hans" hreflang="zh-Hans" data-language-switch>中</a>}
+    <details class="mobile-menu">
+      <summary aria-label={locale === "en" ? "Open navigation" : "打开导航"}><span></span><span></span></summary>
+      <nav aria-label={locale === "en" ? "Mobile navigation" : "移动端导航"}>
+        {links.map(([href, label]) => <a href={localizePath(href, locale)}>{label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  if (window.location.pathname.endsWith("/cabinet/") && window.location.search) {
+    for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-language-switch]")) {
+      const destination = new URL(link.href, window.location.origin);
+      destination.search = window.location.search;
+      link.href = `${destination.pathname}${destination.search}`;
+    }
+  }
+</script>

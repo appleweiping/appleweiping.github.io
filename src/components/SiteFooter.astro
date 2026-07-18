@@ -1,0 +1,15 @@
+---
+import type { Locale } from "@/types/content";
+import { identity } from "@/data/profile";
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<footer class="site-footer">
+  <p>© 2026 Weiping Yan</p>
+  <p>{locale === "en" ? "AI for Science · Evidence before ornament" : "AI for Science · 证据先于装饰"}</p>
+  <div>
+    <a href={`mailto:${identity.email}`}>Email</a>
+    <a href={identity.github} target="_blank" rel="noreferrer">GitHub</a>
+    <a href={identity.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+  </div>
+</footer>

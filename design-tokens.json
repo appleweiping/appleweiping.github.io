@@ -1,0 +1,29 @@
+{
+  "color": {
+    "ivory": "#f3efe5",
+    "paper": "#fbf8f0",
+    "ink": "#171815",
+    "inkMuted": "#55584f",
+    "jade": "#315b4d",
+    "jadeDeep": "#1f4036",
+    "brass": "#765426",
+    "cinnabar": "#8a4236",
+    "line": "#d7cfbd"
+  },
+  "typography": {
+    "display": "Instrument Serif, Noto Serif SC, Georgia, serif",
+    "body": "Inter, Noto Sans SC, system-ui, sans-serif",
+    "scale": ["0.75rem", "0.875rem", "1rem", "1.25rem", "1.75rem", "2.5rem", "4rem", "clamp(4rem, 12vw, 9rem)"]
+  },
+  "space": ["0.25rem", "0.5rem", "0.75rem", "1rem", "1.5rem", "2rem", "3rem", "4rem", "6rem", "8rem"],
+  "radius": {
+    "small": "0.25rem",
+    "medium": "0.75rem",
+    "pill": "999px"
+  },
+  "motion": {
+    "fast": "140ms",
+    "normal": "240ms",
+    "slow": "520ms"
+  }
+}

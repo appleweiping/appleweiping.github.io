@@ -1,0 +1,42 @@
+---
+import type { Locale } from "@/types/content";
+import type { ProjectRecord } from "@/types/project";
+import { getProjectCover } from "@/lib/projects";
+import { getWing } from "@/data/wings";
+import { localizePath, ui } from "@/lib/i18n";
+
+interface Props { project: ProjectRecord; locale: Locale; index?: number }
+const { project, locale, index } = Astro.props;
+const copy = ui[locale];
+const wing = getWing(project.wing);
+const cover = getProjectCover(project);
+const searchable = [project.title, project.repository, project.summary.en, project.summary.zh, project.topics.join(" "), project.languages.join(" ")].join(" ").toLowerCase();
+---
+<article
+  class="project-card"
+  data-project-card
+  data-search={searchable}
+  data-wing={project.wing}
+  data-kind={project.sourceKind}
+>
+  <a class="project-cover" href={localizePath(`/works/${project.slug}/`, locale)} aria-label={`${copy.viewProject}: ${project.title}`}>
+    {cover ? <img src={cover} alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" /> : (
+      <span class="generated-cover" aria-hidden="true">
+        <span>{String((index ?? 0) + 1).padStart(3, "0")}</span>
+        <strong>{project.title.slice(0, 2).toUpperCase()}</strong>
+      </span>
+    )}
+  </a>
+  <div class="project-card-body">
+    <div class="project-card-meta">
+      <span>{locale === "en" ? wing.en : wing.zh}</span>
+      <span>{project.sourceKind}</span>
+    </div>
+    <h2><a href={localizePath(`/works/${project.slug}/`, locale)}>{project.title}</a></h2>
+    <p>{project.summary[locale]}</p>
+    <div class="meta-row">
+      {project.languages.slice(0, 3).map((language) => <span class="tag">{language}</span>)}
+      {project.curationStatus === "metadata-only" && <span class="tag pending">{copy.pending}</span>}
+    </div>
+  </div>
+</article>

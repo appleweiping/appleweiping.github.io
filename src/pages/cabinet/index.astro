@@ -1,0 +1,28 @@
+---
+import CabinetApp from "@/components/cabinet/CabinetApp";
+import CabinetStaticFallback from "@/components/cabinet/CabinetStaticFallback.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getProjects } from "@/lib/projects";
+
+const projects = getProjects();
+const description = `Cabinet of Inquiry: an accessible three-dimensional and two-dimensional museum index of all ${projects.length} public repositories by Weiping Yan.`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Cabinet of Inquiry",
+  description,
+  url: "https://appleweiping.github.io/cabinet/",
+  numberOfItems: projects.length,
+  isPartOf: { "@type": "WebSite", name: "Weiping Yan", url: "https://appleweiping.github.io/" },
+};
+---
+
+<BaseLayout title="Cabinet of Inquiry" description={description} locale="en" jsonLd={jsonLd}>
+  <div id="cabinet-hydration-fallback"><CabinetStaticFallback projects={projects} locale="en" /></div>
+  <CabinetApp projects={projects} locale="en" client:only="react" />
+  <script>
+    const fallback = document.querySelector<HTMLElement>("#cabinet-hydration-fallback");
+    const island = fallback?.nextElementSibling;
+    island?.addEventListener("astro:hydrate", () => { if (fallback) fallback.hidden = true; }, { once: true });
+  </script>
+</BaseLayout>

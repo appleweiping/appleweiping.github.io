@@ -1,0 +1,72 @@
+---
+import type { Locale } from "@/types/content";
+import type { ProjectRecord } from "@/types/project";
+import { getProjectCover } from "@/lib/projects";
+import { getWing } from "@/data/wings";
+import { localizePath, ui } from "@/lib/i18n";
+
+interface Props { project: ProjectRecord; locale: Locale }
+const { project, locale } = Astro.props;
+const copy = ui[locale];
+const wing = getWing(project.wing);
+const cover = getProjectCover(project);
+const hasDemoUrl = project.demo.kind !== "none" && Boolean(project.demo.url);
+const hasDemoEvidence = project.demo.kind !== "none";
+---
+<article class="project-detail container">
+  <nav class="breadcrumbs" aria-label={locale === "en" ? "Breadcrumb" : "面包屑导航"}>
+    <a href={localizePath("/works/", locale)}>{locale === "en" ? "Works" : "作品"}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{project.title}</span>
+  </nav>
+  <header class="project-detail-header">
+    <div>
+      <p class="eyebrow">{locale === "en" ? wing.en : wing.zh} · {project.sourceKind}</p>
+      <h1>{project.title}</h1>
+      <p class="lede">{project.summary[locale]}</p>
+      <div class="button-row">
+        <a class="button primary" href={`https://github.com/${project.repository}`} target="_blank" rel="noreferrer">{copy.openGithub}</a>
+        {hasDemoUrl && <a class="button" href={project.demo.url} target="_blank" rel="noreferrer">{copy.openDemo}</a>}
+        <a class="button" href={localizePath(`/cabinet/?project=${encodeURIComponent(project.slug)}`, locale)}>{copy.enterCabinet}</a>
+      </div>
+    </div>
+    <div class="project-detail-cover">
+      {cover ? <img src={cover} alt={`${project.title} project media`} referrerpolicy="no-referrer" /> : <span class="generated-cover"><strong>{project.title.slice(0, 2).toUpperCase()}</strong></span>}
+    </div>
+  </header>
+  <section class="project-facts" aria-label={locale === "en" ? "Project facts" : "项目事实"}>
+    <div><span>{locale === "en" ? "Repository" : "仓库"}</span><strong>{project.repository}</strong></div>
+    <div><span>{locale === "en" ? "Status" : "状态"}</span><strong>{project.status}</strong></div>
+    <div><span>{locale === "en" ? "Demo evidence" : "Demo 证据"}</span><strong>{project.demo.kind}</strong></div>
+    <div><span>{locale === "en" ? "Last updated" : "最近更新"}</span><strong>{project.updatedAt.slice(0, 10)}</strong></div>
+  </section>
+  {project.contribution && (
+    <section class="project-copy section-rule">
+      <p class="eyebrow">{locale === "en" ? "Contribution" : "个人贡献"}</p>
+      <h2>{locale === "en" ? "What this record demonstrates" : "这项记录所呈现的工作"}</h2>
+      <p class="lede">{project.contribution[locale]}</p>
+    </section>
+  )}
+  <section class="project-copy section-rule">
+    <p class="eyebrow">{locale === "en" ? "Technology and topics" : "技术与主题"}</p>
+    <div class="meta-row">
+      {[...project.languages, ...project.topics].map((item) => <span class="tag">{item}</span>)}
+    </div>
+    {project.demo.kind === "media" && (
+      <div class="project-media-grid" aria-label={locale === "en" ? "Recorded project evidence" : "项目实证材料"}>
+        {project.media.map((item, index) => (
+          <figure>
+            {["image", "screenshot", "photo"].includes(item.kind)
+              ? <img src={item.src} alt={`${project.title} — ${locale === "en" ? "project evidence" : "项目实证"} ${index + 1}`} loading="lazy" referrerpolicy="no-referrer" />
+              : ["video", "recording", "screen-recording"].includes(item.kind)
+                ? <video src={item.src} controls preload="metadata" aria-label={`${project.title} — ${locale === "en" ? "project evidence" : "项目实证"} ${index + 1}`} />
+                : <a href={item.src} target="_blank" rel="noreferrer">{locale === "en" ? "Open evidence" : "打开实证材料"} {index + 1} ↗</a>}
+            {item.attribution && <figcaption>{item.attribution}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    )}
+    {!hasDemoEvidence && <p class="project-no-demo">{copy.noDemo}</p>}
+    {project.curationStatus === "metadata-only" && <p class="project-no-demo">{locale === "en" ? "This new public repository is online with source metadata and awaits a full bilingual curatorial review." : "该公开仓库已按元数据自动入馆，完整双语策展内容待补充。"}</p>}
+  </section>
+</article>

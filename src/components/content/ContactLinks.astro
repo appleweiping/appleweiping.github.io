@@ -1,0 +1,42 @@
+---
+import { identity } from "@/data/profile";
+import type { Locale } from "@/types/content";
+
+interface Props { locale: Locale; compact?: boolean }
+const { locale, compact = false } = Astro.props;
+const links = [
+  {
+    label: locale === "en" ? "Email" : "电子邮箱",
+    value: identity.email,
+    href: `mailto:${identity.email}`,
+    note: locale === "en" ? "For research and collaboration enquiries" : "用于研究与合作沟通",
+  },
+  {
+    label: "GitHub",
+    value: "@appleweiping",
+    href: identity.github,
+    note: locale === "en" ? "Public code and project records" : "公开代码与项目档案",
+  },
+  {
+    label: "LinkedIn",
+    value: "Weiping Yan",
+    href: identity.linkedin,
+    note: locale === "en" ? "Academic and professional profile" : "学术与职业资料",
+  },
+] as const;
+---
+
+<address class:list={["contact-links", { compact }]}>
+  <ul>
+    {links.map((link) => (
+      <li>
+        <span class="contact-label">{link.label}</span>
+        <a href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noreferrer" : undefined}>
+          {link.value}<span aria-hidden="true">{link.href.startsWith("http") ? " ↗" : ""}</span>
+          {link.href.startsWith("http") && <span class="sr-only">{locale === "en" ? " (opens in a new tab)" : "（在新标签页中打开）"}</span>}
+        </a>
+        {!compact && <span class="contact-note">{link.note}</span>}
+      </li>
+    ))}
+  </ul>
+</address>

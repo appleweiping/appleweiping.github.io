@@ -1,0 +1,12 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ProjectDetail from "@/components/projects/ProjectDetail.astro";
+import { getProjects } from "@/lib/projects";
+import "@/styles/projects.css";
+export function getStaticPaths() { return getProjects().map((project) => ({ params: { slug: project.slug }, props: { project } })); }
+const { project } = Astro.props;
+const jsonLd = { "@context": "https://schema.org", "@type": "SoftwareSourceCode", name: project.title, description: project.summary.en, codeRepository: `https://github.com/${project.repository}`, programmingLanguage: project.languages };
+---
+<BaseLayout title={project.title} description={project.summary.en} locale="en" jsonLd={jsonLd}>
+  <ProjectDetail project={project} locale="en" />
+</BaseLayout>

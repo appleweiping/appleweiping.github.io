@@ -1,0 +1,56 @@
+---
+import type { Locale } from "@/types/content";
+import type { ProjectRecord } from "@/types/project";
+import { getWing } from "@/data/wings";
+import { localizePath, ui } from "@/lib/i18n";
+
+interface EvidenceRecord {
+  slug: string;
+  repositoryName: string;
+}
+
+interface Props {
+  projects: ProjectRecord[];
+  evidence: EvidenceRecord[];
+  locale: Locale;
+}
+
+const { projects, evidence, locale } = Astro.props;
+const copy = ui[locale];
+const bySlug = new Map(projects.map((project) => [project.slug.toLowerCase(), project]));
+const syncing = locale === "en"
+  ? "This public repository record is being synchronized."
+  : "该公开仓库档案正在同步。";
+---
+
+<ol class="evidence-grid">
+  {evidence.map((record, index) => {
+    const project = bySlug.get(record.slug.toLowerCase());
+    const title = project?.title ?? record.repositoryName;
+    return (
+      <li>
+        <article class="evidence-card" aria-labelledby={`evidence-${record.slug}-${locale}`}>
+          <div class="evidence-card-topline">
+            <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+            <span>{project ? (locale === "en" ? getWing(project.wing).en : getWing(project.wing).zh) : copy.pending}</span>
+          </div>
+          <h3 id={`evidence-${record.slug}-${locale}`}>{title}</h3>
+          <p>{project?.summary[locale] ?? syncing}</p>
+          {project ? (
+            <>
+              <div class="meta-row" aria-label={locale === "en" ? "Project metadata" : "项目元数据"}>
+                <span class="tag">{project.sourceKind}</span>
+                {project.languages.slice(0, 2).map((language) => <span class="tag">{language}</span>)}
+              </div>
+              <a class="text-link" href={localizePath(`/works/${project.slug}/`, locale)}>{copy.viewProject}<span aria-hidden="true"> →</span></a>
+            </>
+          ) : (
+            <a class="text-link" href={`https://github.com/appleweiping/${record.repositoryName}`} target="_blank" rel="noreferrer">
+              {copy.openGithub}<span aria-hidden="true"> ↗</span><span class="sr-only">{locale === "en" ? " (opens in a new tab)" : "（在新标签页中打开）"}</span>
+            </a>
+          )}
+        </article>
+      </li>
+    );
+  })}
+</ol>

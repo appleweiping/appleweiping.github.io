@@ -1,0 +1,21 @@
+---
+import HomePageContent from "@/components/content/HomePageContent.astro";
+import { identity } from "@/data/profile";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/pages.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: identity.name,
+  url: "https://appleweiping.github.io/",
+  email: `mailto:${identity.email}`,
+  jobTitle: identity.title.en,
+  sameAs: [identity.github, identity.linkedin],
+  knowsAbout: ["AI for Science", "Foundation models", "AI-driven analog EDA"],
+};
+---
+
+<BaseLayout title="Weiping Yan" description="AI for Science undergraduate researcher working across foundation models, scientific machine learning, and AI-assisted analog EDA." locale="en" jsonLd={jsonLd}>
+  <HomePageContent locale="en" />
+</BaseLayout>

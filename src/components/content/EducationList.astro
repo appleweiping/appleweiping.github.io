@@ -1,0 +1,27 @@
+---
+import type { EducationItem, Locale } from "@/types/content";
+
+interface Props {
+  items: EducationItem[];
+  locale: Locale;
+  compact?: boolean;
+}
+
+const { items, locale, compact = false } = Astro.props;
+---
+
+<ol class:list={["education-list", { compact }]}>
+  {items.map((item, index) => (
+    <li>
+      <article aria-labelledby={`education-${item.id}-${locale}`}>
+        <p class="record-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</p>
+        <div>
+          <h3 id={`education-${item.id}-${locale}`}>{item.institution}</h3>
+          <p class="education-program">{item.program[locale]}</p>
+          {item.note && <p class="education-note">{item.note[locale]}</p>}
+        </div>
+        <p class="education-date">{item.dates[locale]}</p>
+      </article>
+    </li>
+  ))}
+</ol>

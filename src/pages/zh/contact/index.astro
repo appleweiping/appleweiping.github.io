@@ -1,0 +1,18 @@
+---
+import ContactPageContent from "@/components/content/ContactPageContent.astro";
+import { identity } from "@/data/profile";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/pages.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "联系闫伟平",
+  url: "https://appleweiping.github.io/zh/contact/",
+  mainEntity: { "@type": "Person", name: identity.name, email: `mailto:${identity.email}` },
+};
+---
+
+<BaseLayout title="联系" description="就 AI for Science 研究与具有技术依据的机器学习合作联系闫伟平。" locale="zh" jsonLd={jsonLd}>
+  <ContactPageContent locale="zh" />
+</BaseLayout>

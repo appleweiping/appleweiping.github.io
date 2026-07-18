@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import WorksIndex from "@/components/projects/WorksIndex.astro";
+import { getProjects } from "@/lib/projects";
+import "@/styles/projects.css";
+const projects = getProjects();
+---
+<BaseLayout title="Works" description="A complete, searchable record of Weiping Yan's public GitHub repositories." locale="en">
+  <WorksIndex projects={projects} locale="en" />
+</BaseLayout>

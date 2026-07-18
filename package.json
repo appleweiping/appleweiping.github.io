@@ -1,0 +1,63 @@
+{
+  "name": "weiping-yan-portfolio-v3",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "pnpm validate:data && astro build",
+    "preview": "astro preview",
+    "typecheck": "astro check",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test tests/e2e",
+    "test:e2e:chromium": "playwright test tests/e2e --project=chromium",
+    "test:visual": "playwright test tests/e2e/visual.spec.ts --project=chromium",
+    "sync:github": "tsx scripts/sync-github.ts",
+    "validate:data": "tsx scripts/validate-projects.ts",
+    "validate:dist": "tsx scripts/validate-public-output.ts",
+    "check:budget": "tsx scripts/check-build-budgets.ts",
+    "check:lighthouse": "lhci autorun",
+    "cv:build": "playwright test tests/cv/generate-cv.spec.ts --project=chromium",
+    "cv:verify": "tsx scripts/verify-cv.ts",
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm check:budget && pnpm cv:build && pnpm cv:verify && pnpm cv:verify -- dist/resume.pdf && pnpm validate:dist && pnpm test:e2e && pnpm check:lighthouse"
+  },
+  "dependencies": {
+    "@astrojs/react": "^6.0.1",
+    "@astrojs/sitemap": "^3.7.3",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
+    "astro": "^7.1.1",
+    "postprocessing": "^6.39.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "three": "^0.185.1",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@axe-core/playwright": "^4.11.1",
+    "@eslint/js": "^9",
+    "@lhci/cli": "^0.15",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.185.0",
+    "eslint": "^9",
+    "eslint-plugin-astro": "^1",
+    "eslint-plugin-react-hooks": "^7",
+    "globals": "^16",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8",
+    "vitest": "^4.0.17"
+  }
+}

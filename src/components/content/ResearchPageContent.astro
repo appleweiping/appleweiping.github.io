@@ -1,0 +1,96 @@
+---
+import EducationList from "@/components/content/EducationList.astro";
+import SectionHeading from "@/components/content/SectionHeading.astro";
+import TimelineList from "@/components/content/TimelineList.astro";
+import { higherEducation, researchDirections, timeline } from "@/data/profile";
+import { localizePath } from "@/lib/i18n";
+import type { Locale } from "@/types/content";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const researchItems = timeline.filter((item) => item.kind === "research");
+const teachingItems = timeline.filter((item) => item.kind === "teaching");
+const entrepreneurshipItems = timeline.filter((item) => item.kind === "entrepreneurship");
+const text = locale === "en" ? {
+  eyebrow: "Research & formation",
+  title: "A record of inquiry across models, circuits, and physical systems.",
+  intro: "My work is developing through research appointments, independent projects, teaching, and interdisciplinary engineering study. Each entry below is limited to the role and evidence currently supported by public or confirmed information.",
+  jump: "On this page",
+  research: "Research",
+  researchDescription: "Current appointments and earlier research projects, presented without inferred affiliations or unverified outcomes.",
+  directions: "Research directions",
+  directionsDescription: "Working themes that connect the individual records.",
+  teaching: "Teaching",
+  teachingDescription: "Undergraduate instruction and structured mathematical support.",
+  entrepreneurship: "Entrepreneurship",
+  entrepreneurshipDescription: "Company-building is recorded separately from academic work and public repositories.",
+  education: "Education",
+  educationDescription: "Concurrent interdisciplinary study followed by transfer to the University of Minnesota.",
+  worksAction: "Inspect the public project evidence",
+} : {
+  eyebrow: "研究与学术形成",
+  title: "跨越模型、电路与物理系统的探索记录。",
+  intro: "我的研究路径由科研岗位、独立项目、教学经历与跨学科工程学习共同构成。以下内容仅陈述已有公开证据或经确认的信息，不推断从属关系，也不补写未经证实的成果。",
+  jump: "本页目录",
+  research: "研究经历",
+  researchDescription: "呈现当前科研岗位与早期研究项目，不推断机构归属，不使用未经核实的结果。",
+  directions: "研究方向",
+  directionsDescription: "连接各项研究记录的持续探索主题。",
+  teaching: "教学经历",
+  teachingDescription: "本科教学支持与结构化数学辅导。",
+  entrepreneurship: "创业经历",
+  entrepreneurshipDescription: "公司建设与学术研究、公开仓库分别记录。",
+  education: "教育经历",
+  educationDescription: "完成并行跨学科学习后，转入明尼苏达大学继续本科阶段学习。",
+  worksAction: "查看公开项目证据",
+};
+---
+
+<header class="page-intro container">
+  <p class="eyebrow">{text.eyebrow}</p>
+  <h1>{text.title}</h1>
+  <p class="lede">{text.intro}</p>
+</header>
+
+<nav class="page-jump container" aria-label={text.jump}>
+  <span>{text.jump}</span>
+  <a href="#research-record">{text.research}</a>
+  <a href="#directions-record">{text.directions}</a>
+  <a href="#teaching-record">{text.teaching}</a>
+  <a href="#entrepreneurship-record">{text.entrepreneurship}</a>
+  <a href="#education-record">{text.education}</a>
+</nav>
+
+<section class="section section-rule container" aria-labelledby="research-record">
+  <SectionHeading eyebrow="01" title={text.research} description={text.researchDescription} headingId="research-record" />
+  <TimelineList items={researchItems} locale={locale} />
+</section>
+
+<section class="section section-rule container" aria-labelledby="directions-record">
+  <SectionHeading eyebrow="02" title={text.directions} description={text.directionsDescription} headingId="directions-record" />
+  <div class="research-direction-list">
+    {researchDirections.map((direction, index) => (
+      <article>
+        <p class="record-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</p>
+        <h3>{direction.title[locale]}</h3>
+        <p>{direction.summary[locale]}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="section section-rule container" aria-labelledby="teaching-record">
+  <SectionHeading eyebrow="03" title={text.teaching} description={text.teachingDescription} headingId="teaching-record" />
+  <TimelineList items={teachingItems} locale={locale} />
+</section>
+
+<section class="section section-rule container" aria-labelledby="entrepreneurship-record">
+  <SectionHeading eyebrow="04" title={text.entrepreneurship} description={text.entrepreneurshipDescription} headingId="entrepreneurship-record" />
+  <TimelineList items={entrepreneurshipItems} locale={locale} />
+</section>
+
+<section class="section section-rule container" aria-labelledby="education-record">
+  <SectionHeading eyebrow="05" title={text.education} description={text.educationDescription} headingId="education-record" />
+  <EducationList items={higherEducation} locale={locale} />
+  <p class="section-action"><a class="button" href={localizePath("/works/", locale)}>{text.worksAction}</a></p>
+</section>
