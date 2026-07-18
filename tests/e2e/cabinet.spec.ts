@@ -36,7 +36,8 @@ test("Cabinet search teleports to an exhibit and exposes the complete 2D switch"
   await result.focus();
   await page.keyboard.press("Enter");
   await expect(page.getByRole("dialog")).toContainText("topo-flow-limits");
-  await page.getByRole("button", { name: /Close exhibit/i }).click();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toBeHidden();
 
   const startTour = page.getByRole("button", { name: "Begin guided tour" });
   if (await startTour.isVisible()) {
