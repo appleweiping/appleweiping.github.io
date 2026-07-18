@@ -2,7 +2,10 @@ import { spawnSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 
-const pdf = resolve(process.argv[2] ?? "public/resume.pdf");
+// pnpm preserves the conventional `--` separator on some platforms and
+// removes it on others, so accept both invocation forms deterministically.
+const input = process.argv.slice(2).find((argument) => argument !== "--");
+const pdf = resolve(input ?? "public/resume.pdf");
 if (!existsSync(pdf)) throw new Error(`CV not found: ${pdf}`);
 
 function run(command: string, args: string[]): string {
