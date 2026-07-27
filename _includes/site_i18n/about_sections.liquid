@@ -1,0 +1,25 @@
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign strings = site.data.i18n[current_lang] | default: site.data.i18n[site.lang] %}
+{% assign news_route = site.data.translation_routes.news[current_lang] %}
+{% assign publications_route = site.data.translation_routes.publications[current_lang] %}
+
+{% if page.localized_announcements %}
+  <h2>
+    <a href="{{ news_route | relative_url }}" style="color: inherit">{{ strings.about.news }}</a>
+  </h2>
+  {% include site_i18n/news.liquid limit=true %}
+{% endif %}
+
+{% if page.localized_selected_papers %}
+  <h2>
+    <a href="{{ publications_route | relative_url }}" style="color: inherit">{{ strings.about.selected_publications }}</a>
+  </h2>
+  {% include selected_papers.liquid %}
+{% endif %}
+
+{% if page.localized_social %}
+  <div class="social">
+    <div class="contact-icons">{% social_links %}</div>
+    <div class="contact-note">{{ strings.about.contact_note }}</div>
+  </div>
+{% endif %}

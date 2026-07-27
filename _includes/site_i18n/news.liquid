@@ -1,0 +1,43 @@
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign strings = site.data.i18n[current_lang] | default: site.data.i18n[site.lang] %}
+{% assign localized_news = site.news | where: 'lang', current_lang | sort: 'date' | reverse %}
+
+<div class="news">
+  {% if localized_news != blank %}
+    {% assign news_size = localized_news | size %}
+    <div
+      class="table-responsive"
+      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
+        style="max-height: 60vw"
+      {% endif %}
+    >
+      <table class="table table-sm table-borderless">
+        {% if include.limit and page.announcements.limit %}
+          {% assign news_limit = page.announcements.limit %}
+        {% else %}
+          {% assign news_limit = news_size %}
+        {% endif %}
+        {% for item in localized_news limit: news_limit %}
+          <tr>
+            <th scope="row" style="width: 20%">
+              {% if current_lang == 'en' %}
+                {{ item.date | date: '%b %d, %Y' }}
+              {% else %}
+                {{ item.date | date: '%Y年%m月%d日' }}
+              {% endif %}
+            </th>
+            <td>
+              {% if item.inline %}
+                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+              {% else %}
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  {% else %}
+    <p>{{ strings.news.empty }}</p>
+  {% endif %}
+</div>

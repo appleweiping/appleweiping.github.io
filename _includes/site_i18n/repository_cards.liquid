@@ -1,0 +1,43 @@
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign strings = site.data.i18n[current_lang] | default: site.data.i18n[site.lang] %}
+{% assign current_locale = site.data.locales | where: 'code', current_lang | first %}
+{% assign catalog_locale = current_locale.data_key %}
+{% assign repository = site.data.repository_catalog.repositories | where: 'repository', include.repository | first %}
+
+<div class="repo p-2 text-center w-100 d-flex align-self-stretch">
+  {% if repository %}
+    {% assign repository_description = repository.description %}
+    {% if catalog_locale != 'en' and site.data.repository_catalog_i18n.repositories[repository.slug][catalog_locale] %}
+      {% assign localized_repository = site.data.repository_catalog_i18n.repositories[repository.slug][catalog_locale] %}
+      {% assign repository_description = localized_repository.description | default: localized_repository %}
+    {% endif %}
+    {% assign primary_language = repository.languages | first %}
+
+    <article class="card h-100 w-100 text-left">
+      <div class="card-body d-flex flex-column">
+        <h2 class="h5 card-title">{{ repository.title | escape }}</h2>
+        <p class="card-text">{{ repository_description | escape }}</p>
+        <p class="small text-muted mt-auto mb-3">
+          {% if primary_language %}
+            <strong>{{ strings.catalog.languages }}</strong>
+            {{ primary_language | escape }}
+            <span aria-hidden="true">·</span>
+          {% endif %}
+          {{ strings.catalog.updated }}
+          {{ repository.updated_at | date: '%Y-%m-%d' }}
+        </p>
+        <div>
+          <a
+            class="btn btn-sm btn-outline-primary"
+            href="{{ repository.source_url | escape }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="{{ strings.catalog.view_source_prefix | escape }} {{ repository.title | escape }} {{ strings.catalog.view_source_suffix | escape }}"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </article>
+  {% endif %}
+</div>

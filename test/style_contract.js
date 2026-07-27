@@ -61,9 +61,45 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
   failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
 }
 
-for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
+for (const forbiddenPath of ["_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
+  }
+}
+
+const approvedGemOverrides = new Set([
+  "_includes/cv/render.liquid",
+  "_includes/footer.liquid",
+  "_includes/header.liquid",
+  "_includes/metadata.liquid",
+  "_layouts/default.liquid",
+]);
+const approvedSiteIncludePatterns = [/^_includes\/cv\/site_[^/]+\.liquid$/, /^_includes\/site_i18n\/[^/]+\.liquid$/];
+
+const walkFiles = (directory) => {
+  if (!exists(directory)) return [];
+  return fs.readdirSync(path.join(root, directory), { withFileTypes: true }).flatMap((entry) => {
+    const relative = path.posix.join(directory, entry.name);
+    return entry.isDirectory() ? walkFiles(relative) : [relative];
+  });
+};
+
+for (const ownedPath of [...walkFiles("_includes"), ...walkFiles("_layouts")]) {
+  const normalized = ownedPath.split(path.sep).join("/");
+  const approvedSiteInclude = approvedSiteIncludePatterns.some((pattern) => pattern.test(normalized));
+  if (!approvedGemOverrides.has(normalized) && !approvedSiteInclude) {
+    failures.push(`Starter-local runtime file is not an approved site override: \`${normalized}\`.`);
+  }
+}
+
+if (!exists(".al-folio-overrides.yml")) {
+  failures.push("Intentional gem overrides must be acknowledged in `.al-folio-overrides.yml`.");
+} else {
+  const overrideAcknowledgements = read(".al-folio-overrides.yml");
+  for (const overridePath of approvedGemOverrides) {
+    if (!new RegExp(`^\\s{2}${escapeRegExp(overridePath)}:\\s*$`, "m").test(overrideAcknowledgements)) {
+      failures.push(`Approved gem override is missing from the upgrade acknowledgement: \`${overridePath}\`.`);
+    }
   }
 }
 

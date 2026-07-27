@@ -1,0 +1,17 @@
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign strings = site.data.i18n[current_lang] | default: site.data.i18n[site.lang] %}
+
+{% if site.bib_search %}
+  {::nomarkdown}
+  <script src="{{ '/assets/js/bibsearch.js' | relative_url | bust_file_cache }}" type="module"></script>
+  <input
+    type="text"
+    id="bibsearch"
+    spellcheck="false"
+    autocomplete="off"
+    class="search bibsearch-form-input"
+    placeholder="{{ strings.publications.filter_placeholder }}"
+    aria-label="{{ strings.publications.filter_placeholder }}"
+  >
+  {:/nomarkdown}
+{% endif %}

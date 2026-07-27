@@ -1,0 +1,156 @@
+{% comment %}
+  Site-local RenderCV selector for the three translated CV datasets.
+  The wrapper, card structure, and Bootstrap/al-folio class names follow
+  al_folio_cv v1.0.0 templates/cv/render.liquid.
+{% endcomment %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {{ page.title }}
+      {% if page.cv_pdf %}
+        <a
+          {% if page.cv_pdf contains '://' %}
+            href="{{ page.cv_pdf }}"
+          {% else %}
+            href="{{ page.cv_pdf | relative_url }}"
+          {% endif %}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+          aria-label="{{ page.cv_labels.download | default: page.title }}"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      {% endif %}
+    </h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    <div class="cv">
+      {% assign cv_dataset_name = page.cv_data | default: 'cv' %}
+      {% assign cv_dataset = site.data[cv_dataset_name] %}
+      {% assign cv = cv_dataset.cv %}
+
+      {% if cv %}
+        {% if cv.name or cv.headline or cv.email or cv.website or cv.social_networks %}
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">{{ page.cv_labels.contact }}</h3>
+            <table class="table table-cv table-sm table-borderless">
+              {% if cv.name %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ page.cv_labels.name }}</b>
+                  </td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td>
+                </tr>
+              {% endif %}
+              {% if cv.headline %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ page.cv_labels.headline }}</b>
+                  </td>
+                  <td class="p-1 pl-2 font-weight-light">{{ cv.headline }}</td>
+                </tr>
+              {% endif %}
+              {% if cv.email %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ page.cv_labels.email }}</b>
+                  </td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    {% if cv.email.first %}
+                      {% for email in cv.email %}
+                        <a href="mailto:{{ email }}">{{ email }}</a>
+                        {%- unless forloop.last %}<br>{% endunless %}
+                      {% endfor %}
+                    {% else %}
+                      <a href="mailto:{{ cv.email }}">{{ cv.email }}</a>
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endif %}
+              {% if cv.website %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ page.cv_labels.website }}</b>
+                  </td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    <a href="{{ cv.website }}" target="_blank" rel="noopener noreferrer">{{ cv.website }}</a>
+                  </td>
+                </tr>
+              {% endif %}
+              {% if cv.social_networks %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ page.cv_labels.profiles }}</b>
+                  </td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    {% for social in cv.social_networks %}
+                      {% case social.network %}
+                        {% when 'GitHub' %}
+                          {% assign social_url = 'https://github.com/' | append: social.username %}
+                        {% when 'LinkedIn' %}
+                          {% assign social_url = 'https://www.linkedin.com/in/' | append: social.username %}
+                        {% when 'Google Scholar' %}
+                          {% assign social_url = 'https://scholar.google.com/citations?user=' | append: social.username %}
+                        {% when 'X' %}
+                          {% assign social_url = 'https://x.com/' | append: social.username %}
+                        {% when 'Instagram' %}
+                          {% assign social_url = 'https://www.instagram.com/' | append: social.username %}
+                        {% else %}
+                          {% assign social_url = null %}
+                      {% endcase %}
+                      {% if social_url %}
+                        <a href="{{ social_url }}" target="_blank" rel="noopener noreferrer">{{ social.network }}</a>
+                        {%- unless forloop.last %} · {% endunless %}
+                      {% endif %}
+                    {% endfor %}
+                  </td>
+                </tr>
+              {% endif %}
+            </table>
+          </div>
+        {% endif %}
+
+        {% for section_pair in cv.sections %}
+          {% assign section_title = section_pair[0] %}
+          {% assign section_entries = section_pair[1] %}
+          <a class="anchor" id="{{ section_title | slugify }}"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+            <div>
+              {% if section_title == page.cv_sections.experience %}
+                {% assign entries = section_entries %}
+                {% include cv/site_experience.liquid %}
+              {% elsif section_title == page.cv_sections.education %}
+                {% assign entries = section_entries %}
+                {% include cv/site_education.liquid %}
+              {% elsif section_title == page.cv_sections.publications %}
+                {% assign entries = section_entries %}
+                {% include cv/publications.liquid %}
+              {% else %}
+                {% for entry in section_entries %}
+                  {% if entry.bullet %}
+                    <ul class="card-text font-weight-light list-group list-group-flush">
+                      <li class="list-group-item">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                    </ul>
+                  {% elsif entry.label %}
+                    <div class="card-text font-weight-light">
+                      <strong>{{ entry.label }}:</strong> {{ entry.details }}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p>No CV data found.</p>
+      {% endif %}
+    </div>
+  </article>
+</div>

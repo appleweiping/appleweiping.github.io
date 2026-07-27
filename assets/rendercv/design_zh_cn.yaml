@@ -1,0 +1,10 @@
+# Noto Sans SC is vendored under _data/fonts for deterministic CI rendering.
+design:
+  theme: classic
+  page:
+    size: a4
+    show_footer: false
+    show_top_note: false
+  typography:
+    alignment: left
+    font_family: Noto Sans SC

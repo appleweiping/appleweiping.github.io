@@ -1,58 +1,68 @@
-name: Render a CV
+name: Render a CV artifact
+
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "_data/cv.yml"
-      - "assets/rendercv/design.yaml"
-      - "assets/rendercv/locale.yaml"
-      - "assets/rendercv/settings.yaml"
-  workflow_call:
   workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: read
+
 jobs:
   rendercv:
     name: RenderCV
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.12"
+          cache: pip
+
       - name: Install RenderCV
+        run: python -m pip install --requirement requirements.txt
+
+      - name: Install PDF validation tools
         run: |
-          pip install -r requirements.txt
-      - name: RenderCV
+          sudo apt-get update
+          sudo apt-get install --yes poppler-utils
+
+      - name: Render all localized CVs
+        shell: bash
         run: |
-          cv_file=$(find _data  -maxdepth 1 -type f \( -name "cv.yaml" -o -name "cv.yml" \))
-          if [ -z "$cv_file" ]; then
-            echo "No cv.yml file found!"
-            exit 1
-          fi
-          rendercv_dir=$(find assets -maxdepth 1 -type d -name "rendercv")
-          if [ -z "$rendercv_dir" ]; then
-            echo "No RenderCV config directory found!"
-            exit 1
-          fi
-          settings=$(find $rendercv_dir -maxdepth 1 -type f \( -name "settings.yaml" -o -name "settings.yml" \))
-          if [ -z "$settings" ]; then
-            echo "Missing RenderCV config file!"
-            exit 1
-          fi
-          rendercv render $cv_file --settings $settings
-          rm assets/rendercv/rendercv_output/*.typ
-      - name: Upload rendercv_output as an artifact
-        uses: actions/upload-artifact@v4
+          rm -f assets/rendercv/rendercv_output/*
+          rendercv render _data/cv.yml \
+            --settings assets/rendercv/settings.yaml \
+            --design assets/rendercv/design.yaml \
+            --locale-catalog assets/rendercv/locale.yaml \
+            --quiet
+          rendercv render _data/cv_zh_cn.yml \
+            --settings assets/rendercv/settings_zh_cn.yaml \
+            --design assets/rendercv/design_zh_cn.yaml \
+            --locale-catalog assets/rendercv/locale_zh_cn.yaml \
+            --quiet
+          rendercv render _data/cv_ja.yml \
+            --settings assets/rendercv/settings_ja.yaml \
+            --design assets/rendercv/design_ja.yaml \
+            --locale-catalog assets/rendercv/locale_ja.yaml \
+            --quiet
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_en.pdf assets/pdf/Weiping_Yan_CV_en.pdf
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_zh-CN.pdf assets/pdf/Weiping_Yan_CV_zh-CN.pdf
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_ja.pdf assets/pdf/Weiping_Yan_CV_ja.pdf
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_en.pdf assets/pdf/Weiping_Yan_CV.pdf
+          python bin/validate_cv_pdfs.py
+          rm -f assets/rendercv/rendercv_output/*.typ
+
+      - name: Upload RenderCV output
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: RenderCV Output
-          path: assets/rendercv/rendercv_output
-      - name: Push the changes
-        run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git add -A
-          git commit -m "chore: render the latest CV"
-          git push
+          name: Weiping-Yan-CVs
+          path: |
+            assets/rendercv/rendercv_output
+            assets/pdf/Weiping_Yan_CV_en.pdf
+            assets/pdf/Weiping_Yan_CV_zh-CN.pdf
+            assets/pdf/Weiping_Yan_CV_ja.pdf
+            assets/pdf/Weiping_Yan_CV.pdf
+          if-no-files-found: error

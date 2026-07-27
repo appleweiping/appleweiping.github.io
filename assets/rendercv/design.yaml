@@ -5,3 +5,6 @@ design:
     size: a4
     show_footer: false
     show_top_note: false
+  typography:
+    alignment: left
+    font_family: Source Sans 3

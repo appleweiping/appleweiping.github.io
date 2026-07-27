@@ -1,0 +1,75 @@
+{% comment %}
+  Locale-aware variant of al_folio_cv v1.0.0 cv/education.liquid.
+  It preserves the upstream DOM and classes and supports a truthful future
+  program start as a single date instead of an ongoing date range.
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+          {% assign start_date = entry.start_date %}
+          {% assign end_date = entry.end_date %}
+          {% if start_date %}
+            {% assign startDate = start_date | split: '-' | first %}
+            {% if end_date == 'present' %}
+              {% assign endDate = page.cv_labels.present %}
+            {% else %}
+              {% assign endDate = end_date | split: '-' | first %}
+            {% endif %}
+            {% assign date = startDate | append: ' - ' | append: endDate %}
+          {% else %}
+            {% assign date = entry.date %}
+          {% endif %}
+
+          <table class="table-cv">
+            <tbody>
+              {% if date %}
+                <tr>
+                  <td>
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                  </td>
+                </tr>
+              {% endif %}
+              {% if entry.location %}
+                <tr>
+                  <td>
+                    <p class="location">
+                      <i class="fa-solid fa-location-dot iconlocation"></i>
+                      {{ entry.location }}
+                    </p>
+                  </td>
+                </tr>
+              {% endif %}
+            </tbody>
+          </table>
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+          {% if entry.url %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">
+              <a href="{{ entry.url }}">{{ entry.degree }}</a>
+            </h6>
+          {% elsif entry.degree %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.degree }}</h6>
+          {% endif %}
+          {% if entry.institution %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.institution }}</h6>
+          {% endif %}
+          {% if entry.area %}
+            <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ entry.area }}</h6>
+          {% endif %}
+          {% if entry.highlights %}
+            <ul class="items">
+              {% for item in entry.highlights %}
+                <li>
+                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

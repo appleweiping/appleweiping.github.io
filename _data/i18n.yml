@@ -1,0 +1,206 @@
+en:
+  nav:
+    current: current
+    toggle: Toggle navigation
+    language: Language
+    search_title: Search
+    search_open: Open search
+    search_placeholder: Type to start searching
+    theme_title: Change theme
+    theme_change: Change color theme
+  a11y:
+    table_of_contents: Table of contents
+    repository_source_summary: Repository source summary
+    repository_topics: Repository topics
+  footer:
+    copyright: Copyright
+    powered_by: >-
+      Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with
+      <a href="https://github.com/alshedivat/al-folio">al-folio</a>. Hosted by
+      <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+    impressum: Impressum
+    last_updated: "Last updated:"
+  about:
+    news: news
+    selected_publications: selected publications
+    contact_note: >-
+      For research or collaboration, email
+      <a href="mailto:yan00944@umn.edu">yan00944@umn.edu</a>.
+  news:
+    empty: No news so far...
+  publications:
+    filter_placeholder: Type to filter
+  projects:
+    categories:
+      research: Research
+      ai-systems: AI systems
+      creative-computing: Creative computing
+      coursework: Coursework
+    thumbnail_alt: Project thumbnail
+    code_repository: Code repository
+    github_stars: GitHub stars
+  repositories:
+    catalog_link: provenance-aware repository catalog
+    github_link: all public repositories on GitHub
+  catalog:
+    synchronized: Synchronized from the paginated GitHub API on
+    metadata_note: Repository descriptions and attribution notes are editorial metadata; repository status, topics, URLs, and timestamps are refreshed from GitHub.
+    pinned: View pinned repositories
+    github: Browse on GitHub
+    browse_by_area: Browse by area
+    repositories: repositories
+    languages: "Languages:"
+    archived: archived
+    fork: fork
+    updated: Updated
+    source: Source
+    demo: Demo
+    view_source_prefix: View
+    view_source_suffix: source code on GitHub
+    open_demo_prefix: Open the
+    open_demo_suffix: demo
+  cv:
+    canonical_note: The complete English CV is available as a web page and PDF.
+    open_web: Open the English web CV
+    download_pdf: Download CV
+  not_found:
+    redirect: You will be redirected to the home page within 3 seconds.
+    fallback: If the redirect does not start, return to Weiping Yan's home page.
+
+zh-CN:
+  nav:
+    current: 当前页面
+    toggle: 展开或收起导航
+    language: 语言
+    search_title: 搜索
+    search_open: 打开搜索
+    search_placeholder: 输入关键词开始搜索
+    theme_title: 切换主题
+    theme_change: 更改配色主题
+  a11y:
+    table_of_contents: 目录
+    repository_source_summary: 仓库来源概览
+    repository_topics: 仓库主题
+  footer:
+    copyright: 版权所有
+    powered_by: >-
+      本站基于 <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> 与
+      <a href="https://github.com/alshedivat/al-folio">al-folio</a> 构建，并托管于
+      <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>。
+    impressum: 法律声明
+    last_updated: 最近更新：
+  about:
+    news: 动态
+    selected_publications: 精选论文
+    contact_note: >-
+      如需讨论研究或合作，请发送邮件至
+      <a href="mailto:yan00944@umn.edu">yan00944@umn.edu</a>。
+  news:
+    empty: 暂无动态。
+  publications:
+    filter_placeholder: 输入关键词筛选
+  projects:
+    categories:
+      research: 研究
+      ai-systems: AI 系统
+      creative-computing: 创意计算
+      coursework: 课程项目
+    thumbnail_alt: 项目缩略图
+    code_repository: 代码仓库
+    github_stars: GitHub 星标
+  repositories:
+    catalog_link: 标注来源与归属的完整仓库目录
+    github_link: GitHub 上的全部公开仓库
+  catalog:
+    synchronized: 通过分页 GitHub API 同步于
+    metadata_note: 仓库简介与归属说明属于编辑元数据；仓库状态、主题、链接及时间戳由 GitHub 刷新。
+    pinned: 查看置顶仓库
+    github: 在 GitHub 浏览
+    browse_by_area: 按领域浏览
+    repositories: 个仓库
+    languages: 使用语言：
+    archived: 已归档
+    fork: 派生
+    updated: 更新于
+    source: 源代码
+    demo: 演示
+    view_source_prefix: 在 GitHub 查看
+    view_source_suffix: 的源代码
+    open_demo_prefix: 打开
+    open_demo_suffix: 的演示
+  cv:
+    canonical_note: 完整中文版简历提供网页版与 PDF。
+    open_web: 打开中文版网页简历
+    download_pdf: 下载简历
+  not_found:
+    redirect: 页面将在 3 秒内跳转至首页。
+    fallback: 若未自动跳转，请返回闫维平的首页。
+
+ja:
+  nav:
+    current: 現在のページ
+    toggle: ナビゲーションを開閉
+    language: 言語
+    search_title: 検索
+    search_open: 検索を開く
+    search_placeholder: キーワードを入力して検索
+    theme_title: テーマを切り替える
+    theme_change: 配色テーマを変更
+  a11y:
+    table_of_contents: 目次
+    repository_source_summary: リポジトリの出典概要
+    repository_topics: リポジトリのトピック
+  footer:
+    copyright: 著作権
+    powered_by: >-
+      本サイトは <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> と
+      <a href="https://github.com/alshedivat/al-folio">al-folio</a> で構築し、
+      <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> でホストしています。
+    impressum: 法的表示
+    last_updated: 最終更新：
+  about:
+    news: ニュース
+    selected_publications: 主な論文
+    contact_note: >-
+      研究・共同研究に関するご連絡は
+      <a href="mailto:yan00944@umn.edu">yan00944@umn.edu</a> までお願いします。
+  news:
+    empty: 現在、お知らせはありません。
+  publications:
+    filter_placeholder: キーワードで絞り込む
+  projects:
+    categories:
+      research: 研究
+      ai-systems: AI システム
+      creative-computing: クリエイティブ・コンピューティング
+      coursework: 授業プロジェクト
+    thumbnail_alt: プロジェクトのサムネイル
+    code_repository: コードリポジトリ
+    github_stars: GitHub スター
+  repositories:
+    catalog_link: 出典と帰属を明記した全リポジトリ一覧
+    github_link: GitHub 上の全公開リポジトリ
+  catalog:
+    synchronized: ページネーション対応 GitHub API からの同期日：
+    metadata_note: リポジトリの説明と帰属注記は編集メタデータです。状態、トピック、URL、タイムスタンプは GitHub から更新されます。
+    pinned: ピン留めしたリポジトリを見る
+    github: GitHub で見る
+    browse_by_area: 分野別に見る
+    repositories: 件
+    languages: 使用言語：
+    archived: アーカイブ済み
+    fork: フォーク
+    updated: 更新日
+    source: ソース
+    demo: デモ
+    view_source_prefix: GitHub で
+    view_source_suffix: のソースコードを見る
+    open_demo_prefix: ""
+    open_demo_suffix: のデモを開く
+  cv:
+    canonical_note: 完全な日本語版CVをWebページとPDFで公開しています。
+    open_web: 日本語版Web CVを開く
+    download_pdf: CVをダウンロード
+  not_found:
+    redirect: 3秒後にホームページへ移動します。
+    fallback: 自動的に移動しない場合は、Weiping Yanのホームページへ戻ってください。

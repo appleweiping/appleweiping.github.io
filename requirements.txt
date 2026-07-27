@@ -1,4 +1,7 @@
-nbconvert
-pyyaml
-rendercv[full]
-scholarly
+nbconvert==7.17.1
+pyyaml==6.0.3
+pypdf==6.10.0
+rendercv[full]==2.8
+rendercv-fonts==0.5.1
+scholarly==1.7.11
+typst==0.15.0

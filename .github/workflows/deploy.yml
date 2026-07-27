@@ -1,108 +1,147 @@
-name: Deploy site
+name: Build and deploy site
 
 on:
   push:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
-      - "!README.md"
+    branches: [main]
   pull_request:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
-      - "!README.md"
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
 
 jobs:
-  deploy:
-    # available images: https://github.com/actions/runner-images#available-images
+  build:
+    name: Build and validate
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-      - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
-      - name: Setup Python 🐍
-        uses: actions/setup-python@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
-          python-version: "3.13"
-          cache: "pip" # caching pip dependencies
-      - name: Setup Node 🧰
-        uses: actions/setup-node@v4
+          python-version: "3.12"
+          cache: pip
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: "20"
-          cache: "npm"
-      - name: Install JS deps 📦
+          cache: npm
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes imagemagick poppler-utils
+
+      - name: Install Python dependencies
+        run: python -m pip install --requirement requirements.txt
+
+      - name: Install JavaScript dependencies
         run: npm ci
-      - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Install and Build 🔧
+
+      - name: Synchronize and validate the public repository catalog
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
-      - name: Purge unused CSS 🧹
+          ruby bin/sync_repository_catalog.rb
+          ruby bin/validate_repository_catalog.rb
+
+      - name: Render the English, Chinese, and Japanese CVs
+        shell: bash
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
-      - name: Deploy 🚀
-        if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+          rm -f assets/rendercv/rendercv_output/*
+          rendercv render _data/cv.yml \
+            --settings assets/rendercv/settings.yaml \
+            --design assets/rendercv/design.yaml \
+            --locale-catalog assets/rendercv/locale.yaml \
+            --quiet
+          rendercv render _data/cv_zh_cn.yml \
+            --settings assets/rendercv/settings_zh_cn.yaml \
+            --design assets/rendercv/design_zh_cn.yaml \
+            --locale-catalog assets/rendercv/locale_zh_cn.yaml \
+            --quiet
+          rendercv render _data/cv_ja.yml \
+            --settings assets/rendercv/settings_ja.yaml \
+            --design assets/rendercv/design_ja.yaml \
+            --locale-catalog assets/rendercv/locale_ja.yaml \
+            --quiet
+
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_en.pdf assets/pdf/Weiping_Yan_CV_en.pdf
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_zh-CN.pdf assets/pdf/Weiping_Yan_CV_zh-CN.pdf
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_ja.pdf assets/pdf/Weiping_Yan_CV_ja.pdf
+          install -D -m 0644 assets/rendercv/rendercv_output/Weiping_Yan_CV_en.pdf assets/pdf/Weiping_Yan_CV.pdf
+          test -s assets/pdf/Weiping_Yan_CV_en.pdf
+          test -s assets/pdf/Weiping_Yan_CV_zh-CN.pdf
+          test -s assets/pdf/Weiping_Yan_CV_ja.pdf
+          cmp --silent assets/pdf/Weiping_Yan_CV_en.pdf assets/pdf/Weiping_Yan_CV.pdf
+          python bin/validate_cv_pdfs.py
+          rm -f assets/rendercv/rendercv_output/*
+
+      - name: Check formatting and starter contracts
+        run: |
+          npm run lint:prettier
+          npm run lint:style-contract
+          npm run test:translations
+          npm run test:redirects
+
+      - name: Audit the al-folio upgrade boundary
+        run: |
+          bundle exec al-folio upgrade audit --no-fail
+          bundle exec al-folio upgrade overrides audit --fail-on-stale
+
+      - name: Build the production site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+
+      - name: Generate legacy redirects
+        run: ruby bin/generate_legacy_redirects.rb --destination _site
+
+      - name: Purge unused CSS
+        run: npm run build:purge-css
+
+      - name: Validate the published output
+        run: |
+          ruby bin/validate_repository_catalog.rb --offline
+          ruby bin/validate_production_site.rb --destination _site
+
+      - name: Configure GitHub Pages
+        if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Upload GitHub Pages artifact
+        if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          folder: _site
+          path: _site
+
+  deploy:
+    name: Deploy
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

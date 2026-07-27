@@ -2,33 +2,42 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+lang: en
+locale: en
+translation_key: about
+description: Weiping Yan is an undergraduate researcher working across machine learning, scientific computing, and trustworthy AI systems.
+subtitle: AI for Science Undergraduate Researcher
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: profile.jpg
+  image_circular: false
+  more_info: ""
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
+
+localized_announcements: true
+localized_selected_papers: true
+localized_social: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am **Weiping Yan (闫维平)**, an undergraduate researcher working at the intersection of machine learning, scientific inquiry, and engineering design. I have pursued concurrent undergraduate studies across Computer Science & Engineering, Electrical Engineering, and Applied Physics at [Delft University of Technology](https://www.tudelft.nl/en/) and [Eindhoven University of Technology](https://www.tue.nl/en/). I am an incoming undergraduate in the [University of Minnesota College of Science and Engineering](https://cse.umn.edu/), with the transition scheduled for **September 8, 2026**; it is not presented here as a current enrollment or appointment, and no specific University of Minnesota major is claimed.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My current interests include **AI for Science**, foundation models for technical workflows, large language models for recommendation, and machine-learning methods for analog circuit modeling and design automation. I value careful problem formulation, reproducible evidence, and clear boundaries between completed work and research in progress.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My research and teaching experience includes an NLP Research Internship with the Minnesota NLP Group since July 2026, as well as work at The Chinese University of Hong Kong, Eindhoven University of Technology, and Zhangjiang Laboratory. The Minnesota NLP role is a research position and is separate from my incoming undergraduate status. Earlier independent work on PM2.5 and respiratory-disease incidence used **synthetic, randomly generated data** for an exploratory Python analysis and led to a published article in _Theoretical and Natural Science_. It was an independent student project, **not an appointment at Carnegie Mellon University**, and it should not be read as an analysis of clinical or population exposure records.
+
+<h2 id="contact">Contact</h2>
+
+The best way to reach me is at [yan00944@umn.edu](mailto:yan00944@umn.edu). I also receive mail at [vipinapple986@gmail.com](mailto:vipinapple986@gmail.com). Links to my research and professional profiles appear below.
+
+{% include site_i18n/about_sections.liquid %}

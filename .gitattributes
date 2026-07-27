@@ -1,2 +1,11 @@
-# Force LF line endings, needed for Docker to work on Windows
-*.sh text eol=lf
+# Keep source artifacts reproducible across Windows, macOS, and Linux.
+* text=auto eol=lf
+
+# Never run text conversion or global diff filters over published binaries.
+*.gif binary
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.png binary
+*.ttf binary
+*.webp binary

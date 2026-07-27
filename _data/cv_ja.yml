@@ -1,0 +1,161 @@
+cv:
+  name: Weiping Yan
+  headline: AI for Science を研究する学部研究者
+  email:
+    - yan00944@umn.edu
+    - vipinapple986@gmail.com
+  website: https://appleweiping.github.io/ja/
+
+  social_networks:
+    - network: GitHub
+      username: appleweiping
+    - network: LinkedIn
+      username: weiping-yan-b62567383
+    - network: Google Scholar
+      username: gK6JtzsAAAAJ
+    - network: X
+      username: VipinYan14431
+    - network: Instagram
+      username: weipingappleapple
+
+  sections:
+    プロフィール:
+      - bullet: >-
+          Weiping Yan（闫维平）は、AI for Science、基盤モデル、推薦システム、
+          科学技術計算、工学設計に取り組む学部研究者です。
+
+    学歴:
+      - institution: University of Minnesota
+        location: 米国ミネソタ州ミネアポリス
+        url: https://cse.umn.edu/
+        area: College of Science and Engineering
+        degree: 学部
+        date: プログラム開始 2026-09-08
+        highlights:
+          - 入学予定であり、学位取得、入学済み、またはダブルメジャー確定とは記載していません。
+
+      - institution: Delft University of Technology × Eindhoven University of Technology
+        location: オランダ・デルフト／アイントホーフェン
+        url: https://www.tudelft.nl/en/
+        area: Computer Science & Engineering、Electrical Engineering、Applied Physics
+        degree: 学部
+        start_date: 2024-09
+        end_date: 2026-08
+        highlights:
+          - University of Minnesota のプログラム開始前までの並行履修期間を 2026 年 8 月まで記録しています。
+
+      - institution: The Affiliated High School to Hangzhou Normal University
+        location: 中国・杭州
+        area: 中国語、数学、英語、物理、化学、技術
+        degree: 高等学校
+        start_date: 2021-09
+        end_date: 2024-08
+
+      - institution: Shanghai Foreign Language School Affiliated to SISU
+        location: 中国・上海
+        area: 理工系
+        degree: 中等教育
+        start_date: 2023-07
+        end_date: 2024-08
+
+    経歴:
+      - company: University of Minnesota — Minnesota NLP Group
+        position: NLP リサーチインターン
+        location: 米国ミネソタ州ミネアポリス
+        url: https://nlp.umn.edu/
+        start_date: 2026-07
+        end_date: present
+        summary: 自然言語処理に関する学部研究インターンシップ。
+
+      - company: Veylora Labs
+        position: 共同創業者
+        start_date: 2026-05
+        end_date: present
+        summary: 組織の意思決定を支援するエグゼクティブ・インテリジェンスシステムを開発。
+
+      - company: The Chinese University of Hong Kong
+        position: リサーチアシスタント
+        location: 香港
+        url: https://www.cuhk.edu.hk/english/
+        start_date: 2026-03
+        end_date: present
+        summary: 大規模言語モデルによる推薦（LLM4Rec）および AI for Science の研究。
+
+      - company: Eindhoven University of Technology
+        position: ティーチングアシスタント
+        location: オランダ・アイントホーフェン
+        url: https://www.tue.nl/en/
+        start_date: 2025-09
+        end_date: 2025-11
+        summary: 学部の微積分および論理・集合論の授業を支援。
+        highlights:
+          - 演習を担当し、問題解決を指導するとともに、数学的推論への体系的なフィードバックを提供。
+
+      - company: Zhangjiang Laboratory
+        position: リサーチアシスタント
+        location: 中国・上海
+        start_date: 2025-07
+        end_date: 2025-09
+        summary: 半導体 IC 設計フローおよび EDA ツールチェーンを研究。
+        highlights:
+          - 回路図・プリレイアウトシミュレーション、DRC/LVS 検証、MPW 向けテープアウト準備を扱い、テープアウト完了は主張していません。
+
+      - company: 独立研究プロジェクト
+        position: 学生研究者 — PM2.5 と呼吸器疾患発症率
+        location: 中国・北京
+        start_date: 2023-09
+        end_date: 2024-02
+        summary: >-
+          Carnegie Mellon University の Soummya Kar 教授と Southeast University
+          の Qiang Gao 准教授の共同指導の下、PM2.5 曝露と呼吸器疾患発症率の関係を研究。
+        highlights:
+          - Python を用いて探索的分析、統計的推論、可視化を実施。
+          - 独立研究プロジェクトであり、Carnegie Mellon University での職歴ではありません。
+          - 発表論文の分析にはランダム生成された合成データを使用し、実世界の臨床・環境データではありません。
+
+    論文:
+      - title: "Effect of PM2.5 air pollution on the incidence of respiratory diseases: A Python-based data analysis"
+        authors:
+          - "*Weiping Yan*"
+        journal: Theoretical and Natural Science, 8(1), 70–75
+        date: 2023-11-13
+        url: https://doi.org/10.54254/2753-8818/8/20240361
+        summary: >-
+          査読付き発表論文。ランダム生成された合成データを分析しており、
+          実世界の臨床・環境データの使用は主張していません。
+
+    主な受賞歴:
+      - bullet: >-
+          **Kaggle Bronze Medal**、[Santa 2025 - Christmas Tree Packing
+          Challenge](https://www.kaggle.com/competitions/santa-2025)、
+          3,357 チーム中 186 位（2026 年 1 月 31 日）。
+      - bullet: >-
+          **First Prize**、CTSS College Student Innovation and Entrepreneurship
+          Competition、所属機関は TU/e として記載（2025 年 7 月）。
+      - bullet: >-
+          **First Prize**、2025 National College Student Mathematics Ability Challenge
+          （2025 年 12 月）。
+      - bullet: >-
+          **National First Prize**、2025 “Science and Innovation Cup” College Student
+          Mathematical Modeling Competition、Mathematical Modeling Knowledge
+          Competition 部門（2025 年 12 月）。
+
+    技術スキル:
+      - label: 研究・分析
+        details: 統計的推論、データ分析、データ可視化、機械学習、科学技術計算、研究ソフトウェア工学
+      - label: プログラミング
+        details: Python、C、Java、MATLAB、Verilog
+      - label: 科学・工学ツール
+        details: NumPy、pandas、Matplotlib、Git、LTspice、Origin
+
+    言語:
+      - label: 中国語（標準語）
+        details: 母語
+      - label: 杭州方言
+        details: 会話可能
+      - label: 英語
+        details: C1
+
+    研究関心:
+      - label: 分野
+        details: AI for Science、基盤モデル、LLM4Rec、AI 駆動アナログ EDA

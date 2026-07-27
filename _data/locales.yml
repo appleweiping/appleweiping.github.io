@@ -1,0 +1,23 @@
+- code: en
+  data_key: en
+  label: English
+  short_label: EN
+  hreflang: en
+  og_locale: en_US
+  home: /
+
+- code: zh-CN
+  data_key: zh
+  label: 简体中文
+  short_label: 中文
+  hreflang: zh-CN
+  og_locale: zh_CN
+  home: /zh/
+
+- code: ja
+  data_key: ja
+  label: 日本語
+  short_label: 日本語
+  hreflang: ja
+  og_locale: ja_JP
+  home: /ja/

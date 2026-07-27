@@ -1,14 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - appleweiping
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - appleweiping/WEIPING_WIKI
+  - appleweiping/AGENT_RESOURCE
+  - appleweiping/WEIPING_COUNCIL
+  - appleweiping/WEIPING_WHALE
+  - appleweiping/WEIPING_LAB
+  - appleweiping/umn-gopher-assistant

@@ -1,0 +1,15 @@
+settings:
+  render_command:
+    design: ../assets/rendercv/design_zh_cn.yaml
+    locale: ../assets/rendercv/locale_zh_cn.yaml
+    typst_path: ../assets/rendercv/rendercv_output/Weiping_Yan_CV_zh-CN.typ
+    pdf_path: ../assets/rendercv/rendercv_output/Weiping_Yan_CV_zh-CN.pdf
+    markdown_path: ../assets/rendercv/rendercv_output/Weiping_Yan_CV_zh-CN.md
+    html_path: ../assets/rendercv/rendercv_output/Weiping_Yan_CV_zh-CN.html
+    png_path: ../assets/rendercv/rendercv_output/Weiping_Yan_CV_zh-CN.png
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: true
+  bold_keywords: []

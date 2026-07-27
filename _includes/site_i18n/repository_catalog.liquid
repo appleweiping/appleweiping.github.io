@@ -1,0 +1,177 @@
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign strings = site.data.i18n[current_lang] | default: site.data.i18n[site.lang] %}
+{% assign current_locale = site.data.locales | where: 'code', current_lang | first %}
+{% assign catalog_locale = current_locale.data_key %}
+{% assign catalog = site.data.repository_catalog %}
+{% assign catalog_i18n = site.data.repository_catalog_i18n %}
+{% assign repositories_route = site.data.translation_routes.repositories[current_lang] %}
+
+<p class="lead">
+  {% if current_lang == 'zh-CN' %}
+    来自
+    <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
+    的 {{ catalog.public_count }} 个公开仓库完整目录。每条记录均区分原创工作、研究、课程项目、复现、派生仓库和资源合集，以明确作者身份与上游归属。
+  {% elsif current_lang == 'ja' %}
+    <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
+    が公開している
+    {{ catalog.public_count }}
+    件のリポジトリを収録した完全な一覧です。独自制作、研究、授業、再現実装、フォーク、資料集を区別し、著者性と上流の帰属を明示します。
+  {% else %}
+    A complete catalog of {{ catalog.public_count }} public repositories from
+    <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>. Each entry
+    distinguishes original work, research, coursework, reproductions, forks, and resource collections so that authorship and upstream attribution
+    remain explicit.
+  {% endif %}
+</p>
+
+<p class="text-muted small">
+  {{ strings.catalog.synchronized }}
+  {{ catalog.synced_at | date: '%Y-%m-%d' }}.
+  {{ strings.catalog.metadata_note }}
+</p>
+
+<p>
+  <a href="{{ repositories_route | relative_url }}">{{ strings.catalog.pinned }}</a> ·
+  <a href="https://github.com/{{ catalog.owner | escape }}?tab=repositories" target="_blank" rel="noopener noreferrer">
+    {{- strings.catalog.github -}}
+  </a>
+</p>
+
+<div class="d-flex flex-wrap mb-4" aria-label="{{ strings.a11y.repository_source_summary }}">
+  {% for source in catalog.source_counts %}
+    {% assign source_label = source[0] | replace: '-', ' ' %}
+    {% if catalog_locale != 'en' and catalog_i18n.source_kinds[source[0]][catalog_locale] %}
+      {% assign source_label = catalog_i18n.source_kinds[source[0]][catalog_locale] %}
+    {% endif %}
+    <span class="badge badge-light border mr-2 mb-2">{{ source_label | escape }} · {{ source[1] }}</span>
+  {% endfor %}
+</div>
+
+<h2 class="h4">{{ strings.catalog.browse_by_area }}</h2>
+
+<div class="row row-cols-1 row-cols-md-2 mb-5">
+  {% for category in catalog.categories %}
+    {% assign category_title = category.title %}
+    {% if catalog_locale != 'en' and catalog_i18n.categories[category.slug][catalog_locale].title %}
+      {% assign category_title = catalog_i18n.categories[category.slug][catalog_locale].title %}
+    {% endif %}
+    <div class="col mb-2">
+      <a class="d-flex justify-content-between align-items-center border rounded p-2" href="#{{ category.slug }}">
+        <span>{{ category_title | escape }}</span>
+        <span class="badge badge-secondary">{{ category.count }}</span>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+{% for category in catalog.categories %}
+  {% assign category_repositories = catalog.repositories | where: 'category', category.slug %}
+  {% assign category_title = category.title %}
+  {% assign category_description = category.description %}
+  {% if catalog_locale != 'en' and catalog_i18n.categories[category.slug][catalog_locale] %}
+    {% assign localized_category = catalog_i18n.categories[category.slug][catalog_locale] %}
+    {% assign category_title = localized_category.title | default: category.title %}
+    {% assign category_description = localized_category.description | default: category.description %}
+  {% endif %}
+
+  <section class="mb-5" aria-labelledby="{{ category.slug }}">
+    <div class="d-flex flex-wrap justify-content-between align-items-baseline border-bottom mb-3">
+      <h2 class="h3 mb-2" id="{{ category.slug | escape }}">{{ category_title | escape }}</h2>
+      <span class="text-muted small">
+        {% if current_lang == 'en' %}
+          {{ category.count }}
+          {{ strings.catalog.repositories }}
+        {% else %}
+          {{ category.count -}}
+          {{- strings.catalog.repositories }}
+        {% endif %}
+      </span>
+    </div>
+
+    <p class="text-muted">{{ category_description | escape }}</p>
+
+    <div class="row row-cols-1 row-cols-lg-2">
+      {% for repository in category_repositories %}
+        {% assign repository_description = repository.description %}
+        {% if catalog_locale != 'en' and catalog_i18n.repositories[repository.slug][catalog_locale] %}
+          {% assign localized_repository = catalog_i18n.repositories[repository.slug][catalog_locale] %}
+          {% assign repository_description = localized_repository.description | default: localized_repository %}
+        {% endif %}
+        {% assign source_label = repository.source_kind | replace: '-', ' ' %}
+        {% if catalog_locale != 'en' and catalog_i18n.source_kinds[repository.source_kind][catalog_locale] %}
+          {% assign source_label = catalog_i18n.source_kinds[repository.source_kind][catalog_locale] %}
+        {% endif %}
+        {% assign attribution = repository.attribution %}
+        {% if catalog_locale != 'en' and catalog_i18n.attributions[repository.attribution][catalog_locale] %}
+          {% assign attribution = catalog_i18n.attributions[repository.attribution][catalog_locale] %}
+        {% endif %}
+
+        <div class="col mb-4" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
+          <article class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">
+                <h3 class="h5 card-title mr-2 mb-1" style="min-width: 0; max-width: 100%; overflow-wrap: anywhere">
+                  <a href="{{ repository.source_url | escape }}" target="_blank" rel="noopener noreferrer">
+                    {{ repository.title | escape }}
+                  </a>
+                </h3>
+                <div>
+                  <span class="badge badge-primary">{{ source_label | escape }}</span>
+                  {% if repository.archived %}
+                    <span class="badge badge-warning">{{ strings.catalog.archived }}</span>
+                  {% endif %}
+                  {% if repository.fork %}
+                    <span class="badge badge-info">{{ strings.catalog.fork }}</span>
+                  {% endif %}
+                </div>
+              </div>
+
+              <p class="card-text">{{ repository_description | escape }}</p>
+
+              <p class="small mb-2">
+                <strong>{{ strings.catalog.languages }}</strong> {{ repository.languages | join: ', ' | escape }}
+              </p>
+
+              {% if repository.topics.size > 0 %}
+                <div class="mb-3" aria-label="{{ strings.a11y.repository_topics }}">
+                  {% for topic in repository.topics limit: 6 %}
+                    <span class="badge badge-light border mr-1 mb-1">{{ topic | escape }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              <p class="small text-muted mt-auto mb-2">{{ attribution | escape }}</p>
+              <p class="small text-muted mb-3">
+                {{ strings.catalog.updated }}
+                {{ repository.updated_at | date: '%Y-%m-%d' }}
+              </p>
+
+              <div>
+                <a
+                  class="btn btn-sm btn-outline-primary mr-2"
+                  href="{{ repository.source_url | escape }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="{{ strings.catalog.view_source_prefix }} {{ repository.title | escape }} {{ strings.catalog.view_source_suffix }}"
+                >
+                  {{- strings.catalog.source -}}
+                </a>
+                {% if repository.demo_url %}
+                  <a
+                    class="btn btn-sm btn-outline-secondary"
+                    href="{{ repository.demo_url | escape }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="{{ strings.catalog.open_demo_prefix }} {{ repository.title | escape }} {{ strings.catalog.open_demo_suffix }}"
+                  >
+                    {{- strings.catalog.demo -}}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

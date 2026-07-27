@@ -1,0 +1,58 @@
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign strings = site.data.i18n[current_lang] | default: site.data.i18n[site.lang] %}
+{% assign translation_set = site.data.translation_routes[page.translation_key] %}
+{% assign current_locale = site.data.locales | where: 'code', current_lang | first %}
+
+<li class="nav-item dropdown">
+  <a
+    class="nav-link dropdown-toggle"
+    href="#"
+    id="languageDropdown"
+    role="button"
+    data-nav-dropdown-toggle="true"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-label="{{ strings.nav.language }}"
+  >
+    {{- current_locale.short_label | default: strings.nav.language -}}
+  </a>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+    {% for locale in site.data.locales %}
+      {% if translation_set and translation_set[locale.code] %}
+        {% assign locale_url = translation_set[locale.code] %}
+      {% else %}
+        {% assign locale_url = locale.home %}
+      {% endif %}
+      <a
+        class="dropdown-item {% if locale.code == current_lang %}active{% endif %}"
+        href="{{ locale_url | relative_url }}"
+        hreflang="{{ locale.hreflang }}"
+        lang="{{ locale.code }}"
+        data-site-language-link
+      >
+        {{- locale.label -}}
+        {% if locale.code == current_lang %}
+          <span class="sr-only">({{ strings.nav.current }})</span>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</li>
+
+<script>
+  (() => {
+    const languageLinks = document.querySelectorAll('[data-site-language-link]');
+    languageLinks.forEach((link) => {
+      link.dataset.baseHref = link.href.split('#')[0];
+    });
+
+    const syncLanguageHashes = () => {
+      languageLinks.forEach((link) => {
+        link.href = `${link.dataset.baseHref}${window.location.hash}`;
+      });
+    };
+
+    syncLanguageHashes();
+    window.addEventListener('hashchange', syncLanguageHashes);
+  })();
+</script>

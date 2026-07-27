@@ -1,0 +1,149 @@
+about:
+  en: /
+  zh-CN: /zh/
+  ja: /ja/
+
+publications:
+  en: /publications/
+  zh-CN: /zh/publications/
+  ja: /ja/publications/
+
+projects:
+  en: /projects/
+  zh-CN: /zh/projects/
+  ja: /ja/projects/
+
+repositories:
+  en: /repositories/
+  zh-CN: /zh/repositories/
+  ja: /ja/repositories/
+
+repository-catalog:
+  en: /repositories/catalog/
+  zh-CN: /zh/repositories/catalog/
+  ja: /ja/repositories/catalog/
+
+cv:
+  en: /cv/
+  zh-CN: /zh/cv/
+  ja: /ja/cv/
+
+news:
+  en: /news/
+  zh-CN: /zh/news/
+  ja: /ja/news/
+
+"404":
+  en: /404.html
+  zh-CN: /zh/404.html
+  ja: /ja/404.html
+
+art-history-museum:
+  en: /projects/art-history-museum/
+  zh-CN: /zh/projects/art-history-museum/
+  ja: /ja/projects/art-history-museum/
+
+blockverse:
+  en: /projects/blockverse/
+  zh-CN: /zh/projects/blockverse/
+  ja: /ja/projects/blockverse/
+
+cadenza:
+  en: /projects/cadenza/
+  zh-CN: /zh/projects/cadenza/
+  ja: /ja/projects/cadenza/
+
+causalpilot:
+  en: /projects/causalpilot/
+  zh-CN: /zh/projects/causalpilot/
+  ja: /ja/projects/causalpilot/
+
+ecg-recoverability:
+  en: /projects/ecg-recoverability/
+  zh-CN: /zh/projects/ecg-recoverability/
+  ja: /ja/projects/ecg-recoverability/
+
+inr-aliasing-limits:
+  en: /projects/inr-aliasing-limits/
+  zh-CN: /zh/projects/inr-aliasing-limits/
+  ja: /ja/projects/inr-aliasing-limits/
+
+lumen-rec:
+  en: /projects/lumen-rec/
+  zh-CN: /zh/projects/lumen-rec/
+  ja: /ja/projects/lumen-rec/
+
+topo-flow-limits:
+  en: /projects/topo-flow-limits/
+  zh-CN: /zh/projects/topo-flow-limits/
+  ja: /ja/projects/topo-flow-limits/
+
+venus-basestation:
+  en: /projects/venus-basestation/
+  zh-CN: /zh/projects/venus-basestation/
+  ja: /ja/projects/venus-basestation/
+
+weiping-council:
+  en: /projects/weiping-council/
+  zh-CN: /zh/projects/weiping-council/
+  ja: /ja/projects/weiping-council/
+
+weiping-lab:
+  en: /projects/weiping-lab/
+  zh-CN: /zh/projects/weiping-lab/
+  ja: /ja/projects/weiping-lab/
+
+weiping-whale:
+  en: /projects/weiping-whale/
+  zh-CN: /zh/projects/weiping-whale/
+  ja: /ja/projects/weiping-whale/
+
+2023-11-13-pm25-paper:
+  en: /news/2023-11-13-pm25-paper/
+  zh-CN: /zh/news/2023-11-13-pm25-paper/
+  ja: /ja/news/2023-11-13-pm25-paper/
+
+2024-09-01-tu-studies:
+  en: /news/2024-09-01-tu-studies/
+  zh-CN: /zh/news/2024-09-01-tu-studies/
+  ja: /ja/news/2024-09-01-tu-studies/
+
+2025-07-01-ctss-first-prize:
+  en: /news/2025-07-01-ctss-first-prize/
+  zh-CN: /zh/news/2025-07-01-ctss-first-prize/
+  ja: /ja/news/2025-07-01-ctss-first-prize/
+
+2025-07-02-zhangjiang:
+  en: /news/2025-07-02-zhangjiang/
+  zh-CN: /zh/news/2025-07-02-zhangjiang/
+  ja: /ja/news/2025-07-02-zhangjiang/
+
+2025-09-01-tue-teaching:
+  en: /news/2025-09-01-tue-teaching/
+  zh-CN: /zh/news/2025-09-01-tue-teaching/
+  ja: /ja/news/2025-09-01-tue-teaching/
+
+2025-12-01-mathematics-awards:
+  en: /news/2025-12-01-mathematics-awards/
+  zh-CN: /zh/news/2025-12-01-mathematics-awards/
+  ja: /ja/news/2025-12-01-mathematics-awards/
+
+2026-01-31-kaggle-bronze:
+  en: /news/2026-01-31-kaggle-bronze/
+  zh-CN: /zh/news/2026-01-31-kaggle-bronze/
+  ja: /ja/news/2026-01-31-kaggle-bronze/
+
+2026-03-01-cuhk:
+  en: /news/2026-03-01-cuhk/
+  zh-CN: /zh/news/2026-03-01-cuhk/
+  ja: /ja/news/2026-03-01-cuhk/
+
+2026-05-02-veylora:
+  en: /news/2026-05-02-veylora/
+  zh-CN: /zh/news/2026-05-02-veylora/
+  ja: /ja/news/2026-05-02-veylora/
+
+2026-07-01-minnesota-nlp:
+  en: /news/2026-07-01-minnesota-nlp/
+  zh-CN: /zh/news/2026-07-01-minnesota-nlp/
+  ja: /ja/news/2026-07-01-minnesota-nlp/

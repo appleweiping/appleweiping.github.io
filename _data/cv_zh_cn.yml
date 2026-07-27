@@ -1,0 +1,157 @@
+cv:
+  name: 闫维平
+  headline: AI for Science 本科研究者
+  email:
+    - yan00944@umn.edu
+    - vipinapple986@gmail.com
+  website: https://appleweiping.github.io/zh/
+
+  social_networks:
+    - network: GitHub
+      username: appleweiping
+    - network: LinkedIn
+      username: weiping-yan-b62567383
+    - network: Google Scholar
+      username: gK6JtzsAAAAJ
+    - network: X
+      username: VipinYan14431
+    - network: Instagram
+      username: weipingappleapple
+
+  sections:
+    个人简介:
+      - bullet: >-
+          闫维平（Weiping Yan）是一名本科研究者，研究与实践方向涵盖 AI for Science、
+          基础模型、推荐系统、科学计算与工程设计。
+
+    教育经历:
+      - institution: University of Minnesota
+        location: 美国明尼苏达州明尼阿波利斯
+        url: https://cse.umn.edu/
+        area: College of Science and Engineering
+        degree: 本科
+        date: 项目于 2026-09-08 开始
+        highlights:
+          - 即将入学；不宣称已获得学位、已完成入学或已确定双专业。
+
+      - institution: Delft University of Technology × Eindhoven University of Technology
+        location: 荷兰代尔夫特与埃因霍温
+        url: https://www.tudelft.nl/en/
+        area: 计算机科学与工程、电气工程及应用物理
+        degree: 本科
+        start_date: 2024-09
+        end_date: 2026-08
+        highlights:
+          - 在 University of Minnesota 项目开始前，并行学习经历记录至 2026 年 8 月。
+
+      - institution: 杭州师范大学附属中学
+        location: 中国杭州
+        area: 语文、数学、英语、物理、化学与技术
+        degree: 高中
+        start_date: 2021-09
+        end_date: 2024-08
+
+      - institution: 上海外国语大学附属外国语学校
+        location: 中国上海
+        area: 理工方向
+        degree: 中学
+        start_date: 2023-07
+        end_date: 2024-08
+
+    经历:
+      - company: University of Minnesota — Minnesota NLP Group
+        position: 自然语言处理研究实习生
+        location: 美国明尼苏达州明尼阿波利斯
+        url: https://nlp.umn.edu/
+        start_date: 2026-07
+        end_date: present
+        summary: 参与自然语言处理方向的本科研究实习。
+
+      - company: Veylora Labs
+        position: 联合创始人
+        start_date: 2026-05
+        end_date: present
+        summary: 开发面向组织决策支持的管理智能系统。
+
+      - company: The Chinese University of Hong Kong
+        position: 研究助理
+        location: 中国香港
+        url: https://www.cuhk.edu.hk/english/
+        start_date: 2026-03
+        end_date: present
+        summary: 开展大语言模型推荐（LLM4Rec）与 AI for Science 方向的研究工作。
+
+      - company: Eindhoven University of Technology
+        position: 教学助理
+        location: 荷兰埃因霍温
+        url: https://www.tue.nl/en/
+        start_date: 2025-09
+        end_date: 2025-11
+        summary: 协助本科微积分与逻辑/集合论课程教学。
+        highlights:
+          - 组织习题课、指导问题求解，并对数学推理提供结构化反馈。
+
+      - company: Zhangjiang Laboratory
+        position: 研究助理
+        location: 中国上海
+        start_date: 2025-07
+        end_date: 2025-09
+        summary: 研究半导体集成电路设计流程与 EDA 工具链。
+        highlights:
+          - 覆盖原理图与预布局仿真、DRC/LVS 验证及面向 MPW 的流片准备；不宣称已完成流片。
+
+      - company: 独立研究项目
+        position: 学生研究者 — PM2.5 与呼吸系统疾病发病率
+        location: 中国北京
+        start_date: 2023-09
+        end_date: 2024-02
+        summary: >-
+          在 Carnegie Mellon University 的 Soummya Kar 教授与 Southeast University
+          的高强副教授共同指导下，研究 PM2.5 暴露与呼吸系统疾病发病率的关系。
+        highlights:
+          - 使用 Python 进行探索性分析、统计推断与可视化。
+          - 这是独立研究项目，并非在 Carnegie Mellon University 任职。
+          - 已发表分析使用随机生成/合成数据，并非真实世界临床或环境数据集。
+
+    论文:
+      - title: "Effect of PM2.5 air pollution on the incidence of respiratory diseases: A Python-based data analysis"
+        authors:
+          - "*Weiping Yan*"
+        journal: Theoretical and Natural Science, 8(1), 70–75
+        date: 2023-11-13
+        url: https://doi.org/10.54254/2753-8818/8/20240361
+        summary: >-
+          已发表研究论文。研究使用随机生成/合成数据，不宣称使用真实世界临床或环境数据集。
+
+    主要荣誉与奖项:
+      - bullet: >-
+          **Kaggle 铜牌**，[Santa 2025 - Christmas Tree Packing
+          Challenge](https://www.kaggle.com/competitions/santa-2025)，
+          3,357 支队伍中排名第 186（2026 年 1 月 31 日）。
+      - bullet: >-
+          **一等奖**，CTSS 大学生创新创业竞赛，参赛所属院校列为 TU/e（2025 年 7 月）。
+      - bullet: >-
+          **一等奖**，2025 全国大学生数学能力挑战赛（2025 年 12 月）。
+      - bullet: >-
+          **全国一等奖**，2025 “科创杯”大学生数学建模竞赛数学建模知识竞赛赛道
+          （2025 年 12 月）。
+
+    技术能力:
+      - label: 研究与分析
+        details: 统计推断、数据分析、数据可视化、机器学习、科学计算、科研软件工程
+      - label: 编程语言
+        details: Python、C、Java、MATLAB、Verilog
+      - label: 科学与工程工具
+        details: NumPy、pandas、Matplotlib、Git、LTspice、Origin
+
+    语言能力:
+      - label: 普通话
+        details: 母语
+      - label: 杭州方言
+        details: 能够口语交流
+      - label: 英语
+        details: C1
+
+    研究兴趣:
+      - label: 方向
+        details: AI for Science、基础模型、LLM4Rec、AI 驱动的模拟 EDA

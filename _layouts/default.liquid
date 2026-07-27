@@ -1,0 +1,96 @@
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign strings = site.data.i18n[current_lang] | default: site.data.i18n[site.lang] %}
+<!doctype html>
+<html lang="{{ current_lang }}">
+  <!-- Head -->
+  <head>
+    {% if page.redirect %}
+      {% if page.redirect == true %}
+        {% assign redirect = site.baseurl | append: '/' %}
+      {% elsif page.redirect contains '://' %}
+        {% assign redirect = page.redirect %}
+      {% else %}
+        {% assign redirect = page.redirect | relative_url %}
+      {% endif %}
+      <meta http-equiv="refresh" content="3; url={{ redirect }}">
+    {% endif %}
+    {% include head.liquid %}
+  </head>
+
+  <!-- Body -->
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!-- Header -->
+    {% include header.liquid %}
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      {% if page.toc and page.toc.sidebar %}
+        {% assign toc_collapse = page.toc.collapse | default: 'expanded' %}
+        {% assign toc_collapse_depth = page.toc.collapse_depth | default: '' %}
+        {% if page.toc.sidebar == 'right' %}
+          <div class="row">
+            <!-- main content area -->
+            <div class="col-sm-9">{{ content }}</div>
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav
+                id="toc-sidebar"
+                class="sticky-top toc toc-sidebar"
+                aria-label="{{ strings.a11y.table_of_contents }}"
+                data-toc-collapse="{{ toc_collapse }}"
+                data-toc-collapse-depth="{{ toc_collapse_depth }}"
+              ></nav>
+            </div>
+          </div>
+        {% else %}
+          <div class="row">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav
+                id="toc-sidebar"
+                class="sticky-top toc toc-sidebar"
+                aria-label="{{ strings.a11y.table_of_contents }}"
+                data-toc-collapse="{{ toc_collapse }}"
+                data-toc-collapse-depth="{{ toc_collapse_depth }}"
+              ></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-sm-9">{{ content }}</div>
+          </div>
+        {% endif %}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </div>
+
+    <!-- Footer -->
+    {% include footer.liquid %}
+
+    <!-- JavaScripts -->
+    {% include scripts.liquid %}
+    {% case current_lang %}
+      {% when 'zh-CN' %}
+        {% assign localized_cv_url = '/assets/pdf/Weiping_Yan_CV_zh-CN.pdf' %}
+      {% when 'ja' %}
+        {% assign localized_cv_url = '/assets/pdf/Weiping_Yan_CV_ja.pdf' %}
+      {% else %}
+        {% assign localized_cv_url = '/assets/pdf/Weiping_Yan_CV_en.pdf' %}
+    {% endcase %}
+    <script>
+      (() => {
+        const search = document.querySelector("ninja-keys");
+        if (!search) return;
+
+        search.setAttribute("placeholder", {{ strings.nav.search_placeholder | jsonify }});
+
+        const actions = Array.isArray(search.data) ? search.data : [];
+        const cvAction = actions.find((action) => action.id === "social-cv");
+        if (!cvAction) return;
+
+        cvAction.title = {{ strings.cv.download_pdf | jsonify }};
+        cvAction.handler = () => window.open({{ localized_cv_url | relative_url | jsonify }}, "_blank");
+        search.data = [...actions];
+      })();
+    </script>
+  </body>
+</html>
