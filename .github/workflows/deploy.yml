@@ -117,7 +117,7 @@ jobs:
       - name: Validate the published output
         run: |
           ruby bin/validate_repository_catalog.rb --offline
-          ruby bin/validate_production_site.rb --destination _site
+          bundle exec ruby bin/validate_production_site.rb --destination _site
 
       - name: Configure GitHub Pages
         if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
