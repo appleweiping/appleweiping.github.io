@@ -6,7 +6,7 @@ overrides:
     gem_version: 1.0.0
     upstream_path: templates/cv/render.liquid
     upstream_sha256: 89c9ce23250ace91325d69ae0b8fab67ecc31466de1f09f91958c745e98a2324
-    local_sha256: 4e692c2b692790cef8750f0e1cfd64b84449cefffdc339f7d39a43ec3c3c7012
+    local_sha256: ff5efdc72c3cdd8303856eb7e59af0792f48e90e658584e0f452388cb2568ba7
     acknowledged_at: "2026-07-27"
   _includes/footer.liquid:
     owner: al_folio_core

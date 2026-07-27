@@ -43,6 +43,10 @@ COMMON_URIS = {
     "https://instagram.com/weipingappleapple",
     "https://doi.org/10.54254/2753-8818/8/20240361",
     "https://www.kaggle.com/competitions/santa-2025",
+    "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence",
+    "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing",
+    "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics",
+    "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation",
 }
 EXPECTED_WEBSITE = {
     "en": "https://appleweiping.github.io/",

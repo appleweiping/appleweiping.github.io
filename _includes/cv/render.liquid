@@ -140,7 +140,8 @@
                     </ul>
                   {% elsif entry.label %}
                     <div class="card-text font-weight-light">
-                      <strong>{{ entry.label }}:</strong> {{ entry.details }}
+                      <strong>{{ entry.label }}:</strong>
+                      {{ entry.details | markdownify | remove: '<p>' | remove: '</p>' }}
                     </div>
                   {% endif %}
                 {% endfor %}

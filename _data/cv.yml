@@ -1,6 +1,6 @@
 cv:
   name: Weiping Yan
-  headline: AI for Science Undergraduate Researcher
+  headline: Undergraduate Researcher
   email:
     - yan00944@umn.edu
     - vipinapple986@gmail.com
@@ -21,9 +21,9 @@ cv:
   sections:
     Profile:
       - bullet: >-
-          Weiping Yan (闫维平) is an undergraduate researcher working across AI for
-          Science, foundation models, recommendation, scientific computing, and
-          engineering design.
+          Weiping Yan (闫维平) is an undergraduate researcher interested in artificial
+          intelligence, natural language processing, microelectronics, and electronic
+          design automation.
 
     Education:
       - institution: University of Minnesota
@@ -80,7 +80,7 @@ cv:
         url: https://www.cuhk.edu.hk/english/
         start_date: 2026-03
         end_date: present
-        summary: Research activity in large language models for recommendation (LLM4Rec) and AI for Science.
+        summary: Research activity in large language models for recommendation (LLM4Rec) and natural language processing.
 
       - company: Eindhoven University of Technology
         position: Teaching Assistant
@@ -160,4 +160,8 @@ cv:
 
     Research Interests:
       - label: Areas
-        details: AI for Science, foundation models, LLM4Rec, AI-driven analog EDA
+        details: >-
+          [Artificial intelligence](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence),
+          [natural language processing](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing),
+          [microelectronics](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics),
+          and [electronic design automation](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation)

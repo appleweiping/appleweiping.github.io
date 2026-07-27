@@ -1,6 +1,6 @@
 cv:
   name: Weiping Yan
-  headline: AI for Science を研究する学部研究者
+  headline: 学部研究者
   email:
     - yan00944@umn.edu
     - vipinapple986@gmail.com
@@ -21,8 +21,8 @@ cv:
   sections:
     プロフィール:
       - bullet: >-
-          Weiping Yan（闫维平）は、AI for Science、基盤モデル、推薦システム、
-          科学技術計算、工学設計に取り組む学部研究者です。
+          Weiping Yan（闫维平）は、人工知能、自然言語処理、マイクロエレクトロニクス、
+          電子設計自動化に関心を持つ学部研究者です。
 
     学歴:
       - institution: University of Minnesota
@@ -79,7 +79,7 @@ cv:
         url: https://www.cuhk.edu.hk/english/
         start_date: 2026-03
         end_date: present
-        summary: 大規模言語モデルによる推薦（LLM4Rec）および AI for Science の研究。
+        summary: 大規模言語モデルによる推薦（LLM4Rec）および自然言語処理の研究。
 
       - company: Eindhoven University of Technology
         position: ティーチングアシスタント
@@ -158,4 +158,8 @@ cv:
 
     研究関心:
       - label: 分野
-        details: AI for Science、基盤モデル、LLM4Rec、AI 駆動アナログ EDA
+        details: >-
+          [人工知能](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence)、
+          [自然言語処理](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing)、
+          [マイクロエレクトロニクス](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics)、
+          [電子設計自動化](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation)

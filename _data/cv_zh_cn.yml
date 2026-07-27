@@ -1,6 +1,6 @@
 cv:
   name: 闫维平
-  headline: AI for Science 本科研究者
+  headline: 本科研究者
   email:
     - yan00944@umn.edu
     - vipinapple986@gmail.com
@@ -21,8 +21,8 @@ cv:
   sections:
     个人简介:
       - bullet: >-
-          闫维平（Weiping Yan）是一名本科研究者，研究与实践方向涵盖 AI for Science、
-          基础模型、推荐系统、科学计算与工程设计。
+          闫维平（Weiping Yan）是一名本科研究者，研究兴趣包括人工智能、自然语言处理、
+          微电子学与电子设计自动化。
 
     教育经历:
       - institution: University of Minnesota
@@ -79,7 +79,7 @@ cv:
         url: https://www.cuhk.edu.hk/english/
         start_date: 2026-03
         end_date: present
-        summary: 开展大语言模型推荐（LLM4Rec）与 AI for Science 方向的研究工作。
+        summary: 开展大语言模型推荐（LLM4Rec）与自然语言处理方向的研究工作。
 
       - company: Eindhoven University of Technology
         position: 教学助理
@@ -154,4 +154,8 @@ cv:
 
     研究兴趣:
       - label: 方向
-        details: AI for Science、基础模型、LLM4Rec、AI 驱动的模拟 EDA
+        details: >-
+          [人工智能](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence)、
+          [自然语言处理](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing)、
+          [微电子学](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics)与
+          [电子设计自动化](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation)

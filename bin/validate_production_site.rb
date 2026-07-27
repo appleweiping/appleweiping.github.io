@@ -188,11 +188,13 @@ end
 
 forbidden_identity = /Albert Einstein|You R\. Name|dummy@example\.com|alshedivat\.github\.io\/al-folio/i
 forbidden_sensitive = /DS-160|passport number|recovery code|恢复码|パスポート番号/i
+forbidden_research_branding = /AI\s+for\s+Science/i
 documents.each do |path, document|
   relative = path.relative_path_from(destination)
   html = path.read(encoding: "UTF-8")
   errors << "forbidden template identity remains in #{relative}" if html.match?(forbidden_identity)
   errors << "sensitive-document terminology leaked into #{relative}" if html.match?(forbidden_sensitive)
+  errors << "obsolete AI for Science branding remains in #{relative}" if html.match?(forbidden_research_branding)
 
   document.css('script[type="application/ld+json"]').each do |script|
     begin
@@ -239,6 +241,12 @@ expected_codes.each do |code|
 end
 
 canonical_hrefs = canonical_documents.values.flat_map { |document| document.css("[href]").map { |element| element["href"] } }.compact.to_set
+research_interest_links = [
+  "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence",
+  "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing",
+  "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics",
+  "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation"
+]
 required_public_links = [
   "https://github.com/appleweiping",
   "https://www.linkedin.com/in/weiping-yan-b62567383",
@@ -248,6 +256,7 @@ required_public_links = [
   "mailto:yan00944@umn.edu",
   "mailto:vipinapple986@gmail.com",
   "https://doi.org/10.54254/2753-8818/8/20240361",
+  *research_interest_links,
   "/assets/pdf/Weiping_Yan_CV_en.pdf",
   "/assets/pdf/Weiping_Yan_CV_zh-CN.pdf",
   "/assets/pdf/Weiping_Yan_CV_ja.pdf"
@@ -269,6 +278,21 @@ about_expectations.each do |code, phrases|
   text = document.text.gsub(/\s+/, " ")
   phrases.each do |phrase|
     errors << "#{code} home page is missing the verified fact #{phrase.inspect}" unless text.include?(phrase)
+  end
+  homepage_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
+  research_interest_links.each do |link|
+    errors << "#{code} home page is missing the research-interest link #{link}" unless homepage_hrefs.include?(link)
+  end
+end
+
+expected_codes.each do |code|
+  route = translation_routes.dig("cv", code)
+  document = canonical_documents[route]
+  next unless document
+
+  cv_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
+  research_interest_links.each do |link|
+    errors << "#{code} CV page is missing the research-interest link #{link}" unless cv_hrefs.include?(link)
   end
 end
 

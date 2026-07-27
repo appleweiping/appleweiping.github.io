@@ -20,8 +20,8 @@ module RepositoryCatalog
     },
     {
       "slug" => "ai4s-research",
-      "title" => "AI for Science & Research",
-      "description" => "Research code applying machine learning, simulation, and computational methods to scientific questions."
+      "title" => "Artificial Intelligence & Research",
+      "description" => "Research code spanning machine learning, language technologies, simulation, and computational methods."
     },
     {
       "slug" => "models-data",

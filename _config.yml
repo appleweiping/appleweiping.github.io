@@ -9,11 +9,11 @@ last_name: Yan
 contact_note: >
   For research or collaboration, email <a href="mailto:yan00944@umn.edu">yan00944@umn.edu</a>.
 description: >- # the ">-" symbol folds lines and removes the trailing newline
-  Weiping Yan (闫维平) is an AI for Science undergraduate researcher working across machine learning, scientific computing, and trustworthy AI systems.
+  Weiping Yan (闫维平) is an incoming undergraduate and researcher interested in artificial intelligence, natural language processing, microelectronics, and electronic design automation.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Weiping Yan, 闫维平, AI for Science, machine learning, scientific computing, undergraduate research
+keywords: Weiping Yan, 闫维平, artificial intelligence, natural language processing, microelectronics, electronic design automation, undergraduate research
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧬 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
