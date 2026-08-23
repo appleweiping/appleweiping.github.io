@@ -24,6 +24,7 @@ npm run lint:prettier
 npm run lint:style-contract
 npm run test:translations
 npm run test:redirects
+npm run test:catalog-policy
 bundle exec al-folio upgrade audit --no-fail
 bundle exec al-folio upgrade overrides audit --fail-on-stale
 JEKYLL_ENV=production bundle exec jekyll build

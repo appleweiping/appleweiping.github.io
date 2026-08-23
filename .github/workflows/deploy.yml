@@ -97,6 +97,7 @@ jobs:
           npm run lint:style-contract
           npm run test:translations
           npm run test:redirects
+          npm run test:catalog-policy
 
       - name: Audit the al-folio upgrade boundary
         run: |

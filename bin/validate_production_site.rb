@@ -164,6 +164,25 @@ repositories = catalog.fetch("repositories")
   end
 end
 
+portfolio_repositories, excluded_repositories = repositories.partition { |repository| repository.fetch("portfolio_project") }
+%w[en zh-CN ja].each do |code|
+  route = translation_routes.dig("projects", code)
+  next unless route
+
+  path = output_path(destination, route)
+  next unless path.file?
+
+  html = path.read(encoding: "UTF-8")
+  portfolio_repositories.each do |repository|
+    slug = repository.fetch("slug")
+    errors << "#{code} projects page is missing portfolio project ##{slug}" unless html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
+  end
+  excluded_repositories.each do |repository|
+    slug = repository.fetch("slug")
+    errors << "#{code} projects page includes excluded repository ##{slug}" if html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
+  end
+end
+
 legacy = JSON.parse(root.join("_data/legacy_repository_slugs.json").read(encoding: "UTF-8")).fetch("slugs")
 legacy_prefixes = { "en" => "", "zh-CN" => "/zh", "ja" => "/ja" }
 legacy_prefixes.each do |code, prefix|
@@ -429,7 +448,8 @@ if errors.empty?
   puts(
     "Production site is valid: #{canonical_routes.length} canonical routes, " \
     "#{project_routes.length} project groups, #{news_routes.length} news groups, " \
-    "#{repositories.length} repositories, and #{legacy.length} legacy slugs."
+    "#{repositories.length} repositories, #{catalog.fetch('project_count')} portfolio projects, " \
+    "and #{legacy.length} legacy slugs."
   )
 else
   warn "Production site validation failed with #{errors.length} error(s):"

@@ -76,6 +76,7 @@ begin
     require_value(repository, "description", errors, label)
     source_kind = require_value(repository, "source_kind", errors, label)
     category = require_value(repository, "category", errors, label)
+    curation_status = require_value(repository, "curation_status", errors, label)
     source_url = require_value(repository, "source_url", errors, label)
     require_value(repository, "attribution", errors, label)
     require_value(repository, "default_branch", errors, label)
@@ -89,6 +90,7 @@ begin
     errors << "#{label}: repository must belong to #{owner}" unless full_name.is_a?(String) && full_name.match?(/\A#{Regexp.escape(owner.to_s)}\/[^\s\/]+\z/i)
     errors << "#{label}: unknown source_kind #{source_kind.inspect}" unless RepositoryCatalog::SOURCE_KINDS.include?(source_kind)
     errors << "#{label}: unknown category #{category.inspect}" unless RepositoryCatalog::CATEGORY_SLUGS.include?(category)
+    errors << "#{label}: unknown curation_status #{curation_status.inspect}" unless RepositoryCatalog::CURATION_STATUSES.include?(curation_status)
     errors << "#{label}: source_url must be HTTPS" unless RepositoryCatalog.https_url?(source_url)
     errors << "#{label}: source_url does not match repository" unless source_url == "https://github.com/#{full_name}"
     errors << "#{label}: demo_url must be HTTPS" if repository.key?("demo_url") && !RepositoryCatalog.https_url?(repository["demo_url"])
@@ -96,6 +98,10 @@ begin
     errors << "#{label}: size_kb must be a non-negative integer" unless repository["size_kb"].is_a?(Integer) && repository["size_kb"] >= 0
     errors << "#{label}: archived must be boolean" unless [true, false].include?(repository["archived"])
     errors << "#{label}: fork must be boolean" unless [true, false].include?(repository["fork"])
+    errors << "#{label}: portfolio_project must be boolean" unless [true, false].include?(repository["portfolio_project"])
+    if [true, false].include?(repository["portfolio_project"]) && !RepositoryCatalog.valid_portfolio_project?(repository)
+      errors << "#{label}: portfolio_project violates the catalog inclusion policy"
+    end
 
     %w[created_at updated_at pushed_at].each do |field|
       errors << "#{label}: #{field} must be an ISO-8601 timestamp" unless RepositoryCatalog.iso8601?(repository[field])
@@ -124,6 +130,15 @@ begin
   end.reject { |_source_kind, count| count.zero? }
   errors << "source_counts do not match repository entries" unless catalog["source_counts"] == actual_source_counts
 
+  project_repositories = repositories.select { |repository| repository["portfolio_project"] }
+  errors << "project_count does not match portfolio project entries" unless catalog["project_count"] == project_repositories.length
+  actual_project_source_counts = RepositoryCatalog::PORTFOLIO_SOURCE_KINDS.to_h do |source_kind|
+    [source_kind, project_repositories.count { |repository| repository["source_kind"] == source_kind }]
+  end.reject { |_source_kind, count| count.zero? }
+  unless catalog["project_source_counts"] == actual_project_source_counts
+    errors << "project_source_counts do not match portfolio project entries"
+  end
+
   categories = catalog["categories"]
   if !categories.is_a?(Array)
     errors << "categories must be an array"
@@ -135,7 +150,11 @@ begin
 
       slug = category["slug"]
       actual_count = repositories.count { |repository| repository["category"] == slug }
+      actual_project_count = project_repositories.count { |repository| repository["category"] == slug }
       errors << "category #{slug.inspect} count does not match repository entries" unless category["count"] == actual_count
+      unless category["project_count"] == actual_project_count
+        errors << "category #{slug.inspect} project_count does not match portfolio project entries"
+      end
       errors << "category #{slug.inspect} needs a title" if category["title"].to_s.empty?
       errors << "category #{slug.inspect} needs a description" if category["description"].to_s.empty?
     end
@@ -164,6 +183,7 @@ begin
       errors << "#{label}: source URL is stale" unless repository["source_url"] == remote["html_url"]
       errors << "#{label}: updated_at is stale" unless repository["updated_at"] == remote["updated_at"]
       errors << "#{label}: archived status is stale" unless repository["archived"] == remote["archived"]
+      errors << "#{label}: fork status is stale" unless repository["fork"] == remote["fork"]
     end
   end
 

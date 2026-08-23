@@ -5,22 +5,51 @@
 {% assign catalog = site.data.repository_catalog %}
 {% assign catalog_i18n = site.data.repository_catalog_i18n %}
 {% assign repositories_route = site.data.translation_routes.repositories[current_lang] %}
+{% assign catalog_route = site.data.translation_routes['repository-catalog'][current_lang] %}
+{% assign projects_only = include.projects_only | default: false %}
+{% assign catalog_repositories = catalog.repositories %}
+{% assign catalog_count = catalog.public_count %}
+{% assign source_counts = catalog.source_counts %}
+{% if projects_only %}
+  {% assign catalog_repositories = catalog.repositories | where: 'portfolio_project', true %}
+  {% assign catalog_count = catalog.project_count %}
+  {% assign source_counts = catalog.project_source_counts %}
+{% endif %}
 
 <p class="lead">
-  {% if current_lang == 'zh-CN' %}
-    来自
-    <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
-    的 {{ catalog.public_count }} 个公开仓库完整目录。每条记录均区分原创工作、研究、课程项目、复现、派生仓库和资源合集，以明确作者身份与上游归属。
-  {% elsif current_lang == 'ja' %}
-    <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
-    が公開している
-    {{ catalog.public_count }}
-    件のリポジトリを収録した完全な一覧です。独自制作、研究、授業、再現実装、フォーク、資料集を区別し、著者性と上流の帰属を明示します。
+  {% if projects_only %}
+    {% if current_lang == 'zh-CN' %}
+      这里按领域完整列出
+      <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
+      的 {{ catalog_count }} 个正规 GitHub 项目，包括经审核的研究、原创作品、课程与自学复现、实验，以及具备实质内容的工具和知识项目。完全
+      fork、归档仓库、仅个人资料配置、治理索引及尚无实现成果的占位仓库不会计入。
+    {% elsif current_lang == 'ja' %}
+      <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
+      の正式な GitHub プロジェクト
+      {{ catalog_count }}
+      件を分野別に網羅しています。確認済みの研究、オリジナル制作、授業・自習再現、実験、実質的なツールや知識プロジェクトを含み、完全フォーク、アーカイブ、プロフィール設定のみのリポジトリ、ガバナンス索引、実装成果のないプレースホルダーは除外しています。
+    {% else %}
+      A complete, category-based index of {{ catalog_count }} portfolio projects from
+      <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>. It
+      includes curated research, original work, coursework and self-study reproductions, experiments, and substantive tool or knowledge projects;
+      exact forks, archived repositories, profile-only configuration, governance indexes, and implementation-free placeholders are excluded.
+    {% endif %}
   {% else %}
-    A complete catalog of {{ catalog.public_count }} public repositories from
-    <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>. Each entry
-    distinguishes original work, research, coursework, reproductions, forks, and resource collections so that authorship and upstream attribution
-    remain explicit.
+    {% if current_lang == 'zh-CN' %}
+      来自
+      <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
+      的 {{ catalog.public_count }} 个公开仓库完整目录。每条记录均区分原创工作、研究、课程项目、复现、派生仓库和资源合集，以明确作者身份与上游归属。
+    {% elsif current_lang == 'ja' %}
+      <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>
+      が公開している
+      {{ catalog.public_count }}
+      件のリポジトリを収録した完全な一覧です。独自制作、研究、授業、再現実装、フォーク、資料集を区別し、著者性と上流の帰属を明示します。
+    {% else %}
+      A complete catalog of {{ catalog.public_count }} public repositories from
+      <a href="https://github.com/{{ catalog.owner | escape }}" target="_blank" rel="noopener noreferrer">@{{ catalog.owner | escape }}</a>. Each
+      entry distinguishes original work, research, coursework, reproductions, forks, and resource collections so that authorship and upstream
+      attribution remain explicit.
+    {% endif %}
   {% endif %}
 </p>
 
@@ -31,14 +60,18 @@
 </p>
 
 <p>
-  <a href="{{ repositories_route | relative_url }}">{{ strings.catalog.pinned }}</a> ·
+  {% if projects_only %}
+    <a href="{{ catalog_route | relative_url }}">{{ strings.repositories.catalog_link }}</a> ·
+  {% else %}
+    <a href="{{ repositories_route | relative_url }}">{{ strings.catalog.pinned }}</a> ·
+  {% endif %}
   <a href="https://github.com/{{ catalog.owner | escape }}?tab=repositories" target="_blank" rel="noopener noreferrer">
     {{- strings.catalog.github -}}
   </a>
 </p>
 
 <div class="d-flex flex-wrap mb-4" aria-label="{{ strings.a11y.repository_source_summary }}">
-  {% for source in catalog.source_counts %}
+  {% for source in source_counts %}
     {% assign source_label = source[0] | replace: '-', ' ' %}
     {% if catalog_locale != 'en' and catalog_i18n.source_kinds[source[0]][catalog_locale] %}
       {% assign source_label = catalog_i18n.source_kinds[source[0]][catalog_locale] %}
@@ -49,23 +82,44 @@
 
 <h2 class="h4">{{ strings.catalog.browse_by_area }}</h2>
 
+{% assign category_anchor_prefix = '' %}
+{% if projects_only %}
+  {% assign category_anchor_prefix = 'github-projects-' %}
+{% endif %}
+
 <div class="row row-cols-1 row-cols-md-2 mb-5">
   {% for category in catalog.categories %}
+    {% assign category_count = category.count %}
+    {% if projects_only %}
+      {% assign category_count = category.project_count %}
+    {% endif %}
+    {% if category_count == 0 %}
+      {% continue %}
+    {% endif %}
     {% assign category_title = category.title %}
     {% if catalog_locale != 'en' and catalog_i18n.categories[category.slug][catalog_locale].title %}
       {% assign category_title = catalog_i18n.categories[category.slug][catalog_locale].title %}
     {% endif %}
-    <div class="col mb-2">
-      <a class="d-flex justify-content-between align-items-center border rounded p-2" href="#{{ category.slug }}">
+    {% assign category_anchor = category_anchor_prefix | append: category.slug %}
+    <div class="col-12 col-md-6 mb-2">
+      <a class="d-flex justify-content-between align-items-center border rounded p-2" href="#{{ category_anchor | escape }}">
         <span>{{ category_title | escape }}</span>
-        <span class="badge badge-secondary">{{ category.count }}</span>
+        <span class="badge badge-secondary">{{ category_count }}</span>
       </a>
     </div>
   {% endfor %}
 </div>
 
 {% for category in catalog.categories %}
-  {% assign category_repositories = catalog.repositories | where: 'category', category.slug %}
+  {% assign category_count = category.count %}
+  {% if projects_only %}
+    {% assign category_count = category.project_count %}
+  {% endif %}
+  {% if category_count == 0 %}
+    {% continue %}
+  {% endif %}
+  {% assign category_anchor = category_anchor_prefix | append: category.slug %}
+  {% assign category_repositories = catalog_repositories | where: 'category', category.slug %}
   {% assign category_title = category.title %}
   {% assign category_description = category.description %}
   {% if catalog_locale != 'en' and catalog_i18n.categories[category.slug][catalog_locale] %}
@@ -74,15 +128,15 @@
     {% assign category_description = localized_category.description | default: category.description %}
   {% endif %}
 
-  <section class="mb-5" aria-labelledby="{{ category.slug }}">
+  <section class="mb-5" aria-labelledby="{{ category_anchor | escape }}">
     <div class="d-flex flex-wrap justify-content-between align-items-baseline border-bottom mb-3">
-      <h2 class="h3 mb-2" id="{{ category.slug | escape }}">{{ category_title | escape }}</h2>
+      <h2 class="h3 mb-2" id="{{ category_anchor | escape }}">{{ category_title | escape }}</h2>
       <span class="text-muted small">
         {% if current_lang == 'en' %}
-          {{ category.count }}
+          {{ category_count }}
           {{ strings.catalog.repositories }}
         {% else %}
-          {{ category.count -}}
+          {{ category_count -}}
           {{- strings.catalog.repositories }}
         {% endif %}
       </span>
@@ -106,7 +160,7 @@
           {% assign attribution = catalog_i18n.attributions[repository.attribution][catalog_locale] %}
         {% endif %}
 
-        <div class="col mb-4" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
+        <div class="col-12 col-lg-6 mb-4" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
           <article class="card h-100">
             <div class="card-body d-flex flex-column">
               <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">

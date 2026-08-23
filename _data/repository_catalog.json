@@ -1,71 +1,89 @@
 {
   "owner": "appleweiping",
-  "public_count": 164,
-  "synced_at": "2026-07-27T12:07:35Z",
+  "public_count": 174,
+  "project_count": 166,
+  "synced_at": "2026-08-23T06:44:38Z",
   "source_counts": {
-    "research": 10,
-    "original": 23,
+    "research": 13,
+    "original": 28,
     "coursework": 6,
     "reproduction": 114,
-    "fork": 2,
-    "meta": 7,
-    "experiment": 1,
-    "metadata-only": 1
+    "fork": 3,
+    "meta": 6,
+    "experiment": 2,
+    "metadata-only": 2
+  },
+  "project_source_counts": {
+    "research": 13,
+    "original": 28,
+    "coursework": 6,
+    "reproduction": 114,
+    "meta": 3,
+    "experiment": 2
   },
   "categories": [
     {
       "slug": "ai-agents",
       "title": "AI & Agent Systems",
       "description": "Agent systems, orchestration, language-model applications, and autonomous workflows.",
-      "count": 18
+      "count": 20,
+      "project_count": 19
     },
     {
       "slug": "ai4s-research",
       "title": "Artificial Intelligence & Research",
       "description": "Research code spanning machine learning, language technologies, simulation, and computational methods.",
-      "count": 4
+      "count": 7,
+      "project_count": 7
     },
     {
       "slug": "models-data",
       "title": "Recommenders, Models & Data",
       "description": "Machine-learning models, recommender systems, data analysis, and statistical computing.",
-      "count": 25
+      "count": 26,
+      "project_count": 26
     },
     {
       "slug": "systems-security",
       "title": "Systems, Security & Infrastructure",
       "description": "Operating systems, compilers, networks, databases, security, and infrastructure engineering.",
-      "count": 37
+      "count": 37,
+      "project_count": 37
     },
     {
       "slug": "robotics-hardware",
       "title": "Robotics, Embedded & Hardware",
       "description": "Robotics, control, signals, embedded systems, digital design, and hardware-oriented work.",
-      "count": 10
+      "count": 11,
+      "project_count": 10
     },
     {
       "slug": "creative-computing",
       "title": "Graphics, Games & Creative Computing",
       "description": "Computer graphics, games, visualization, media, and other creative computing projects.",
-      "count": 20
+      "count": 21,
+      "project_count": 21
     },
     {
       "slug": "products-tools",
       "title": "Products & Developer Tools",
       "description": "User-facing products, web applications, productivity software, and developer tooling.",
-      "count": 11
+      "count": 12,
+      "project_count": 11
     },
     {
       "slug": "coursework-notes",
       "title": "Coursework, Reproductions & Notes",
       "description": "Coursework records, self-study implementations, reproducibility exercises, and technical notes.",
-      "count": 35
+      "count": 37,
+      "project_count": 35
     },
     {
       "slug": "new-acquisitions",
       "title": "New Acquisitions",
       "description": "Recently published repositories awaiting deeper editorial classification.",
-      "count": 4
+      "count": 3,
+      "project_count": 0
     }
   ],
   "repositories": [
@@ -95,7 +113,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://acecue.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1245644492,
@@ -132,7 +151,7 @@
       ],
       "source_url": "https://github.com/appleweiping/AGENT_RESOURCE",
       "created_at": "2026-05-21T12:19:24Z",
-      "updated_at": "2026-07-24T18:49:53Z",
+      "updated_at": "2026-08-09T21:12:25Z",
       "pushed_at": "2026-06-30T13:02:31Z",
       "archived": false,
       "fork": false,
@@ -140,7 +159,8 @@
       "size_kb": 137645,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution."
+      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1259316708,
@@ -166,7 +186,8 @@
       "size_kb": 4390,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1265974349,
@@ -194,7 +215,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://ai-mirror-dusky.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288970370,
@@ -226,7 +248,8 @@
       "size_kb": 460,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1247460531,
@@ -254,7 +277,45 @@
       "size_kb": 9319,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1330890445,
+      "slug": "analog-forge-agent",
+      "repository": "appleweiping/analog-forge-agent",
+      "title": "analog-forge-agent",
+      "description": "Research-preview LLM4EDA workbench that turns natural-language analog specifications into typed topology, PDK, and testbench contracts with SPICE-grounded evidence boundaries and equal-budget multi-objective search.",
+      "source_kind": "research",
+      "category": "ai4s-research",
+      "topics": [
+        "ai-agents",
+        "analog-design",
+        "bayesian-optimization",
+        "gf180",
+        "ihp-open-pdk",
+        "llm4eda",
+        "pareto-optimization",
+        "reproducible-research",
+        "sky130",
+        "spice"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "source_url": "https://github.com/appleweiping/analog-forge-agent",
+      "created_at": "2026-08-11T12:18:37Z",
+      "updated_at": "2026-08-11T13:15:09Z",
+      "pushed_at": "2026-08-11T13:18:34Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 3144,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "demo_url": "https://appleweiping.github.io/analog-forge-agent/",
+      "portfolio_project": true
     },
     {
       "repo_id": 724199548,
@@ -282,7 +343,8 @@
       "default_branch": "main",
       "curation_status": "curated",
       "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.",
-      "demo_url": "https://github.com/appleweiping"
+      "demo_url": "https://github.com/appleweiping",
+      "portfolio_project": false
     },
     {
       "repo_id": 1187607346,
@@ -294,6 +356,7 @@
       "category": "products-tools",
       "topics": [],
       "languages": [
+        "HTML",
         "TypeScript",
         "Astro",
         "CSS",
@@ -301,15 +364,17 @@
       ],
       "source_url": "https://github.com/appleweiping/appleweiping.github.io",
       "created_at": "2026-03-20T23:29:21Z",
-      "updated_at": "2026-07-18T20:28:56Z",
-      "pushed_at": "2026-07-18T20:45:21Z",
+      "updated_at": "2026-07-27T14:09:19Z",
+      "pushed_at": "2026-07-27T14:07:36Z",
       "archived": false,
       "fork": false,
       "visibility": "public",
-      "size_kb": 80166,
+      "size_kb": 106466,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution."
+      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.",
+      "demo_url": "https://appleweiping.github.io/",
+      "portfolio_project": true
     },
     {
       "repo_id": 1286743025,
@@ -337,7 +402,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://art-history-museum-nine.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294911661,
@@ -376,7 +442,8 @@
       "size_kb": 32,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294841584,
@@ -415,7 +482,8 @@
       "size_kb": 32,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290102530,
@@ -448,7 +516,8 @@
       "size_kb": 933,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1243756673,
@@ -475,7 +544,8 @@
       "size_kb": 25087,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Public fork; no original authorship of the upstream project is claimed."
+      "attribution": "Public fork; no original authorship of the upstream project is claimed.",
+      "portfolio_project": false
     },
     {
       "repo_id": 1188059488,
@@ -499,7 +569,8 @@
       "size_kb": 12,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution."
+      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1305573066,
@@ -530,7 +601,8 @@
       "size_kb": 42461,
       "default_branch": "main",
       "curation_status": "metadata-only",
-      "attribution": "Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes."
+      "attribution": "Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes.",
+      "portfolio_project": false
     },
     {
       "repo_id": 1304208565,
@@ -566,7 +638,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://appleweiping.github.io/blockverse/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1304004928,
@@ -594,7 +667,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://appleweiping.github.io/cadenza/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292802552,
@@ -631,7 +705,8 @@
       "size_kb": 455,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292884332,
@@ -666,7 +741,8 @@
       "size_kb": 61,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1305689032,
@@ -674,8 +750,8 @@
       "repository": "appleweiping/causalpilot",
       "title": "causalpilot",
       "description": "Evidence-gated agentic experimentation with deterministic causal tools, selective deployment, and a 3D control room.",
-      "source_kind": "meta",
-      "category": "new-acquisitions",
+      "source_kind": "original",
+      "category": "ai-agents",
       "topics": [
         "agentic-ai",
         "causal-inference",
@@ -704,9 +780,10 @@
       "visibility": "public",
       "size_kb": 16426,
       "default_branch": "main",
-      "curation_status": "metadata-only",
-      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.",
-      "demo_url": "https://appleweiping.github.io/causalpilot/"
+      "curation_status": "curated",
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "demo_url": "https://appleweiping.github.io/causalpilot/",
+      "portfolio_project": true
     },
     {
       "repo_id": 1266768005,
@@ -732,7 +809,8 @@
       "size_kb": 2467,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292235810,
@@ -768,7 +846,8 @@
       "size_kb": 6369,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294694855,
@@ -803,7 +882,8 @@
       "size_kb": 961,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292875041,
@@ -834,7 +914,8 @@
       "size_kb": 71,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290460972,
@@ -865,7 +946,8 @@
       "size_kb": 373,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288825584,
@@ -896,7 +978,8 @@
       "size_kb": 333,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289330069,
@@ -929,7 +1012,8 @@
       "size_kb": 12640,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288841266,
@@ -964,7 +1048,8 @@
       "size_kb": 1507,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288592892,
@@ -993,7 +1078,7 @@
       ],
       "source_url": "https://github.com/appleweiping/cmu11785-idl",
       "created_at": "2026-07-03T18:58:58Z",
-      "updated_at": "2026-07-03T21:48:21Z",
+      "updated_at": "2026-08-09T23:56:17Z",
       "pushed_at": "2026-07-03T21:47:36Z",
       "archived": false,
       "fork": false,
@@ -1001,7 +1086,8 @@
       "size_kb": 108,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289185846,
@@ -1039,7 +1125,8 @@
       "size_kb": 155,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1269400041,
@@ -1065,7 +1152,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://content-flywheel-delta.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290896068,
@@ -1097,7 +1185,8 @@
       "size_kb": 52,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290531620,
@@ -1131,7 +1220,8 @@
       "size_kb": 74,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290514699,
@@ -1165,7 +1255,8 @@
       "size_kb": 6068,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290545659,
@@ -1201,7 +1292,8 @@
       "size_kb": 76,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292219074,
@@ -1235,7 +1327,8 @@
       "size_kb": 97,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292808106,
@@ -1273,7 +1366,8 @@
       "size_kb": 5915,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1291902964,
@@ -1314,7 +1408,8 @@
       "size_kb": 517,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1293226519,
@@ -1353,7 +1448,8 @@
       "size_kb": 1521,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290756701,
@@ -1394,7 +1490,8 @@
       "size_kb": 58,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290142233,
@@ -1427,7 +1524,8 @@
       "size_kb": 136,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292240187,
@@ -1462,7 +1560,8 @@
       "size_kb": 673,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1287545416,
@@ -1495,7 +1594,8 @@
       "size_kb": 20092,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288210011,
@@ -1527,7 +1627,8 @@
       "size_kb": 1532,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1287945561,
@@ -1563,7 +1664,8 @@
       "size_kb": 530,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288199805,
@@ -1595,7 +1697,8 @@
       "size_kb": 149,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1287989306,
@@ -1627,7 +1730,8 @@
       "size_kb": 3484,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289268759,
@@ -1658,7 +1762,8 @@
       "size_kb": 532,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1287794952,
@@ -1693,7 +1798,8 @@
       "size_kb": 24476,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1287919422,
@@ -1729,7 +1835,8 @@
       "size_kb": 4496,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288149664,
@@ -1762,7 +1869,8 @@
       "size_kb": 608,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289477811,
@@ -1792,7 +1900,8 @@
       "size_kb": 190,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289465432,
@@ -1830,7 +1939,8 @@
       "size_kb": 165,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294573699,
@@ -1869,7 +1979,8 @@
       "size_kb": 221,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289353138,
@@ -1903,7 +2014,8 @@
       "size_kb": 1911,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289389684,
@@ -1938,7 +2050,8 @@
       "size_kb": 2766,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1291218564,
@@ -1975,7 +2088,8 @@
       "size_kb": 200,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1291278546,
@@ -2012,7 +2126,8 @@
       "size_kb": 504,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289007340,
@@ -2051,7 +2166,33 @@
       "size_kb": 652,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1331215521,
+      "slug": "cu-detector-research-artifact",
+      "repository": "appleweiping/cu-detector-research-artifact",
+      "title": "cu-detector-research-artifact",
+      "description": "Privacy-reduced Chrome interaction recorder and research-engineering artifact for building auditable human-versus-computer-use-agent datasets and analysis pipelines; it does not yet claim a reliable detector.",
+      "source_kind": "research",
+      "category": "ai4s-research",
+      "topics": [],
+      "languages": [
+        "Python"
+      ],
+      "source_url": "https://github.com/appleweiping/cu-detector-research-artifact",
+      "created_at": "2026-08-11T18:03:32Z",
+      "updated_at": "2026-08-18T09:27:43Z",
+      "pushed_at": "2026-08-18T09:25:39Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 22392,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288402433,
@@ -2090,7 +2231,8 @@
       "size_kb": 743,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1255869500,
@@ -2115,7 +2257,8 @@
       "size_kb": 6467,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289692920,
@@ -2147,7 +2290,8 @@
       "size_kb": 59,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1296858100,
@@ -2184,7 +2328,8 @@
       "size_kb": 14804,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288195012,
@@ -2217,7 +2362,34 @@
       "size_kb": 11236,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1315497186,
+      "slug": "eediy",
+      "repository": "appleweiping/eediy",
+      "title": "eediy",
+      "description": "Bilingual, evidence-oriented electrical-engineering learning navigator that turns prerequisite graphs, official course resources, reproducible projects, and laboratory-safety guidance into auditable study routes.",
+      "source_kind": "original",
+      "category": "coursework-notes",
+      "topics": [],
+      "languages": [
+        "Python"
+      ],
+      "source_url": "https://github.com/appleweiping/eediy",
+      "created_at": "2026-07-28T23:01:20Z",
+      "updated_at": "2026-08-03T05:01:59Z",
+      "pushed_at": "2026-08-03T05:03:00Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 8454,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "demo_url": "https://appleweiping.github.io/eediy/",
+      "portfolio_project": true
     },
     {
       "repo_id": 1188028769,
@@ -2242,7 +2414,8 @@
       "size_kb": 1188,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution."
+      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1293256133,
@@ -2280,7 +2453,8 @@
       "size_kb": 11253,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292638677,
@@ -2316,7 +2490,8 @@
       "size_kb": 40,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288410694,
@@ -2349,7 +2524,8 @@
       "size_kb": 4305,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294557430,
@@ -2386,7 +2562,8 @@
       "size_kb": 120,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294700517,
@@ -2424,7 +2601,8 @@
       "size_kb": 1265,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294664161,
@@ -2459,7 +2637,8 @@
       "size_kb": 3019,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294662965,
@@ -2494,7 +2673,33 @@
       "size_kb": 1747,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1321559852,
+      "slug": "github-achievement-lab",
+      "repository": "appleweiping/github-achievement-lab",
+      "title": "github-achievement-lab",
+      "description": "Contained, auditable GitHub profile achievement exercise.",
+      "source_kind": "meta",
+      "category": "coursework-notes",
+      "topics": [],
+      "languages": [
+        "Documentation"
+      ],
+      "source_url": "https://github.com/appleweiping/github-achievement-lab",
+      "created_at": "2026-08-03T09:57:35Z",
+      "updated_at": "2026-08-03T10:03:14Z",
+      "pushed_at": "2026-08-03T09:57:41Z",
+      "archived": true,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 2,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.",
+      "portfolio_project": false
     },
     {
       "repo_id": 1290805389,
@@ -2526,7 +2731,8 @@
       "size_kb": 149,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294654931,
@@ -2561,7 +2767,8 @@
       "size_kb": 287,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1295550556,
@@ -2588,7 +2795,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://appleweiping.github.io/hotwire-city/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1303550151,
@@ -2616,7 +2824,33 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://appleweiping.github.io/hungry-fin/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1314867426,
+      "slug": "imperfect-information-agent-core",
+      "repository": "appleweiping/imperfect-information-agent-core",
+      "title": "imperfect-information-agent-core",
+      "description": "A small, reproducible decision kernel for deadline-aware search under partial observability.",
+      "source_kind": "original",
+      "category": "ai-agents",
+      "topics": [],
+      "languages": [
+        "Python"
+      ],
+      "source_url": "https://github.com/appleweiping/imperfect-information-agent-core",
+      "created_at": "2026-07-28T10:54:17Z",
+      "updated_at": "2026-07-28T12:21:42Z",
+      "pushed_at": "2026-07-28T12:21:17Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 148,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294425912,
@@ -2652,7 +2886,8 @@
       "size_kb": 613,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1296789623,
@@ -2688,7 +2923,46 @@
       "size_kb": 23501,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1314239144,
+      "slug": "kaggle-santa-2025-packing-lab",
+      "repository": "appleweiping/kaggle-santa-2025-packing-lab",
+      "title": "kaggle-santa-2025-packing-lab",
+      "description": "Auditable irregular-polygon packing laboratory based on the Christmas team's Kaggle Santa 2025 bronze-medal result, integrating attributed solvers, cross-language tooling, and independent geometry validation.",
+      "source_kind": "experiment",
+      "category": "models-data",
+      "topics": [
+        "bronze-medal",
+        "computational-geometry",
+        "cpp",
+        "kaggle",
+        "openmp",
+        "optimization",
+        "packing",
+        "python",
+        "reproducibility",
+        "rust",
+        "simulated-annealing"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "source_url": "https://github.com/appleweiping/kaggle-santa-2025-packing-lab",
+      "created_at": "2026-07-27T20:12:12Z",
+      "updated_at": "2026-07-28T10:07:57Z",
+      "pushed_at": "2026-07-28T10:19:11Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 22589,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Competition artifact by Weiping Yan; repository documentation attributes upstream solvers and distinguishes integration, validation, and reporting work from algorithm authorship.",
+      "demo_url": "https://www.kaggle.com/certification/competitions/weipingyan/santa-2025",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290514941,
@@ -2719,7 +2993,8 @@
       "size_kb": 99,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292760260,
@@ -2757,7 +3032,8 @@
       "size_kb": 480,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290515851,
@@ -2790,7 +3066,8 @@
       "size_kb": 121,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1265440203,
@@ -2821,7 +3098,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://kbuilt.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294497803,
@@ -2852,7 +3130,8 @@
       "size_kb": 50,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1268466001,
@@ -2869,7 +3148,7 @@
       ],
       "source_url": "https://github.com/appleweiping/legal-case-automation",
       "created_at": "2026-06-13T15:09:07Z",
-      "updated_at": "2026-06-13T15:36:26Z",
+      "updated_at": "2026-07-27T22:03:31Z",
       "pushed_at": "2026-06-13T15:36:22Z",
       "archived": false,
       "fork": false,
@@ -2879,7 +3158,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://legal-case-automation.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288588570,
@@ -2916,7 +3196,8 @@
       "size_kb": 461,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1224880499,
@@ -2935,7 +3216,7 @@
       ],
       "source_url": "https://github.com/appleweiping/Lumen-Rec",
       "created_at": "2026-04-29T18:14:07Z",
-      "updated_at": "2026-06-22T12:33:30Z",
+      "updated_at": "2026-08-03T09:01:51Z",
       "pushed_at": "2026-06-22T02:50:34Z",
       "archived": false,
       "fork": false,
@@ -2943,7 +3224,8 @@
       "size_kb": 193047,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1268465835,
@@ -2972,7 +3254,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://medora-phr.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290394586,
@@ -3011,7 +3294,8 @@
       "curation_status": "curated",
       "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
       "demo_url": "https://appleweiping.github.io/missing-semester/",
-      "demo_verified_at": "2026-07-19"
+      "demo_verified_at": "2026-07-19",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294638076,
@@ -3046,7 +3330,8 @@
       "size_kb": 1048,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294659713,
@@ -3083,7 +3368,8 @@
       "size_kb": 821,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294448497,
@@ -3118,7 +3404,8 @@
       "size_kb": 546,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1295033747,
@@ -3154,7 +3441,8 @@
       "size_kb": 117,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289556033,
@@ -3184,7 +3472,8 @@
       "size_kb": 4304,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294427320,
@@ -3220,7 +3509,8 @@
       "size_kb": 1079,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289460466,
@@ -3256,7 +3546,8 @@
       "size_kb": 1675,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294419634,
@@ -3291,7 +3582,8 @@
       "size_kb": 288,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289683220,
@@ -3321,7 +3613,8 @@
       "size_kb": 154,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294416618,
@@ -3356,7 +3649,8 @@
       "size_kb": 372,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290463937,
@@ -3386,7 +3680,8 @@
       "size_kb": 43,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1290091937,
@@ -3416,7 +3711,8 @@
       "size_kb": 3134,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1291472496,
@@ -3450,7 +3746,8 @@
       "size_kb": 1345,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1295030450,
@@ -3494,7 +3791,8 @@
       "size_kb": 243,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288706926,
@@ -3524,7 +3822,8 @@
       "size_kb": 642,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294550922,
@@ -3561,7 +3860,8 @@
       "size_kb": 72,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288086873,
@@ -3593,7 +3893,8 @@
       "size_kb": 1300,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288650128,
@@ -3626,7 +3927,42 @@
       "size_kb": 83,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1320471779,
+      "slug": "mournwell",
+      "repository": "appleweiping/mournwell",
+      "title": "mournwell",
+      "description": "An original, code-drawn dark cartoon room-crawler for desktop and mobile.",
+      "source_kind": "original",
+      "category": "creative-computing",
+      "topics": [
+        "browser-game",
+        "mobile-game",
+        "phaser",
+        "playwright",
+        "procedural-generation",
+        "roguelite",
+        "typescript"
+      ],
+      "languages": [
+        "TypeScript"
+      ],
+      "source_url": "https://github.com/appleweiping/mournwell",
+      "created_at": "2026-08-02T18:16:02Z",
+      "updated_at": "2026-08-02T18:26:09Z",
+      "pushed_at": "2026-08-09T19:05:24Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 1059,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "demo_url": "https://appleweiping.github.io/mournwell/",
+      "portfolio_project": true
     },
     {
       "repo_id": 1291118506,
@@ -3664,7 +4000,8 @@
       "size_kb": 364,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1287859146,
@@ -3699,7 +4036,8 @@
       "size_kb": 515,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1287450215,
@@ -3731,7 +4069,8 @@
       "size_kb": 118,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1270564169,
@@ -3756,7 +4095,8 @@
       "size_kb": 838,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1250365222,
@@ -3794,7 +4134,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://newroad-valley.vercel.app/play.html",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292647186,
@@ -3831,7 +4172,8 @@
       "size_kb": 42,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292437959,
@@ -3868,7 +4210,8 @@
       "size_kb": 152,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294157548,
@@ -3902,7 +4245,8 @@
       "size_kb": 19430,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288281593,
@@ -3934,7 +4278,8 @@
       "size_kb": 285,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1192521976,
@@ -3960,7 +4305,8 @@
       "size_kb": 30,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution."
+      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1303536141,
@@ -3986,7 +4332,7 @@
       ],
       "source_url": "https://github.com/appleweiping/overdrive-city",
       "created_at": "2026-07-17T04:03:23Z",
-      "updated_at": "2026-07-17T04:04:03Z",
+      "updated_at": "2026-08-13T18:29:36Z",
       "pushed_at": "2026-07-17T04:03:29Z",
       "archived": false,
       "fork": false,
@@ -3996,14 +4342,15 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://appleweiping.github.io/overdrive-city/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1313690711,
       "slug": "pams-rac-reproduction",
       "repository": "appleweiping/pams-rac-reproduction",
       "title": "pams-rac-reproduction",
-      "description": "Independent, auditable reproduction of PAMS for repetitive action counting",
+      "description": "Placeholder repository for a planned PAMS repetitive-action-counting reproduction; the default branch does not yet contain an implementation artifact.",
       "source_kind": "metadata-only",
       "category": "new-acquisitions",
       "topics": [
@@ -4018,15 +4365,16 @@
       ],
       "source_url": "https://github.com/appleweiping/pams-rac-reproduction",
       "created_at": "2026-07-27T10:05:08Z",
-      "updated_at": "2026-07-27T11:46:14Z",
-      "pushed_at": "2026-07-27T11:43:55Z",
+      "updated_at": "2026-08-09T21:30:53Z",
+      "pushed_at": "2026-08-17T10:26:32Z",
       "archived": false,
       "fork": false,
       "visibility": "public",
-      "size_kb": 5,
+      "size_kb": 19294,
       "default_branch": "main",
       "curation_status": "metadata-only",
-      "attribution": "Listed from public GitHub metadata; authorship and contribution details have not been independently curated."
+      "attribution": "Listed from public GitHub metadata; authorship and contribution details have not been independently curated.",
+      "portfolio_project": false
     },
     {
       "repo_id": 1304248330,
@@ -4063,7 +4411,33 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://appleweiping.github.io/paradise-isle/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1341932770,
+      "slug": "periodic-motion-language",
+      "repository": "appleweiping/periodic-motion-language",
+      "title": "periodic-motion-language",
+      "description": "Placeholder repository for planned language-aligned periodic-motion research; the default branch does not yet contain an implementation artifact.",
+      "source_kind": "metadata-only",
+      "category": "new-acquisitions",
+      "topics": [],
+      "languages": [
+        "Documentation"
+      ],
+      "source_url": "https://github.com/appleweiping/periodic-motion-language",
+      "created_at": "2026-08-21T15:02:26Z",
+      "updated_at": "2026-08-21T15:02:50Z",
+      "pushed_at": "2026-08-21T18:33:51Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 82,
+      "default_branch": "main",
+      "curation_status": "metadata-only",
+      "attribution": "Listed from public GitHub metadata; authorship and contribution details have not been independently curated.",
+      "portfolio_project": false
     },
     {
       "repo_id": 1293067178,
@@ -4100,7 +4474,8 @@
       "size_kb": 53,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292370731,
@@ -4135,7 +4510,8 @@
       "size_kb": 43,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1266683356,
@@ -4161,7 +4537,33 @@
       "size_kb": 1092,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1321537488,
+      "slug": "power-grid-model",
+      "repository": "appleweiping/power-grid-model",
+      "title": "power-grid-model",
+      "description": "Exact public fork of LF Energy's Power Grid Model library for distribution power-system analysis; no local commits are currently ahead of upstream.",
+      "source_kind": "fork",
+      "category": "robotics-hardware",
+      "topics": [],
+      "languages": [
+        "Documentation"
+      ],
+      "source_url": "https://github.com/appleweiping/power-grid-model",
+      "created_at": "2026-08-03T09:36:05Z",
+      "updated_at": "2026-08-03T09:36:05Z",
+      "pushed_at": "2026-08-20T16:25:00Z",
+      "archived": false,
+      "fork": true,
+      "visibility": "public",
+      "size_kb": 19762,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes.",
+      "portfolio_project": false
     },
     {
       "repo_id": 1289349256,
@@ -4194,7 +4596,8 @@
       "size_kb": 1152,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1304237972,
@@ -4220,7 +4623,8 @@
       "size_kb": 343,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1298028405,
@@ -4258,7 +4662,8 @@
       "size_kb": 3845,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1270564108,
@@ -4283,7 +4688,8 @@
       "size_kb": 790,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1232419699,
@@ -4301,7 +4707,7 @@
       ],
       "source_url": "https://github.com/appleweiping/Security-helper",
       "created_at": "2026-05-07T23:12:05Z",
-      "updated_at": "2026-05-23T16:11:02Z",
+      "updated_at": "2026-08-03T09:01:48Z",
       "pushed_at": "2026-05-23T16:10:59Z",
       "archived": false,
       "fork": false,
@@ -4311,7 +4717,8 @@
       "curation_status": "curated",
       "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution.",
       "demo_url": "https://appleweiping.github.io/Security-helper/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294910939,
@@ -4350,7 +4757,8 @@
       "size_kb": 254,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292851299,
@@ -4389,7 +4797,45 @@
       "size_kb": 75,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
+    },
+    {
+      "repo_id": 1330890417,
+      "slug": "spec2gds-agent",
+      "repository": "appleweiping/spec2gds-agent",
+      "title": "spec2gds-agent",
+      "description": "Research-preview, contract-first LLM4EDA workbench for auditable RTL-to-physical design using simulation, formal verification, synthesis, physical-design evidence, and resumable run manifests.",
+      "source_kind": "research",
+      "category": "ai4s-research",
+      "topics": [
+        "ai-agents",
+        "electronic-design-automation",
+        "formal-verification",
+        "hardware-design",
+        "llm4eda",
+        "openroad",
+        "qwen",
+        "reproducible-research",
+        "verilog",
+        "yosys"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "source_url": "https://github.com/appleweiping/spec2gds-agent",
+      "created_at": "2026-08-11T12:18:35Z",
+      "updated_at": "2026-08-16T03:50:44Z",
+      "pushed_at": "2026-08-11T13:15:44Z",
+      "archived": false,
+      "fork": false,
+      "visibility": "public",
+      "size_kb": 3323,
+      "default_branch": "main",
+      "curation_status": "curated",
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "demo_url": "https://appleweiping.github.io/spec2gds-agent/",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289089085,
@@ -4420,7 +4866,8 @@
       "size_kb": 709,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1293102196,
@@ -4457,7 +4904,8 @@
       "size_kb": 84,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294555537,
@@ -4495,7 +4943,8 @@
       "size_kb": 410,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292509831,
@@ -4534,7 +4983,8 @@
       "size_kb": 136,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294668633,
@@ -4569,7 +5019,8 @@
       "size_kb": 837,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292858143,
@@ -4612,7 +5063,8 @@
       "size_kb": 3175,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294157481,
@@ -4648,7 +5100,8 @@
       "size_kb": 117,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294359575,
@@ -4681,7 +5134,8 @@
       "size_kb": 596,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1289055179,
@@ -4713,7 +5167,8 @@
       "size_kb": 359,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294594773,
@@ -4754,7 +5209,8 @@
       "size_kb": 101,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1240017640,
@@ -4770,7 +5226,7 @@
       ],
       "source_url": "https://github.com/appleweiping/TERRARIA_DOC",
       "created_at": "2026-05-15T17:22:36Z",
-      "updated_at": "2026-06-04T13:01:18Z",
+      "updated_at": "2026-08-03T09:01:42Z",
       "pushed_at": "2026-06-04T13:01:05Z",
       "archived": false,
       "fork": false,
@@ -4778,7 +5234,8 @@
       "size_kb": 8985,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Experimental repository; consult its documentation for methods, sources, and contribution details."
+      "attribution": "Experimental repository; consult its documentation for methods, sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1224703742,
@@ -4797,7 +5254,7 @@
       ],
       "source_url": "https://github.com/appleweiping/TGL-Rec",
       "created_at": "2026-04-29T14:42:05Z",
-      "updated_at": "2026-06-10T18:25:22Z",
+      "updated_at": "2026-08-03T09:01:52Z",
       "pushed_at": "2026-06-19T19:56:02Z",
       "archived": false,
       "fork": false,
@@ -4805,7 +5262,8 @@
       "size_kb": 1193,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1288424356,
@@ -4837,7 +5295,8 @@
       "size_kb": 200,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1292867539,
@@ -4869,7 +5328,8 @@
       "size_kb": 91,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1296066358,
@@ -4906,7 +5366,8 @@
       "size_kb": 32905,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1270564041,
@@ -4931,7 +5392,8 @@
       "size_kb": 494,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1195226736,
@@ -4949,7 +5411,7 @@
       ],
       "source_url": "https://github.com/appleweiping/TRUCE-Rec",
       "created_at": "2026-03-29T12:01:06Z",
-      "updated_at": "2026-07-07T11:05:09Z",
+      "updated_at": "2026-08-03T09:02:18Z",
       "pushed_at": "2026-06-22T10:26:01Z",
       "archived": false,
       "fork": false,
@@ -4957,7 +5419,8 @@
       "size_kb": 55598,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details."
+      "attribution": "Research repository; consult its documentation for collaborators, data sources, and contribution details.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294369749,
@@ -4988,7 +5451,8 @@
       "size_kb": 571,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294857181,
@@ -5024,7 +5488,8 @@
       "size_kb": 58,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294406480,
@@ -5059,7 +5524,8 @@
       "size_kb": 214,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294453856,
@@ -5091,7 +5557,8 @@
       "size_kb": 847,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294428262,
@@ -5126,7 +5593,8 @@
       "size_kb": 1352,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1294422710,
@@ -5161,7 +5629,8 @@
       "size_kb": 843,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1188046836,
@@ -5185,7 +5654,8 @@
       "size_kb": 338,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution."
+      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1305943572,
@@ -5193,8 +5663,8 @@
       "repository": "appleweiping/umn-gopher-assistant",
       "title": "umn-gopher-assistant",
       "description": "Independent bilingual five-campus UMN Gopher Assistant platform",
-      "source_kind": "meta",
-      "category": "new-acquisitions",
+      "source_kind": "original",
+      "category": "products-tools",
       "topics": [],
       "languages": [
         "TypeScript",
@@ -5205,15 +5675,16 @@
       ],
       "source_url": "https://github.com/appleweiping/umn-gopher-assistant",
       "created_at": "2026-07-19T18:33:13Z",
-      "updated_at": "2026-07-23T05:39:38Z",
-      "pushed_at": "2026-07-23T05:45:47Z",
+      "updated_at": "2026-08-03T04:35:03Z",
+      "pushed_at": "2026-08-17T19:40:58Z",
       "archived": false,
       "fork": false,
       "visibility": "public",
-      "size_kb": 1293,
+      "size_kb": 2301,
       "default_branch": "main",
-      "curation_status": "metadata-only",
-      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution."
+      "curation_status": "curated",
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1259381747,
@@ -5237,7 +5708,8 @@
       "size_kb": 1,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution."
+      "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.",
+      "portfolio_project": false
     },
     {
       "repo_id": 1294664281,
@@ -5272,7 +5744,8 @@
       "size_kb": 3155,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1293368139,
@@ -5311,7 +5784,8 @@
       "size_kb": 157,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1218129553,
@@ -5339,7 +5813,8 @@
       "size_kb": 6209,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution."
+      "attribution": "Coursework record; the repository documentation is authoritative for team and module attribution.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1263413833,
@@ -5360,7 +5835,7 @@
       ],
       "source_url": "https://github.com/appleweiping/visa-lark",
       "created_at": "2026-06-08T23:54:42Z",
-      "updated_at": "2026-06-12T12:10:17Z",
+      "updated_at": "2026-08-04T18:19:25Z",
       "pushed_at": "2026-06-12T12:10:09Z",
       "archived": false,
       "fork": false,
@@ -5370,7 +5845,8 @@
       "curation_status": "curated",
       "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
       "demo_url": "https://visa-lark.vercel.app",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1242994017,
@@ -5391,7 +5867,7 @@
       ],
       "source_url": "https://github.com/appleweiping/WEIPING_COUNCIL",
       "created_at": "2026-05-19T00:38:23Z",
-      "updated_at": "2026-07-27T10:32:44Z",
+      "updated_at": "2026-08-16T19:02:10Z",
       "pushed_at": "2026-06-04T16:18:09Z",
       "archived": false,
       "fork": false,
@@ -5399,7 +5875,8 @@
       "size_kb": 5029,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1248166324,
@@ -5421,7 +5898,7 @@
       ],
       "source_url": "https://github.com/appleweiping/WEIPING_LAB",
       "created_at": "2026-05-24T09:19:49Z",
-      "updated_at": "2026-07-27T04:40:46Z",
+      "updated_at": "2026-08-16T21:31:45Z",
       "pushed_at": "2026-06-04T16:18:09Z",
       "archived": false,
       "fork": false,
@@ -5429,7 +5906,8 @@
       "size_kb": 3110,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components."
+      "attribution": "Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1245101224,
@@ -5447,7 +5925,7 @@
       ],
       "source_url": "https://github.com/appleweiping/WEIPING_WHALE",
       "created_at": "2026-05-20T23:05:41Z",
-      "updated_at": "2026-07-27T09:57:05Z",
+      "updated_at": "2026-08-22T08:45:20Z",
       "pushed_at": "2026-06-08T17:20:04Z",
       "archived": false,
       "fork": false,
@@ -5455,7 +5933,8 @@
       "size_kb": 9082,
       "default_branch": "master",
       "curation_status": "curated",
-      "attribution": "Derivative implementation based on CodeWhale (MIT), inspired by MIT's CodeWhale research; upstream authorship and attribution remain with their respective authors."
+      "attribution": "Derivative implementation based on CodeWhale (MIT), inspired by MIT's CodeWhale research; upstream authorship and attribution remain with their respective authors.",
+      "portfolio_project": true
     },
     {
       "repo_id": 1217236784,
@@ -5479,7 +5958,7 @@
       ],
       "source_url": "https://github.com/appleweiping/WEIPING_WIKI",
       "created_at": "2026-04-21T17:23:39Z",
-      "updated_at": "2026-07-27T10:54:26Z",
+      "updated_at": "2026-08-17T10:16:14Z",
       "pushed_at": "2026-06-19T19:02:39Z",
       "archived": false,
       "fork": false,
@@ -5489,7 +5968,8 @@
       "curation_status": "curated",
       "attribution": "Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.",
       "demo_url": "https://appleweiping.github.io/WEIPING_WIKI/",
-      "demo_verified_at": "2026-07-18"
+      "demo_verified_at": "2026-07-18",
+      "portfolio_project": true
     },
     {
       "repo_id": 1291392136,
@@ -5518,7 +5998,8 @@
       "size_kb": 270,
       "default_branch": "main",
       "curation_status": "curated",
-      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository."
+      "attribution": "Self-study reproduction based on the named public course or source material; upstream teaching materials remain attributed in the repository.",
+      "portfolio_project": true
     }
   ]
 }

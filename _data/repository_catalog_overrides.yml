@@ -1,0 +1,120 @@
+repositories:
+  - repository: appleweiping/AGENT_RESOURCE
+    portfolio_project: true
+
+  - repository: appleweiping/analog-forge-agent
+    description: >-
+      Research-preview LLM4EDA workbench that turns natural-language analog specifications into typed topology, PDK, and testbench contracts with SPICE-grounded evidence boundaries and equal-budget multi-objective search.
+    source_kind: research
+    category: ai4s-research
+    curation_status: curated
+    attribution: Research repository; consult its documentation for collaborators, data sources, and contribution details.
+    portfolio_project: true
+
+  - repository: appleweiping/appleweiping
+    portfolio_project: false
+
+  - repository: appleweiping/appleweiping.github.io
+    portfolio_project: true
+
+  - repository: appleweiping/causalpilot
+    source_kind: original
+    category: ai-agents
+    curation_status: curated
+    attribution: Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.
+    portfolio_project: true
+
+  - repository: appleweiping/cu-detector-research-artifact
+    description: >-
+      Privacy-reduced Chrome interaction recorder and research-engineering artifact for building auditable human-versus-computer-use-agent datasets and analysis pipelines; it does not yet claim a reliable detector.
+    source_kind: research
+    category: ai4s-research
+    curation_status: curated
+    attribution: Research repository; consult its documentation for collaborators, data sources, and contribution details.
+    portfolio_project: true
+
+  - repository: appleweiping/eediy
+    description: >-
+      Bilingual, evidence-oriented electrical-engineering learning navigator that turns prerequisite graphs, official course resources, reproducible projects, and laboratory-safety guidance into auditable study routes.
+    source_kind: original
+    category: coursework-notes
+    curation_status: curated
+    attribution: Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.
+    portfolio_project: true
+
+  - repository: appleweiping/github-achievement-lab
+    source_kind: meta
+    category: coursework-notes
+    curation_status: curated
+    attribution: Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.
+    portfolio_project: false
+
+  - repository: appleweiping/imperfect-information-agent-core
+    source_kind: original
+    category: ai-agents
+    curation_status: curated
+    attribution: Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.
+    portfolio_project: true
+
+  - repository: appleweiping/kaggle-santa-2025-packing-lab
+    description: >-
+      Auditable irregular-polygon packing laboratory based on the Christmas team's Kaggle Santa 2025 bronze-medal result, integrating attributed solvers, cross-language tooling, and independent geometry validation.
+    source_kind: experiment
+    category: models-data
+    curation_status: curated
+    attribution: >-
+      Competition artifact by Weiping Yan; repository documentation attributes upstream solvers and distinguishes integration, validation, and reporting work from algorithm authorship.
+    portfolio_project: true
+
+  - repository: appleweiping/mournwell
+    source_kind: original
+    category: creative-computing
+    curation_status: curated
+    attribution: Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.
+    portfolio_project: true
+
+  - repository: appleweiping/pams-rac-reproduction
+    description: Placeholder repository for a planned PAMS repetitive-action-counting reproduction; the default branch does not yet contain an implementation artifact.
+    source_kind: metadata-only
+    category: new-acquisitions
+    curation_status: metadata-only
+    attribution: Listed from public GitHub metadata; authorship and contribution details have not been independently curated.
+    portfolio_project: false
+
+  - repository: appleweiping/periodic-motion-language
+    description: Placeholder repository for planned language-aligned periodic-motion research; the default branch does not yet contain an implementation artifact.
+    source_kind: metadata-only
+    category: new-acquisitions
+    curation_status: metadata-only
+    attribution: Listed from public GitHub metadata; authorship and contribution details have not been independently curated.
+    portfolio_project: false
+
+  - repository: appleweiping/power-grid-model
+    description: Exact public fork of LF Energy's Power Grid Model library for distribution power-system analysis; no local commits are currently ahead of upstream.
+    source_kind: fork
+    category: robotics-hardware
+    curation_status: curated
+    attribution: Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes.
+    portfolio_project: false
+
+  - repository: appleweiping/spec2gds-agent
+    description: >-
+      Research-preview, contract-first LLM4EDA workbench for auditable RTL-to-physical design using simulation, formal verification, synthesis, physical-design evidence, and resumable run manifests.
+    source_kind: research
+    category: ai4s-research
+    curation_status: curated
+    attribution: Research repository; consult its documentation for collaborators, data sources, and contribution details.
+    portfolio_project: true
+
+  - repository: appleweiping/umn-gopher-assistant
+    source_kind: original
+    category: products-tools
+    curation_status: curated
+    attribution: Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.
+    portfolio_project: true
+
+  - repository: appleweiping/UNDERGRADUATE_STUDY_NETHERLANDS
+    portfolio_project: false
+
+  - repository: appleweiping/WEIPING_WIKI
+    portfolio_project: true

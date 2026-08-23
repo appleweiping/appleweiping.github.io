@@ -10,6 +10,7 @@ require_relative "repository_catalog_support"
 options = {
   owner: RepositoryCatalog::OWNER,
   output: RepositoryCatalog::DEFAULT_OUTPUT,
+  overrides: RepositoryCatalog::DEFAULT_OVERRIDES,
   snapshot: nil
 }
 
@@ -18,6 +19,9 @@ OptionParser.new do |parser|
   parser.on("--owner OWNER", "GitHub account to synchronize (default: #{RepositoryCatalog::OWNER})") { |value| options[:owner] = value }
   parser.on("--snapshot PATH", "Curated JSON/YAML snapshot to merge on the first run") { |value| options[:snapshot] = File.expand_path(value) }
   parser.on("--output PATH", "Catalog output path (default: _data/repository_catalog.json)") { |value| options[:output] = File.expand_path(value) }
+  parser.on("--overrides PATH", "Curated repository overrides (default: _data/repository_catalog_overrides.yml)") do |value|
+    options[:overrides] = File.expand_path(value)
+  end
 end.parse!
 
 def read_data(path)
@@ -70,7 +74,10 @@ def text_from(value, *path)
 end
 
 def curated_value(curated, snake_case, camel_case = nil)
-  curated[snake_case] || (camel_case && curated[camel_case])
+  return curated[snake_case] if curated.key?(snake_case)
+  return curated[camel_case] if camel_case && curated.key?(camel_case)
+
+  nil
 end
 
 def normalize_languages(curated, api_repository)
@@ -107,7 +114,7 @@ def build_entry(api_repository, curated)
   attribution = text_from(curated, "attribution") || text_from(curated, "contribution", "en") || RepositoryCatalog::ATTRIBUTION_BY_SOURCE.fetch(source_kind)
   slug = text_from(curated, "slug") || RepositoryCatalog.slugify(api_repository.fetch("name"))
 
-  {
+  entry = {
     "repo_id" => api_repository.fetch("id"),
     "slug" => slug,
     "repository" => api_repository.fetch("full_name"),
@@ -129,6 +136,14 @@ def build_entry(api_repository, curated)
     "curation_status" => curated_value(curated, "curation_status", "curationStatus") || "metadata-only",
     "attribution" => attribution
   }.merge(normalize_demo(curated, api_repository))
+
+  curated_portfolio_project = curated_value(curated, "portfolio_project", "portfolioProject")
+  entry["portfolio_project"] = if [true, false].include?(curated_portfolio_project)
+                                   curated_portfolio_project
+                                 else
+                                   RepositoryCatalog.default_portfolio_project?(entry)
+                                 end
+  entry
 end
 
 def write_catalog(path, catalog)
@@ -176,6 +191,12 @@ begin
   curated_data = read_data(snapshot_path)
   curated = curated_repositories(curated_data)
   by_id, by_name = index_curated(curated)
+  overrides_path = File.expand_path(options.fetch(:overrides))
+  unless File.dirname(overrides_path) == data_directory
+    raise RepositoryCatalog::Error, "Catalog overrides must remain inside #{data_directory}"
+  end
+  overrides = curated_repositories(read_data(overrides_path))
+  override_by_id, override_by_name = index_curated(overrides)
 
   client = RepositoryCatalog::GitHubClient.new
   profile = client.profile(owner)
@@ -193,9 +214,19 @@ begin
     raise RepositoryCatalog::Error, "Repository source URL is empty: #{repository['full_name']}" if repository["html_url"].to_s.strip.empty?
   end
 
+  api_names = api_repositories.map { |repository| repository.fetch("full_name").downcase }
+  stale_overrides = overrides.filter_map do |repository|
+    full_name = repository["repository"].to_s.downcase
+    repository["repository"] unless api_names.include?(full_name)
+  end
+  unless stale_overrides.empty?
+    raise RepositoryCatalog::Error, "Catalog overrides reference non-public repositories: #{stale_overrides.join(', ')}"
+  end
+
   repositories = api_repositories.map do |api_repository|
     existing = by_id[api_repository.fetch("id")] || by_name[api_repository.fetch("full_name").downcase] || {}
-    build_entry(api_repository, existing)
+    override = override_by_id[api_repository.fetch("id")] || override_by_name[api_repository.fetch("full_name").downcase] || {}
+    build_entry(api_repository, existing.merge(override))
   end
   repositories.sort_by! { |repository| repository.fetch("repository").downcase }
 
@@ -209,6 +240,11 @@ begin
   invalid_sources = repositories.map { |repository| repository.fetch("source_kind") }.uniq - RepositoryCatalog::SOURCE_KINDS
   raise RepositoryCatalog::Error, "Unknown source kinds: #{invalid_sources.join(', ')}" unless invalid_sources.empty?
 
+  invalid_curation_statuses = repositories.map { |repository| repository.fetch("curation_status") }.uniq - RepositoryCatalog::CURATION_STATUSES
+  unless invalid_curation_statuses.empty?
+    raise RepositoryCatalog::Error, "Unknown curation statuses: #{invalid_curation_statuses.join(', ')}"
+  end
+
   invalid_categories = repositories.map { |repository| repository.fetch("category") }.uniq - RepositoryCatalog::CATEGORY_SLUGS
   raise RepositoryCatalog::Error, "Unknown categories: #{invalid_categories.join(', ')}" unless invalid_categories.empty?
 
@@ -216,15 +252,26 @@ begin
     [source_kind, repositories.count { |repository| repository.fetch("source_kind") == source_kind }]
   end.reject { |_source_kind, count| count.zero? }
 
+  project_repositories = repositories.select { |repository| repository.fetch("portfolio_project") }
+  project_source_counts = RepositoryCatalog::PORTFOLIO_SOURCE_KINDS.to_h do |source_kind|
+    [source_kind, project_repositories.count { |repository| repository.fetch("source_kind") == source_kind }]
+  end.reject { |_source_kind, count| count.zero? }
+
   categories = RepositoryCatalog::CATEGORY_DEFINITIONS.map do |definition|
-    definition.merge("count" => repositories.count { |repository| repository.fetch("category") == definition.fetch("slug") })
+    slug = definition.fetch("slug")
+    definition.merge(
+      "count" => repositories.count { |repository| repository.fetch("category") == slug },
+      "project_count" => project_repositories.count { |repository| repository.fetch("category") == slug }
+    )
   end
 
   catalog = {
     "owner" => owner,
     "public_count" => repositories.length,
+    "project_count" => project_repositories.length,
     "synced_at" => Time.now.utc.iso8601,
     "source_counts" => source_counts,
+    "project_source_counts" => project_source_counts,
     "categories" => categories,
     "repositories" => repositories
   }

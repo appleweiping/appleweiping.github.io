@@ -9,8 +9,12 @@ require "uri"
 module RepositoryCatalog
   OWNER = "appleweiping"
   DEFAULT_OUTPUT = File.expand_path("../_data/repository_catalog.json", __dir__)
+  DEFAULT_OVERRIDES = File.expand_path("../_data/repository_catalog_overrides.yml", __dir__)
 
   SOURCE_KINDS = %w[research original coursework reproduction fork meta experiment metadata-only].freeze
+  DEFAULT_PROJECT_SOURCE_KINDS = %w[research original coursework reproduction experiment].freeze
+  PORTFOLIO_SOURCE_KINDS = %w[research original coursework reproduction meta experiment].freeze
+  CURATION_STATUSES = %w[curated metadata-only].freeze
 
   CATEGORY_DEFINITIONS = [
     {
@@ -186,5 +190,21 @@ module RepositoryCatalog
 
   def slugify(value)
     value.to_s.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
+  end
+
+  def default_portfolio_project?(repository)
+    repository["curation_status"] == "curated" &&
+      DEFAULT_PROJECT_SOURCE_KINDS.include?(repository["source_kind"]) &&
+      repository["fork"] == false &&
+      repository["archived"] == false
+  end
+
+  def valid_portfolio_project?(repository)
+    repository["portfolio_project"] == false ||
+      (repository["portfolio_project"] == true &&
+       repository["curation_status"] == "curated" &&
+       PORTFOLIO_SOURCE_KINDS.include?(repository["source_kind"]) &&
+       repository["fork"] == false &&
+       repository["archived"] == false)
   end
 end

@@ -37,6 +37,7 @@ If plugin-related, provide:
 - [ ] `npm ci`
 - [ ] `bundle exec jekyll build`
 - [ ] `npm run lint:prettier`
+- [ ] `npm run test:catalog-policy`
 - [ ] `npm run lint:style-contract`
 - [ ] Integration tests (`test/integration_*.sh`) as needed
 - [ ] Visual tests (`npm run test:visual`) as needed
