@@ -1,0 +1,77 @@
+{% if include.styles_only %}
+  <style>
+    [data-repository-cover-card] {
+      overflow: hidden;
+    }
+
+    .repository-cover-frame {
+      display: flex;
+      aspect-ratio: 16 / 9;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+      background: var(--global-card-bg-color);
+    }
+
+    .repository-cover-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    {% if include.projects_only %}
+      .portfolio-projects {
+        position: relative;
+        left: 50%;
+        width: min(1110px, calc(100vw - 30px));
+        transform: translateX(-50%);
+      }
+
+      @media (max-width: 767.98px) {
+        .portfolio-projects {
+          left: auto;
+          width: 100%;
+          transform: none;
+        }
+
+        body:has(.portfolio-projects) {
+          padding-bottom: 0;
+        }
+
+        body:has(.portfolio-projects) footer.fixed-bottom {
+          position: static;
+        }
+      }
+    {% endif %}
+  </style>
+{% else %}
+  {% assign repository = include.repository %}
+  {% assign repository_cover = site.data.repository_covers.covers[repository.slug] %}
+  {% assign current_lang = page.lang | default: site.lang %}
+
+  {% if current_lang == 'zh-CN' %}
+    {% capture repository_cover_alt %}{{ repository.title }} 仓库封面{% endcapture %}
+  {% elsif current_lang == 'ja' %}
+    {% capture repository_cover_alt %}{{ repository.title }} リポジトリのカバー画像{% endcapture %}
+  {% else %}
+    {% capture repository_cover_alt %}{{ repository.title }} repository cover{% endcapture %}
+  {% endif %}
+
+  {% if repository_cover and repository_cover.path %}
+    <figure class="repository-cover-frame" data-repository-cover-frame>
+      <img
+        class="card-img-top repository-cover-image"
+        src="{{ repository_cover.path | relative_url | escape }}"
+        width="{{ repository_cover.width | escape }}"
+        height="{{ repository_cover.height | escape }}"
+        alt="{{ repository_cover_alt | strip | escape }}"
+        loading="lazy"
+        decoding="async"
+        data-repository-cover
+        data-repository-slug="{{ repository.slug | escape }}"
+      >
+    </figure>
+  {% endif %}
+{% endif %}

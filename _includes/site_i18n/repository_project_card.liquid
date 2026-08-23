@@ -1,18 +1,13 @@
 {% assign repository = include.repository %}
 {% assign repository_description = include.description %}
 {% assign source_label = include.source_label %}
-{% assign matching_projects = site.projects | where: 'translation_key', repository.slug %}
-{% assign preview_project = matching_projects | where: 'lang', current_lang | first %}
-{% unless preview_project %}
-  {% assign preview_project = matching_projects | first %}
-{% endunless %}
-
+{% assign repository_cover = site.data.repository_covers.covers[repository.slug] %}
 {% if current_lang == 'zh-CN' %}
-  {% capture preview_alt %}{{ repository.title }} 项目预览{% endcapture %}
+  {% capture repository_cover_alt %}{{ repository.title }} 仓库封面{% endcapture %}
 {% elsif current_lang == 'ja' %}
-  {% capture preview_alt %}{{ repository.title }} プロジェクトのプレビュー{% endcapture %}
+  {% capture repository_cover_alt %}{{ repository.title }} リポジトリのカバー画像{% endcapture %}
 {% else %}
-  {% capture preview_alt %}{{ repository.title }} project preview{% endcapture %}
+  {% capture repository_cover_alt %}{{ repository.title }} repository cover{% endcapture %}
 {% endif %}
 
 <div class="col" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
@@ -23,16 +18,21 @@
     rel="noopener noreferrer"
     aria-label="{{ strings.catalog.view_source_prefix }} {{ repository.title | escape }} {{ strings.catalog.view_source_suffix }}"
   >
-    <article class="card h-100 hoverable" data-portfolio-project-card>
-      {% if preview_project.img %}
-        {%
-          include figure.liquid
-          loading="lazy"
-          path=preview_project.img
-          sizes="(min-width: 768px) 290px, 100vw"
-          alt=preview_alt
-          class="card-img-top"
-        %}
+    <article class="card h-100 hoverable" data-portfolio-project-card data-repository-cover-card>
+      {% if repository_cover and repository_cover.path %}
+        <figure class="repository-cover-frame" data-repository-cover-frame>
+          <img
+            class="card-img-top repository-cover-image"
+            src="{{ repository_cover.path | relative_url | escape }}"
+            width="{{ repository_cover.width | escape }}"
+            height="{{ repository_cover.height | escape }}"
+            alt="{{ repository_cover_alt | strip | escape }}"
+            loading="lazy"
+            decoding="async"
+            data-repository-cover
+            data-repository-slug="{{ repository.slug | escape }}"
+          >
+        </figure>
       {% endif %}
       <div class="card-body d-flex flex-column">
         <h3 class="card-title" style="overflow-wrap: anywhere">{{ repository.title | escape }}</h3>

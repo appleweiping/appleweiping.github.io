@@ -3,17 +3,45 @@
 {% assign current_locale = site.data.locales | where: 'code', current_lang | first %}
 {% assign catalog_locale = current_locale.data_key %}
 {% assign repository = site.data.repository_catalog.repositories | where: 'repository', include.repository | first %}
+{% assign first_pinned_repository = site.data.repositories.github_repos | first %}
+
+{% if include.repository == first_pinned_repository %}
+  {% include site_i18n/repository_cover.liquid styles_only=true %}
+{% endif %}
 
 <div class="repo p-2 text-center w-100 d-flex align-self-stretch">
   {% if repository %}
     {% assign repository_description = repository.description %}
+    {% assign repository_cover = site.data.repository_covers.covers[repository.slug] %}
+    {% if current_lang == 'zh-CN' %}
+      {% capture repository_cover_alt %}{{ repository.title }} 仓库封面{% endcapture %}
+    {% elsif current_lang == 'ja' %}
+      {% capture repository_cover_alt %}{{ repository.title }} リポジトリのカバー画像{% endcapture %}
+    {% else %}
+      {% capture repository_cover_alt %}{{ repository.title }} repository cover{% endcapture %}
+    {% endif %}
     {% if catalog_locale != 'en' and site.data.repository_catalog_i18n.repositories[repository.slug][catalog_locale] %}
       {% assign localized_repository = site.data.repository_catalog_i18n.repositories[repository.slug][catalog_locale] %}
       {% assign repository_description = localized_repository.description | default: localized_repository %}
     {% endif %}
     {% assign primary_language = repository.languages | first %}
 
-    <article class="card h-100 w-100 text-left">
+    <article class="card h-100 w-100 text-left" data-pinned-repository-card data-repository-cover-card>
+      {% if repository_cover and repository_cover.path %}
+        <figure class="repository-cover-frame" data-repository-cover-frame>
+          <img
+            class="card-img-top repository-cover-image"
+            src="{{ repository_cover.path | relative_url | escape }}"
+            width="{{ repository_cover.width | escape }}"
+            height="{{ repository_cover.height | escape }}"
+            alt="{{ repository_cover_alt | strip | escape }}"
+            loading="lazy"
+            decoding="async"
+            data-repository-cover
+            data-repository-slug="{{ repository.slug | escape }}"
+          >
+        </figure>
+      {% endif %}
       <div class="card-body d-flex flex-column">
         <h2 class="h5 card-title">{{ repository.title | escape }}</h2>
         <p class="card-text">{{ repository_description | escape }}</p>

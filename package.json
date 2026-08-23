@@ -5,6 +5,7 @@
     "lint:style-contract": "node test/style_contract.js",
     "test:redirects": "ruby -Itest test/test_generate_legacy_redirects.rb",
     "test:catalog-policy": "bundle exec ruby -Itest test/test_repository_catalog_support.rb",
+    "test:covers": "python bin/validate_repository_covers.py",
     "test:translations": "ruby bin/validate_translations.rb",
     "test:visual": "playwright test --config test/visual/playwright.config.js",
     "test:visual:update": "playwright test --config test/visual/playwright.config.js --update-snapshots"

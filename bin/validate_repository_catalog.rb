@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "digest"
 require "json"
 require "optparse"
 require "set"
@@ -9,12 +10,14 @@ require_relative "repository_catalog_support"
 
 options = {
   catalog: RepositoryCatalog::DEFAULT_OUTPUT,
+  covers: File.expand_path("../_data/repository_covers.json", __dir__),
   remote: true
 }
 
 OptionParser.new do |parser|
   parser.banner = "Usage: ruby bin/validate_repository_catalog.rb [options]"
   parser.on("--catalog PATH", "Catalog path (default: _data/repository_catalog.json)") { |value| options[:catalog] = File.expand_path(value) }
+  parser.on("--covers PATH", "Repository cover manifest (default: _data/repository_covers.json)") { |value| options[:covers] = File.expand_path(value) }
   parser.on("--offline", "Skip comparison with the live GitHub public repository API") { options[:remote] = false }
 end.parse!
 
@@ -47,6 +50,8 @@ end
 begin
   catalog = read_catalog(options.fetch(:catalog))
   raise RepositoryCatalog::Error, "Catalog root must be an object" unless catalog.is_a?(Hash)
+  cover_manifest = read_catalog(options.fetch(:covers))
+  raise RepositoryCatalog::Error, "Repository cover manifest root must be an object" unless cover_manifest.is_a?(Hash)
 
   errors = []
   owner = catalog["owner"]
@@ -116,6 +121,45 @@ begin
   duplicate_values(seen_ids).each { |value| errors << "duplicate repo_id: #{value}" }
   duplicate_values(seen_names).each { |value| errors << "duplicate repository: #{value}" }
   duplicate_values(seen_slugs).each { |value| errors << "duplicate slug: #{value}" }
+
+  covers = cover_manifest["covers"]
+  if !covers.is_a?(Hash)
+    errors << "repository cover manifest covers must be an object"
+  else
+    repository_slugs = seen_slugs.select { |slug| slug.is_a?(String) }.to_set
+    cover_slugs = covers.keys.to_set
+    (repository_slugs - cover_slugs).sort.each { |slug| errors << "repository cover manifest is missing #{slug}" }
+    (cover_slugs - repository_slugs).sort.each { |slug| errors << "repository cover manifest contains unknown slug #{slug}" }
+    errors << "repository cover manifest cover_count does not match repositories length" unless cover_manifest["cover_count"] == repositories.length
+    errors << "repository cover manifest owner must be #{owner}" unless cover_manifest["owner"] == owner
+
+    covers.each do |slug, cover|
+      label = "repository cover #{slug}"
+      unless cover.is_a?(Hash)
+        errors << "#{label}: entry must be an object"
+        next
+      end
+
+      expected_path = "/assets/img/repository-covers/#{slug}.webp"
+      path = require_value(cover, "path", errors, label)
+      errors << "#{label}: path must be #{expected_path}" unless path == expected_path
+      errors << "#{label}: width must be 960" unless cover["width"] == 960
+      errors << "#{label}: height must be 540" unless cover["height"] == 540
+      output_sha256 = cover["output_sha256"]
+      unless output_sha256.is_a?(String) && output_sha256.match?(/\A[0-9a-f]{64}\z/)
+        errors << "#{label}: output_sha256 must be a lowercase SHA-256 digest"
+      end
+
+      next unless path == expected_path
+
+      cover_file = File.expand_path("..#{path}", __dir__)
+      if !File.file?(cover_file)
+        errors << "#{label}: generated file is missing at #{path}"
+      elsif output_sha256.is_a?(String) && output_sha256.match?(/\A[0-9a-f]{64}\z/) && Digest::SHA256.file(cover_file).hexdigest != output_sha256
+        errors << "#{label}: generated file SHA-256 does not match the manifest"
+      end
+    end
+  end
 
   whale = repositories.find { |repository| repository["repo_id"] == 1_245_101_224 }
   if whale
@@ -190,7 +234,7 @@ begin
   raise RepositoryCatalog::Error, errors.join("\n") unless errors.empty?
 
   mode = options.fetch(:remote) ? "including live GitHub comparison" : "offline"
-  puts "Repository catalog is valid: #{repositories.length} public repositories (#{mode})."
+  puts "Repository catalog is valid: #{repositories.length} public repositories and #{covers.length} covers (#{mode})."
 rescue KeyError, RepositoryCatalog::Error => e
   warn "Repository catalog validation failed:\n#{e.message}"
   exit 1

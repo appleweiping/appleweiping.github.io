@@ -52,6 +52,39 @@ rescue StandardError => e
   nil
 end
 
+def validate_repository_cover_images(document, selector, repositories, covers, errors, label, baseurl)
+  images = document.css(selector)
+  expected_slugs = repositories.map { |repository| repository.fetch("slug") }
+  actual_slugs = images.map { |image| image["data-repository-slug"].to_s }
+
+  if images.length != repositories.length
+    errors << "#{label} should render #{repositories.length} repository covers, found #{images.length}"
+  end
+
+  (expected_slugs.to_set - actual_slugs.to_set).sort.each { |slug| errors << "#{label} is missing repository cover #{slug}" }
+  (actual_slugs.to_set - expected_slugs.to_set).sort.each { |slug| errors << "#{label} includes unexpected repository cover #{slug.inspect}" }
+  actual_slugs.tally.each do |slug, count|
+    errors << "#{label} renders repository cover #{slug.inspect} #{count} times" if count > 1
+  end
+
+  images.each do |image|
+    slug = image["data-repository-slug"].to_s
+    cover = covers[slug]
+    unless cover.is_a?(Hash)
+      errors << "#{label} references missing cover manifest entry #{slug.inspect}"
+      next
+    end
+
+    expected_src = "#{baseurl}#{cover.fetch('path')}"
+    errors << "#{label} cover #{slug} has an unexpected src" unless image["src"] == expected_src
+    errors << "#{label} cover #{slug} should lazy-load" unless image["loading"] == "lazy"
+    errors << "#{label} cover #{slug} should decode asynchronously" unless image["decoding"] == "async"
+    errors << "#{label} cover #{slug} is missing meaningful alt text" if image["alt"].to_s.strip.empty?
+    errors << "#{label} cover #{slug} width does not match the manifest" unless image["width"] == cover.fetch("width").to_s
+    errors << "#{label} cover #{slug} height does not match the manifest" unless image["height"] == cover.fetch("height").to_s
+  end
+end
+
 config = YAML.safe_load(root.join("_config.yml").read(encoding: "UTF-8"), aliases: false) || {}
 site_url = config.fetch("url").to_s.sub(%r{/+\z}, "")
 baseurl = config.fetch("baseurl", "").to_s.sub(%r{/+\z}, "")
@@ -150,6 +183,7 @@ end
 
 catalog = JSON.parse(root.join("_data/repository_catalog.json").read(encoding: "UTF-8"))
 repositories = catalog.fetch("repositories")
+repository_covers = JSON.parse(root.join("_data/repository_covers.json").read(encoding: "UTF-8")).fetch("covers")
 %w[en zh-CN ja].each do |code|
   route = translation_routes.dig("repository-catalog", code)
   next unless route
@@ -158,10 +192,25 @@ repositories = catalog.fetch("repositories")
   next unless path.file?
 
   html = path.read(encoding: "UTF-8")
+  document = Nokogiri::HTML(html)
   repositories.each do |repository|
     slug = repository.fetch("slug")
     errors << "#{code} repository catalog is missing anchor ##{slug}" unless html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
   end
+
+  catalog_cards = document.css("[data-catalog-repository-card]")
+  if catalog_cards.length != repositories.length
+    errors << "#{code} repository catalog should render #{repositories.length} repository cards, found #{catalog_cards.length}"
+  end
+  validate_repository_cover_images(
+    document,
+    "[data-catalog-repository-card] [data-repository-cover]",
+    repositories,
+    repository_covers,
+    errors,
+    "#{code} repository catalog",
+    baseurl
+  )
 end
 
 portfolio_repositories, excluded_repositories = repositories.partition { |repository| repository.fetch("portfolio_project") }
@@ -194,12 +243,15 @@ portfolio_repositories, excluded_repositories = repositories.partition { |reposi
     errors << "#{code} projects page should render #{expected_category_grids} responsive three-column category grids, found #{category_grids.length}"
   end
 
-  preview_images = document.css("[data-portfolio-project-card] .card-img-top")
-  errors << "#{code} projects page should reuse at least 12 verified local project covers" if preview_images.length < 12
-  preview_images.each do |image|
-    errors << "#{code} project preview image should lazy-load" unless image["loading"] == "lazy"
-    errors << "#{code} project preview image is missing meaningful alt text" if image["alt"].to_s.strip.empty?
-  end
+  validate_repository_cover_images(
+    document,
+    "[data-portfolio-project-card] [data-repository-cover]",
+    portfolio_repositories,
+    repository_covers,
+    errors,
+    "#{code} projects page",
+    baseurl
+  )
 end
 
 legacy = JSON.parse(root.join("_data/legacy_repository_slugs.json").read(encoding: "UTF-8")).fetch("slugs")
@@ -259,6 +311,12 @@ end.to_h
 
 pinned_repositories = YAML.safe_load(root.join("_data/repositories.yml").read(encoding: "UTF-8"), aliases: false).fetch("github_repos")
 expected_pinned_links = pinned_repositories.map { |repository| "https://github.com/#{repository}" }.sort
+pinned_catalog_repositories = pinned_repositories.filter_map do |repository_name|
+  repositories.find { |repository| repository.fetch("repository") == repository_name }
+end
+unless pinned_catalog_repositories.length == pinned_repositories.length
+  errors << "_data/repositories.yml contains pinned repositories missing from the public catalog"
+end
 expected_codes.each do |code|
   route = translation_routes.dig("repositories", code)
   document = canonical_documents[route]
@@ -276,6 +334,16 @@ expected_codes.each do |code|
   unless github_links.sort == expected_pinned_links
     errors << "#{code} repositories page pinned GitHub links do not match _data/repositories.yml"
   end
+
+  validate_repository_cover_images(
+    document,
+    ".repositories [data-pinned-repository-card] [data-repository-cover]",
+    pinned_catalog_repositories,
+    repository_covers,
+    errors,
+    "#{code} repositories page",
+    baseurl
+  )
 end
 
 canonical_hrefs = canonical_documents.values.flat_map { |document| document.css("[href]").map { |element| element["href"] } }.compact.to_set

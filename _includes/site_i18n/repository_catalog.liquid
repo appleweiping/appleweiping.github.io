@@ -16,58 +16,7 @@
   {% assign source_counts = catalog.project_source_counts %}
 {% endif %}
 
-{% if projects_only %}
-  <style>
-    .portfolio-projects {
-      position: relative;
-      left: 50%;
-      width: min(1110px, calc(100vw - 30px));
-      transform: translateX(-50%);
-    }
-
-    .portfolio-projects [data-portfolio-project-card] {
-      overflow: hidden;
-    }
-
-    .portfolio-projects [data-portfolio-project-card] > figure {
-      display: flex;
-      aspect-ratio: 16 / 9;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      overflow: hidden;
-      background: var(--global-card-bg-color);
-    }
-
-    .portfolio-projects [data-portfolio-project-card] > figure picture {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .portfolio-projects [data-portfolio-project-card] .card-img-top {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    @media (max-width: 767.98px) {
-      .portfolio-projects {
-        left: auto;
-        width: 100%;
-        transform: none;
-      }
-
-      body:has(.portfolio-projects) {
-        padding-bottom: 0;
-      }
-
-      body:has(.portfolio-projects) footer.fixed-bottom {
-        position: static;
-      }
-    }
-  </style>
-{% endif %}
+{% include site_i18n/repository_cover.liquid styles_only=true projects_only=projects_only %}
 
 <p class="lead">
   {% if projects_only %}
@@ -206,7 +155,7 @@
         <p class="text-muted">{{ category_description | escape }}</p>
       {% endif %}
 
-      {% assign repository_grid_class = 'row row-cols-1 row-cols-lg-2' %}
+      {% assign repository_grid_class = 'row row-cols-1 row-cols-md-2' %}
       {% if projects_only %}
         {% assign repository_grid_class = 'row row-cols-1 row-cols-md-3' %}
       {% endif %}
@@ -234,8 +183,31 @@
               source_label=source_label
             %}
           {% else %}
-            <div class="col-12 col-lg-6 mb-4" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
-              <article class="card h-100">
+            {% assign repository_cover = site.data.repository_covers.covers[repository.slug] %}
+            {% if current_lang == 'zh-CN' %}
+              {% capture repository_cover_alt %}{{ repository.title }} 仓库封面{% endcapture %}
+            {% elsif current_lang == 'ja' %}
+              {% capture repository_cover_alt %}{{ repository.title }} リポジトリのカバー画像{% endcapture %}
+            {% else %}
+              {% capture repository_cover_alt %}{{ repository.title }} repository cover{% endcapture %}
+            {% endif %}
+            <div class="col-12 col-md-6 mb-4" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
+              <article class="card h-100" data-catalog-repository-card data-repository-cover-card>
+                {% if repository_cover and repository_cover.path %}
+                  <figure class="repository-cover-frame" data-repository-cover-frame>
+                    <img
+                      class="card-img-top repository-cover-image"
+                      src="{{ repository_cover.path | relative_url | escape }}"
+                      width="{{ repository_cover.width | escape }}"
+                      height="{{ repository_cover.height | escape }}"
+                      alt="{{ repository_cover_alt | strip | escape }}"
+                      loading="lazy"
+                      decoding="async"
+                      data-repository-cover
+                      data-repository-slug="{{ repository.slug | escape }}"
+                    >
+                  </figure>
+                {% endif %}
                 <div class="card-body d-flex flex-column">
                   <div class="d-flex flex-wrap justify-content-between align-items-start mb-2">
                     <h3 class="h5 card-title mr-2 mb-1" style="min-width: 0; max-width: 100%; overflow-wrap: anywhere">

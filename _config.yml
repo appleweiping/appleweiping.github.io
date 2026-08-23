@@ -296,10 +296,14 @@ jekyll-minifier:
   # breaking every spacing/positioning utility (e.g. .fixed-top -> broken navbar). Disable it.
   compress_css: false
   # JS minification is delegated to jekyll-terser (compress_javascript above is false).
-  # These generated repository catalog pages are intentionally left unminified. Compressing them
-  # dominates the Windows and GitHub Actions build time without changing the rendered output.
+  # These generated project and repository catalog pages are intentionally left unminified.
+  # Compressing their large card grids dominates the Windows and GitHub Actions build time without
+  # changing the rendered output.
   exclude:
     - "robots.txt"
+    - "projects/index.html"
+    - "zh/projects/index.html"
+    - "ja/projects/index.html"
     - "repositories/catalog/index.html"
     - "zh/repositories/catalog/index.html"
     - "ja/repositories/catalog/index.html"

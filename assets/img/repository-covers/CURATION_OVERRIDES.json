@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "force_github_preview": {
+    "agent-resource": "Replace an illustration-style resource banner whose third-party or generated provenance is not established.",
+    "agentic-science": "Replace an illustration-style banner that does not document a verified non-generated visual source.",
+    "aide-dev": "Replace an illustration-style banner that does not document a verified non-generated visual source.",
+    "claudeseek": "Replace an illustration-style banner that does not document a verified non-generated visual source.",
+    "delvtools-public": "Replace an illustration-style banner that does not document a verified non-generated visual source.",
+    "cs50p": "Avoid republishing an upstream course shirt asset as original portfolio artwork.",
+    "cs50x": "Replace an unrepresentative assignment sample with the repository's attributed GitHub preview.",
+    "cs61a-sicp": "Avoid republishing an upstream game sprite as original portfolio artwork.",
+    "csapp-labs": "Avoid republishing the upstream Godzilla sample image as original portfolio artwork.",
+    "mit-6006": "Replace an almost-empty generated frame that is illegible at card size.",
+    "mit-6100l": "Avoid republishing a color-vision test plate that may be an upstream course asset.",
+    "mit-6858": "Avoid republishing an upstream lion photograph as original portfolio artwork.",
+    "newroad-valley": "The repository documents its banner as image-model generated; use the repository preview to honor the no-AI-art direction.",
+    "uml-class-diagram-tool": "Replace a small application icon with the fully attributed repository preview.",
+    "weiping-council": "Replace an illustration-style banner that does not document a verified non-generated visual source.",
+    "weiping-lab": "Replace an illustration-style banner that does not document a verified non-generated visual source.",
+    "weiping-whale": "Replace an illustration-style banner that does not document a verified non-generated visual source."
+  }
+}
