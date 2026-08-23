@@ -173,6 +173,7 @@ portfolio_repositories, excluded_repositories = repositories.partition { |reposi
   next unless path.file?
 
   html = path.read(encoding: "UTF-8")
+  document = Nokogiri::HTML(html)
   portfolio_repositories.each do |repository|
     slug = repository.fetch("slug")
     errors << "#{code} projects page is missing portfolio project ##{slug}" unless html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
@@ -180,6 +181,24 @@ portfolio_repositories, excluded_repositories = repositories.partition { |reposi
   excluded_repositories.each do |repository|
     slug = repository.fetch("slug")
     errors << "#{code} projects page includes excluded repository ##{slug}" if html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
+  end
+
+  project_cards = document.css("[data-portfolio-project-card]")
+  if project_cards.length != portfolio_repositories.length
+    errors << "#{code} projects page should render #{portfolio_repositories.length} portfolio grid cards, found #{project_cards.length}"
+  end
+
+  category_grids = document.css(".portfolio-projects .row.row-cols-1.row-cols-md-3")
+  expected_category_grids = catalog.fetch("categories").count { |category| category.fetch("project_count").positive? }
+  if category_grids.length != expected_category_grids
+    errors << "#{code} projects page should render #{expected_category_grids} responsive three-column category grids, found #{category_grids.length}"
+  end
+
+  preview_images = document.css("[data-portfolio-project-card] .card-img-top")
+  errors << "#{code} projects page should reuse at least 12 verified local project covers" if preview_images.length < 12
+  preview_images.each do |image|
+    errors << "#{code} project preview image should lazy-load" unless image["loading"] == "lazy"
+    errors << "#{code} project preview image is missing meaningful alt text" if image["alt"].to_s.strip.empty?
   end
 end
 

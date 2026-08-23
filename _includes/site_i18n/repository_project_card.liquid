@@ -1,0 +1,49 @@
+{% assign repository = include.repository %}
+{% assign repository_description = include.description %}
+{% assign source_label = include.source_label %}
+{% assign matching_projects = site.projects | where: 'translation_key', repository.slug %}
+{% assign preview_project = matching_projects | where: 'lang', current_lang | first %}
+{% unless preview_project %}
+  {% assign preview_project = matching_projects | first %}
+{% endunless %}
+
+{% if current_lang == 'zh-CN' %}
+  {% capture preview_alt %}{{ repository.title }} 项目预览{% endcapture %}
+{% elsif current_lang == 'ja' %}
+  {% capture preview_alt %}{{ repository.title }} プロジェクトのプレビュー{% endcapture %}
+{% else %}
+  {% capture preview_alt %}{{ repository.title }} project preview{% endcapture %}
+{% endif %}
+
+<div class="col" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
+  <a
+    class="d-block h-100"
+    href="{{ repository.source_url | escape }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="{{ strings.catalog.view_source_prefix }} {{ repository.title | escape }} {{ strings.catalog.view_source_suffix }}"
+  >
+    <article class="card h-100 hoverable" data-portfolio-project-card>
+      {% if preview_project.img %}
+        {%
+          include figure.liquid
+          loading="lazy"
+          path=preview_project.img
+          sizes="(min-width: 768px) 290px, 100vw"
+          alt=preview_alt
+          class="card-img-top"
+        %}
+      {% endif %}
+      <div class="card-body d-flex flex-column">
+        <h3 class="card-title" style="overflow-wrap: anywhere">{{ repository.title | escape }}</h3>
+        <p class="card-text">{{ repository_description | escape }}</p>
+        <p class="small text-muted mt-auto mb-0">
+          {{ source_label | escape -}}
+          {% if repository.languages.first %}
+            · {{ repository.languages.first | escape }}
+          {% endif %}
+        </p>
+      </div>
+    </article>
+  </a>
+</div>

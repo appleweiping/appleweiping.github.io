@@ -205,6 +205,7 @@ exclude:
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
+  - design-qa.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
