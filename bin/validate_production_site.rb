@@ -353,6 +353,7 @@ research_interest_links = [
   "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics",
   "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation"
 ]
+openreview_url = "https://openreview.net/forum?id=UV2UJ4VHf7"
 required_public_links = [
   "https://github.com/appleweiping",
   "https://www.linkedin.com/in/weiping-yan-b62567383",
@@ -362,6 +363,7 @@ required_public_links = [
   "mailto:yan00944@umn.edu",
   "mailto:vipinapple986@gmail.com",
   "https://doi.org/10.54254/2753-8818/8/20240361",
+  openreview_url,
   *research_interest_links,
   "/assets/pdf/Weiping_Yan_CV_en.pdf",
   "/assets/pdf/Weiping_Yan_CV_zh-CN.pdf",
@@ -389,6 +391,7 @@ about_expectations.each do |code, phrases|
   research_interest_links.each do |link|
     errors << "#{code} home page is missing the research-interest link #{link}" unless homepage_hrefs.include?(link)
   end
+  errors << "#{code} home page is missing the selected OAM-GA manuscript" unless document.at_css("#wang2026oamga")
 end
 
 expected_codes.each do |code|
@@ -403,9 +406,9 @@ expected_codes.each do |code|
 end
 
 publication_expectations = {
-  "en" => ["only formally published paper", "randomly generated, synthetic data"],
-  "zh-CN" => ["一篇正式发表", "合成、随机生成的数据"],
-  "ja" => ["正式に発表した論文はこの1報", "ランダムに生成した合成データ"]
+  "en" => ["one formally published paper", "one manuscript submitted to DAI 2026", "not yet peer-reviewed or accepted", "randomly generated, synthetic data"],
+  "zh-CN" => ["一篇正式发表的论文", "一篇已投稿至 DAI 2026", "不代表已经同行评审或录用", "合成、随机生成的数据"],
+  "ja" => ["正式に発表済みの論文1報", "DAI 2026へ投稿中の原稿1報", "査読済みまたは採択済み", "ランダムに生成した合成データ"]
 }
 publication_expectations.each do |code, phrases|
   route = translation_routes.dig("publications", code)
@@ -416,6 +419,36 @@ publication_expectations.each do |code, phrases|
   phrases.each do |phrase|
     errors << "#{code} publications page is missing the research boundary #{phrase.inspect}" unless text.include?(phrase)
   end
+
+  publication_entries = document.css(".publications ol.bibliography > li")
+  errors << "#{code} publications page should render 2 entries, found #{publication_entries.length}" unless publication_entries.length == 2
+  year_headings = document.css(".publications h2.bibliography").map { |heading| heading.text.strip }
+  unless year_headings == ["2026", "2023"]
+    errors << "#{code} publications page should order year groups as 2026 then 2023, found #{year_headings.inspect}"
+  end
+
+  oam_entry = document.at_css("#wang2026oamga")
+  if oam_entry.nil?
+    errors << "#{code} publications page is missing the OAM-GA submitted manuscript"
+    next
+  end
+
+  oam_text = oam_entry.text.gsub(/\s+/, " ")
+  oam_required_text = [
+    "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
+    "Xiang Wang",
+    "Xu Yan",
+    "Letian Pei",
+    "Weiping Yan",
+    "Submitted to DAI 2026",
+    "not yet peer-reviewed or accepted"
+  ]
+  oam_required_text.each do |value|
+    errors << "#{code} OAM-GA entry is missing #{value.inspect}" unless oam_text.include?(value)
+  end
+
+  oam_hrefs = oam_entry.css("a[href]").map { |element| element["href"] }.compact
+  errors << "#{code} OAM-GA entry is missing its public OpenReview link" unless oam_hrefs.include?(openreview_url)
 end
 
 translation_routes.each do |translation_key, routes|

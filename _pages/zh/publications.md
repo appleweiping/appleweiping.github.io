@@ -5,7 +5,7 @@ title: 论文
 lang: zh-CN
 locale: zh
 translation_key: publications
-description: 闫维平的同行评审论文，以及 DOI 与官方全文链接。
+description: 闫维平已发表和投稿中的研究论文，以及正式出版与投稿页面链接。
 nav: true
 nav_order: 2
 ---
@@ -13,7 +13,8 @@ nav_order: 2
 <!-- _pages/publications.md -->
 
 <p class="text-muted">
-  这是我目前唯一一篇正式发表的论文。该独立研究使用合成、随机生成的数据，不涉及临床记录或真实环境观测数据。论文正式题名与出版元数据保留原文。
+  本页收录一篇正式发表的论文和一篇已投稿至 DAI 2026 的稿件；投稿中不代表已经同行评审或录用。2023
+  年的独立研究使用合成、随机生成的数据，不涉及临床记录或真实环境观测数据。论文正式题名与元数据保留原文。
 </p>
 
 {% include site_i18n/bib_search.liquid %}

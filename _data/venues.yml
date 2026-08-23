@@ -1,3 +1,7 @@
 "TNS":
   url: https://tns.ewapub.com/
   color: "#4f6f52"
+
+"Submitted":
+  url: https://openreview.net/forum?id=UV2UJ4VHf7
+  color: "#7a5a00"
