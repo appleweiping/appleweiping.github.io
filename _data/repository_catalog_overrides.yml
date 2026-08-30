@@ -134,11 +134,12 @@ repositories:
     portfolio_project: false
 
   - repository: appleweiping/periodic-motion-language
-    description: Placeholder repository for planned language-aligned periodic-motion research; the default branch does not yet contain an implementation artifact.
+    description: >-
+      Archived historical starting point for language-aligned periodic-motion research; active development moved to PhaseSet, where the audited dyadic PhasePair milestone is preserved as the immutable v0.1.0 release.
     source_kind: metadata-only
     category: new-acquisitions
     curation_status: metadata-only
-    attribution: Listed from public GitHub metadata; authorship and contribution details have not been independently curated.
+    attribution: Historical redirect repository; active implementation and its preserved PhasePair milestone are documented in the linked PhaseSet repository.
     portfolio_project: false
 
   - repository: appleweiping/phaseset-multiperson-motion-language

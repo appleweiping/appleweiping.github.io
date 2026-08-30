@@ -162,6 +162,10 @@
       "zh": "条目来自公开 GitHub 元数据；尚未独立核实作者身份与贡献细节。",
       "ja": "公開 GitHub メタデータに基づく掲載であり、著者性と貢献の詳細は独立に確認していない。"
     },
+    "Historical redirect repository; active implementation and its preserved PhasePair milestone are documented in the linked PhaseSet repository.": {
+      "zh": "历史迁移指引仓库；活跃实现及保留的 PhasePair 里程碑以所链接的 PhaseSet 仓库文档为准。",
+      "ja": "履歴移行案内用リポジトリ。現行実装と保存された PhasePair マイルストーンは、リンク先の PhaseSet リポジトリに記録されている。"
+    },
     "Derivative implementation based on CodeWhale (MIT), inspired by MIT's CodeWhale research; upstream authorship and attribution remain with their respective authors.": {
       "zh": "基于 CodeWhale（MIT）并受 MIT CodeWhale 研究启发的衍生实现；上游作者身份与署名仍归各自作者所有。",
       "ja": "CodeWhale（MIT）を基に、MIT の CodeWhale 研究から着想した派生実装。上流の著者性と帰属は各著者に属する。"
@@ -689,8 +693,8 @@
       "ja": "PAMS 反復動作カウント再現の計画用プレースホルダー。既定ブランチには現時点で実装成果がない。"
     },
     "periodic-motion-language": {
-      "zh": "计划开展语言对齐周期运动研究的占位仓库；默认分支目前尚无实现成果。",
-      "ja": "言語整合型の周期運動研究を計画するプレースホルダー。既定ブランチには現時点で実装成果がない。"
+      "zh": "语言对齐周期运动研究的已归档历史起点；活跃开发已迁移到 PhaseSet，其中经审计的双人 PhasePair 里程碑作为不可变的 v0.1.0 版本保留。",
+      "ja": "言語整合型周期モーション研究のアーカイブ済みの出発点。開発は PhaseSet に移行し、監査済みの2者 PhasePair マイルストーンは不変の v0.1.0 リリースとして保存されている。"
     },
     "phaseset-multiperson-motion-language": {
       "zh": "面向多人动作—语言检索的无数据研究实现：以流式、置换不变的周期关系 token 建模群体动作，并提供可复现代码、测试与发布契约；目前尚无真实数据实验结果。",
