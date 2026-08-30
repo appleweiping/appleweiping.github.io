@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "owner": "appleweiping",
-  "synced_at": "2026-08-23T13:09:46Z",
-  "repository_count": 174,
+  "synced_at": "2026-08-30T10:52:57Z",
+  "repository_count": 178,
   "repositories": {
     "acecue": {
       "repository": "appleweiping/acecue",
@@ -10,7 +10,7 @@
     },
     "agent-resource": {
       "repository": "appleweiping/AGENT_RESOURCE",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b6f23109a68300f0e286b73f448e3aac4da7a6d287a218b53a4a0b41e84a0d59/appleweiping/AGENT_RESOURCE"
+      "open_graph_image_url": "https://opengraph.githubassets.com/833c4164fb4f33a143067fa9f1fc7b18200ec3d7a0c3b8db0433760cc3c1f065/appleweiping/AGENT_RESOURCE"
     },
     "agentic-science": {
       "repository": "appleweiping/AGENTIC_SCIENCE",
@@ -28,6 +28,10 @@
       "repository": "appleweiping/AIDE_DEV",
       "open_graph_image_url": "https://opengraph.githubassets.com/08fb2db8fffa05c7d20b84c82f6a703e01b0b375e1ae83ea6d14208f8eac27dd/appleweiping/AIDE_DEV"
     },
+    "align-public": {
+      "repository": "appleweiping/ALIGN-public",
+      "open_graph_image_url": "https://opengraph.githubassets.com/809e8183872dc5056e7784045a8bd6b7dbb41a118c2f1687f1bf874981326651/appleweiping/ALIGN-public"
+    },
     "analog-forge-agent": {
       "repository": "appleweiping/analog-forge-agent",
       "open_graph_image_url": "https://opengraph.githubassets.com/39382d696f654e3ba4c40d34196e35ad0686ccf4ba8cc6b1694b1818bd964fdc/appleweiping/analog-forge-agent"
@@ -38,7 +42,7 @@
     },
     "appleweiping-github-io": {
       "repository": "appleweiping/appleweiping.github.io",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2c34965a806e2b87f8bb5176a89d011668734105630a849a409e2c6c9e33f9f0/appleweiping/appleweiping.github.io"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d1d5450949fece1f4f6c81280f1f8838d182f6132290dafd53cdaa760c3c4a3e/appleweiping/appleweiping.github.io"
     },
     "art-history-museum": {
       "repository": "appleweiping/art-history-museum",
@@ -298,7 +302,7 @@
     },
     "games103": {
       "repository": "appleweiping/games103",
-      "open_graph_image_url": "https://opengraph.githubassets.com/00601ab54104f1bc423fbbc6661497cd6a86b083176640e1f6d5d2e883228b50/appleweiping/games103"
+      "open_graph_image_url": "https://opengraph.githubassets.com/30866387172dc9a25e5969ac0a547fee42d219b19f37f475453e71c4c54ba6d9/appleweiping/games103"
     },
     "games202": {
       "repository": "appleweiping/games202",
@@ -307,6 +311,10 @@
     "github-achievement-lab": {
       "repository": "appleweiping/github-achievement-lab",
       "open_graph_image_url": "https://opengraph.githubassets.com/8be4725e12f1525a097b740de906b4eb41647af0e81cb75f3106b03dada66f58/appleweiping/github-achievement-lab"
+    },
+    "glayout": {
+      "repository": "appleweiping/gLayout",
+      "open_graph_image_url": "https://opengraph.githubassets.com/c7b5e0c4af40728f840b4ecb01a3a3bb55f9bb21dfd4df60012ac00fd123ad46/appleweiping/gLayout"
     },
     "haskell-mooc": {
       "repository": "appleweiping/haskell-mooc",
@@ -464,6 +472,10 @@
       "repository": "appleweiping/needle-dl-system",
       "open_graph_image_url": "https://opengraph.githubassets.com/c0c167ec9d9d057e40b0a81a49b04550f32d44cd9f399a3a599ec373125664ac/appleweiping/needle-dl-system"
     },
+    "nemesis": {
+      "repository": "appleweiping/NEMESIS",
+      "open_graph_image_url": "https://opengraph.githubassets.com/38d69c56a7971d769535c871db8af3152ca011e725d8b352f8b3e95777dab0fc/appleweiping/NEMESIS"
+    },
     "neural-networks-zero-to-hero": {
       "repository": "appleweiping/neural-networks-zero-to-hero",
       "open_graph_image_url": "https://opengraph.githubassets.com/4433be9b87cf339c920ed15e4bba40e833ad8beab44176b42f42ac11f2185e05/appleweiping/neural-networks-zero-to-hero"
@@ -506,11 +518,15 @@
     },
     "paradise-isle": {
       "repository": "appleweiping/paradise-isle",
-      "open_graph_image_url": "https://opengraph.githubassets.com/0ccd78823af9e8e71ed46dc3d36c6e889e1e4b471ede48ff5b53cf0165daf90d/appleweiping/paradise-isle"
+      "open_graph_image_url": "https://opengraph.githubassets.com/61527eae639ff4552d6c9748d6d8b6fb5a77662ed0a9688959b63da42a2fdf96/appleweiping/paradise-isle"
     },
     "periodic-motion-language": {
       "repository": "appleweiping/periodic-motion-language",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9542da8d2daba8650fd011ace0a5670e60952df1db20d41a35091db83b0c9da8/appleweiping/periodic-motion-language"
+      "open_graph_image_url": "https://opengraph.githubassets.com/192715e2c56c20b7480c13922cdb64ef8af9d25a7c42d45e6f7a23842e6250d8/appleweiping/periodic-motion-language"
+    },
+    "phaseset-multiperson-motion-language": {
+      "repository": "appleweiping/phaseset-multiperson-motion-language",
+      "open_graph_image_url": "https://opengraph.githubassets.com/6d2be16aa54ff3432f78d060ae1cf9af6e9379216a51ccabe593df978aa8198d/appleweiping/phaseset-multiperson-motion-language"
     },
     "pku-software-analysis": {
       "repository": "appleweiping/pku-software-analysis",
@@ -682,19 +698,19 @@
     },
     "weiping-council": {
       "repository": "appleweiping/WEIPING_COUNCIL",
-      "open_graph_image_url": "https://opengraph.githubassets.com/3c6345f0b9865aa51803059b939a48a05418c9a171834f77b86e4a20029e2c3e/appleweiping/WEIPING_COUNCIL"
+      "open_graph_image_url": "https://opengraph.githubassets.com/3ee719a93454bb9167f206cb4bb7ebe6532e30d8da6adc6c6517b9c7c612fb71/appleweiping/WEIPING_COUNCIL"
     },
     "weiping-lab": {
       "repository": "appleweiping/WEIPING_LAB",
-      "open_graph_image_url": "https://opengraph.githubassets.com/277089fddc3967bbdbaf21fb6359e8af8c00e4980465107b5292f9b63d93fa40/appleweiping/WEIPING_LAB"
+      "open_graph_image_url": "https://opengraph.githubassets.com/ba918400842c014302d1ced768cb31bfa3eb2c243e68fb927193acc81c8ee750/appleweiping/WEIPING_LAB"
     },
     "weiping-whale": {
       "repository": "appleweiping/WEIPING_WHALE",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2dcabcc0c41fc1fc81e16afeaea68014c6dd8917c23ec8242bbde8393c749ba5/appleweiping/WEIPING_WHALE"
+      "open_graph_image_url": "https://opengraph.githubassets.com/948d7141703ef836a8cd09fc892eb56153c66ab74a88203f46484d4586851f72/appleweiping/WEIPING_WHALE"
     },
     "weiping-wiki": {
       "repository": "appleweiping/WEIPING_WIKI",
-      "open_graph_image_url": "https://opengraph.githubassets.com/d3ac6d7ee517da72300071d0e71927018a7575121bf2fcd1532d7323181737d1/appleweiping/WEIPING_WIKI"
+      "open_graph_image_url": "https://opengraph.githubassets.com/ff8768d175af9f64da8a999c0d9994cede828d4288c19e1355ba22ea41812976/appleweiping/WEIPING_WIKI"
     },
     "xv6-labs": {
       "repository": "appleweiping/xv6-labs",

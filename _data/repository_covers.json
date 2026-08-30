@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "owner": "appleweiping",
-  "repository_count": 174,
-  "project_count": 166,
-  "cover_count": 174,
-  "generated_at": "2026-08-23T13:59:55Z",
+  "repository_count": 178,
+  "project_count": 167,
+  "cover_count": 178,
+  "generated_at": "2026-08-30T11:01:25Z",
   "covers": {
     "acecue": {
       "path": "/assets/img/repository-covers/acecue.webp",
@@ -91,6 +91,20 @@
       "height": 540,
       "license_risk": "low",
       "license_note": "Replace an illustration-style banner that does not document a verified non-generated visual source."
+    },
+    "align-public": {
+      "path": "/assets/img/repository-covers/align-public.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/ALIGN-public/e392ae4789eb49193a4865244d8cc31dbe1744b7/docs/sphinx_docs/source/images/layouts.png",
+      "source_path": "docs/sphinx_docs/source/images/layouts.png",
+      "source_commit": "e392ae4789eb49193a4865244d8cc31dbe1744b7",
+      "source_blob": "82731959095bcc238e5abae80799cab0193ffa67",
+      "source_sha256": "fbb8359a9a62c8eea4d7a13b4f44664ebfaae61017f1439c68c548a72ea9dee6",
+      "output_sha256": "13dc4820f1873c10e755fba22a95d23fbd0eab2f7a873b4bbf7ebcf71781e834",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Repository-native upstream documentation gallery under BSD-3-Clause; the catalog explicitly labels this repository as an exact fork of ALIGN-analoglayout/ALIGN-public and does not claim authorship of the illustrated layouts."
     },
     "analog-forge-agent": {
       "path": "/assets/img/repository-covers/analog-forge-agent.webp",
@@ -1040,6 +1054,20 @@
       "license_risk": "low",
       "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
+    "glayout": {
+      "path": "/assets/img/repository-covers/glayout.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/gLayout/3e129ede58b4d21509dad682e56b9d573cefe8ab/tutorial/_images/port_route.png",
+      "source_path": "tutorial/_images/port_route.png",
+      "source_commit": "3e129ede58b4d21509dad682e56b9d573cefe8ab",
+      "source_blob": "c3134e37a85bd4ffd38b9a61904211c6c290f339",
+      "source_sha256": "bdf5c08a1d228e2ec962bc51f6fd10d2b2235631546040fecdff44224e57f18a",
+      "output_sha256": "779a181b98e0ad8f008e7f99f98d10e9e1da1f5c45805ca26e4ae796f6af8954",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Repository-native upstream tutorial diagram under MIT; the catalog explicitly labels this repository as an exact fork of ReaLLMASIC/gLayout and does not claim authorship of the diagram."
+    },
     "haskell-mooc": {
       "path": "/assets/img/repository-covers/haskell-mooc.webp",
       "source_type": "github-repository-preview",
@@ -1590,6 +1618,20 @@
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
     },
+    "nemesis": {
+      "path": "/assets/img/repository-covers/nemesis.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/NEMESIS/3e52a9bee1a78eda63ac6db7111b598aba6ddbee/docs/assets/combined_subplots.png",
+      "source_path": "docs/assets/combined_subplots.png",
+      "source_commit": "3e52a9bee1a78eda63ac6db7111b598aba6ddbee",
+      "source_blob": "7dc1674e06fb764a068351a9fceef0b1ee1feaa5",
+      "source_sha256": "edd95dac1117fea918bc5500f104b61e6d1ebb962ebb1b3a586961efc2981c26",
+      "output_sha256": "d62f4bc6a52a0e33db4ad217250f66a8ee56fb985c4ccfdabe95bc68f28b3950",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Repository-native upstream worked-example plot under BSD-3-Clause; the catalog explicitly labels this repository as an exact fork of UMN-EDA/NEMESIS and does not present the plot as the portfolio owner's experiment or paper result."
+    },
     "neural-networks-zero-to-hero": {
       "path": "/assets/img/repository-covers/neural-networks-zero-to-hero.webp",
       "source_type": "repository-asset",
@@ -1745,6 +1787,20 @@
       "height": 540,
       "license_risk": "low",
       "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "phaseset-multiperson-motion-language": {
+      "path": "/assets/img/repository-covers/phaseset-multiperson-motion-language.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/phaseset-multiperson-motion-language/89951ecdfbfe45fcbfb9e724f9b119eb2dfdfc93/figures/phaseset_motivation.png",
+      "source_path": "figures/phaseset_motivation.png",
+      "source_commit": "89951ecdfbfe45fcbfb9e724f9b119eb2dfdfc93",
+      "source_blob": "086c6f9e1d709713f60ab410520a12e8004de6ac",
+      "source_sha256": "a8d257fce7d54cfbce67ff2f5aeb17bf081e10f70d3c5e7c5b02f21278baeb96",
+      "output_sha256": "1d26b0a4e960b0241c320253145e06e95aa7620da897a845952dccfd1218d202",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Repository-native technical diagram in an MIT-licensed research repository; no separate asset license is stated."
     },
     "pku-software-analysis": {
       "path": "/assets/img/repository-covers/pku-software-analysis.webp",

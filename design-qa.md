@@ -15,7 +15,7 @@
 
 The comparison board shows the reference on the left and the implementation on the right. Both use a dark page, a right-aligned category heading with a divider, three equal-width desktop columns, image-first cards, subdued shadows, large lightweight titles, and short descriptions. The implementation intentionally retains the site's persistent navigation, 930px content width, exact GitHub repository names, and a compact provenance/language line.
 
-The complete index renders 166 cards in eight `row-cols-1 row-cols-md-3` category grids. At the final desktop checkpoint the first creative row measured three 350px cards at x=138, 518, and 898 with equal 408px height and equal 197px media frames. The full page height fell from the pre-fix 64,882px single-column rendering to 21,304px. At 390px the cards form one 345px column with no horizontal overflow.
+The original visual checkpoint rendered 166 cards in eight `row-cols-1 row-cols-md-3` category grids. At the final desktop checkpoint the first creative row measured three 350px cards at x=138, 518, and 898 with equal 408px height and equal 197px media frames. The full page height fell from the pre-fix 64,882px single-column rendering to 21,304px. At 390px the cards formed one 345px column with no horizontal overflow. The 2026-08-30 GitHub synchronization added one formal project without changing the card template or grid CSS, bringing the current catalog to 167 project cards.
 
 Focused-region comparison was not needed: the source and implementation cards are legible at full-view scale, and the separate mobile capture covers the responsive state.
 
@@ -23,9 +23,9 @@ Focused-region comparison was not needed: the source and implementation cards ar
 
 - No actionable P0, P1, or P2 visual differences remain.
 - The former Featured section is absent. The complete categorized grid is now the only Projects collection on the page.
-- All 166 formal projects, all 174 public repositories in the full catalog, and all six pinned repository cards render a locally hosted 960×540 WebP cover.
-- Cover provenance is complete: 22 real demo screenshots, 72 commit/blob-pinned repository assets, and 80 locally cached GitHub repository previews. No generated or runtime-hotlinked image is published.
-- All 11 cover contact sheets were visually reviewed. Illustration-style banners, logos, badges, icons, sprites, course merchandise, test plates, unrelated photos, blank frames, and the known GPT-image banner were rejected or replaced with an attributable repository preview.
+- All 167 formal projects, all 178 public repositories in the full catalog, and all six pinned repository cards render a locally hosted 960×540 WebP cover.
+- Cover provenance is complete: 22 real demo screenshots, 76 commit/blob-pinned repository assets, and 80 locally cached GitHub repository previews. No generated or runtime-hotlinked image is published.
+- The original 11 cover contact sheets and all four 2026-08-30 additions were visually reviewed. Illustration-style banners, logos, badges, icons, sprites, course merchandise, test plates, unrelated photos, blank frames, and the known GPT-image banner were rejected or replaced with an attributable repository preview.
 
 ## Comparison history
 
@@ -38,10 +38,10 @@ Focused-region comparison was not needed: the source and implementation cards ar
 ## Interaction and accessibility checks
 
 - All eight category links move to their prefixed category anchors.
-- All 166 cards are whole-card GitHub links with `target="_blank"` and `rel="noopener noreferrer"`.
+- All 167 current cards are whole-card GitHub links with `target="_blank"` and `rel="noopener noreferrer"`.
 - Covers lazy-load, reserve intrinsic dimensions, use a consistent 16:9 frame, and have localized, meaningful alt text.
-- English, Chinese, and Japanese output contains the same 166 card IDs and eight category grids.
-- The full repository catalog contains 174 covered cards in all three languages. The pinned view contains exactly six covered cards, with `appleweiping.github.io` as the current sixth GitHub pin.
+- English, Chinese, and Japanese output contains the same 167 current card IDs and eight category grids.
+- The full repository catalog contains 178 covered cards in all three languages. The pinned view contains exactly six covered cards, with `appleweiping.github.io` as the current sixth GitHub pin.
 
 ## Source and build evidence
 
@@ -50,6 +50,6 @@ Focused-region comparison was not needed: the source and implementation cards ar
 - GitHub preview pins: `assets/img/repository-covers/GITHUB_OG_SOURCES.json`
 - Manual curation overrides: `assets/img/repository-covers/CURATION_OVERRIDES.json`
 - Human-readable provenance: `assets/img/repository-covers/ASSET_PROVENANCE.md`
-- Local structural build: successful with a temporary Windows-only ImageMagick disable override; the three Projects pages rendered in 1.07–2.01 seconds each, all six complete Projects/Catalog index pages completed without a single-page stall, and the cover/catalog validators passed at 174/174. The Ubuntu deployment workflow remains the authority for the production responsive-image (`srcset`) check because the Windows system `convert.exe` is not ImageMagick.
+- Original local structural build: successful with a temporary Windows-only ImageMagick disable override; the three Projects pages rendered in 1.07–2.01 seconds each, all six complete Projects/Catalog index pages completed without a single-page stall, and the cover/catalog validators passed at 174/174. The 2026-08-30 incremental synchronization passed catalog, translation, policy, and cover validation at 178/178 before deployment. The Ubuntu deployment workflow remains the authority for the production responsive-image (`srcset`) check because the Windows system `convert.exe` is not ImageMagick.
 
 final result: passed

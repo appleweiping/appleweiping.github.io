@@ -2,6 +2,31 @@ repositories:
   - repository: appleweiping/AGENT_RESOURCE
     portfolio_project: true
 
+  - repository: appleweiping/ALIGN-public
+    description: >-
+      Unmodified public fork of the upstream ALIGN analog-layout generator, which translates SPICE netlists into constraint-aware GDSII layouts; this fork has no commits ahead of upstream.
+    source_kind: fork
+    category: robotics-hardware
+    languages:
+      - Python
+      - C++
+      - Jupyter Notebook
+      - Shell
+      - JavaScript
+      - HTML
+      - CSS
+      - CMake
+      - Makefile
+      - Verilog
+      - Tcl
+      - Dockerfile
+      - Prolog
+      - Ruby
+    demo_url: https://align-analoglayout.github.io/ALIGN-public/
+    curation_status: curated
+    attribution: Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes.
+    portfolio_project: false
+
   - repository: appleweiping/analog-forge-agent
     description: >-
       Research-preview LLM4EDA workbench that turns natural-language analog specifications into typed topology, PDK, and testbench contracts with SPICE-grounded evidence boundaries and equal-budget multi-objective search.
@@ -49,6 +74,20 @@ repositories:
     attribution: Metadata, documentation, or resource collection; individual upstream materials retain their original attribution.
     portfolio_project: false
 
+  - repository: appleweiping/gLayout
+    description: >-
+      Unmodified public fork of upstream gLayout, a PDK-agnostic analog-layout automation framework for DRC-clean component generation across open PDKs; this fork has no commits ahead of upstream.
+    source_kind: fork
+    category: robotics-hardware
+    languages:
+      - Python
+      - Jupyter Notebook
+      - SPICE
+      - Shell
+    curation_status: curated
+    attribution: Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes.
+    portfolio_project: false
+
   - repository: appleweiping/imperfect-information-agent-core
     source_kind: original
     category: ai-agents
@@ -73,6 +112,19 @@ repositories:
     attribution: Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.
     portfolio_project: true
 
+  - repository: appleweiping/NEMESIS
+    description: >-
+      Unmodified public fork of UMN-EDA's NEMESIS framework for LLM-aided OTA equation synthesis, SPICE verification, iterative correction, and auditable example runs; this fork has no commits ahead of upstream.
+    source_kind: fork
+    category: ai4s-research
+    languages:
+      - Python
+      - SPICE
+      - Shell
+    curation_status: curated
+    attribution: Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes.
+    portfolio_project: false
+
   - repository: appleweiping/pams-rac-reproduction
     description: Placeholder repository for a planned PAMS repetitive-action-counting reproduction; the default branch does not yet contain an implementation artifact.
     source_kind: metadata-only
@@ -88,6 +140,18 @@ repositories:
     curation_status: metadata-only
     attribution: Listed from public GitHub metadata; authorship and contribution details have not been independently curated.
     portfolio_project: false
+
+  - repository: appleweiping/phaseset-multiperson-motion-language
+    description: >-
+      Data-free research implementation of streamed, permutation-invariant periodic relation tokens for multi-person motion-language retrieval, with reproducible code, tests, and release contracts; it does not yet report real-data results.
+    source_kind: research
+    category: ai4s-research
+    languages:
+      - Python
+      - TeX
+    curation_status: curated
+    attribution: Research repository; consult its documentation for collaborators, data sources, and contribution details.
+    portfolio_project: true
 
   - repository: appleweiping/power-grid-model
     description: Exact public fork of LF Energy's Power Grid Model library for distribution power-system analysis; no local commits are currently ahead of upstream.
