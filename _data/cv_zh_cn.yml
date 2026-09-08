@@ -30,9 +30,12 @@ cv:
         url: https://cse.umn.edu/
         area: College of Science and Engineering
         degree: 本科
-        date: 项目于 2026-09-08 开始
+        start_date: 2026-09
+        end_date: present
         highlights:
-          - 即将入学；不宣称已获得学位、已完成入学或已确定双专业。
+          - >-
+            现为 College of Science and Engineering 本科生；[2026 年秋季课程于 9 月 8 日开始](https://asr.umn.edu/2026-27-twin-cities-and-rochester-calendar)。
+            不宣称尚未确定的具体专业或已完成的学位。
 
       - institution: Delft University of Technology × Eindhoven University of Technology
         location: 荷兰代尔夫特与埃因霍温
@@ -42,7 +45,7 @@ cv:
         start_date: 2024-09
         end_date: 2026-08
         highlights:
-          - 在 University of Minnesota 项目开始前，并行学习经历记录至 2026 年 8 月。
+          - 转入 University of Minnesota 前，并行学习经历记录至 2026 年 8 月。
           - >-
             [TU/e Honors Academy — Honors Bachelor Program](https://educationguide.tue.nl/programs/honors-academy)
             参与者（2025—2026；转学前参与）。
@@ -120,6 +123,18 @@ cv:
           - 已发表分析使用随机生成/合成数据，并非真实世界临床或环境数据集。
 
     论文:
+      - title: "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars"
+        authors:
+          - Xiang Wang
+          - Xu Yan
+          - Letian Pei
+          - "*Weiping Yan*"
+        journal: 已投稿至 DAI 2026
+        date: 2026
+        url: https://openreview.net/forum?id=UV2UJ4VHf7
+        summary: >-
+          共同作者论文；修订版已发布于 OpenReview。已投稿至 DAI 2026，录用决定尚未公布，尚未录用或发表。
+
       - title: "Effect of PM2.5 air pollution on the incidence of respiratory diseases: A Python-based data analysis"
         authors:
           - "*Weiping Yan*"
@@ -129,10 +144,20 @@ cv:
         summary: >-
           已发表研究论文。研究使用随机生成/合成数据，不宣称使用真实世界临床或环境数据集。
 
+    精选开源贡献:
+      - bullet: >-
+          2026 年 8—9 月共有 6 个上游拉取请求被合并：[Power Grid Model #1516](https://github.com/PowerGridModel/power-grid-model/pull/1516)、
+          [#1518](https://github.com/PowerGridModel/power-grid-model/pull/1518)与
+          [#1540](https://github.com/PowerGridModel/power-grid-model/pull/1540)，
+          [LensKit #1209](https://github.com/lenskit/lkpy/pull/1209)，
+          [M* #235](https://github.com/mstar-project/mstar/pull/235)及
+          [PISA #641](https://github.com/pisa-engine/pisa/pull/641)；内容涉及验证与传感器语义、性能文档、
+          推荐系统警告、媒体解码与错误处理，以及检索类型安全。
+
     主要荣誉与奖项:
       - bullet: >-
-          **Kaggle 铜牌**，[Santa 2025 - Christmas Tree Packing
-          Challenge](https://www.kaggle.com/competitions/santa-2025)，
+          [**Kaggle 铜牌**](https://www.kaggle.com/certification/competitions/weipingyan/santa-2025)，
+          [Santa 2025 - Christmas Tree Packing Challenge](https://www.kaggle.com/competitions/santa-2025)，
           3,357 支队伍中排名第 186（2026 年 1 月 31 日）。
       - bullet: >-
           **一等奖**，CTSS 大学生创新创业竞赛，参赛所属院校列为 TU/e（2025 年 7 月）。
@@ -146,7 +171,7 @@ cv:
       - label: 研究与分析
         details: 统计推断、数据分析、数据可视化、机器学习、科学计算、科研软件工程
       - label: 编程语言
-        details: Python、C、Java、MATLAB、Verilog
+        details: Python、C、C++、Java、MATLAB、Verilog
       - label: 科学与工程工具
         details: NumPy、pandas、Matplotlib、Git、LTspice、Origin
 

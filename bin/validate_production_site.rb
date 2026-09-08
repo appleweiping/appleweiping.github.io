@@ -133,7 +133,7 @@ end
 project_routes = translation_routes.select { |key, _routes| root.join("_projects/#{key}.md").file? }
 news_routes = translation_routes.select { |key, _routes| root.join("_news").glob("**/*.md").any? { |path| path.basename(".md").to_s == key } }
 errors << "expected 17 translated project route groups, found #{project_routes.length}" unless project_routes.length == 17
-errors << "expected 10 translated news route groups, found #{news_routes.length}" unless news_routes.length == 10
+errors << "expected 13 translated news route groups, found #{news_routes.length}" unless news_routes.length == 13
 
 required_pdf_assets = {
   "assets/pdf/Weiping_Yan_CV_en.pdf" => "en",
@@ -384,6 +384,16 @@ research_interest_links = [
 openreview_url = "https://openreview.net/forum?id=UV2UJ4VHf7"
 honors_url = "https://educationguide.tue.nl/programs/honors-academy"
 tudelft_hpb_url = "https://www.tudelft.nl/en/student/eemcs-student-portal/education/honours-programme"
+umn_calendar_url = "https://asr.umn.edu/2026-27-twin-cities-and-rochester-calendar"
+kaggle_certificate_url = "https://www.kaggle.com/certification/competitions/weipingyan/santa-2025"
+merged_pull_request_urls = [
+  "https://github.com/PowerGridModel/power-grid-model/pull/1516",
+  "https://github.com/PowerGridModel/power-grid-model/pull/1518",
+  "https://github.com/PowerGridModel/power-grid-model/pull/1540",
+  "https://github.com/lenskit/lkpy/pull/1209",
+  "https://github.com/mstar-project/mstar/pull/235",
+  "https://github.com/pisa-engine/pisa/pull/641"
+]
 required_public_links = [
   "https://github.com/appleweiping",
   "https://www.linkedin.com/in/weiping-yan-b62567383",
@@ -396,9 +406,9 @@ required_public_links = [
   openreview_url,
   honors_url,
   tudelft_hpb_url,
-  "https://github.com/lenskit/lkpy/pull/1209",
-  "https://github.com/mstar-project/mstar/pull/235",
-  "https://github.com/pisa-engine/pisa/pull/641",
+  umn_calendar_url,
+  kaggle_certificate_url,
+  *merged_pull_request_urls,
   "https://github.com/UMN-Choi-Lab/HighwayVLM/pull/3",
   "https://github.com/median-research-group/LibMTL/pull/97",
   *research_interest_links,
@@ -411,9 +421,14 @@ required_public_links.each do |required_link|
 end
 
 about_expectations = {
-  "en" => ["College of Science and Engineering", "September 8, 2026", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor (HPB)", "in 2025–2026 before transferring"],
-  "zh-CN" => ["科学与工程学院", "2026 年 9 月 8 日", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）", "2025—2026 年、转学前参加了"],
-  "ja" => ["College of Science and Engineering", "2026年9月8日", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor（HPB）", "2025–2026年、編入前に"]
+  "en" => ["I am now an undergraduate in the University of Minnesota College of Science and Engineering", "Fall 2026 classes started on September 8, 2026", "I do not claim a specific University of Minnesota major or a completed degree", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor (HPB)", "in 2025–2026 before transferring"],
+  "zh-CN" => ["我现为明尼苏达大学科学与工程学院本科生", "明尼苏达大学 2026 年秋季课程于 9 月 8 日开始", "不声称尚未确定的具体专业或已完成的学位", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）", "2025—2026 年、转学前参加了"],
+  "ja" => ["現在はミネソタ大学 College of Science and Engineering の学部生", "2026年秋学期の授業は9月8日に始まりました", "未確定の専攻や取得済みの学位を記載しません", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor（HPB）", "2025–2026年、編入前に"]
+}
+outdated_about_claims = {
+  "en" => "incoming undergraduate",
+  "zh-CN" => "即将入学",
+  "ja" => "入学予定"
 }
 about_expectations.each do |code, phrases|
   route = translation_routes.dig("about", code)
@@ -424,18 +439,70 @@ about_expectations.each do |code, phrases|
   phrases.each do |phrase|
     errors << "#{code} home page is missing the verified fact #{phrase.inspect}" unless text.include?(phrase)
   end
+  errors << "#{code} home page still presents the UMN program as future enrollment" if text.include?(outdated_about_claims.fetch(code))
   homepage_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
   research_interest_links.each do |link|
     errors << "#{code} home page is missing the research-interest link #{link}" unless homepage_hrefs.include?(link)
   end
   errors << "#{code} home page is missing the official TU Delft HPB link" unless homepage_hrefs.include?(tudelft_hpb_url)
+  errors << "#{code} home page is missing the official UMN Fall 2026 calendar link" unless homepage_hrefs.include?(umn_calendar_url)
   errors << "#{code} home page is missing the selected OAM-GA manuscript" unless document.at_css("#wang2026oamga")
 end
 
-cv_hpb_expectations = {
-  "en" => ["TU Delft — Honours Programme Bachelor (HPB)", "participant (2025–2026; participation before transfer)"],
-  "zh-CN" => ["TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）", "参与者（2025—2026；转学前参与）"],
-  "ja" => ["TU Delft Honours Programme Bachelor（HPB）", "参加（2025–2026年、編入前）"]
+cv_text_expectations = {
+  "en" => [
+    "Undergraduate in the College of Science and Engineering",
+    "Fall 2026 classes began September 8, 2026",
+    "No specific major or completed degree is claimed",
+    "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
+    "the decision is pending",
+    "not yet accepted or published",
+    "Selected Open-Source Contributions",
+    "Six merged upstream pull requests",
+    "Power Grid Model",
+    "LensKit",
+    "M*",
+    "PISA",
+    "TU Delft — Honours Programme Bachelor (HPB)",
+    "participant (2025–2026; participation before transfer)"
+  ],
+  "zh-CN" => [
+    "现为 College of Science and Engineering 本科生",
+    "2026 年秋季课程于 9 月 8 日开始",
+    "不宣称尚未确定的具体专业或已完成的学位",
+    "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
+    "录用决定尚未公布",
+    "尚未录用或发表",
+    "精选开源贡献",
+    "6 个上游拉取请求被合并",
+    "Power Grid Model",
+    "LensKit",
+    "M*",
+    "PISA",
+    "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）",
+    "参与者（2025—2026；转学前参与）"
+  ],
+  "ja" => [
+    "College of Science and Engineering の学部生",
+    "2026年秋学期の授業は9月8日に開始",
+    "未確定の専攻や取得済みの学位は記載していません",
+    "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
+    "採否は未決定",
+    "未採択・未発表",
+    "主なオープンソース貢献",
+    "6件の上流プルリクエストがマージされました",
+    "Power Grid Model",
+    "LensKit",
+    "M*",
+    "PISA",
+    "TU Delft Honours Programme Bachelor（HPB）",
+    "参加（2025–2026年、編入前）"
+  ]
+}
+outdated_cv_claims = {
+  "en" => "Incoming undergraduate",
+  "zh-CN" => "即将入学",
+  "ja" => "入学予定"
 }
 expected_codes.each do |code|
   route = translation_routes.dig("cv", code)
@@ -447,17 +514,22 @@ expected_codes.each do |code|
     errors << "#{code} CV page is missing the research-interest link #{link}" unless cv_hrefs.include?(link)
   end
   cv_text = document.text.gsub(/\s+/, " ")
-  cv_hpb_expectations.fetch(code).each do |phrase|
-    errors << "#{code} CV page is missing the verified TU Delft HPB fact #{phrase.inspect}" unless cv_text.include?(phrase)
+  cv_text_expectations.fetch(code).each do |phrase|
+    errors << "#{code} CV page is missing verified current content #{phrase.inspect}" unless cv_text.include?(phrase)
   end
+  outdated_claim = outdated_cv_claims.fetch(code)
+  errors << "#{code} CV page still presents the UMN program as future enrollment" if cv_text.include?(outdated_claim)
   errors << "#{code} CV page is missing the official TU/e Honors Academy link" unless cv_hrefs.include?(honors_url)
   errors << "#{code} CV page is missing the official TU Delft HPB link" unless cv_hrefs.include?(tudelft_hpb_url)
+  [umn_calendar_url, openreview_url, kaggle_certificate_url, *merged_pull_request_urls].each do |link|
+    errors << "#{code} CV page is missing the verified source link #{link}" unless cv_hrefs.include?(link)
+  end
 end
 
 publication_expectations = {
-  "en" => ["one formally published paper", "one manuscript submitted to DAI 2026", "not yet peer-reviewed or accepted", "randomly generated, synthetic data"],
-  "zh-CN" => ["一篇正式发表的论文", "一篇已投稿至 DAI 2026", "不代表已经同行评审或录用", "合成、随机生成的数据"],
-  "ja" => ["正式に発表済みの論文1報", "DAI 2026へ投稿中の原稿1報", "査読済みまたは採択済み", "ランダムに生成した合成データ"]
+  "en" => ["one formally published paper", "one manuscript submitted to DAI 2026", "decision pending", "not yet accepted or published", "randomly generated, synthetic data"],
+  "zh-CN" => ["一篇正式发表的论文", "一篇已投稿至 DAI 2026", "录用决定尚未公布", "尚未录用或发表", "合成、随机生成的数据"],
+  "ja" => ["正式に発表済みの論文1報", "DAI 2026へ投稿中の原稿1報", "採否は未決定", "未採択・未発表", "ランダムに生成した合成データ"]
 }
 publication_expectations.each do |code, phrases|
   route = translation_routes.dig("publications", code)
@@ -490,7 +562,9 @@ publication_expectations.each do |code, phrases|
     "Letian Pei",
     "Weiping Yan",
     "Submitted to DAI 2026",
-    "not yet peer-reviewed or accepted"
+    "under review",
+    "decision pending",
+    "not yet accepted or published"
   ]
   oam_required_text.each do |value|
     errors << "#{code} OAM-GA entry is missing #{value.inspect}" unless oam_text.include?(value)
@@ -498,6 +572,62 @@ publication_expectations.each do |code, phrases|
 
   oam_hrefs = oam_entry.css("a[href]").map { |element| element["href"] }.compact
   errors << "#{code} OAM-GA entry is missing its public OpenReview link" unless oam_hrefs.include?(openreview_url)
+end
+
+news_expectations = {
+  "2026-01-31-kaggle-bronze" => {
+    "links" => ["https://www.kaggle.com/competitions/santa-2025", kaggle_certificate_url],
+    "phrases" => {
+      "en" => ["official Kaggle Bronze Medal", "186th of 3,357 teams"],
+      "zh-CN" => ["官方铜牌证书", "3,357 支队伍中排名第 186"],
+      "ja" => ["公式の Bronze Medal 証明書", "3,357 チーム中 186 位"]
+    }
+  },
+  "2026-09-08-umn-cse-start" => {
+    "links" => ["https://cse.umn.edu/", umn_calendar_url],
+    "phrases" => {
+      "en" => ["I began my undergraduate studies", "Fall 2026 classes began on September 8, 2026", "No specific major or completed degree is claimed"],
+      "zh-CN" => ["我开始在明尼苏达大学科学与工程学院修读本科课程", "此处不注明尚未确认的具体专业", "不将该经历表述为已获得学位"],
+      "ja" => ["College of Science and Engineering で学部課程を開始しました", "特定の専攻が確定したとは記載せず", "学位取得済みとも表現していません"]
+    }
+  },
+  "2026-09-08-oamga-revision" => {
+    "links" => [openreview_url],
+    "phrases" => {
+      "en" => ["OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars", "remains under review, with a decision pending", "has not been accepted or published"],
+      "zh-CN" => ["OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars", "仍处于投稿评审阶段", "决定尚未公布", "尚未被接收或正式发表"],
+      "ja" => ["OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars", "現在も査読中で決定待ち", "採択または正式出版には至っていません"]
+    }
+  },
+  "2026-09-08-upstream-merges" => {
+    "links" => merged_pull_request_urls,
+    "phrases" => {
+      "en" => ["Six of my pull requests were merged upstream", "Power Grid Model #1516", "LensKit #1209", "M* #235", "PISA #641", "accepted changes"],
+      "zh-CN" => ["我提交的六个拉取请求被上游项目合并", "Power Grid Model #1516", "LensKit #1209", "M* #235", "PISA #641", "这些已接收的改动"],
+      "ja" => ["6 件のプルリクエストがアップストリームへマージされました", "Power Grid Model #1516", "LensKit #1209", "M* #235", "PISA #641", "採用された変更"]
+    }
+  }
+}
+news_expectations.each do |translation_key, expectation|
+  expected_codes.each do |code|
+    route = translation_routes.dig(translation_key, code)
+    if route.nil?
+      errors << "#{translation_key}: missing #{code} translation route"
+      next
+    end
+
+    document = canonical_documents[route]
+    next unless document
+
+    news_text = document.text.gsub(/\s+/, " ")
+    expectation.fetch("phrases").fetch(code).each do |phrase|
+      errors << "#{code} news #{translation_key} is missing #{phrase.inspect}" unless news_text.include?(phrase)
+    end
+    news_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
+    expectation.fetch("links").each do |link|
+      errors << "#{code} news #{translation_key} is missing verified source link #{link}" unless news_hrefs.include?(link)
+    end
+  end
 end
 
 translation_routes.each do |translation_key, routes|

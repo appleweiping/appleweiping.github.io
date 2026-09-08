@@ -29,7 +29,39 @@ CORE_TRANSLATION_KEYS = %w[
 
 EXPECTED_COUNTS = {
   "projects" => 17,
-  "news" => 10
+  "news" => 13
+}.freeze
+
+EXPECTED_NEWS_ITEMS = {
+  "2026-01-31-kaggle-bronze" => {
+    "date" => "2026-01-31 12:00:00 +0800",
+    "urls" => Set[
+      "https://www.kaggle.com/competitions/santa-2025",
+      "https://www.kaggle.com/certification/competitions/weipingyan/santa-2025"
+    ]
+  },
+  "2026-09-08-umn-cse-start" => {
+    "date" => "2026-09-08 20:00:00 +0800",
+    "urls" => Set[
+      "https://cse.umn.edu/",
+      "https://asr.umn.edu/2026-27-twin-cities-and-rochester-calendar"
+    ]
+  },
+  "2026-09-08-oamga-revision" => {
+    "date" => "2026-09-08 16:00:00 +0800",
+    "urls" => Set["https://openreview.net/forum?id=UV2UJ4VHf7"]
+  },
+  "2026-09-08-upstream-merges" => {
+    "date" => "2026-09-08 12:00:00 +0800",
+    "urls" => Set[
+      "https://github.com/PowerGridModel/power-grid-model/pull/1516",
+      "https://github.com/PowerGridModel/power-grid-model/pull/1518",
+      "https://github.com/PowerGridModel/power-grid-model/pull/1540",
+      "https://github.com/lenskit/lkpy/pull/1209",
+      "https://github.com/mstar-project/mstar/pull/235",
+      "https://github.com/pisa-engine/pisa/pull/641"
+    ]
+  }
 }.freeze
 
 Document = Struct.new(:path, :front_matter, :body, keyword_init: true)
@@ -183,6 +215,29 @@ end
 grouped_by_key(pages).each do |translation_key, translations|
   locales = translations.map { |document| document.front_matter["locale"] }.sort
   errors << "pages/#{translation_key}: expected exactly en/zh/ja translations, found #{locales.inspect}" unless locales == LOCALES.keys.sort
+end
+
+news_by_key = grouped_by_key(collections.fetch("news"))
+EXPECTED_NEWS_ITEMS.each do |translation_key, expectation|
+  translations = news_by_key.fetch(translation_key, [])
+  if translations.length != LOCALES.length
+    errors << "news/#{translation_key}: required milestone must have exactly three translations"
+    next
+  end
+
+  translations.each do |translation|
+    label = translation.path.relative_path_from(root)
+    actual_date = translation.front_matter["date"]&.to_s
+    unless actual_date == expectation.fetch("date")
+      errors << "#{label}: date should be #{expectation.fetch('date').inspect}, found #{actual_date.inspect}"
+    end
+
+    actual_urls = external_urls(translation.body)
+    expected_urls = expectation.fetch("urls")
+    unless actual_urls == expected_urls
+      errors << "#{label}: source URL set should be #{expected_urls.to_a.sort.inspect}, found #{actual_urls.to_a.sort.inspect}"
+    end
+  end
 end
 
 begin

@@ -31,9 +31,13 @@ cv:
         url: https://cse.umn.edu/
         area: College of Science and Engineering
         degree: UG
-        date: Program starts 2026-09-08
+        start_date: 2026-09
+        end_date: present
         highlights:
-          - Incoming undergraduate; no degree or declared double major is claimed.
+          - >-
+            Undergraduate in the College of Science and Engineering; [Fall 2026 classes began
+            September 8, 2026](https://asr.umn.edu/2026-27-twin-cities-and-rochester-calendar).
+            No specific major or completed degree is claimed.
 
       - institution: Delft University of Technology × Eindhoven University of Technology
         location: Delft and Eindhoven, the Netherlands
@@ -43,7 +47,7 @@ cv:
         start_date: 2024-09
         end_date: 2026-08
         highlights:
-          - Concurrent study period recorded through August 2026 before the University of Minnesota program begins.
+          - Concurrent study period recorded through August 2026 before transferring to the University of Minnesota.
           - >-
             [TU/e Honors Academy — Honors Bachelor Program](https://educationguide.tue.nl/programs/honors-academy)
             participant (2025–2026; participation before transfer).
@@ -122,6 +126,19 @@ cv:
           - The published analysis used randomly generated/synthetic data, not a real-world clinical or environmental dataset.
 
     Publications:
+      - title: "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars"
+        authors:
+          - Xiang Wang
+          - Xu Yan
+          - Letian Pei
+          - "*Weiping Yan*"
+        journal: Submitted to DAI 2026
+        date: 2026
+        url: https://openreview.net/forum?id=UV2UJ4VHf7
+        summary: >-
+          Co-authored manuscript; revised version posted on OpenReview. Submitted to DAI 2026;
+          the decision is pending, and it is not yet accepted or published.
+
       - title: "Effect of PM2.5 air pollution on the incidence of respiratory diseases: A Python-based data analysis"
         authors:
           - "*Weiping Yan*"
@@ -132,10 +149,21 @@ cv:
           Published research article. The study reports analysis of randomly generated/synthetic
           data and does not claim a real-world clinical or environmental dataset.
 
+    Selected Open-Source Contributions:
+      - bullet: >-
+          Six merged upstream pull requests across [Power Grid Model #1516](https://github.com/PowerGridModel/power-grid-model/pull/1516),
+          [#1518](https://github.com/PowerGridModel/power-grid-model/pull/1518), and
+          [#1540](https://github.com/PowerGridModel/power-grid-model/pull/1540);
+          [LensKit #1209](https://github.com/lenskit/lkpy/pull/1209);
+          [M* #235](https://github.com/mstar-project/mstar/pull/235); and
+          [PISA #641](https://github.com/pisa-engine/pisa/pull/641) (August–September 2026),
+          covering validation and sensor semantics, performance documentation, recommender warnings,
+          media decoding and error handling, and retrieval type safety.
+
     Selected Honors and Awards:
       - bullet: >-
-          **Kaggle Bronze Medal**, [Santa 2025 - Christmas Tree Packing
-          Challenge](https://www.kaggle.com/competitions/santa-2025) — 186th of
+          [**Kaggle Bronze Medal**](https://www.kaggle.com/certification/competitions/weipingyan/santa-2025),
+          [Santa 2025 - Christmas Tree Packing Challenge](https://www.kaggle.com/competitions/santa-2025) — 186th of
           3,357 teams (January 31, 2026).
       - bullet: >-
           **First Prize**, CTSS College Student Innovation and Entrepreneurship
@@ -152,7 +180,7 @@ cv:
       - label: Research and analysis
         details: Statistical inference, data analysis, data visualization, machine learning, scientific computing, research software engineering
       - label: Programming
-        details: Python, C, Java, MATLAB, Verilog
+        details: Python, C, C++, Java, MATLAB, Verilog
       - label: Scientific and engineering tools
         details: NumPy, pandas, Matplotlib, Git, LTspice, Origin
 

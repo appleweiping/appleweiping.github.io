@@ -9,4 +9,4 @@ related_posts: false
 permalink: /zh/news/2026-01-31-kaggle-bronze/
 ---
 
-我在 Kaggle Santa 2025 Christmas Tree Packing Challenge 中获得铜牌，在 3,357 支队伍中排名第 186。
+我在 [Kaggle Santa 2025 Christmas Tree Packing Challenge](https://www.kaggle.com/competitions/santa-2025) 中获得官方[铜牌证书](https://www.kaggle.com/certification/competitions/weipingyan/santa-2025)，在 3,357 支队伍中排名第 186。

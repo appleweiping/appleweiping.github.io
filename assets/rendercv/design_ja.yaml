@@ -8,3 +8,4 @@ design:
   typography:
     alignment: left
     font_family: Noto Sans JP
+    line_spacing: 0.45em
