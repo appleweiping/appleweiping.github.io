@@ -29,9 +29,22 @@ EXPECTED_TEXT = {
         "Program starts 2026-09-08",
         "randomly generated/synthetic data",
         "TU/e Honors Academy",
+        "TU Delft — Honours Programme Bachelor (HPB) participant (2025–2026; participation before transfer).",
     ],
-    "zh-CN": ["闫维平", "项目于 2026-09-08 开始", "随机生成/合成数据", "TU/e Honors Academy"],
-    "ja": ["Weiping Yan", "プログラム開始", "ランダム生成された合成データ", "TU/e Honors Academy"],
+    "zh-CN": [
+        "闫维平",
+        "项目于 2026-09-08 开始",
+        "随机生成/合成数据",
+        "TU/e Honors Academy",
+        "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）参与者（2025—2026；转学前参与）",
+    ],
+    "ja": [
+        "Weiping Yan",
+        "プログラム開始",
+        "ランダム生成された合成データ",
+        "TU/e Honors Academy",
+        "TU Delft Honours Programme Bachelor（HPB）参加（2025–2026年、編入前）",
+    ],
 }
 EXPECTED_FONT = {
     "en": "SourceSans3",
@@ -53,6 +66,7 @@ COMMON_URIS = {
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics",
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation",
     "https://educationguide.tue.nl/programs/honors-academy",
+    "https://www.tudelft.nl/en/student/eemcs-student-portal/education/honours-programme",
 }
 EXPECTED_WEBSITE = {
     "en": "https://appleweiping.github.io/",
@@ -162,8 +176,9 @@ def validate_pdf(locale: str, path: Path) -> tuple[int, int, list[str]]:
     text = "\n".join(page.extract_text() or "" for page in reader.pages)
     if len(text.strip()) < 1_500:
         raise ValidationError(f"{path.name} has too little selectable text: {len(text.strip())} characters")
+    compact_text = "".join(text.split())
     for phrase in EXPECTED_TEXT[locale]:
-        if phrase not in text:
+        if "".join(phrase.split()) not in compact_text:
             raise ValidationError(f"{path.name} is missing selectable text {phrase!r}")
 
     fonts = font_records(reader)

@@ -383,6 +383,7 @@ research_interest_links = [
 ]
 openreview_url = "https://openreview.net/forum?id=UV2UJ4VHf7"
 honors_url = "https://educationguide.tue.nl/programs/honors-academy"
+tudelft_hpb_url = "https://www.tudelft.nl/en/student/eemcs-student-portal/education/honours-programme"
 required_public_links = [
   "https://github.com/appleweiping",
   "https://www.linkedin.com/in/weiping-yan-b62567383",
@@ -394,6 +395,7 @@ required_public_links = [
   "https://doi.org/10.54254/2753-8818/8/20240361",
   openreview_url,
   honors_url,
+  tudelft_hpb_url,
   "https://github.com/lenskit/lkpy/pull/1209",
   "https://github.com/mstar-project/mstar/pull/235",
   "https://github.com/pisa-engine/pisa/pull/641",
@@ -409,9 +411,9 @@ required_public_links.each do |required_link|
 end
 
 about_expectations = {
-  "en" => ["College of Science and Engineering", "September 8, 2026", "Minnesota NLP Group", "TU/e Honors Academy"],
-  "zh-CN" => ["科学与工程学院", "2026 年 9 月 8 日", "Minnesota NLP Group", "TU/e Honors Academy"],
-  "ja" => ["College of Science and Engineering", "2026年9月8日", "Minnesota NLP Group", "TU/e Honors Academy"]
+  "en" => ["College of Science and Engineering", "September 8, 2026", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor (HPB)", "in 2025–2026 before transferring"],
+  "zh-CN" => ["科学与工程学院", "2026 年 9 月 8 日", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）", "2025—2026 年、转学前参加了"],
+  "ja" => ["College of Science and Engineering", "2026年9月8日", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor（HPB）", "2025–2026年、編入前に"]
 }
 about_expectations.each do |code, phrases|
   route = translation_routes.dig("about", code)
@@ -426,9 +428,15 @@ about_expectations.each do |code, phrases|
   research_interest_links.each do |link|
     errors << "#{code} home page is missing the research-interest link #{link}" unless homepage_hrefs.include?(link)
   end
+  errors << "#{code} home page is missing the official TU Delft HPB link" unless homepage_hrefs.include?(tudelft_hpb_url)
   errors << "#{code} home page is missing the selected OAM-GA manuscript" unless document.at_css("#wang2026oamga")
 end
 
+cv_hpb_expectations = {
+  "en" => ["TU Delft — Honours Programme Bachelor (HPB)", "participant (2025–2026; participation before transfer)"],
+  "zh-CN" => ["TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）", "参与者（2025—2026；转学前参与）"],
+  "ja" => ["TU Delft Honours Programme Bachelor（HPB）", "参加（2025–2026年、編入前）"]
+}
 expected_codes.each do |code|
   route = translation_routes.dig("cv", code)
   document = canonical_documents[route]
@@ -438,7 +446,12 @@ expected_codes.each do |code|
   research_interest_links.each do |link|
     errors << "#{code} CV page is missing the research-interest link #{link}" unless cv_hrefs.include?(link)
   end
+  cv_text = document.text.gsub(/\s+/, " ")
+  cv_hpb_expectations.fetch(code).each do |phrase|
+    errors << "#{code} CV page is missing the verified TU Delft HPB fact #{phrase.inspect}" unless cv_text.include?(phrase)
+  end
   errors << "#{code} CV page is missing the official TU/e Honors Academy link" unless cv_hrefs.include?(honors_url)
+  errors << "#{code} CV page is missing the official TU Delft HPB link" unless cv_hrefs.include?(tudelft_hpb_url)
 end
 
 publication_expectations = {
