@@ -23,8 +23,8 @@ Focused-region comparison was not needed: the source and implementation cards ar
 
 - No actionable P0, P1, or P2 visual differences remain.
 - The former Featured section is absent. The complete categorized grid is now the only Projects collection on the page.
-- All 189 formal projects, all 219 public repositories in the full catalog, and all six pinned repository cards render a locally hosted 960×540 WebP cover.
-- Cover provenance is complete: 22 real demo screenshots, 86 commit/blob-pinned repository assets, and 111 locally cached GitHub repository previews. No AI-generated or runtime-hotlinked image is published.
+- All 189 formal projects, all 220 public repositories in the full catalog, and all six pinned repository cards render a locally hosted 960×540 WebP cover.
+- Cover provenance is complete: 22 real demo screenshots, 87 commit/blob-pinned repository assets, and 111 locally cached GitHub repository previews. No AI-generated or runtime-hotlinked image is published.
 - The original 11 cover contact sheets, the four 2026-08-30 additions, and three 2026-09-08 incremental contact sheets were visually reviewed. Representative real outputs include the HighwayVLM operator dashboard, PISA indexing architecture, M\* official social mark, PromptWitness audit report, Frame Quorum contact sheet, and room-replica Cycles render. Illustration-style banners, illegible marks, badges, icons, sprites, course merchandise, test plates, unrelated photos, blank frames, and the known GPT-image banner were rejected or replaced with an attributable repository preview.
 
 ## Comparison history
@@ -41,7 +41,7 @@ Focused-region comparison was not needed: the source and implementation cards ar
 - All 189 current cards are whole-card links: the 12 portfolio entries with audited detail pages open the current-language internal route, while the remainder open GitHub with `target="_blank"` and `rel="noopener noreferrer"`.
 - Covers lazy-load, reserve intrinsic dimensions, use a consistent 16:9 frame, and have localized, meaningful alt text.
 - English, Chinese, and Japanese output contains the same 189 current card IDs and eight category grids.
-- The full repository catalog contains 219 covered cards in all three languages and exposes 16 source-audited detail routes, including four open-source participation/contribution pages. The pinned view contains exactly six covered cards, with `appleweiping.github.io` as the current sixth GitHub pin.
+- The full repository catalog contains 220 covered cards in all three languages and exposes 17 source-audited detail routes, including five open-source participation/contribution pages. The pinned view contains exactly six covered cards, with `appleweiping.github.io` as the current sixth GitHub pin.
 
 ## Source and build evidence
 
@@ -50,6 +50,6 @@ Focused-region comparison was not needed: the source and implementation cards ar
 - GitHub preview pins: `assets/img/repository-covers/GITHUB_OG_SOURCES.json`
 - Manual curation overrides: `assets/img/repository-covers/CURATION_OVERRIDES.json`
 - Human-readable provenance: `assets/img/repository-covers/ASSET_PROVENANCE.md`
-- Local structural builds use a temporary Windows-only ImageMagick disable override because the Windows system `convert.exe` is not ImageMagick. The 2026-09-08 production-mode build completed all 102 rendered pages in 184 seconds; repository, cover, route, translation, PDF, redirect, HTML, and CSS-purge checks passed at 219/219, with the single expected local omission being responsive WebP `srcset`. The Ubuntu deployment workflow remains authoritative for generating and validating that responsive-image output.
+- Local structural builds use a temporary Windows-only ImageMagick disable override because the Windows system `convert.exe` is not ImageMagick. The 2026-09-08 production-mode build completed all 102 rendered pages in 184 seconds before the final LibMTL delta; repository, cover, route, translation, PDF, redirect, HTML, and CSS-purge checks passed, with the single expected local omission being responsive WebP `srcset`. The Ubuntu deployment workflow remains authoritative for the final 220-repository build and responsive-image output.
 
 final result: passed

@@ -132,7 +132,7 @@ end
 
 project_routes = translation_routes.select { |key, _routes| root.join("_projects/#{key}.md").file? }
 news_routes = translation_routes.select { |key, _routes| root.join("_news").glob("**/*.md").any? { |path| path.basename(".md").to_s == key } }
-errors << "expected 16 translated project route groups, found #{project_routes.length}" unless project_routes.length == 16
+errors << "expected 17 translated project route groups, found #{project_routes.length}" unless project_routes.length == 17
 errors << "expected 10 translated news route groups, found #{news_routes.length}" unless news_routes.length == 10
 
 required_pdf_assets = {
@@ -398,6 +398,7 @@ required_public_links = [
   "https://github.com/mstar-project/mstar/pull/235",
   "https://github.com/pisa-engine/pisa/pull/641",
   "https://github.com/UMN-Choi-Lab/HighwayVLM/pull/3",
+  "https://github.com/median-research-group/LibMTL/pull/97",
   *research_interest_links,
   "/assets/pdf/Weiping_Yan_CV_en.pdf",
   "/assets/pdf/Weiping_Yan_CV_zh-CN.pdf",

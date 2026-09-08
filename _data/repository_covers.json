@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "owner": "appleweiping",
-  "repository_count": 219,
+  "repository_count": 220,
   "project_count": 189,
-  "cover_count": 219,
-  "generated_at": "2026-09-08T13:17:37Z",
+  "cover_count": 220,
+  "generated_at": "2026-09-08T14:25:03Z",
   "covers": {
     "github": {
       "path": "/assets/img/repository-covers/github.webp",
@@ -1443,6 +1443,20 @@
       "height": 540,
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
+    },
+    "libmtl": {
+      "path": "/assets/img/repository-covers/libmtl.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/median-research-group/LibMTL/4336804847eaa5e0b924b743d76beec7ac3fdc97/docs/docs/images/framework.png",
+      "source_path": "docs/docs/images/framework.png",
+      "source_commit": "4336804847eaa5e0b924b743d76beec7ac3fdc97",
+      "source_blob": "8ca6d4f98dc31a0da739876ad6853014b274df70",
+      "source_sha256": "c034f9d80b23c063f04d36fb57072c68b32de0ba5c21b995477de9668feaf495",
+      "output_sha256": "071b835a672e6943df34592b2feeaf95021db36f5e3584b06ccc2ce3681651b2",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Repository-native framework diagram under the upstream MIT-licensed project; the detail page preserves Median Research Group and maintainer attribution."
     },
     "lkpy": {
       "path": "/assets/img/repository-covers/lkpy.webp",

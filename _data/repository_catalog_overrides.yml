@@ -300,6 +300,16 @@ repositories:
     curation_status: curated
     portfolio_project: true
 
+  - repository: appleweiping/LibMTL
+    description: >-
+      Exact public fork of the upstream LibMTL PyTorch framework for modular multi-task-learning architectures, loss and gradient weighting, training, and benchmark evaluation. At the 2026-09-08 audit the default branch was identical to upstream; Weiping Yan's CLI-help fix was a separate open, unreviewed upstream PR #97.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Python
+    curation_status: curated
+    portfolio_project: false
+
   - repository: appleweiping/lkpy
     description: >-
       Public fork of the LensKit recommendation toolkit; although the fork default branch had no local commits ahead at the 2026-09-08 audit, Weiping Yan's ItemKNN unknown-user warning fix and tests were merged upstream in PR #1209.

@@ -940,6 +940,10 @@
       "zh": "使用安全 Rust 实现 BM25、WAND、block-max WAND 与 TREC 实验的确定性信息检索工具包。",
       "ja": "safe Rust による BM25、WAND、block-max WAND、TREC 実験向けの決定論的 IR toolkit。"
     },
+    "libmtl": {
+      "zh": "上游 LibMTL 的公开精确 fork。LibMTL 是模块化 PyTorch 多任务学习框架，统一组织共享／任务专属架构、损失与梯度加权、训练和基准评估。截至 2026-09-08，默认分支与上游完全一致；闫维平的命令行帮助修复另行提交为上游 PR #97，当时仍未评审、未合并。",
+      "ja": "モジュール化されたマルチタスク学習の architecture、損失・勾配 weighting、学習、benchmark 評価を統一する PyTorch framework LibMTL の upstream と同一の公開 fork。2026-09-08 時点で default branch は upstream と同一で、Weiping Yan の CLI help 修正は別の upstream PR #97 として open、未 review、未 merge でした。"
+    },
     "lkpy": {
       "zh": "LensKit 推荐工具包的公开 fork；虽然截至 2026-09-08 默认分支没有本地领先提交，但闫维平针对 ItemKNN 未知用户警告的修复与测试已通过 PR #1209 合并到上游。",
       "ja": "LensKit 推薦 toolkit の公開 fork。2026-09-08 時点で default branch の local ahead は0ですが、Weiping Yan による ItemKNN の未知ユーザー警告修正と test は upstream PR #1209 でマージ済みです。"

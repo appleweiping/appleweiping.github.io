@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "owner": "appleweiping",
-  "synced_at": "2026-09-08T12:49:32Z",
-  "repository_count": 219,
+  "synced_at": "2026-09-08T14:16:55Z",
+  "repository_count": 220,
   "repositories": {
     "github": {
       "repository": "appleweiping/.github",
@@ -427,6 +427,10 @@
     "lhy-ml-homeworks": {
       "repository": "appleweiping/lhy-ml-homeworks",
       "open_graph_image_url": "https://opengraph.githubassets.com/51c7ff60dd154f4704aa461dea14119434ce6afdc4cfa4fa13941f3cc02dfe65/appleweiping/lhy-ml-homeworks"
+    },
+    "libmtl": {
+      "repository": "appleweiping/LibMTL",
+      "open_graph_image_url": "https://opengraph.githubassets.com/ec9de60c7ee4ab2e7bfd23e95230350360800f1aed39be5ebb54da3f2c078501/appleweiping/LibMTL"
     },
     "lkpy": {
       "repository": "appleweiping/lkpy",

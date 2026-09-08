@@ -6,7 +6,7 @@ Source for [appleweiping.github.io](https://appleweiping.github.io/), a trilingu
 
 ## Content
 
-- About, publications, 16 project detail pages, repositories, CV, news, and 404 pages are published in all three languages using
+- About, publications, 17 project detail pages, repositories, CV, news, and 404 pages are published in all three languages using
   al-folio's native Jekyll content model.
 - The full catalog of public repositories is synchronized from the paginated GitHub API before production builds;
   repository names, topics, languages, and URLs remain verbatim while descriptions and classifications are localized.
