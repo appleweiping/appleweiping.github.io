@@ -26,9 +26,8 @@ COMPATIBILITY_PDF = PDF_DIRECTORY / "Weiping_Yan_CV.pdf"
 EXPECTED_TEXT = {
     "en": [
         "Weiping Yan",
-        "Undergraduate in the College of Science and Engineering",
+        "Electrical Engineering and Computer Science student",
         "Fall 2026 classes began September 8, 2026",
-        "No specific major or completed degree is claimed",
         "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
         "Submitted to DAI 2026",
         "the decision is pending",
@@ -45,9 +44,8 @@ EXPECTED_TEXT = {
     ],
     "zh-CN": [
         "闫维平",
-        "现为 College of Science and Engineering 本科生",
+        "电气工程与计算机科学本科生",
         "2026 年秋季课程于 9 月 8 日开始",
-        "不宣称尚未确定的具体专业或已完成的学位",
         "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
         "已投稿至 DAI 2026",
         "录用决定尚未公布",
@@ -64,9 +62,8 @@ EXPECTED_TEXT = {
     ],
     "ja": [
         "Weiping Yan",
-        "College of Science and Engineering の学部生",
+        "電気工学・コンピュータサイエンスを学ぶ学部生",
         "2026年秋学期の授業は9月8日に開始",
-        "未確定の専攻や取得済みの学位は記載していません",
         "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
         "DAI 2026 に投稿済み",
         "採否は未決定",
@@ -81,6 +78,11 @@ EXPECTED_TEXT = {
         "TU/e Honors Academy",
         "TU Delft Honours Programme Bachelor（HPB）参加（2025–2026年、編入前）",
     ],
+}
+FORBIDDEN_TEXT = {
+    "en": ["No specific major", "completed degree is claimed"],
+    "zh-CN": ["不宣称尚未确定的具体专业", "不注明尚未确认的具体专业"],
+    "ja": ["未確定の専攻", "特定の専攻が確定したとは記載せず"],
 }
 EXPECTED_FONT = {
     "en": "SourceSans3",
@@ -225,6 +227,9 @@ def validate_pdf(locale: str, path: Path) -> tuple[int, int, list[str]]:
     for phrase in EXPECTED_TEXT[locale]:
         if "".join(phrase.split()) not in compact_text:
             raise ValidationError(f"{path.name} is missing selectable text {phrase!r}")
+    for phrase in FORBIDDEN_TEXT[locale]:
+        if "".join(phrase.split()) in compact_text:
+            raise ValidationError(f"{path.name} contains unwanted defensive wording {phrase!r}")
 
     fonts = font_records(reader)
     if not fonts or not any(EXPECTED_FONT[locale] in name for name, _embedded, _unicode in fonts):

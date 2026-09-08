@@ -421,14 +421,14 @@ required_public_links.each do |required_link|
 end
 
 about_expectations = {
-  "en" => ["I am now an undergraduate in the University of Minnesota College of Science and Engineering", "Fall 2026 classes started on September 8, 2026", "I do not claim a specific University of Minnesota major or a completed degree", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor (HPB)", "in 2025–2026 before transferring"],
-  "zh-CN" => ["我现为明尼苏达大学科学与工程学院本科生", "明尼苏达大学 2026 年秋季课程于 9 月 8 日开始", "不声称尚未确定的具体专业或已完成的学位", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）", "2025—2026 年、转学前参加了"],
-  "ja" => ["現在はミネソタ大学 College of Science and Engineering の学部生", "2026年秋学期の授業は9月8日に始まりました", "未確定の専攻や取得済みの学位を記載しません", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor（HPB）", "2025–2026年、編入前に"]
+  "en" => ["I am now an Electrical Engineering and Computer Science student", "University of Minnesota College of Science and Engineering", "Fall 2026 classes started on September 8, 2026", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor (HPB)", "in 2025–2026 before transferring"],
+  "zh-CN" => ["我现为明尼苏达大学科学与工程学院电气工程与计算机科学本科生", "明尼苏达大学 2026 年秋季课程于 9 月 8 日开始", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）", "2025—2026 年、转学前参加了"],
+  "ja" => ["現在はミネソタ大学 College of Science and Engineering で電気工学とコンピュータサイエンスを学ぶ学部生", "2026年秋学期の授業は9月8日に始まりました", "Minnesota NLP Group", "TU/e Honors Academy", "TU Delft Honours Programme Bachelor（HPB）", "2025–2026年、編入前に"]
 }
 outdated_about_claims = {
-  "en" => "incoming undergraduate",
-  "zh-CN" => "即将入学",
-  "ja" => "入学予定"
+  "en" => ["incoming undergraduate", "I do not claim a specific University of Minnesota major", "No specific major"],
+  "zh-CN" => ["即将入学", "不声称尚未确定的具体专业", "不注明尚未确认的具体专业"],
+  "ja" => ["入学予定", "未確定の専攻", "特定の専攻が確定したとは記載せず"]
 }
 about_expectations.each do |code, phrases|
   route = translation_routes.dig("about", code)
@@ -439,7 +439,9 @@ about_expectations.each do |code, phrases|
   phrases.each do |phrase|
     errors << "#{code} home page is missing the verified fact #{phrase.inspect}" unless text.include?(phrase)
   end
-  errors << "#{code} home page still presents the UMN program as future enrollment" if text.include?(outdated_about_claims.fetch(code))
+  outdated_about_claims.fetch(code).each do |phrase|
+    errors << "#{code} home page contains outdated or unwanted wording #{phrase.inspect}" if text.include?(phrase)
+  end
   homepage_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
   research_interest_links.each do |link|
     errors << "#{code} home page is missing the research-interest link #{link}" unless homepage_hrefs.include?(link)
@@ -451,9 +453,8 @@ end
 
 cv_text_expectations = {
   "en" => [
-    "Undergraduate in the College of Science and Engineering",
+    "Electrical Engineering and Computer Science student",
     "Fall 2026 classes began September 8, 2026",
-    "No specific major or completed degree is claimed",
     "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
     "the decision is pending",
     "not yet accepted or published",
@@ -467,9 +468,8 @@ cv_text_expectations = {
     "participant (2025–2026; participation before transfer)"
   ],
   "zh-CN" => [
-    "现为 College of Science and Engineering 本科生",
+    "电气工程与计算机科学本科生",
     "2026 年秋季课程于 9 月 8 日开始",
-    "不宣称尚未确定的具体专业或已完成的学位",
     "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
     "录用决定尚未公布",
     "尚未录用或发表",
@@ -483,9 +483,8 @@ cv_text_expectations = {
     "参与者（2025—2026；转学前参与）"
   ],
   "ja" => [
-    "College of Science and Engineering の学部生",
+    "電気工学・コンピュータサイエンスを学ぶ学部生",
     "2026年秋学期の授業は9月8日に開始",
-    "未確定の専攻や取得済みの学位は記載していません",
     "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
     "採否は未決定",
     "未採択・未発表",
@@ -500,9 +499,9 @@ cv_text_expectations = {
   ]
 }
 outdated_cv_claims = {
-  "en" => "Incoming undergraduate",
-  "zh-CN" => "即将入学",
-  "ja" => "入学予定"
+  "en" => ["Incoming undergraduate", "No specific major", "completed degree is claimed"],
+  "zh-CN" => ["即将入学", "不宣称尚未确定的具体专业", "不注明尚未确认的具体专业"],
+  "ja" => ["入学予定", "未確定の専攻", "特定の専攻が確定したとは記載せず"]
 }
 expected_codes.each do |code|
   route = translation_routes.dig("cv", code)
@@ -517,8 +516,9 @@ expected_codes.each do |code|
   cv_text_expectations.fetch(code).each do |phrase|
     errors << "#{code} CV page is missing verified current content #{phrase.inspect}" unless cv_text.include?(phrase)
   end
-  outdated_claim = outdated_cv_claims.fetch(code)
-  errors << "#{code} CV page still presents the UMN program as future enrollment" if cv_text.include?(outdated_claim)
+  outdated_cv_claims.fetch(code).each do |phrase|
+    errors << "#{code} CV page contains outdated or unwanted wording #{phrase.inspect}" if cv_text.include?(phrase)
+  end
   errors << "#{code} CV page is missing the official TU/e Honors Academy link" unless cv_hrefs.include?(honors_url)
   errors << "#{code} CV page is missing the official TU Delft HPB link" unless cv_hrefs.include?(tudelft_hpb_url)
   [umn_calendar_url, openreview_url, kaggle_certificate_url, *merged_pull_request_urls].each do |link|
@@ -586,9 +586,14 @@ news_expectations = {
   "2026-09-08-umn-cse-start" => {
     "links" => ["https://cse.umn.edu/", umn_calendar_url],
     "phrases" => {
-      "en" => ["I began my undergraduate studies", "Fall 2026 classes began on September 8, 2026", "No specific major or completed degree is claimed"],
-      "zh-CN" => ["我开始在明尼苏达大学科学与工程学院修读本科课程", "此处不注明尚未确认的具体专业", "不将该经历表述为已获得学位"],
-      "ja" => ["College of Science and Engineering で学部課程を開始しました", "特定の専攻が確定したとは記載せず", "学位取得済みとも表現していません"]
+      "en" => ["I began my undergraduate studies in Electrical Engineering and Computer Science", "Fall 2026 classes began on September 8, 2026"],
+      "zh-CN" => ["我开始在明尼苏达大学科学与工程学院修读电气工程与计算机科学本科课程"],
+      "ja" => ["College of Science and Engineering で電気工学とコンピュータサイエンスの学部課程を開始しました"]
+    },
+    "forbidden_phrases" => {
+      "en" => ["No specific major", "completed degree is claimed"],
+      "zh-CN" => ["不注明尚未确认的具体专业", "不将该经历表述为已获得学位"],
+      "ja" => ["特定の専攻が確定したとは記載せず", "学位取得済みとも表現していません"]
     }
   },
   "2026-09-08-oamga-revision" => {
@@ -622,6 +627,9 @@ news_expectations.each do |translation_key, expectation|
     news_text = document.text.gsub(/\s+/, " ")
     expectation.fetch("phrases").fetch(code).each do |phrase|
       errors << "#{code} news #{translation_key} is missing #{phrase.inspect}" unless news_text.include?(phrase)
+    end
+    expectation.fetch("forbidden_phrases", {}).fetch(code, []).each do |phrase|
+      errors << "#{code} news #{translation_key} contains unwanted wording #{phrase.inspect}" if news_text.include?(phrase)
     end
     news_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
     expectation.fetch("links").each do |link|
