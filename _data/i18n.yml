@@ -53,8 +53,11 @@ en:
     archived: archived
     fork: fork
     updated: Updated
+    details: Details
     source: Source
     demo: Demo
+    open_details_prefix: Open
+    open_details_suffix: project details
     view_source_prefix: View
     view_source_suffix: source code on GitHub
     open_demo_prefix: Open the
@@ -122,8 +125,11 @@ zh-CN:
     archived: 已归档
     fork: 派生
     updated: 更新于
+    details: 详情
     source: 源代码
     demo: 演示
+    open_details_prefix: 查看
+    open_details_suffix: 的项目详情
     view_source_prefix: 在 GitHub 查看
     view_source_suffix: 的源代码
     open_demo_prefix: 打开
@@ -191,8 +197,11 @@ ja:
     archived: アーカイブ済み
     fork: フォーク
     updated: 更新日
+    details: 詳細
     source: ソース
     demo: デモ
+    open_details_prefix: ""
+    open_details_suffix: のプロジェクト詳細を開く
     view_source_prefix: GitHub で
     view_source_suffix: のソースコードを見る
     open_demo_prefix: ""

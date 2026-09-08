@@ -132,7 +132,7 @@ end
 
 project_routes = translation_routes.select { |key, _routes| root.join("_projects/#{key}.md").file? }
 news_routes = translation_routes.select { |key, _routes| root.join("_news").glob("**/*.md").any? { |path| path.basename(".md").to_s == key } }
-errors << "expected 12 translated project route groups, found #{project_routes.length}" unless project_routes.length == 12
+errors << "expected 16 translated project route groups, found #{project_routes.length}" unless project_routes.length == 16
 errors << "expected 10 translated news route groups, found #{news_routes.length}" unless news_routes.length == 10
 
 required_pdf_assets = {
@@ -211,6 +211,24 @@ repository_covers = JSON.parse(root.join("_data/repository_covers.json").read(en
     "#{code} repository catalog",
     baseurl
   )
+
+  repositories.each do |repository|
+    slug = repository.fetch("slug")
+    detail_route = translation_routes.dig(slug, code)
+    next unless detail_route
+
+    card = document.at_css(%([id="#{slug}"] [data-catalog-repository-card]))
+    if card.nil?
+      errors << "#{code} repository catalog is missing the detail-linked card for #{slug}"
+      next
+    end
+
+    expected_href = "#{baseurl}#{detail_route}"
+    title_href = card.at_css("h3 a")&.[]("href")
+    details_href = card.at_css("a.btn-outline-primary")&.[]("href")
+    errors << "#{code} repository catalog title for #{slug} should link to #{expected_href}" unless title_href == expected_href
+    errors << "#{code} repository catalog detail button for #{slug} should link to #{expected_href}" unless details_href == expected_href
+  end
 end
 
 portfolio_repositories, excluded_repositories = repositories.partition { |repository| repository.fetch("portfolio_project") }
@@ -252,6 +270,16 @@ portfolio_repositories, excluded_repositories = repositories.partition { |reposi
     "#{code} projects page",
     baseurl
   )
+
+  portfolio_repositories.each do |repository|
+    slug = repository.fetch("slug")
+    detail_route = translation_routes.dig(slug, code)
+    next unless detail_route
+
+    expected_href = "#{baseurl}#{detail_route}"
+    card_href = document.at_css(%([id="#{slug}"] > a))&.[]("href")
+    errors << "#{code} project card for #{slug} should link to #{expected_href}" unless card_href == expected_href
+  end
 end
 
 legacy = JSON.parse(root.join("_data/legacy_repository_slugs.json").read(encoding: "UTF-8")).fetch("slugs")
@@ -354,6 +382,7 @@ research_interest_links = [
   "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation"
 ]
 openreview_url = "https://openreview.net/forum?id=UV2UJ4VHf7"
+honors_url = "https://educationguide.tue.nl/programs/honors-academy"
 required_public_links = [
   "https://github.com/appleweiping",
   "https://www.linkedin.com/in/weiping-yan-b62567383",
@@ -364,6 +393,11 @@ required_public_links = [
   "mailto:vipinapple986@gmail.com",
   "https://doi.org/10.54254/2753-8818/8/20240361",
   openreview_url,
+  honors_url,
+  "https://github.com/lenskit/lkpy/pull/1209",
+  "https://github.com/mstar-project/mstar/pull/235",
+  "https://github.com/pisa-engine/pisa/pull/641",
+  "https://github.com/UMN-Choi-Lab/HighwayVLM/pull/3",
   *research_interest_links,
   "/assets/pdf/Weiping_Yan_CV_en.pdf",
   "/assets/pdf/Weiping_Yan_CV_zh-CN.pdf",
@@ -374,9 +408,9 @@ required_public_links.each do |required_link|
 end
 
 about_expectations = {
-  "en" => ["College of Science and Engineering", "September 8, 2026", "Minnesota NLP Group"],
-  "zh-CN" => ["科学与工程学院", "2026 年 9 月 8 日", "Minnesota NLP Group"],
-  "ja" => ["College of Science and Engineering", "2026年9月8日", "Minnesota NLP Group"]
+  "en" => ["College of Science and Engineering", "September 8, 2026", "Minnesota NLP Group", "TU/e Honors Academy"],
+  "zh-CN" => ["科学与工程学院", "2026 年 9 月 8 日", "Minnesota NLP Group", "TU/e Honors Academy"],
+  "ja" => ["College of Science and Engineering", "2026年9月8日", "Minnesota NLP Group", "TU/e Honors Academy"]
 }
 about_expectations.each do |code, phrases|
   route = translation_routes.dig("about", code)
@@ -403,6 +437,7 @@ expected_codes.each do |code|
   research_interest_links.each do |link|
     errors << "#{code} CV page is missing the research-interest link #{link}" unless cv_hrefs.include?(link)
   end
+  errors << "#{code} CV page is missing the official TU/e Honors Academy link" unless cv_hrefs.include?(honors_url)
 end
 
 publication_expectations = {

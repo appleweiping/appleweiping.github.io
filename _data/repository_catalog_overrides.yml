@@ -183,3 +183,366 @@ repositories:
 
   - repository: appleweiping/WEIPING_WIKI
     portfolio_project: true
+
+  - repository: appleweiping/.github
+    description: >-
+      Exact public fork of the trec-auto-judge organization metadata and infrastructure profile; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: ai4s-research
+    languages:
+      - Documentation
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/allo
+    description: >-
+      Exact public fork of Cornell's Allo accelerator-design and programming framework; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: robotics-hardware
+    languages:
+      - Python
+      - C++
+      - CMake
+      - MLIR
+      - Tcl
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/anserini
+    description: >-
+      Public fork of Castorini's Lucene-based Anserini toolkit for reproducible information-retrieval research; it had no local commits ahead and was one commit behind upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Java
+      - Python
+      - Shell
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/BiasWeave
+    source_kind: original
+    category: robotics-hardware
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/CharLib
+    description: >-
+      Exact public fork of the open-source CharLib standard-cell characterization toolchain; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: robotics-hardware
+    languages:
+      - Python
+      - Shell
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/ConvoKit
+    description: >-
+      Exact public fork of Cornell NLP's ConvoKit toolkit and conversational datasets; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Jupyter Notebook
+      - Python
+      - JavaScript
+      - CSS
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/corpusledger
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/evidence-braid
+    source_kind: original
+    category: ai-agents
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/FacetRoute
+    source_kind: original
+    category: ai-agents
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/frame-quorum
+    source_kind: original
+    category: creative-computing
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/graph-sail
+    source_kind: original
+    category: systems-security
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/HighwayVLM
+    description: >-
+      Public fork of UMN Choi Lab's freeway-camera safety system, combining CV-first escalation, vision-language analysis, SQLite persistence, and a FastAPI dashboard; the default branch was identical to upstream at the 2026-09-08 audit, while a separate draft PR #3 remained unmerged.
+    source_kind: fork
+    category: ai4s-research
+    languages:
+      - Python
+      - JavaScript
+      - CSS
+      - HTML
+      - Shell
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/IndexSail
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/lkpy
+    description: >-
+      Public fork of the LensKit recommendation toolkit; although the fork default branch had no local commits ahead at the 2026-09-08 audit, Weiping Yan's ItemKNN unknown-user warning fix and tests were merged upstream in PR #1209.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Python
+      - Rust
+      - Shell
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/metricguard
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/mmengine
+    description: >-
+      Exact public fork of OpenMMLab's MMEngine foundation library for deep-learning training; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Python
+      - Dockerfile
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/MosaicFeed
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/mstar
+    description: >-
+      Public fork of M*, a universal any-to-any model-serving framework; the fork default branch had no local commits ahead at the 2026-09-08 audit, while Weiping Yan's base64-audio validation and error-mapping fix was merged upstream in PR #235.
+    source_kind: fork
+    category: systems-security
+    languages:
+      - Python
+      - Rust
+      - CUDA
+      - Shell
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/mtap
+    description: >-
+      Exact public fork of MTAP, a gRPC and microservices framework for distributed text analysis; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: systems-security
+    languages:
+      - Python
+      - Java
+      - Go
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/OpenRAM
+    description: >-
+      Exact public fork of VLSIDA's OpenRAM compiler for generating SRAM layouts and characterization artifacts; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: robotics-hardware
+    languages:
+      - Python
+      - Verilog
+      - Tcl
+      - C
+      - Assembly
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/OrchidRec
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/payload-palette
+    source_kind: original
+    category: systems-security
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/PeerMatchLab
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/pisa
+    description: >-
+      Public fork of PISA, a high-performance academic search-index toolkit; the fork default branch had no local commits ahead at the 2026-09-08 audit, while Weiping Yan's scoped-enum WAND configuration change was merged upstream in PR #641.
+    source_kind: fork
+    category: models-data
+    languages:
+      - C++
+      - Python
+      - CMake
+      - Shell
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/processors
+    description: >-
+      Exact public fork of CLU Lab's Natural Language Processors library; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Java
+      - Scala
+      - Python
+      - JavaScript
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/promptwitness
+    source_kind: original
+    category: ai-agents
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/pyserini
+    description: >-
+      Exact public fork of Castorini's Pyserini toolkit for reproducible sparse and dense information retrieval; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Python
+      - Shell
+      - HTML
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/pyterrier
+    description: >-
+      Exact public fork of the PyTerrier framework for declarative information-retrieval experiments; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Jupyter Notebook
+      - Python
+      - Java
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/Regressistor
+    source_kind: original
+    category: robotics-hardware
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/room-replica
+    source_kind: original
+    category: creative-computing
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/SchematicAirlock
+    source_kind: original
+    category: robotics-hardware
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/SimCairn
+    source_kind: original
+    category: robotics-hardware
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/SpiceTrellis
+    source_kind: original
+    category: robotics-hardware
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/splitproof
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/spydrnet
+    description: >-
+      Exact public fork of BYU CCL's SpyDrNet framework for analyzing and transforming FPGA netlists; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: robotics-hardware
+    languages:
+      - Python
+      - Tcl
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/stream-quilt
+    source_kind: original
+    category: systems-security
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/SWE-bench
+    description: >-
+      Exact public fork of the SWE-bench benchmark for evaluating language models on real-world GitHub issues; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: ai4s-research
+    languages:
+      - Python
+      - Shell
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/TopologyLantern
+    source_kind: original
+    category: robotics-hardware
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/transcribe-critic
+    description: >-
+      Exact public fork of transcribe-critic, which merges multiple speech transcripts with LLM adjudication, diarization, and summarization; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: models-data
+    languages:
+      - Python
+    curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/turnscope
+    source_kind: original
+    category: models-data
+    curation_status: curated
+    portfolio_project: true
+
+  - repository: appleweiping/VILA
+    description: >-
+      Exact public fork of NVIDIA's VILA family of vision-language models for edge, data-center, and cloud multimodal tasks; the fork default branch had no commits ahead of upstream at the 2026-09-08 audit.
+    source_kind: fork
+    category: ai4s-research
+    languages:
+      - Python
+      - CUDA
+      - C++
+      - Shell
+    curation_status: curated
+    portfolio_project: false

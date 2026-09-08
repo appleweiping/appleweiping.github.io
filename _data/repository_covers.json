@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
   "owner": "appleweiping",
-  "repository_count": 178,
-  "project_count": 167,
-  "cover_count": 178,
-  "generated_at": "2026-08-30T11:01:25Z",
+  "repository_count": 219,
+  "project_count": 189,
+  "cover_count": 219,
+  "generated_at": "2026-09-08T13:17:37Z",
   "covers": {
+    "github": {
+      "path": "/assets/img/repository-covers/github.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/194b682356eecdee7b3ff69d6567cc8f7f7f7898ce37c2dfe5c77ac2c9d729db/appleweiping/.github",
+      "source_path": "https://github.com/appleweiping/.github",
+      "source_sha256": "d82b7e66c3771d271ac8980d5a3c9df2295f9069571a020818c262093e9d6ac9",
+      "output_sha256": "08de612b2b9d0ffa95bb9e4c34bdc190f93ce1ebcb64356d5065f5312e4df0f8",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "acecue": {
       "path": "/assets/img/repository-covers/acecue.webp",
       "source_type": "demo-screenshot",
@@ -106,6 +118,18 @@
       "license_risk": "low-medium",
       "license_note": "Repository-native upstream documentation gallery under BSD-3-Clause; the catalog explicitly labels this repository as an exact fork of ALIGN-analoglayout/ALIGN-public and does not claim authorship of the illustrated layouts."
     },
+    "allo": {
+      "path": "/assets/img/repository-covers/allo.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/b96843cf255935c09a0ca1017ad671fbcda37abc0eb97fc3202f99dabb25b90e/appleweiping/allo",
+      "source_path": "https://github.com/appleweiping/allo",
+      "source_sha256": "4749336e1007b1b70dba3031a169d8712ccf744df734accf5b4b5b6f8c51c10c",
+      "output_sha256": "b0fd4231e53149df6292323be979a4f7fb0278d001f9b79feef61600f6667081",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "analog-forge-agent": {
       "path": "/assets/img/repository-covers/analog-forge-agent.webp",
       "source_type": "demo-screenshot",
@@ -123,6 +147,18 @@
         "height": 675
       },
       "device_pixel_ratio": 1.0
+    },
+    "anserini": {
+      "path": "/assets/img/repository-covers/anserini.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/1867076f6bba67188e2ad449f5cdafb3bd882964b1b82ada50edcd0712b90323/appleweiping/anserini",
+      "source_path": "https://github.com/appleweiping/anserini",
+      "source_sha256": "0a09c4f114edca56a2bb8c20142fcc0532303df703af2edbe917888db7085e32",
+      "output_sha256": "b18ec722ac9d98097512e1ce9c9c643da507e345dd7a13cb9f294a675b7c8bf5",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
     "appleweiping": {
       "path": "/assets/img/repository-covers/appleweiping.webp",
@@ -246,6 +282,18 @@
       "license_risk": "low",
       "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
+    "biasweave": {
+      "path": "/assets/img/repository-covers/biasweave.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/7ae3a89a0c52c8b1cdedc087bd6ebc1b92d482c61902d693686febcae4328bb7/appleweiping/BiasWeave",
+      "source_path": "https://github.com/appleweiping/BiasWeave",
+      "source_sha256": "65e1086e859369a1c482bc0084d5806354b9c085c7d6109662533180ce577330",
+      "output_sha256": "62f768416a8ec9bf777fe6bb595ca60e56c9528b28619dce132538c04a5be7ab",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "blockverse": {
       "path": "/assets/img/repository-covers/blockverse.webp",
       "source_type": "demo-screenshot",
@@ -323,6 +371,18 @@
         "height": 675
       },
       "device_pixel_ratio": 1.0
+    },
+    "charlib": {
+      "path": "/assets/img/repository-covers/charlib.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/194b682356eecdee7b3ff69d6567cc8f7f7f7898ce37c2dfe5c77ac2c9d729db/appleweiping/CharLib",
+      "source_path": "https://github.com/appleweiping/CharLib",
+      "source_sha256": "93f553bf49b31f3302be7fb67ed125c09215dac7c110e95504240b6b3e578462",
+      "output_sha256": "58fa5743ab11b223de18b14107ebc744e8faa653adb9becb41a81486e66678d6",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
     "claudeseek": {
       "path": "/assets/img/repository-covers/claudeseek.webp",
@@ -476,6 +536,18 @@
       },
       "device_pixel_ratio": 1.0
     },
+    "convokit": {
+      "path": "/assets/img/repository-covers/convokit.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/39b1de986ff9abe61d6a3fb4e48f768090ed8e3b684f5d93d370574fac7c2fbd/appleweiping/ConvoKit",
+      "source_path": "https://github.com/appleweiping/ConvoKit",
+      "source_sha256": "5b5408b64f0116f4c00737199cacdc7cb251a00fbc9442ef2702187cb0218744",
+      "output_sha256": "92c9d6e65c07e495da4d5cd9119a925ca2d8b3ca273fa5e20f9cb86859e267c5",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "cornell-cs3110-ocaml": {
       "path": "/assets/img/repository-covers/cornell-cs3110-ocaml.webp",
       "source_type": "github-repository-preview",
@@ -483,6 +555,18 @@
       "source_path": "https://github.com/appleweiping/cornell-cs3110-ocaml",
       "source_sha256": "3126ae1762d0ad25138bc5b8ddb6e77e1e15a72e8a8deb597c4694794272ceed",
       "output_sha256": "6dac402e06273d6e7d3d1d32b1b0b2894ee21561c61f72660cba6ddf0e5aead5",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "corpusledger": {
+      "path": "/assets/img/repository-covers/corpusledger.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/481b8c259fa202fa5f78b6e9082bb78681c8c366eba6f57b75e0f55cabfb47b1/appleweiping/corpusledger",
+      "source_path": "https://github.com/appleweiping/corpusledger",
+      "source_sha256": "36461d95a7594d406298085344540886f18499b5b9dec1987986c134a9742e06",
+      "output_sha256": "f71516042fb12ac3b57dfcbb1cbf210eda46065b77db5d3a51941a0229897795",
       "width": 960,
       "height": 540,
       "license_risk": "low",
@@ -974,6 +1058,30 @@
       "license_risk": "low",
       "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
+    "evidence-braid": {
+      "path": "/assets/img/repository-covers/evidence-braid.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/3ac4a5e5613a164069de359c2ac69b88b77b32da049c9cb3fb71dd3ac8e423f5/appleweiping/evidence-braid",
+      "source_path": "https://github.com/appleweiping/evidence-braid",
+      "source_sha256": "79c1b4b8d6802571287b29146320adff25b312e8b21b9e9e46a443d6463e9099",
+      "output_sha256": "9932b52621d56592191c4e5e6f463f2cc7c5a1177ed6e0c0d841fb9c0a2d03bc",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "facetroute": {
+      "path": "/assets/img/repository-covers/facetroute.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/2daec4bf4b9ea6df3168d9e7f9705cfe5eaa0a7eacea12fe90d24b23798716a8/appleweiping/FacetRoute",
+      "source_path": "https://github.com/appleweiping/FacetRoute",
+      "source_sha256": "7882f4b54850a5f85051e52f644a1fcf4f12a013b77079450df0bbdac0f5c7c4",
+      "output_sha256": "a106cd4de6df1706a7f3ea131d9b6c58f26333c8fd864f6e6bab13b0e7afbb20",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "flow-matching-6s184": {
       "path": "/assets/img/repository-covers/flow-matching-6s184.webp",
       "source_type": "repository-asset",
@@ -987,6 +1095,20 @@
       "height": 540,
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
+    },
+    "frame-quorum": {
+      "path": "/assets/img/repository-covers/frame-quorum.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/frame-quorum/eaca7505eb812a9cc60f60e342ff5af9e207b499/examples/output/contact-sheet.png",
+      "source_path": "examples/output/contact-sheet.png",
+      "source_commit": "eaca7505eb812a9cc60f60e342ff5af9e207b499",
+      "source_blob": "b3ba2177d41a2e891126d20f63b773d51ebea81c",
+      "source_sha256": "2ba4aaa63486ff1df9f51be5743a61f42b6d6a54060b7775fe3ce4ea2779b7bb",
+      "output_sha256": "7d42f4a282d86c97653b4a7b633665c90642b73b4dbd12b1d09396606dd16c8c",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Repository-generated contact sheet under MIT; source image-sequence provenance remains documented in the repository example."
     },
     "full-stack-open": {
       "path": "/assets/img/repository-covers/full-stack-open.webp",
@@ -1068,6 +1190,20 @@
       "license_risk": "low-medium",
       "license_note": "Repository-native upstream tutorial diagram under MIT; the catalog explicitly labels this repository as an exact fork of ReaLLMASIC/gLayout and does not claim authorship of the diagram."
     },
+    "graph-sail": {
+      "path": "/assets/img/repository-covers/graph-sail.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/graph-sail/3c4b2686426e341d46734451eb55bb9ff6034d19/docs/assets/demo-report.png",
+      "source_path": "docs/assets/demo-report.png",
+      "source_commit": "3c4b2686426e341d46734451eb55bb9ff6034d19",
+      "source_blob": "caa7f7e9280223de20886da34142efef038eb7cc",
+      "source_sha256": "79ea9f0269e96703dbf160b67648152ce45d927efc2ec2669714158441259fe3",
+      "output_sha256": "2e8a820fc29b7d290ca8ba0d501c94bc163a9f8a8ef8dc43e915ad49d6b0cb26",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "Repository-generated scheduling report under the repository MIT license."
+    },
     "haskell-mooc": {
       "path": "/assets/img/repository-covers/haskell-mooc.webp",
       "source_type": "github-repository-preview",
@@ -1079,6 +1215,20 @@
       "height": 540,
       "license_risk": "low",
       "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "highwayvlm": {
+      "path": "/assets/img/repository-covers/highwayvlm.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/HighwayVLM/d9f2571a940ba22a8b93fd475dd58a6add0613de/docs/screenshots/dashboard-corridor-watch.png",
+      "source_path": "docs/screenshots/dashboard-corridor-watch.png",
+      "source_commit": "d9f2571a940ba22a8b93fd475dd58a6add0613de",
+      "source_blob": "7d62171770d0a385e40e4ef5a612eb150f84f8d9",
+      "source_sha256": "f9941ab24b58eb3a14cb2f2ec1bcd0b186e24a53c05a6014f38463ae774309c6",
+      "output_sha256": "3f2b98f862f6c0d4424cf630bd9dc116efbc886f3f8f9c59c779b98daf86d073",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "MIT-licensed upstream application screenshot; the catalog and detail page retain UMN Choi Lab authorship and fork attribution."
     },
     "hit-os": {
       "path": "/assets/img/repository-covers/hit-os.webp",
@@ -1137,6 +1287,18 @@
       "height": 540,
       "license_risk": "medium",
       "license_note": "Repository license exists, but image-specific provenance still needs confirmation."
+    },
+    "indexsail": {
+      "path": "/assets/img/repository-covers/indexsail.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/668a8fac6c279376795608b2f545fbf74e3e41400835e0ab2b1b9775bcf37fa7/appleweiping/IndexSail",
+      "source_path": "https://github.com/appleweiping/IndexSail",
+      "source_sha256": "73e6d2e8071c00f51658352989e12facd0cc8e52ef0449a39e0f86b619fee17b",
+      "output_sha256": "0e10a3bcc555f850867ae27fec9756fee273b8c85643a1f335fcb0d95b699173",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
     "info-theory-mackay": {
       "path": "/assets/img/repository-covers/info-theory-mackay.webp",
@@ -1282,6 +1444,18 @@
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
     },
+    "lkpy": {
+      "path": "/assets/img/repository-covers/lkpy.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/db7dc7c112beffa34f46de28c6727e8ba7097f0279d3694778dac7375c2ba33b/appleweiping/lkpy",
+      "source_path": "https://github.com/appleweiping/lkpy",
+      "source_sha256": "fc4c55d4b5dde5b554a84ed59c4fae6306f72514a6ba2f9a8393071ee8a270d0",
+      "output_sha256": "3837b4c33367e4127048ec41cc7890e5caed1f435f19fbeca02fef8f3a4489e3",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "The official upstream wordmark becomes illegible against the normalized transparent-image background; use the fully attributed GitHub repository preview."
+    },
     "lumen-rec": {
       "path": "/assets/img/repository-covers/lumen-rec.webp",
       "source_type": "repository-asset",
@@ -1313,6 +1487,18 @@
         "height": 675
       },
       "device_pixel_ratio": 1.0
+    },
+    "metricguard": {
+      "path": "/assets/img/repository-covers/metricguard.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/b53a371cb4010be11aa755030cd589b2c9a22386c79cafb72b4258d4c4aae860/appleweiping/metricguard",
+      "source_path": "https://github.com/appleweiping/metricguard",
+      "source_sha256": "82330239452fd5ed8fe70f240f16d27bbb10fe20c4f53f35e8557d760611611d",
+      "output_sha256": "e5a73f9cc18eeed82eaf86963e900dc287bfedeca7f0835fce5649bbce7742d3",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
     "missing-semester": {
       "path": "/assets/img/repository-covers/missing-semester.webp",
@@ -1572,6 +1758,32 @@
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
     },
+    "mmengine": {
+      "path": "/assets/img/repository-covers/mmengine.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/b57f2609f429c064c4c14b4d343a86b1399d77b6b42edd598b695e200d3d92e8/appleweiping/mmengine",
+      "source_path": "https://github.com/appleweiping/mmengine",
+      "source_sha256": "7283adb75752789dbb7665efb42b4f331a5873e41b686b277eb0d082c925f19c",
+      "output_sha256": "52ff7d6f08e12d007095a4e9b910c9074cb7a128b7b0c81be368b345e9325a50",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "mosaicfeed": {
+      "path": "/assets/img/repository-covers/mosaicfeed.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/MosaicFeed/d86da2470e45b9a5812dfa07ef0723fed1b511fc/docs/demo.png",
+      "source_path": "docs/demo.png",
+      "source_commit": "d86da2470e45b9a5812dfa07ef0723fed1b511fc",
+      "source_blob": "faa2c188f7519e689af4961c0932b433edd6f750",
+      "source_sha256": "cc5837221e427a9376ac0ec54efc3c9dbc5236ebb447a01e477c24382013a27d",
+      "output_sha256": "61dd75bfb76bc365d0b2888f70698fb4a906347a2ea4d4f401e1b53549b88a32",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "Repository-generated ranking report under the repository MIT license."
+    },
     "mournwell": {
       "path": "/assets/img/repository-covers/mournwell.webp",
       "source_type": "demo-screenshot",
@@ -1589,6 +1801,32 @@
         "height": 675
       },
       "device_pixel_ratio": 1.0
+    },
+    "mstar": {
+      "path": "/assets/img/repository-covers/mstar.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/mstar-project/mstar/7da29ea207fca1692f0a70a75f36a89ee6386448/assets/mstar-social-dark.png",
+      "source_path": "assets/mstar-social-dark.png",
+      "source_commit": "7da29ea207fca1692f0a70a75f36a89ee6386448",
+      "source_blob": "15b6580ab656846ea11200f5e0682f62444c71d9",
+      "source_sha256": "5f44d73b22d8375ed657a17befd049c167139e3c3fd5605caa6d792fd47f0fe2",
+      "output_sha256": "4c727027f7d7b00457e561f240d06a59e559fa53ae7a8c1316e900f3fc086f98",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Official upstream social card under Apache-2.0; M* authorship remains explicit on the detail page."
+    },
+    "mtap": {
+      "path": "/assets/img/repository-covers/mtap.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/b4fcd94281ccba5ccd874b644c170215b193d7116648532562599b4db624517b/appleweiping/mtap",
+      "source_path": "https://github.com/appleweiping/mtap",
+      "source_sha256": "7a6859f666a32e6eb03435c78ba5c1c99c82f3ace6b5e5531d91b04f8bebfdcd",
+      "output_sha256": "bf014238a51a672827379c0ee42aa9faf640799e07814658cb7defa89536a08e",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
     "nand2tetris": {
       "path": "/assets/img/repository-covers/nand2tetris.webp",
@@ -1720,6 +1958,30 @@
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
     },
+    "openram": {
+      "path": "/assets/img/repository-covers/openram.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/306ab4f34f701a3e2eb73495fa232e31ae705bae20520d78284a92748100008c/appleweiping/OpenRAM",
+      "source_path": "https://github.com/appleweiping/OpenRAM",
+      "source_sha256": "5e99cc9d9db43092e0879a390e0f85542fe7a28729abffeab39267ceed09fe31",
+      "output_sha256": "7c5d6f69a63b88046c3f2eec83ad903f9eafd49ea63173bf00c8f67686d3df3a",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "orchidrec": {
+      "path": "/assets/img/repository-covers/orchidrec.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/bf85f18aa053b1d9d58b7b3b571c2c3987c10a354f47234917bd582758b78ade/appleweiping/OrchidRec",
+      "source_path": "https://github.com/appleweiping/OrchidRec",
+      "source_sha256": "bf4f54eb9674907461e3fc7d7bc685fe53792fe16ee050910f9a082edbf12859",
+      "output_sha256": "2d22ed780f40acef2a2443f6649d5884ac0308b73cea67991d96b8e441109361",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "os-project": {
       "path": "/assets/img/repository-covers/os-project.webp",
       "source_type": "github-repository-preview",
@@ -1776,6 +2038,32 @@
       "license_risk": "low-medium",
       "license_note": "Likely project-generated result/screenshot under a detected license; still retain attribution and verify embedded third-party content."
     },
+    "payload-palette": {
+      "path": "/assets/img/repository-covers/payload-palette.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/7c5e1eef163da870b8180cb743cc1249bdd0e2ec66d9f9d9797a30ccc85ac4b1/appleweiping/payload-palette",
+      "source_path": "https://github.com/appleweiping/payload-palette",
+      "source_sha256": "9f81983d4299d8378b0f288df0e0c943d82167ac98411c017dbd7516a4f6e69a",
+      "output_sha256": "7bd57749bed021afff05dfd518564c7e7f97c39c72ec0f06d88bd39456955658",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "peermatchlab": {
+      "path": "/assets/img/repository-covers/peermatchlab.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/PeerMatchLab/d4a343749020728644cd4a0cc65d0a66d27b9b00/docs/demo.png",
+      "source_path": "docs/demo.png",
+      "source_commit": "d4a343749020728644cd4a0cc65d0a66d27b9b00",
+      "source_blob": "cba9e1cb555a2908df868f493b306e9057ccf776",
+      "source_sha256": "8ba5a20d9289ff775beb8099199ffc58b3e71bea0bee8f403759c80269796096",
+      "output_sha256": "75f3a4d612c5fe05515f029c198f88698ab0c330d1297e9dfa8c3f5d8c987677",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "Repository-generated matching report under the repository MIT license."
+    },
     "periodic-motion-language": {
       "path": "/assets/img/repository-covers/periodic-motion-language.webp",
       "source_type": "github-repository-preview",
@@ -1801,6 +2089,20 @@
       "height": 540,
       "license_risk": "low-medium",
       "license_note": "Repository-native technical diagram in an MIT-licensed research repository; no separate asset license is stated."
+    },
+    "pisa": {
+      "path": "/assets/img/repository-covers/pisa.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/pisa-engine/pisa/ae8cc33b7529664f57076b9f16ae30df18cbc9f5/docs/src/pipeline.png",
+      "source_path": "docs/src/pipeline.png",
+      "source_commit": "ae8cc33b7529664f57076b9f16ae30df18cbc9f5",
+      "source_blob": "68298f37c3fe6d4d9947478d3a87e1ed75693d3a",
+      "source_sha256": "12fe347e2745a32536001cb0d329deac3217d03dedd44df239bbb447adce7358",
+      "output_sha256": "e6e2e45c0a317c360374d99258a940103a2ea1085c736fd106e3f93527620ffd",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Official upstream indexing-pipeline diagram under Apache-2.0; PISA authorship remains explicit on the detail page."
     },
     "pku-software-analysis": {
       "path": "/assets/img/repository-covers/pku-software-analysis.webp",
@@ -1864,6 +2166,56 @@
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
     },
+    "processors": {
+      "path": "/assets/img/repository-covers/processors.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/137a07723b9a6adabc7fba2194a5d296f9519c0f6e1f0f48454e929358507ecd/appleweiping/processors",
+      "source_path": "https://github.com/appleweiping/processors",
+      "source_sha256": "19878c17a5012b5221d1e9edffd4ec78f3aa12a283d755f3a06a56f4e12901d7",
+      "output_sha256": "6106654f7c0c840f498d04270316a4db6cf8f05682cf12f00c7d0b1ec757b9eb",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "promptwitness": {
+      "path": "/assets/img/repository-covers/promptwitness.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/promptwitness/9606fbe0980ef07a16be1883ab8f04ba55ba1754/docs/demo-report.png",
+      "source_path": "docs/demo-report.png",
+      "source_commit": "9606fbe0980ef07a16be1883ab8f04ba55ba1754",
+      "source_blob": "9a8e1c448dab42bb4e9ca6e8083a2aa39b1f3c49",
+      "source_sha256": "ab860a953194829504f07ed0f1fbbe4b99e5301ef5ddcfa241e3d6c16ee3883f",
+      "output_sha256": "4f21506a969d79a36d50e8ded4b487eaf2b064ba043d554c088c1780e0d2c87f",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "Repository-generated audit report under the repository MIT license."
+    },
+    "pyserini": {
+      "path": "/assets/img/repository-covers/pyserini.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/2ea0a7adca6c570eeea38b8f5e27d19a6ae75df1d2862f0e0fd7044d838feb30/appleweiping/pyserini",
+      "source_path": "https://github.com/appleweiping/pyserini",
+      "source_sha256": "24d515a348555ae020d55e9213f8912f8fa2b6f4c9cc2ed1b8ca379c3ac95bf5",
+      "output_sha256": "95b79be1b07aff29fd80f008cab1a24604521f3720d48f1a796c390dce6a2029",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "pyterrier": {
+      "path": "/assets/img/repository-covers/pyterrier.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/6fa32f30fa9b3312a8c89198276b1c7e084198bdc8570df4ca4268333e135dad/appleweiping/pyterrier",
+      "source_path": "https://github.com/appleweiping/pyterrier",
+      "source_sha256": "b867cd3f5a46649d373f8c9d7b35d82485743a18a8d5068b3b3db3ce663ba178",
+      "output_sha256": "29ce942e883834ac7d8e14241ae0b7f79d3382a422cc1c4fdaa52049f8f92aea",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "red-horizon-rts": {
       "path": "/assets/img/repository-covers/red-horizon-rts.webp",
       "source_type": "repository-asset",
@@ -1877,6 +2229,18 @@
       "height": 540,
       "license_risk": "medium",
       "license_note": "Repository license exists, but image-specific provenance still needs confirmation."
+    },
+    "regressistor": {
+      "path": "/assets/img/repository-covers/regressistor.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/7ae3a89a0c52c8b1cdedc087bd6ebc1b92d482c61902d693686febcae4328bb7/appleweiping/Regressistor",
+      "source_path": "https://github.com/appleweiping/Regressistor",
+      "source_sha256": "426f5384124dc1e6087b9c0a214401ffed648702cd933639b8e70b667254202e",
+      "output_sha256": "22e8791613976bbf1b544008c0d7b6e6b854e499f67617a86e775ae8b61ec767",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
     "resynthesis-watermark-limits": {
       "path": "/assets/img/repository-covers/resynthesis-watermark-limits.webp",
@@ -1897,6 +2261,32 @@
       "source_path": "https://github.com/appleweiping/riskcal-rlvr",
       "source_sha256": "927fc71ed1ff42d37e3998d6340649de03d0093aaf868713bf28ca4df82ef46d",
       "output_sha256": "b63bb2e2d36ab2cdd7b7155b60902624db51b0b51a726058d10a1f61ccb8ad9d",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "room-replica": {
+      "path": "/assets/img/repository-covers/room-replica.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/room-replica/c04b28f2b1d40530e7eef8911217aa4cf5cf909b/renders/overview.jpg",
+      "source_path": "renders/overview.jpg",
+      "source_commit": "c04b28f2b1d40530e7eef8911217aa4cf5cf909b",
+      "source_blob": "31ab92e99beb82fb02f3ed7358382f29d5aaadff",
+      "source_sha256": "ac05feb3f97e34133c5690b3b1fda36957f983a2c4c75cac01e6e9ff74f6b741",
+      "output_sha256": "88d728860c0f7236a556afeff5d4c95395b9cb097fc69260eeb56043152893a2",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low-medium",
+      "license_note": "Project-native Cycles render; the repository documents the user-supplied reference photographs and asset provenance."
+    },
+    "schematicairlock": {
+      "path": "/assets/img/repository-covers/schematicairlock.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/09eec425e0d6d9083534d2936a6443d6eadde38bb37808f5a8e8451bae9fb6d8/appleweiping/SchematicAirlock",
+      "source_path": "https://github.com/appleweiping/SchematicAirlock",
+      "source_sha256": "b9b84f4e22c4f3bf4fe6cb5324ae216e37cbccf73420404837f3d3b2c7d2af8a",
+      "output_sha256": "e0654366e591df636b9d3dcbd8c41befef439b58caf1d4abe119754913be49c1",
       "width": 960,
       "height": 540,
       "license_risk": "low",
@@ -1932,6 +2322,18 @@
       "license_risk": "low",
       "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
+    "simcairn": {
+      "path": "/assets/img/repository-covers/simcairn.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/baf4aa7a9c09be0a672ee8561aac13c21ed831b34375593a772f3a790e7582f1/appleweiping/SimCairn",
+      "source_path": "https://github.com/appleweiping/SimCairn",
+      "source_sha256": "de5b54efb9da5af1c039bbd1df437c118e8f82d2fc1778d53203761b7ab92c0a",
+      "output_sha256": "c0450a81175d64b51dae5f905fa536317817d7ff046798ec334ab517f1b07904",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "sjtu-compilers": {
       "path": "/assets/img/repository-covers/sjtu-compilers.webp",
       "source_type": "github-repository-preview",
@@ -1961,6 +2363,42 @@
         "height": 675
       },
       "device_pixel_ratio": 1.0
+    },
+    "spicetrellis": {
+      "path": "/assets/img/repository-covers/spicetrellis.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/b8a6121d6b719751d81a013b7d011d897ecbf7baefec852e6a5b86652b92f650/appleweiping/SpiceTrellis",
+      "source_path": "https://github.com/appleweiping/SpiceTrellis",
+      "source_sha256": "b59eeaf150748680df57a8cf9da2f548b6e9986d5d138e516c3a7a2a7d180199",
+      "output_sha256": "1bde8c234c67a922caa4ec9df18b4de9933592e694bddb935ad695cd88a2d87a",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "splitproof": {
+      "path": "/assets/img/repository-covers/splitproof.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/2357157882c50b2920b2ab45e4bbfec78a07b655be35e499476094bfb7680fdb/appleweiping/splitproof",
+      "source_path": "https://github.com/appleweiping/splitproof",
+      "source_sha256": "07409784cb602cf7897862950aea9012d651a3b54952bbc5752b7f9983ffd588",
+      "output_sha256": "702a042905002aa4809d299992ee8dabe6853a4ae45d28a5b393b2df46932280",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "spydrnet": {
+      "path": "/assets/img/repository-covers/spydrnet.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/e0cecdedff97ae0b41ea8d23dabe9316a84ddacc6e930fa403ab58dba0a89345/appleweiping/spydrnet",
+      "source_path": "https://github.com/appleweiping/spydrnet",
+      "source_sha256": "8ce0e1e829554490fde92cb789b9a5f0009d61fa03cedfd4c908821e15597e00",
+      "output_sha256": "bb2adf097cda283ea9001475e4b8a78790cd68ae90cd581e9af1329350a4b325",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
     "sta4273-min-expectations": {
       "path": "/assets/img/repository-covers/sta4273-min-expectations.webp",
@@ -2080,6 +2518,32 @@
       "license_risk": "high",
       "license_note": "Reproduction/coursework repository: repository license may not cover upstream course, dataset, or artwork assets."
     },
+    "stream-quilt": {
+      "path": "/assets/img/repository-covers/stream-quilt.webp",
+      "source_type": "repository-asset",
+      "source_url": "https://raw.githubusercontent.com/appleweiping/stream-quilt/ac443a9d17509a4009aee65cf3f0de29947764e5/docs/assets/demo-timeline.png",
+      "source_path": "docs/assets/demo-timeline.png",
+      "source_commit": "ac443a9d17509a4009aee65cf3f0de29947764e5",
+      "source_blob": "a7f6da168e621730328e400fe8bca7dd2fcbf3fc",
+      "source_sha256": "57d58dfe096d6ab0efc43ecdf6f172df3e7b14b3dd04cb0a2713a73ab9bbe62c",
+      "output_sha256": "70701f27882c7497cf5eeadcfc160104212b817db3eafac0d06cfa90539d58ce",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "Repository-generated event timeline under the repository MIT license."
+    },
+    "swe-bench": {
+      "path": "/assets/img/repository-covers/swe-bench.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/e65313aa92fdfb990cf0271fd6dd70a9700a102fd872637f7a61f3f7438563bf/appleweiping/SWE-bench",
+      "source_path": "https://github.com/appleweiping/SWE-bench",
+      "source_sha256": "c3328c7cd33625c89c5eece674199fcdcefa306f9821a02ec6f07400723e75ba",
+      "output_sha256": "e72a33916207c5b698b207316914d338f5d0ebb0839e413069c7f15557e4439d",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "sysadmin-decal": {
       "path": "/assets/img/repository-covers/sysadmin-decal.webp",
       "source_type": "github-repository-preview",
@@ -2160,6 +2624,18 @@
       "license_risk": "low-medium",
       "license_note": "Likely project-generated result/screenshot under a detected license; still retain attribution and verify embedded third-party content."
     },
+    "topologylantern": {
+      "path": "/assets/img/repository-covers/topologylantern.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/96708e2487c0026c6b56025df964fead349d70c543d93de7ee2ad96aef42c3c9/appleweiping/TopologyLantern",
+      "source_path": "https://github.com/appleweiping/TopologyLantern",
+      "source_sha256": "00d41bc6e4bdf55a862c5b0ac926c2cd25a9958c8dd1b822db52702d3619746a",
+      "output_sha256": "94d079ae24d0f93b34a6311faf5b79b7e9a50cff54bd8a6887fe817ae48dee55",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "tracecausal": {
       "path": "/assets/img/repository-covers/tracecausal.webp",
       "source_type": "github-repository-preview",
@@ -2172,6 +2648,18 @@
       "license_risk": "low",
       "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
     },
+    "transcribe-critic": {
+      "path": "/assets/img/repository-covers/transcribe-critic.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/e0cecdedff97ae0b41ea8d23dabe9316a84ddacc6e930fa403ab58dba0a89345/appleweiping/transcribe-critic",
+      "source_path": "https://github.com/appleweiping/transcribe-critic",
+      "source_sha256": "427767fcbf9133433baa65134e061a949eeab6a5f4794bd577978cd3ed494c32",
+      "output_sha256": "03e0243b767ee38c1a4425bdb297610b2d4b4a8600109f38e90cd3e1923d8f6a",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
     "truce-rec": {
       "path": "/assets/img/repository-covers/truce-rec.webp",
       "source_type": "github-repository-preview",
@@ -2179,6 +2667,18 @@
       "source_path": "https://github.com/appleweiping/TRUCE-Rec",
       "source_sha256": "6d5360bf3746aae49f56b249f077c379411422b7d4801ea785418938fbe39ed0",
       "output_sha256": "ebf76f104a70410f68a8f165e0a40bc943e0fb661a3fbb97ca168a4a6d7aae20",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "turnscope": {
+      "path": "/assets/img/repository-covers/turnscope.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/ee4947a3b74fd8821f82b983d8b86068603965f2252b6a9bcf59d2a31b6d92d3/appleweiping/turnscope",
+      "source_path": "https://github.com/appleweiping/turnscope",
+      "source_sha256": "df8be5d51129ad9e45cbc2f7f5782d07ab37ae257d48a34d58a0c032c02354a4",
+      "output_sha256": "0c83e72f4062d12111b040b71066201fff7f86df37ba0f628e977aecea8a5f65",
       "width": 960,
       "height": 540,
       "license_risk": "low",
@@ -2337,6 +2837,18 @@
       "source_path": "https://github.com/appleweiping/venus-basestation",
       "source_sha256": "32132e6e114a5a548ed4d0548357aa3b9f5394f9698ee6e9ec624542e4eb7913",
       "output_sha256": "5475228d7ab6d519f807c41a54b151a886f2c8b1aabf9f3ec8e09b80ab79c4c1",
+      "width": 960,
+      "height": 540,
+      "license_risk": "low",
+      "license_note": "GitHub-generated social preview for this public repository, downloaded and locally pinned; no synthetic project artwork."
+    },
+    "vila": {
+      "path": "/assets/img/repository-covers/vila.webp",
+      "source_type": "github-repository-preview",
+      "source_url": "https://opengraph.githubassets.com/df20ebc1d041d09b033595e44d6199be342d97b92a62a88b371fa93b1d1dfed8/appleweiping/VILA",
+      "source_path": "https://github.com/appleweiping/VILA",
+      "source_sha256": "9814314d9a4ed386097c76f23da012923bb40338c9e023ae5b1d900342717215",
+      "output_sha256": "c66b4a23d9d162b91c42c1116afdfd1aa4f79ce27931978ae47bb0d63521a82b",
       "width": 960,
       "height": 540,
       "license_risk": "low",

@@ -30,7 +30,7 @@ localized_selected_papers: true
 localized_social: true
 ---
 
-私は **Weiping Yan（闫维平）**です。機械学習、科学的探究、工学設計の交差領域に取り組む学部研究者です。[デルフト工科大学](https://www.tudelft.nl/en/)と[アイントホーフェン工科大学](https://www.tue.nl/en/)で、コンピュータ科学・工学、電気工学、応用物理を並行して学んできました。[ミネソタ大学 College of Science and Engineering](https://cse.umn.edu/) に入学予定の学部生で、この移行は **2026年9月8日**に開始する予定です。本サイトでは、これをすでに始まった在籍・職歴として扱わず、まだ確定していないミネソタ大学での専攻も記載しません。
+私は **Weiping Yan（闫维平）**です。機械学習、科学的探究、工学設計の交差領域に取り組む学部研究者です。[デルフト工科大学](https://www.tudelft.nl/en/)と[アイントホーフェン工科大学](https://www.tue.nl/en/)で、コンピュータ科学・工学、電気工学、応用物理を並行して学んできました。この期間のうち2025–2026年、編入前に [TU/e Honors Academy — Honors Bachelor Program](https://educationguide.tue.nl/programs/honors-academy) に参加しました。[ミネソタ大学 College of Science and Engineering](https://cse.umn.edu/) に入学予定の学部生で、この移行は **2026年9月8日**に開始する予定です。本サイトでは、これをすでに始まった在籍・職歴として扱わず、まだ確定していないミネソタ大学での専攻も記載しません。
 
 現在関心を持っている分野は、[人工知能](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence)、[自然言語処理](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing)、[マイクロエレクトロニクス](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics)、[電子設計自動化](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation)です。問題設定の明確さ、再現可能な証拠、完了済みの成果と進行中の研究を区別することを重視しています。
 

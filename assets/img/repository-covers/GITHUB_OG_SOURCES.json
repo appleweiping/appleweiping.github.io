@@ -1,720 +1,884 @@
 {
   "schema_version": 1,
   "owner": "appleweiping",
-  "synced_at": "2026-08-30T10:52:57Z",
-  "repository_count": 178,
+  "synced_at": "2026-09-08T12:49:32Z",
+  "repository_count": 219,
   "repositories": {
+    "github": {
+      "repository": "appleweiping/.github",
+      "open_graph_image_url": "https://opengraph.githubassets.com/194b682356eecdee7b3ff69d6567cc8f7f7f7898ce37c2dfe5c77ac2c9d729db/appleweiping/.github"
+    },
     "acecue": {
       "repository": "appleweiping/acecue",
-      "open_graph_image_url": "https://opengraph.githubassets.com/cc64e5f74a7fa8cd8b26c54b3eb5eed155303c0317f71036abfb8c44fb1e2bf0/appleweiping/acecue"
+      "open_graph_image_url": "https://opengraph.githubassets.com/afc8f74997d0f02d99ba9f6b6af54dea445ed9a5819a61fb49183de6569f84e9/appleweiping/acecue"
     },
     "agent-resource": {
       "repository": "appleweiping/AGENT_RESOURCE",
-      "open_graph_image_url": "https://opengraph.githubassets.com/833c4164fb4f33a143067fa9f1fc7b18200ec3d7a0c3b8db0433760cc3c1f065/appleweiping/AGENT_RESOURCE"
+      "open_graph_image_url": "https://opengraph.githubassets.com/047f1d183c663b5e735f37817f56372f755172e26ba8c500511da263773f1c3b/appleweiping/AGENT_RESOURCE"
     },
     "agentic-science": {
       "repository": "appleweiping/AGENTIC_SCIENCE",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c68a6ca9b77f16b423103a5fdd251e23989b30ba869d4eadcb5e59856a02dc62/appleweiping/AGENTIC_SCIENCE"
+      "open_graph_image_url": "https://opengraph.githubassets.com/6774b56656e2d258bf11199210dedc7441812c2e361e89f4d880aa7c2e40592b/appleweiping/AGENTIC_SCIENCE"
     },
     "ai-mirror": {
       "repository": "appleweiping/ai-mirror",
-      "open_graph_image_url": "https://opengraph.githubassets.com/8120946e802500aa540c78e8b0311693f3e366791ee4819fbf0994e63bbbc3b2/appleweiping/ai-mirror"
+      "open_graph_image_url": "https://opengraph.githubassets.com/5b0a8038763ccbd0f6ef340bf0b004f068b5a10a44fc950dde72bcd84555bc95/appleweiping/ai-mirror"
     },
     "aics-labs": {
       "repository": "appleweiping/aics-labs",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9edd7b069a010798c2ef76f4a403b80fd438514e4bbe1c85dd4631d859092685/appleweiping/aics-labs"
+      "open_graph_image_url": "https://opengraph.githubassets.com/23ea31b4fb4324fc0e8b2031b9159132990e64ce9604ef83f5aaafeddc885693/appleweiping/aics-labs"
     },
     "aide-dev": {
       "repository": "appleweiping/AIDE_DEV",
-      "open_graph_image_url": "https://opengraph.githubassets.com/08fb2db8fffa05c7d20b84c82f6a703e01b0b375e1ae83ea6d14208f8eac27dd/appleweiping/AIDE_DEV"
+      "open_graph_image_url": "https://opengraph.githubassets.com/acc3a19d6f13fe693133d9adfe9eea7fbb87e890cad4332cfeaaacf87c5e47b7/appleweiping/AIDE_DEV"
     },
     "align-public": {
       "repository": "appleweiping/ALIGN-public",
-      "open_graph_image_url": "https://opengraph.githubassets.com/809e8183872dc5056e7784045a8bd6b7dbb41a118c2f1687f1bf874981326651/appleweiping/ALIGN-public"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c9405d7e10e0c9274436fdaa55a8080ee117b52c5fcf2861d0cffa60b906e6eb/appleweiping/ALIGN-public"
+    },
+    "allo": {
+      "repository": "appleweiping/allo",
+      "open_graph_image_url": "https://opengraph.githubassets.com/b96843cf255935c09a0ca1017ad671fbcda37abc0eb97fc3202f99dabb25b90e/appleweiping/allo"
     },
     "analog-forge-agent": {
       "repository": "appleweiping/analog-forge-agent",
-      "open_graph_image_url": "https://opengraph.githubassets.com/39382d696f654e3ba4c40d34196e35ad0686ccf4ba8cc6b1694b1818bd964fdc/appleweiping/analog-forge-agent"
+      "open_graph_image_url": "https://opengraph.githubassets.com/7033dab5d6347655544faacec9a5db76fcb05833e7cd68fcd361558d2b71a324/appleweiping/analog-forge-agent"
+    },
+    "anserini": {
+      "repository": "appleweiping/anserini",
+      "open_graph_image_url": "https://opengraph.githubassets.com/1867076f6bba67188e2ad449f5cdafb3bd882964b1b82ada50edcd0712b90323/appleweiping/anserini"
     },
     "appleweiping": {
       "repository": "appleweiping/appleweiping",
-      "open_graph_image_url": "https://opengraph.githubassets.com/33bb0f54e1fffd260ad343215fcda04c29ff05f36d14e506e77ba1c1ebaed81a/appleweiping/appleweiping"
+      "open_graph_image_url": "https://opengraph.githubassets.com/3cbec3ecbea1dbe6ba35ebf171c9be9b85238efdfbaf4c740e7ae4496593097b/appleweiping/appleweiping"
     },
     "appleweiping-github-io": {
       "repository": "appleweiping/appleweiping.github.io",
-      "open_graph_image_url": "https://opengraph.githubassets.com/d1d5450949fece1f4f6c81280f1f8838d182f6132290dafd53cdaa760c3c4a3e/appleweiping/appleweiping.github.io"
+      "open_graph_image_url": "https://opengraph.githubassets.com/614fbaec752e56d1147def8f8a30b5825f8aa1eed00dd8a0831a3945f2bdd8b0/appleweiping/appleweiping.github.io"
     },
     "art-history-museum": {
       "repository": "appleweiping/art-history-museum",
-      "open_graph_image_url": "https://opengraph.githubassets.com/090c1b8cc380c673e53a94751ce70653fbb0cdc89c885f681aa7cce3b60455d4/appleweiping/art-history-museum"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c7772808801dd55d1c44a188fbbc440a25e9f4ebad6cceecb0e7da35a172dcbb/appleweiping/art-history-museum"
     },
     "asu-cse365": {
       "repository": "appleweiping/asu-cse365",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2bab6ea268d81b32d6cf6ba416e930695b2b2c7285e6c8cd9690cfa03427d225/appleweiping/asu-cse365"
+      "open_graph_image_url": "https://opengraph.githubassets.com/ef95a7f995c087b56a2f680521e9b7eaad4e46d805be0f7672c121a02af08f6f/appleweiping/asu-cse365"
     },
     "asu-cse466": {
       "repository": "appleweiping/asu-cse466",
-      "open_graph_image_url": "https://opengraph.githubassets.com/661065001c51a38f64bfa022bc933d307c86c41a02d7f430349246492d766a03/appleweiping/asu-cse466"
+      "open_graph_image_url": "https://opengraph.githubassets.com/fd1b10b300971952d780d522fb5b915448f587b93816f028b66a209db0f50b5d/appleweiping/asu-cse466"
     },
     "aut-ap1400": {
       "repository": "appleweiping/aut-ap1400",
-      "open_graph_image_url": "https://opengraph.githubassets.com/7945e7aec2ea7b9493bfa34d2e01482f2aff6ae299f625f8ec89841b3789f632/appleweiping/aut-ap1400"
+      "open_graph_image_url": "https://opengraph.githubassets.com/9b5d3bfeb81f17acbf5cfdfbfef903d89bede1aa218b70e7ed54136b7cc2f838/appleweiping/aut-ap1400"
     },
     "auto-claude-code-research-in-sleep": {
       "repository": "appleweiping/Auto-claude-code-research-in-sleep",
-      "open_graph_image_url": "https://opengraph.githubassets.com/aa4a8749775235e206c35280e5b6be0f6e46dcefe7eb0e9b1bf9eeb4102bfeef/appleweiping/Auto-claude-code-research-in-sleep"
+      "open_graph_image_url": "https://opengraph.githubassets.com/0596cbf82402250f1bd04195afd7f1afe0d6417023c4347aaaac467cacc15d48/appleweiping/Auto-claude-code-research-in-sleep"
     },
     "autonomous-robotics-project": {
       "repository": "appleweiping/Autonomous-Robotics-Project",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b9123cf71cad01abd2a7afbb511ee6b02cfdd5aa8b6ab663dfbdd6dfec3638da/appleweiping/Autonomous-Robotics-Project"
+      "open_graph_image_url": "https://opengraph.githubassets.com/ee08d244571c9f5fb2f21dcda8aa7c4414f3fc6ba920f1d659e18fb4dae065c2/appleweiping/Autonomous-Robotics-Project"
     },
     "autoresearchclaw": {
       "repository": "appleweiping/AutoResearchClaw",
-      "open_graph_image_url": "https://opengraph.githubassets.com/e7e2477c954a5891a8d950d3b10642097dbb43191ba7f90193f001107e970ed0/appleweiping/AutoResearchClaw"
+      "open_graph_image_url": "https://opengraph.githubassets.com/16889486a498122f8c120db7afc8e55bd6654c3f8a869ce7b997d816591cf59a/appleweiping/AutoResearchClaw"
+    },
+    "biasweave": {
+      "repository": "appleweiping/BiasWeave",
+      "open_graph_image_url": "https://opengraph.githubassets.com/7ae3a89a0c52c8b1cdedc087bd6ebc1b92d482c61902d693686febcae4328bb7/appleweiping/BiasWeave"
     },
     "blockverse": {
       "repository": "appleweiping/blockverse",
-      "open_graph_image_url": "https://opengraph.githubassets.com/0c1c425e0667f54ab81a09228d7b0d61fa9ff0af21be0cb8b7202834b95e7d16/appleweiping/blockverse"
+      "open_graph_image_url": "https://opengraph.githubassets.com/56b7d8bc69e265a8abc020539e80c47b322341db626e17a5f13ded0022092141/appleweiping/blockverse"
     },
     "cadenza": {
       "repository": "appleweiping/cadenza",
-      "open_graph_image_url": "https://opengraph.githubassets.com/1e60498eb3a5124a180443376c61a37e0fc33f36f2fa8e5a920ea9be5b92f143/appleweiping/cadenza"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4e1bb08f351303df40f3af3e39ebd27c781851a373ac71de29d6c09842d73602/appleweiping/cadenza"
     },
     "caltech-cs122-nanodb": {
       "repository": "appleweiping/caltech-cs122-nanodb",
-      "open_graph_image_url": "https://opengraph.githubassets.com/1499615747e65fea8bf0f18e101c52f89442040d5d268660b125656149eaaccb/appleweiping/caltech-cs122-nanodb"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f3a591f5ffaa629f45101ebd50774f468f89206e028fb241620b86b3814156a7/appleweiping/caltech-cs122-nanodb"
     },
     "cambridge-semantics": {
       "repository": "appleweiping/cambridge-semantics",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b3ee866ac73b8357b6fc6f3ed4e565cbf8a2456cb1fbc2433f11f22cfbb9bc8f/appleweiping/cambridge-semantics"
+      "open_graph_image_url": "https://opengraph.githubassets.com/dc68031f2e4b1696126a316e23337e5c077bda12e4498648d4aee04b092e9472/appleweiping/cambridge-semantics"
     },
     "causalpilot": {
       "repository": "appleweiping/causalpilot",
-      "open_graph_image_url": "https://opengraph.githubassets.com/eef7ae8d01c406f18207eea92a4563b81d4b0dd24fee03f09785282be29dd9a3/appleweiping/causalpilot"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c39ab3e2cf63e37eed7b131f7c550de072e802a39df32a7194389d17e4722ddf/appleweiping/causalpilot"
+    },
+    "charlib": {
+      "repository": "appleweiping/CharLib",
+      "open_graph_image_url": "https://opengraph.githubassets.com/194b682356eecdee7b3ff69d6567cc8f7f7f7898ce37c2dfe5c77ac2c9d729db/appleweiping/CharLib"
     },
     "claudeseek": {
       "repository": "appleweiping/claudeseek",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2caa6e953135f356a75da87b9cb9927eb465c1ee5965178b65f6ebe90074e2d2/appleweiping/claudeseek"
+      "open_graph_image_url": "https://opengraph.githubassets.com/1c5af4651138d474f2d54675661ccfd1571978fbdca77db39631f39289bfca86/appleweiping/claudeseek"
     },
     "cmu-15445-bustub": {
       "repository": "appleweiping/cmu-15445-bustub",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2abf485db3c8737f1a7f1daccad13b8247b8bb87fe6fbdd9e756578266650568/appleweiping/cmu-15445-bustub"
+      "open_graph_image_url": "https://opengraph.githubassets.com/5d4449bdfc60f66875dfb0dc0149a24bad0633fcc300ff25a59cf2a95f553133/appleweiping/cmu-15445-bustub"
     },
     "cmu-15462-scotty3d": {
       "repository": "appleweiping/cmu-15462-scotty3d",
-      "open_graph_image_url": "https://opengraph.githubassets.com/76345ff33e0d4a002326429afa60af185f163f3d932c50a16b31221f81b071fd/appleweiping/cmu-15462-scotty3d"
+      "open_graph_image_url": "https://opengraph.githubassets.com/9fb775b9f4a20818a1a7c3b8030f590facb60869f03d49587e5911ad0a782264/appleweiping/cmu-15462-scotty3d"
     },
     "cmu-15799": {
       "repository": "appleweiping/cmu-15799",
-      "open_graph_image_url": "https://opengraph.githubassets.com/49c656f3dc77aae9ad544b6ab0a2274a5b5b4aaf579fc3ddfaefd89742d5e6b0/appleweiping/cmu-15799"
+      "open_graph_image_url": "https://opengraph.githubassets.com/18ca4851516f38b9c9322b8e763f3d85cea5cb98295a3549be0cb21063d9f12e/appleweiping/cmu-15799"
     },
     "cmu-17803-empirical": {
       "repository": "appleweiping/cmu-17803-empirical",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9d886ff00b0ca594761794a32d4863b5fcf358fff063d5ff7d45bd922702c1a2/appleweiping/cmu-17803-empirical"
+      "open_graph_image_url": "https://opengraph.githubassets.com/5ba3d41c37561f43c67545541175b4faa33a2b6fc899b7a2985a7c492a3e9bfb/appleweiping/cmu-17803-empirical"
     },
     "cmu10708-pgm": {
       "repository": "appleweiping/cmu10708-pgm",
-      "open_graph_image_url": "https://opengraph.githubassets.com/54eba8f11b51c2795058490180177b9d851ba3ba79fb5f92a867d9a7fd84e6e6/appleweiping/cmu10708-pgm"
+      "open_graph_image_url": "https://opengraph.githubassets.com/39208e8b14bd75da2e8a84ba787f877a254745a5afc73ca3871c3e2b84b9ad97/appleweiping/cmu10708-pgm"
     },
     "cmu11667-llms": {
       "repository": "appleweiping/cmu11667-llms",
-      "open_graph_image_url": "https://opengraph.githubassets.com/8d42b4bf26d7ace248b5c5ca6ddb32e3f9eaca8fa80169a6fdaf928f10a0660e/appleweiping/cmu11667-llms"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d800733f0c163d499c42980c3a048f1aa60f11e3e34b7e013b622bd0b13bdfe9/appleweiping/cmu11667-llms"
     },
     "cmu11711-anlp": {
       "repository": "appleweiping/cmu11711-anlp",
-      "open_graph_image_url": "https://opengraph.githubassets.com/48e1a89de3a98d94267265abbeff46572e82c1468716d198c4b69d86cc077f37/appleweiping/cmu11711-anlp"
+      "open_graph_image_url": "https://opengraph.githubassets.com/8775c136a1253edf6ee84bc0df44e547bc2f2cab2d0273b7f8fe15d7be1bc282/appleweiping/cmu11711-anlp"
     },
     "cmu11785-idl": {
       "repository": "appleweiping/cmu11785-idl",
-      "open_graph_image_url": "https://opengraph.githubassets.com/337839b5449b17d701e246ecbeaf7dd7fff62431791fa0cc2e2cfb539fdd00a9/appleweiping/cmu11785-idl"
+      "open_graph_image_url": "https://opengraph.githubassets.com/83b089f7b4714bdc2d76276a3762505cbe7277801565492639373ddd474db87b/appleweiping/cmu11785-idl"
     },
     "cmu11868-llm-systems": {
       "repository": "appleweiping/cmu11868-llm-systems",
-      "open_graph_image_url": "https://opengraph.githubassets.com/bb55f35d9265daa4fc6e0605f63ffec7efbf715b9284d316110f6672e818a306/appleweiping/cmu11868-llm-systems"
+      "open_graph_image_url": "https://opengraph.githubassets.com/2318c561e8effc61386acde386699dd419398697b04fc43ced5385065a63bc98/appleweiping/cmu11868-llm-systems"
     },
     "content-flywheel": {
       "repository": "appleweiping/content-flywheel",
-      "open_graph_image_url": "https://opengraph.githubassets.com/849cae011b1a2c7304b7b0fd8a47e75fe50742303c46f736dba300d03e5cb9f0/appleweiping/content-flywheel"
+      "open_graph_image_url": "https://opengraph.githubassets.com/7adbf991a50a08ea76b6f75d787a377cca17b9626022b3a6423179c7aec8f5ea/appleweiping/content-flywheel"
+    },
+    "convokit": {
+      "repository": "appleweiping/ConvoKit",
+      "open_graph_image_url": "https://opengraph.githubassets.com/39b1de986ff9abe61d6a3fb4e48f768090ed8e3b684f5d93d370574fac7c2fbd/appleweiping/ConvoKit"
     },
     "cornell-cs3110-ocaml": {
       "repository": "appleweiping/cornell-cs3110-ocaml",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b60ba279241472c7dd22080396502b2913f4396449781f6bebcf89f5409313fb/appleweiping/cornell-cs3110-ocaml"
+      "open_graph_image_url": "https://opengraph.githubassets.com/313351ba9c78c63af52a62d225f6fb7fafff185fe68b7a4d1bee55f7fff3a0b5/appleweiping/cornell-cs3110-ocaml"
+    },
+    "corpusledger": {
+      "repository": "appleweiping/corpusledger",
+      "open_graph_image_url": "https://opengraph.githubassets.com/481b8c259fa202fa5f78b6e9082bb78681c8c366eba6f57b75e0f55cabfb47b1/appleweiping/corpusledger"
     },
     "cs106b": {
       "repository": "appleweiping/cs106b",
-      "open_graph_image_url": "https://opengraph.githubassets.com/85919b2b04931191985a6ba03e625e50bbefd96a2d7655f167d952194ca513a9/appleweiping/cs106b"
+      "open_graph_image_url": "https://opengraph.githubassets.com/bc4e7ceb3f11bd9501394e42e0542b3a736e54694b0e5c5bc1220fdf7798454f/appleweiping/cs106b"
     },
     "cs106l": {
       "repository": "appleweiping/cs106l",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ceb9c5ae121108d43b5b544e89e8de1f454bc2b123cb765a1fa2d24c909876d9/appleweiping/cs106l"
+      "open_graph_image_url": "https://opengraph.githubassets.com/2ad137899f087f75d7a30f002dad26ea4911d7ede26ff899b78537d6d33f586f/appleweiping/cs106l"
     },
     "cs110l-rust": {
       "repository": "appleweiping/cs110l-rust",
-      "open_graph_image_url": "https://opengraph.githubassets.com/676e1602ecc26fe276dfcb4c57a732e8e9720e910d5ee58d0a291e23dca10c64/appleweiping/cs110l-rust"
+      "open_graph_image_url": "https://opengraph.githubassets.com/a045f3eb57a30b5bd4a2f4b44e4ec4722004c234ab62a6c037cfc61295ff8d8a/appleweiping/cs110l-rust"
     },
     "cs144-tcp": {
       "repository": "appleweiping/cs144-tcp",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c6a488c08ae7ecd1b685770a80119baa38b3e1ac32d95acf62843423c273fa55/appleweiping/cs144-tcp"
+      "open_graph_image_url": "https://opengraph.githubassets.com/8c89a4e4c36d60275e9ca7bcebce180d02bfa520063b7c94e2c1650abce70275/appleweiping/cs144-tcp"
     },
     "cs149-parallel": {
       "repository": "appleweiping/cs149-parallel",
-      "open_graph_image_url": "https://opengraph.githubassets.com/f0dd07d610ad15150587383b7941ab4886259a9417f45d4633c6fdd425fdc57e/appleweiping/cs149-parallel"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4ceb5000984caff963d98dcf6a87c5fac22889dfcea0d7006c3925c34e19740b/appleweiping/cs149-parallel"
     },
     "cs162-pintos": {
       "repository": "appleweiping/cs162-pintos",
-      "open_graph_image_url": "https://opengraph.githubassets.com/d2815e1ba067a594e0fe537aa14a7e1b00794a99ee8e5542dc973f93eaf55e2e/appleweiping/cs162-pintos"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c91f4a9069c7bce4e3d5a2835e1ad547efeb997b7d4f4bc4cb6769e2a23a1f29/appleweiping/cs162-pintos"
     },
     "cs168-internet": {
       "repository": "appleweiping/cs168-internet",
-      "open_graph_image_url": "https://opengraph.githubassets.com/32ec76d292fbd3630ce541d05266704100b387547656ef2728768d179c10bcfb/appleweiping/cs168-internet"
+      "open_graph_image_url": "https://opengraph.githubassets.com/297711b0a0b81b1e8cee7c66f5f210db84817fed9d4187b3b62d1e19b54657de/appleweiping/cs168-internet"
     },
     "cs169-agile": {
       "repository": "appleweiping/cs169-agile",
-      "open_graph_image_url": "https://opengraph.githubassets.com/983f66a878bbdaa66f6758b52bf10310e3a401235357169a9924c76eea3b94b6/appleweiping/cs169-agile"
+      "open_graph_image_url": "https://opengraph.githubassets.com/6c098edaded3485d73f6a4d1d1705277a137f6b637204dde217d7faed491db3d/appleweiping/cs169-agile"
     },
     "cs170": {
       "repository": "appleweiping/cs170",
-      "open_graph_image_url": "https://opengraph.githubassets.com/a4ef2671ccbbec9ce680ead1109ae5344b2c7062c7cd8ba147a4528ee45664d5/appleweiping/cs170"
+      "open_graph_image_url": "https://opengraph.githubassets.com/83d5adaa9ac4cb18acde13014de49deb9dec2fbd69014b2865b06d1d824c4684/appleweiping/cs170"
     },
     "cs186-rookiedb": {
       "repository": "appleweiping/cs186-rookiedb",
-      "open_graph_image_url": "https://opengraph.githubassets.com/61bedf9160a847a2296bfd3fc90cf07726fe648e7fbe92aeb1985572905aa244/appleweiping/cs186-rookiedb"
+      "open_graph_image_url": "https://opengraph.githubassets.com/89387e886f45e34161eae1aa48420a0259aa7192a9e1e788a4d89be770a36ed7/appleweiping/cs186-rookiedb"
     },
     "cs188-pacman-ai": {
       "repository": "appleweiping/cs188-pacman-ai",
-      "open_graph_image_url": "https://opengraph.githubassets.com/79b4fa781176601c63e27d8ae790ce6623bdf4be9676e6d66e63f9b75c77e17a/appleweiping/cs188-pacman-ai"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c0e98c9fab98f877f18625871572484732925bba3d4e3d8c0d07d4ad4e04a210/appleweiping/cs188-pacman-ai"
     },
     "cs189-ml": {
       "repository": "appleweiping/cs189-ml",
-      "open_graph_image_url": "https://opengraph.githubassets.com/448162f8615a136eb517a65a163647f2832e2f26ab3f99080b4b94d6736ad194/appleweiping/cs189-ml"
+      "open_graph_image_url": "https://opengraph.githubassets.com/efa9a1041de7257cade34ff6c5393d9b88056ceecfdd0086a1b9e218431901ae/appleweiping/cs189-ml"
     },
     "cs224n-nlp": {
       "repository": "appleweiping/cs224n-nlp",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9549d3c0b31da74fd47c5f7bc6d0e9e3daa9f630e876a2e59c0e3f489e494eed/appleweiping/cs224n-nlp"
+      "open_graph_image_url": "https://opengraph.githubassets.com/aa8ef0f1a77ad4e926aec1908277d781a95488481496d9442f38b3ac02461b04/appleweiping/cs224n-nlp"
     },
     "cs224w-graph-ml": {
       "repository": "appleweiping/cs224w-graph-ml",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2e7372d831c39fb5b46954b055844e3a982eff432c13cd05441f1f7ca7a2304f/appleweiping/cs224w-graph-ml"
+      "open_graph_image_url": "https://opengraph.githubassets.com/87880654dbc82e1d7014cfc2834b6f8ff12209f87bb0b293d2339797ddff22fc/appleweiping/cs224w-graph-ml"
     },
     "cs229-machine-learning": {
       "repository": "appleweiping/cs229-machine-learning",
-      "open_graph_image_url": "https://opengraph.githubassets.com/e7969287c45364a5849d89f8983bfc8c11f52ac8dc4424d6c38ffd5eec262583/appleweiping/cs229-machine-learning"
+      "open_graph_image_url": "https://opengraph.githubassets.com/6e4454ad73e4360d0214886ab72f76fc5b0425546f037b55e51b8242431eb162/appleweiping/cs229-machine-learning"
     },
     "cs229m-ml-theory": {
       "repository": "appleweiping/cs229m-ml-theory",
-      "open_graph_image_url": "https://opengraph.githubassets.com/4eb6f7265fe461e7a682d0cb060d46efe3ff7633aab2081f34bee9ca93714917/appleweiping/cs229m-ml-theory"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4492cd403a1c24588275f3b1d237345f9242af239792b63f2248c0d3d99251e4/appleweiping/cs229m-ml-theory"
     },
     "cs231n-assignments": {
       "repository": "appleweiping/cs231n-assignments",
-      "open_graph_image_url": "https://opengraph.githubassets.com/a96794a929a5669a079cf0a7893adc99bd749e90ddfc4d80cbed699d7678c5e3/appleweiping/cs231n-assignments"
+      "open_graph_image_url": "https://opengraph.githubassets.com/a1dbd3f11593c1474a510a260dd2041235cb4d742eef410d16d32607f4b42d84/appleweiping/cs231n-assignments"
     },
     "cs285-deep-rl": {
       "repository": "appleweiping/cs285-deep-rl",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2e8ef4d0dca6168ea3b7b0a7fca38d0fa69532f09bc66542f4bf6abdc47c3868/appleweiping/cs285-deep-rl"
+      "open_graph_image_url": "https://opengraph.githubassets.com/56bbbdbbd4ff53e21d93c14e13de10bebc2643f2ea16c040979c396744b07ea1/appleweiping/cs285-deep-rl"
     },
     "cs50-ai": {
       "repository": "appleweiping/cs50-ai",
-      "open_graph_image_url": "https://opengraph.githubassets.com/78c91035af2ef14ada012092dc1d74312548cd2eaab516cb4c0136f388fc8256/appleweiping/cs50-ai"
+      "open_graph_image_url": "https://opengraph.githubassets.com/a176d90aa21748fa5d99e2de00feeb6a102edfc696a710f0a04a6b7504f180ed/appleweiping/cs50-ai"
     },
     "cs50p": {
       "repository": "appleweiping/cs50p",
-      "open_graph_image_url": "https://opengraph.githubassets.com/370af675fe5ec78638465402fec4f9cf7b559e546292a3263917ac33042946aa/appleweiping/cs50p"
+      "open_graph_image_url": "https://opengraph.githubassets.com/5228d2c9f7afcb31c4889666f1c19ffd0440b2dbf17681218a62b32630b9318a/appleweiping/cs50p"
     },
     "cs50x": {
       "repository": "appleweiping/cs50x",
-      "open_graph_image_url": "https://opengraph.githubassets.com/cbc643eb770c848e2857904ab2f1a45deef9d0036f6ee4e83eea690129204cdc/appleweiping/cs50x"
+      "open_graph_image_url": "https://opengraph.githubassets.com/ef34f05dc22aecdae51019760c3711012755e70da27ef102b3638c795d1cc439/appleweiping/cs50x"
     },
     "cs571-react-native": {
       "repository": "appleweiping/cs571-react-native",
-      "open_graph_image_url": "https://opengraph.githubassets.com/74211419702eb515ce0183b565c0c9e8c5d23b97b6c4b909d83a71054857c36f/appleweiping/cs571-react-native"
+      "open_graph_image_url": "https://opengraph.githubassets.com/10c5bc70777b57b59f108bb0e9047e6f5483200e7f1ad83c62fd07901f70f404/appleweiping/cs571-react-native"
     },
     "cs61a-sicp": {
       "repository": "appleweiping/cs61a-sicp",
-      "open_graph_image_url": "https://opengraph.githubassets.com/04a17b249dcd99df0be1bc65018bfb3a1e8cd686df7482b4f2d8ca4a4d53abac/appleweiping/cs61a-sicp"
+      "open_graph_image_url": "https://opengraph.githubassets.com/468becd4a8592cad7571f1d03cffb6ef25fefd44ee5c9b5c00b396e6343b0aa0/appleweiping/cs61a-sicp"
     },
     "cs61b": {
       "repository": "appleweiping/cs61b",
-      "open_graph_image_url": "https://opengraph.githubassets.com/f7ec73e7e72617b2587933fe60510c694fd783e28177e21f71a2bdb553799afe/appleweiping/cs61b"
+      "open_graph_image_url": "https://opengraph.githubassets.com/93581730d46ce3fd8882cfc85361c460a593add868b4b79d2649e0963b80bc2f/appleweiping/cs61b"
     },
     "cs61c": {
       "repository": "appleweiping/cs61c",
-      "open_graph_image_url": "https://opengraph.githubassets.com/0ba4e32c3e02bb459674fbd68a185a08e8f27d6c02ef9db44a6a03efd46f9434/appleweiping/cs61c"
+      "open_graph_image_url": "https://opengraph.githubassets.com/43a9fd3e099f31f8c714581ca28970c5eaa90ea06408ce7bc5051460e0898fde/appleweiping/cs61c"
     },
     "csapp-labs": {
       "repository": "appleweiping/csapp-labs",
-      "open_graph_image_url": "https://opengraph.githubassets.com/fbbb045e8f59be2d7e0867f3eff96b398ba3473a219e2776d6a82eb01087dedc/appleweiping/csapp-labs"
+      "open_graph_image_url": "https://opengraph.githubassets.com/2d58e4e580695a24e2b2e922d90e1bfa2341b6427b8896e349b05d2e9a48f2df/appleweiping/csapp-labs"
     },
     "cse234-ml-data-systems": {
       "repository": "appleweiping/cse234-ml-data-systems",
-      "open_graph_image_url": "https://opengraph.githubassets.com/020dc901ad09a81559b6ec85cdb2eee1463a55c0fe6939b56c26806c38fe2e39/appleweiping/cse234-ml-data-systems"
+      "open_graph_image_url": "https://opengraph.githubassets.com/dd18806201b8d3f68d22a67cfbbf7032a64abbb259e3d38c305ef34fffc6e3d8/appleweiping/cse234-ml-data-systems"
     },
     "cu-detector-research-artifact": {
       "repository": "appleweiping/cu-detector-research-artifact",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b6487c648281c9d5b4ce2b8daebdefc63ed3a0a9b1882dee422e71738d2f69f5/appleweiping/cu-detector-research-artifact"
+      "open_graph_image_url": "https://opengraph.githubassets.com/554fa79d7f287806934d463c3330ac8762767af929384963c1b7feaec81fe93c/appleweiping/cu-detector-research-artifact"
     },
     "deep-learning-specialization": {
       "repository": "appleweiping/deep-learning-specialization",
-      "open_graph_image_url": "https://opengraph.githubassets.com/901bdbe39cd772b45e2b2e0570880925f35dc3f9f158f7636712233e7b145d90/appleweiping/deep-learning-specialization"
+      "open_graph_image_url": "https://opengraph.githubassets.com/98dbc6a06c57c4cc404db28b2b3a7fe77849ff2cbe1507c05dc13e732620c228/appleweiping/deep-learning-specialization"
     },
     "delvtools-public": {
       "repository": "appleweiping/DELVTOOLS_PUBLIC",
-      "open_graph_image_url": "https://opengraph.githubassets.com/593b92b1d744933c31c729d58df48019a132cb95f19ec61a03ad9d17a3ffbc2f/appleweiping/DELVTOOLS_PUBLIC"
+      "open_graph_image_url": "https://opengraph.githubassets.com/03398fe12330d12e6b061d12d052b70ca0d32e7546c3b79d7b60ce609e263c72/appleweiping/DELVTOOLS_PUBLIC"
     },
     "duke-intro-c": {
       "repository": "appleweiping/duke-intro-c",
-      "open_graph_image_url": "https://opengraph.githubassets.com/373460ed83ce527223ec7d845abe9162aec0dc4a1a7e6edbc916c52f8d39a360/appleweiping/duke-intro-c"
+      "open_graph_image_url": "https://opengraph.githubassets.com/858c4505b4f307f7dcd462c57a4c2699ff1621cac480757c3cd927899ae3dd6e/appleweiping/duke-intro-c"
     },
     "ecg-recoverability": {
       "repository": "appleweiping/ecg-recoverability",
-      "open_graph_image_url": "https://opengraph.githubassets.com/098061704706b91b5e8bf6867a656e9ded0a24f54ffca165da9560c491832652/appleweiping/ecg-recoverability"
+      "open_graph_image_url": "https://opengraph.githubassets.com/8c215607142512a18bfba2894d9f5592204300f73885b20e022b8812d62839ef/appleweiping/ecg-recoverability"
     },
     "eecs498-deep-vision": {
       "repository": "appleweiping/eecs498-deep-vision",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c521e58f12050959eb34d3c712dd840fcf3f6fa7b6f2133bca7c2fb79133a779/appleweiping/eecs498-deep-vision"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4bd3b41a533fa2ab040408327e2b10b2f85cdffea98fe9187050cc0e72fa8b28/appleweiping/eecs498-deep-vision"
     },
     "eediy": {
       "repository": "appleweiping/eediy",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c4c68d5dc34c6df99fa9f1e70bb977141bde74b9e7dafa48b290cf4a572b0a80/appleweiping/eediy"
+      "open_graph_image_url": "https://opengraph.githubassets.com/533fafc4629311b7872a1dd649cf3dec4d2d54a77bb8bf3662e8509ce48a441e/appleweiping/eediy"
     },
     "embedded-cry-detection-and-soothing-system": {
       "repository": "appleweiping/Embedded-Cry-Detection-and-Soothing-System",
-      "open_graph_image_url": "https://opengraph.githubassets.com/8ed63c5047cc40847713892925750b12bc8334780bc3e3bc601407a6e529dfe4/appleweiping/Embedded-Cry-Detection-and-Soothing-System"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c0a815795b00193c4a995c7c3c705aaa250303cb5d1f545c2f3eb64c945ac588/appleweiping/Embedded-Cry-Detection-and-Soothing-System"
     },
     "ethz-computer-architecture": {
       "repository": "appleweiping/ethz-computer-architecture",
-      "open_graph_image_url": "https://opengraph.githubassets.com/23d9a61982dcbbb4949537cae33d91f9756bcf63ea40355fff01510104099b5a/appleweiping/ethz-computer-architecture"
+      "open_graph_image_url": "https://opengraph.githubassets.com/bd2fc7eed097217b5dc4f6840b1d8e2cc8f5695a911fe15a98eab1e80d83ec5f/appleweiping/ethz-computer-architecture"
     },
     "ethz-ddca": {
       "repository": "appleweiping/ethz-ddca",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ebf6dc89920191a9d5306d762ade179e864cf0307b6c36195728ab03f89426f1/appleweiping/ethz-ddca"
+      "open_graph_image_url": "https://opengraph.githubassets.com/034a1cead6fac5945ce63f02374bc958bb13663020a6e90104aed288f0e760a3/appleweiping/ethz-ddca"
+    },
+    "evidence-braid": {
+      "repository": "appleweiping/evidence-braid",
+      "open_graph_image_url": "https://opengraph.githubassets.com/3ac4a5e5613a164069de359c2ac69b88b77b32da049c9cb3fb71dd3ac8e423f5/appleweiping/evidence-braid"
+    },
+    "facetroute": {
+      "repository": "appleweiping/FacetRoute",
+      "open_graph_image_url": "https://opengraph.githubassets.com/2daec4bf4b9ea6df3168d9e7f9705cfe5eaa0a7eacea12fe90d24b23798716a8/appleweiping/FacetRoute"
     },
     "flow-matching-6s184": {
       "repository": "appleweiping/flow-matching-6s184",
-      "open_graph_image_url": "https://opengraph.githubassets.com/158e4fcde9dc35db9dd6de62c1b1e8bbbee0ee64fb14238c739ba241e4b23df4/appleweiping/flow-matching-6s184"
+      "open_graph_image_url": "https://opengraph.githubassets.com/0706b01023746961e9a1b03b6556890ee5db3e430ee8b42ec573e2a06b381e5e/appleweiping/flow-matching-6s184"
+    },
+    "frame-quorum": {
+      "repository": "appleweiping/frame-quorum",
+      "open_graph_image_url": "https://opengraph.githubassets.com/d7abf2d08adfc8e49b3de43a09790c6fac48d2abc2740b5db8789f59adab4c09/appleweiping/frame-quorum"
     },
     "full-stack-open": {
       "repository": "appleweiping/full-stack-open",
-      "open_graph_image_url": "https://opengraph.githubassets.com/35a26c3d8d68888306a29f8e83b65a03a89e9c30049400f83c65690701fedced/appleweiping/full-stack-open"
+      "open_graph_image_url": "https://opengraph.githubassets.com/06f122209eb7dc125bfc0b691d3e7c4b14a350e371518c5e69904cc4f3b1d1fd/appleweiping/full-stack-open"
     },
     "games101": {
       "repository": "appleweiping/games101",
-      "open_graph_image_url": "https://opengraph.githubassets.com/20333c7d883c047d7d74dd0a0e1cc7ce75634037e6be2b083421f15c7209287f/appleweiping/games101"
+      "open_graph_image_url": "https://opengraph.githubassets.com/617fc282dcc312cc333b50ebd2267dcc11d6052bba60477404c3ec2bcdace9cc/appleweiping/games101"
     },
     "games103": {
       "repository": "appleweiping/games103",
-      "open_graph_image_url": "https://opengraph.githubassets.com/30866387172dc9a25e5969ac0a547fee42d219b19f37f475453e71c4c54ba6d9/appleweiping/games103"
+      "open_graph_image_url": "https://opengraph.githubassets.com/43787761da022da39f0b40fced1453110c3f167cce2d6c21bc7872611614efe3/appleweiping/games103"
     },
     "games202": {
       "repository": "appleweiping/games202",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ebe95300bdbbd73be6b5f2921f4a745e6addb24ba11706b4330a51175b0afc2a/appleweiping/games202"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e9f6422e233656a953b2ed926a86ef2f6bc0384c94c64b72ba6c0804790373e2/appleweiping/games202"
     },
     "github-achievement-lab": {
       "repository": "appleweiping/github-achievement-lab",
-      "open_graph_image_url": "https://opengraph.githubassets.com/8be4725e12f1525a097b740de906b4eb41647af0e81cb75f3106b03dada66f58/appleweiping/github-achievement-lab"
+      "open_graph_image_url": "https://opengraph.githubassets.com/ed5c38ff5a84c56b0864943611d87afc77721994ca7e36672b15dd963dea729f/appleweiping/github-achievement-lab"
     },
     "glayout": {
       "repository": "appleweiping/gLayout",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c7b5e0c4af40728f840b4ecb01a3a3bb55f9bb21dfd4df60012ac00fd123ad46/appleweiping/gLayout"
+      "open_graph_image_url": "https://opengraph.githubassets.com/9580f0d545e491a7bef971b683a55655d9ffec3accffaedefe8c8e8c7d1afb86/appleweiping/gLayout"
+    },
+    "graph-sail": {
+      "repository": "appleweiping/graph-sail",
+      "open_graph_image_url": "https://opengraph.githubassets.com/e5cf28aecfe3522403841a947842bff337cf7c68614e783c2815f540a84aaf73/appleweiping/graph-sail"
     },
     "haskell-mooc": {
       "repository": "appleweiping/haskell-mooc",
-      "open_graph_image_url": "https://opengraph.githubassets.com/6441a4e8bcef27f57064d2a1447d24bd71b8c68ad1bc2f452e9b06504d67c85e/appleweiping/haskell-mooc"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d25ad8f825a0c0b96e79061163426820621f789111ff85044a0bcd5e5fe8f8bd/appleweiping/haskell-mooc"
+    },
+    "highwayvlm": {
+      "repository": "appleweiping/HighwayVLM",
+      "open_graph_image_url": "https://opengraph.githubassets.com/c2ec4b817b4717c0144f736bbfe014c3c2fb6936f1bff38312ca4055e444c31d/appleweiping/HighwayVLM"
     },
     "hit-os": {
       "repository": "appleweiping/hit-os",
-      "open_graph_image_url": "https://opengraph.githubassets.com/7b8d08ada12477712b0fd820bd8f1cd5e1fe8f0bd12c0d02e508cf41cfc3d492/appleweiping/hit-os"
+      "open_graph_image_url": "https://opengraph.githubassets.com/77e321da5d3c65ae9e55a8b66da344324315f2b0887a9c65763a95a105f7daae/appleweiping/hit-os"
     },
     "hotwire-city": {
       "repository": "appleweiping/hotwire-city",
-      "open_graph_image_url": "https://opengraph.githubassets.com/5af03c5e15be40afb174da0f5da0851463a50eeb57d37c9d623b2c5fd1c83a90/appleweiping/hotwire-city"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4b28687fc02ebda315ef9b5369f1beb425cae729c2083e1c459ab0e479c3107f/appleweiping/hotwire-city"
     },
     "hungry-fin": {
       "repository": "appleweiping/hungry-fin",
-      "open_graph_image_url": "https://opengraph.githubassets.com/7b0a2c9d9002bf261eca138e505a0d1e7e0a7ce6213784e6c8fba5d24c8aad90/appleweiping/hungry-fin"
+      "open_graph_image_url": "https://opengraph.githubassets.com/173ebdb984381820e8ba710fadcd1b2f1a2aed50e971ebf0762afa6ec1ba9860/appleweiping/hungry-fin"
     },
     "imperfect-information-agent-core": {
       "repository": "appleweiping/imperfect-information-agent-core",
-      "open_graph_image_url": "https://opengraph.githubassets.com/fca88a09c5933090fbca49701b060e6e6f697efbdb2ce338b700b28196411bc9/appleweiping/imperfect-information-agent-core"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4b2b7d21b2b7daa9afdc4286b105f2c0de782b315d715b53acc052bc2bd28654/appleweiping/imperfect-information-agent-core"
+    },
+    "indexsail": {
+      "repository": "appleweiping/IndexSail",
+      "open_graph_image_url": "https://opengraph.githubassets.com/668a8fac6c279376795608b2f545fbf74e3e41400835e0ab2b1b9775bcf37fa7/appleweiping/IndexSail"
     },
     "info-theory-mackay": {
       "repository": "appleweiping/info-theory-mackay",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9fa30271f1d0efadd250376fa07114c10ca70a9ffa56a6a9aede829f93af4379/appleweiping/info-theory-mackay"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c05aef871a72b24df32e727dbea2cc8cb59806f9ae23a844d75975200e91a23d/appleweiping/info-theory-mackay"
     },
     "inr-aliasing-limits": {
       "repository": "appleweiping/inr-aliasing-limits",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b8ad0052f6b34114a180ca1ac8ec0a9022b3674a36cad518ac5018a35fed9e25/appleweiping/inr-aliasing-limits"
+      "open_graph_image_url": "https://opengraph.githubassets.com/cd18735eb33278c86953894cc1a26668d0c630a7cac620e82246df36e1ac56c6/appleweiping/inr-aliasing-limits"
     },
     "kaggle-santa-2025-packing-lab": {
       "repository": "appleweiping/kaggle-santa-2025-packing-lab",
-      "open_graph_image_url": "https://opengraph.githubassets.com/87d3e57ece7468bb3ade6870552fd148f57a9dfe4233b38d0b317da26154e116/appleweiping/kaggle-santa-2025-packing-lab"
+      "open_graph_image_url": "https://opengraph.githubassets.com/dd51c07324516ba379be93e6052f098179ea12d24942109b0fe51e40b3cdd9d2/appleweiping/kaggle-santa-2025-packing-lab"
     },
     "kaist-cs220-rust": {
       "repository": "appleweiping/kaist-cs220-rust",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b38ddfbd67a44b240fea806cbb5df69747b42de95c531be3c24437c26ca545c4/appleweiping/kaist-cs220-rust"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4cf445ef41d084f7da1c251ee33f63cafc575a4823fb800cd8f2f691952c096e/appleweiping/kaist-cs220-rust"
     },
     "kaist-cs420": {
       "repository": "appleweiping/kaist-cs420",
-      "open_graph_image_url": "https://opengraph.githubassets.com/7dec5d872b153db174fe71e49099341dd5565f19ac0d779d152c10b8c75aad6e/appleweiping/kaist-cs420"
+      "open_graph_image_url": "https://opengraph.githubassets.com/cd3c4e9574fb485063a49f07493279db1710d898096d82875b4ed9ea4bab97c9/appleweiping/kaist-cs420"
     },
     "kaist-cs431-concurrent-rust": {
       "repository": "appleweiping/kaist-cs431-concurrent-rust",
-      "open_graph_image_url": "https://opengraph.githubassets.com/23a2c81a9bc1ea4316b7b7172053d044e7d8b5374290a48006ced5c96175d899/appleweiping/kaist-cs431-concurrent-rust"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f2e02d4bc68f81e3a7122eb60b57b57b87634eebe2648dfad71cb49d9cd389ea/appleweiping/kaist-cs431-concurrent-rust"
     },
     "kbuilt": {
       "repository": "appleweiping/kbuilt",
-      "open_graph_image_url": "https://opengraph.githubassets.com/6d828e0b089585797241fc2e303338b07e2e37aeabd75e7edbbe7f8c73c54a7f/appleweiping/kbuilt"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e1bfbff527837d6187f75fd33d220d416cad4212b73fd55e597883a06947077d/appleweiping/kbuilt"
     },
     "kurose-wireshark-labs": {
       "repository": "appleweiping/kurose-wireshark-labs",
-      "open_graph_image_url": "https://opengraph.githubassets.com/779c901db6cf3deb54632c4f88403e9bfa182d3dc5441d2516b5f53ba913b6ce/appleweiping/kurose-wireshark-labs"
+      "open_graph_image_url": "https://opengraph.githubassets.com/8440a0a98ed481781d588ff4e4b14a1797eb7457523bd1da1c1d09fbd7bc12df/appleweiping/kurose-wireshark-labs"
     },
     "legal-case-automation": {
       "repository": "appleweiping/legal-case-automation",
-      "open_graph_image_url": "https://opengraph.githubassets.com/fd00969c6cf4b943e6fc6c17a2664f97d75c830792ebbc3c3a1e53a6d88bc7ba/appleweiping/legal-case-automation"
+      "open_graph_image_url": "https://opengraph.githubassets.com/197bae8a64b5b6c3d61c71b36ba8d137f723532ac53e6e0c951309a167483d89/appleweiping/legal-case-automation"
     },
     "lhy-ml-homeworks": {
       "repository": "appleweiping/lhy-ml-homeworks",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2cefccbe368cf1ebbad1425ffbf28fbf68079f415f53257683cf4a768896bd2d/appleweiping/lhy-ml-homeworks"
+      "open_graph_image_url": "https://opengraph.githubassets.com/51c7ff60dd154f4704aa461dea14119434ce6afdc4cfa4fa13941f3cc02dfe65/appleweiping/lhy-ml-homeworks"
+    },
+    "lkpy": {
+      "repository": "appleweiping/lkpy",
+      "open_graph_image_url": "https://opengraph.githubassets.com/db7dc7c112beffa34f46de28c6727e8ba7097f0279d3694778dac7375c2ba33b/appleweiping/lkpy"
     },
     "lumen-rec": {
       "repository": "appleweiping/Lumen-Rec",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ea25542fba0602374208e9ba342b73ad1ae5eb225f20dbb9be07db5d41a85210/appleweiping/Lumen-Rec"
+      "open_graph_image_url": "https://opengraph.githubassets.com/cf352f6029bb4a279489a5eabbc87e4ec685d76a809bd48667933cc562caeefe/appleweiping/Lumen-Rec"
     },
     "medora": {
       "repository": "appleweiping/medora",
-      "open_graph_image_url": "https://opengraph.githubassets.com/01296ade182e4c5f97aa89062beb6fb1c6595b782bb434511bd094e8968e44ae/appleweiping/medora"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e68c4b80ef8763b1ea80781e447d2d8cb8020da464fc8da475f8ff26b39b5437/appleweiping/medora"
+    },
+    "metricguard": {
+      "repository": "appleweiping/metricguard",
+      "open_graph_image_url": "https://opengraph.githubassets.com/b53a371cb4010be11aa755030cd589b2c9a22386c79cafb72b4258d4c4aae860/appleweiping/metricguard"
     },
     "missing-semester": {
       "repository": "appleweiping/missing-semester",
-      "open_graph_image_url": "https://opengraph.githubassets.com/0bb8f68f8a50a35931789cf8ec6a29119158174931528895932e28d0839056eb/appleweiping/missing-semester"
+      "open_graph_image_url": "https://opengraph.githubassets.com/9dbfd81a60ed7e6a8b90f51ea21152f1eacfad253f9b48e8af6a0dc92a72fb3e/appleweiping/missing-semester"
     },
     "mit-1801-1802-calculus": {
       "repository": "appleweiping/mit-1801-1802-calculus",
-      "open_graph_image_url": "https://opengraph.githubassets.com/e0718d678e385647cb6afa154c06a1aea0b8b5de74cddac49dec9529ab344a14/appleweiping/mit-1801-1802-calculus"
+      "open_graph_image_url": "https://opengraph.githubassets.com/75bdedfa18e4c144fc31050495716600e6a31f88ea71af71563b96096b682775/appleweiping/mit-1801-1802-calculus"
     },
     "mit-1806-linear-algebra": {
       "repository": "appleweiping/mit-1806-linear-algebra",
-      "open_graph_image_url": "https://opengraph.githubassets.com/3d760facb77ad7a46fa93985988b4d95431f96ea79ad96f873770cc63a8fab00/appleweiping/mit-1806-linear-algebra"
+      "open_graph_image_url": "https://opengraph.githubassets.com/afadc4cce4c32dad7bb2547b459c9b7cfe1af77a79a10c41a1e034126d061b46/appleweiping/mit-1806-linear-algebra"
     },
     "mit-18330-numerical": {
       "repository": "appleweiping/mit-18330-numerical",
-      "open_graph_image_url": "https://opengraph.githubassets.com/a8e91350f35803c18e1a5e6edcdfd32f4fd2465d99a838ebb45bc33149c6d7d9/appleweiping/mit-18330-numerical"
+      "open_graph_image_url": "https://opengraph.githubassets.com/953fcc47498062a6924f9a5c6ffd96914400b40013a776d5f4319003d84b8338/appleweiping/mit-18330-numerical"
     },
     "mit-6-1600": {
       "repository": "appleweiping/mit-6.1600",
-      "open_graph_image_url": "https://opengraph.githubassets.com/34413948b1398cdf94b509f80a48a3d4c761d2b0111575eb1b69ce3c8c65c035/appleweiping/mit-6.1600"
+      "open_graph_image_url": "https://opengraph.githubassets.com/dd42945d1a440cf484800236b3dca3273467b98f3c1df782f6e1ef32db139848/appleweiping/mit-6.1600"
     },
     "mit-6006": {
       "repository": "appleweiping/mit-6006",
-      "open_graph_image_url": "https://opengraph.githubassets.com/df76f9419625246db70fb0a6a44a55216de7daabdf3652f7f53dda6673919d8f/appleweiping/mit-6006"
+      "open_graph_image_url": "https://opengraph.githubassets.com/0a2b9f2a2e1c6afa3cf814f4be039440ae4064f110052a2869150e95936edd93/appleweiping/mit-6006"
     },
     "mit-6007-signals": {
       "repository": "appleweiping/mit-6007-signals",
-      "open_graph_image_url": "https://opengraph.githubassets.com/237fc09c9fd1cf8c8c36beaa1b2f0dee4bd18c737e918f163b4e06290c5c6626/appleweiping/mit-6007-signals"
+      "open_graph_image_url": "https://opengraph.githubassets.com/75943ebdee07c4bbf8dc89821b80863aad4ea9bd757eca9241eed1521fadfd2a/appleweiping/mit-6007-signals"
     },
     "mit-6031-software-construction": {
       "repository": "appleweiping/mit-6031-software-construction",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9925e676a5feab79f1abfb5d979859c42b47ddbf1616ef64fa51e8e31a41f16d/appleweiping/mit-6031-software-construction"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e39ce38eebe635c42292de4c240c7846f3e6fe100cc7107b194ef51400f3e24c/appleweiping/mit-6031-software-construction"
     },
     "mit-6042j": {
       "repository": "appleweiping/mit-6042j",
-      "open_graph_image_url": "https://opengraph.githubassets.com/26748e38df46b694e4be892d2e691aada90f9a3183fca0fac9be0511db391f51/appleweiping/mit-6042j"
+      "open_graph_image_url": "https://opengraph.githubassets.com/aabd38058af4258b5bd31cf31c3114b875259831b12c8d6523a3ed2acf2d07d3/appleweiping/mit-6042j"
     },
     "mit-6046": {
       "repository": "appleweiping/mit-6046",
-      "open_graph_image_url": "https://opengraph.githubassets.com/2c95174bb29fb255843d73fe4694abe8ebc4c927469746120871c4256c439e18/appleweiping/mit-6046"
+      "open_graph_image_url": "https://opengraph.githubassets.com/834ca48416ff3334bec855c82875b1a3393f2b818d6971b6d6cec442bffba9a8/appleweiping/mit-6046"
     },
     "mit-6050j-info-theory": {
       "repository": "appleweiping/mit-6050j-info-theory",
-      "open_graph_image_url": "https://opengraph.githubassets.com/d0fc45ab289f22f2473bef71eb50cd28b21d6f8740caa3bb9c1daabcff0c56ce/appleweiping/mit-6050j-info-theory"
+      "open_graph_image_url": "https://opengraph.githubassets.com/0b11e924a5941e76452d4e2f7900b941f66ac73f3ef1e7b5ad17bc51345022a7/appleweiping/mit-6050j-info-theory"
     },
     "mit-6092-java": {
       "repository": "appleweiping/mit-6092-java",
-      "open_graph_image_url": "https://opengraph.githubassets.com/7a7574ed27e4dec202f78fd229dfcccebb6705b042c51d266d636a255b3796db/appleweiping/mit-6092-java"
+      "open_graph_image_url": "https://opengraph.githubassets.com/289f7a982272403df4722975c753d1e30a6161004a8fe31ee2c8dcbcf62e45d2/appleweiping/mit-6092-java"
     },
     "mit-6100l": {
       "repository": "appleweiping/mit-6100l",
-      "open_graph_image_url": "https://opengraph.githubassets.com/73f19278e677b5343fe51c2a97f25e275e15efee72732fcca22f48b8f6cbcf72/appleweiping/mit-6100l"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e1e753b0139c07fafa0afd84ba8c640efa212d2fe56fde4db03baa0f577df943/appleweiping/mit-6100l"
     },
     "mit-6824-raft": {
       "repository": "appleweiping/mit-6824-raft",
-      "open_graph_image_url": "https://opengraph.githubassets.com/4dd41f21da77ea3be4bf541cf1121281d09f39f23a1b848c2120634652fbbff0/appleweiping/mit-6824-raft"
+      "open_graph_image_url": "https://opengraph.githubassets.com/664486609e5babf91219c9d182d4e7c69cf9b9c3b66f4d22ea8d9417d497cdee/appleweiping/mit-6824-raft"
     },
     "mit-6858": {
       "repository": "appleweiping/mit-6858",
-      "open_graph_image_url": "https://opengraph.githubassets.com/44bf65bc4f1f366a92d4a58e21c9daab5f7438c497e68960733ded8759c06995/appleweiping/mit-6858"
+      "open_graph_image_url": "https://opengraph.githubassets.com/3160e34213fdb70ee61fc1bd644278e8f03f1b7a2df40554f54eec34e4c83987/appleweiping/mit-6858"
     },
     "mit-6s7960-dl": {
       "repository": "appleweiping/mit-6s7960-dl",
-      "open_graph_image_url": "https://opengraph.githubassets.com/f629bc6b5dbd1760d9b3cc245aadbd73c2efc994a5e86adf30c4d5850f84cccb/appleweiping/mit-6s7960-dl"
+      "open_graph_image_url": "https://opengraph.githubassets.com/df5f4cc90b391f710276ae25e4d904e1face03b7a625a52f48859fc4dd1b8440/appleweiping/mit-6s7960-dl"
     },
     "mit-web": {
       "repository": "appleweiping/mit-web",
-      "open_graph_image_url": "https://opengraph.githubassets.com/427de8e606c80c927da312b261aee3f5a78fb9571f816f96fcafff87a3d9fede/appleweiping/mit-web"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c3438d82df4e2fa45428fe11b9b2df521d4a2630d739170825244d124874bc48/appleweiping/mit-web"
     },
     "ml-specialization-labs": {
       "repository": "appleweiping/ml-specialization-labs",
-      "open_graph_image_url": "https://opengraph.githubassets.com/226a46ad08aaed06d3326b7dc9ee4e3dbfe845433d08626784e2137098f140be/appleweiping/ml-specialization-labs"
+      "open_graph_image_url": "https://opengraph.githubassets.com/cb421a9371d78f9bfa9eef975162c47d81b7750055bad05772f453167e7e624a/appleweiping/ml-specialization-labs"
     },
     "mlc-exercises": {
       "repository": "appleweiping/mlc-exercises",
-      "open_graph_image_url": "https://opengraph.githubassets.com/6fb6f78690587e02f23aa9a1223c95decbb433e33ed62658dbe5d7c8575fe581/appleweiping/mlc-exercises"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f27a662126960053a2ccb924ccd706d6e025bccef01f1f474918640b3bbc2e57/appleweiping/mlc-exercises"
+    },
+    "mmengine": {
+      "repository": "appleweiping/mmengine",
+      "open_graph_image_url": "https://opengraph.githubassets.com/b57f2609f429c064c4c14b4d343a86b1399d77b6b42edd598b695e200d3d92e8/appleweiping/mmengine"
+    },
+    "mosaicfeed": {
+      "repository": "appleweiping/MosaicFeed",
+      "open_graph_image_url": "https://opengraph.githubassets.com/3fd34f653f6f1b51c4beb27f10a52944004975a04b634ee2a31123b6a401ccc5/appleweiping/MosaicFeed"
     },
     "mournwell": {
       "repository": "appleweiping/mournwell",
-      "open_graph_image_url": "https://opengraph.githubassets.com/d8fd22376134fe4f1a7daae2130f50bc7b0a852996b16ca2a26561330d63977d/appleweiping/mournwell"
+      "open_graph_image_url": "https://opengraph.githubassets.com/94269547e887a9f963cecc39201f8be3354ee6e4bbd3e484a16d9aac1a8bc87e/appleweiping/mournwell"
+    },
+    "mstar": {
+      "repository": "appleweiping/mstar",
+      "open_graph_image_url": "https://opengraph.githubassets.com/101abc98cec4f5ec4ea0799f27940f4360c2c4e486a15334d1d00c51bbdc7327/appleweiping/mstar"
+    },
+    "mtap": {
+      "repository": "appleweiping/mtap",
+      "open_graph_image_url": "https://opengraph.githubassets.com/b4fcd94281ccba5ccd874b644c170215b193d7116648532562599b4db624517b/appleweiping/mtap"
     },
     "nand2tetris": {
       "repository": "appleweiping/nand2tetris",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ed21502d3596a69ca8d833b1a16be3ed0b6cc55a3061e21ffbfef255472742df/appleweiping/nand2tetris"
+      "open_graph_image_url": "https://opengraph.githubassets.com/109fa9e12fa1330a0de8d182793ad706a5e4d3f92d2f33e6e185d85b71bf90a1/appleweiping/nand2tetris"
     },
     "needle-dl-system": {
       "repository": "appleweiping/needle-dl-system",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c0c167ec9d9d057e40b0a81a49b04550f32d44cd9f399a3a599ec373125664ac/appleweiping/needle-dl-system"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4e1ce7f0807a522edd4030476d0a00b6dce939f7c93cceac9e0c6ec156f5b0f5/appleweiping/needle-dl-system"
     },
     "nemesis": {
       "repository": "appleweiping/NEMESIS",
-      "open_graph_image_url": "https://opengraph.githubassets.com/38d69c56a7971d769535c871db8af3152ca011e725d8b352f8b3e95777dab0fc/appleweiping/NEMESIS"
+      "open_graph_image_url": "https://opengraph.githubassets.com/853a734aa064cef0fca85a95298986855c6d8e95fd17108f5864751c8fc6f5fc/appleweiping/NEMESIS"
     },
     "neural-networks-zero-to-hero": {
       "repository": "appleweiping/neural-networks-zero-to-hero",
-      "open_graph_image_url": "https://opengraph.githubassets.com/4433be9b87cf339c920ed15e4bba40e833ad8beab44176b42f42ac11f2185e05/appleweiping/neural-networks-zero-to-hero"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f498dc7f98390a03225522ae0a176e3e79f7f4f3f2ea36d2d3bd2b673f0009ea/appleweiping/neural-networks-zero-to-hero"
     },
     "neurotrace-it": {
       "repository": "appleweiping/neurotrace-it",
-      "open_graph_image_url": "https://opengraph.githubassets.com/5519d0d0342d5a34108cc4b3844432ab198253be38df4ffc3c05abfea39a3e08/appleweiping/neurotrace-it"
+      "open_graph_image_url": "https://opengraph.githubassets.com/5f50f625b85ecc884468b0bcec12545db02430351bd4f8fde7f437f69c84304b/appleweiping/neurotrace-it"
     },
     "newroad-valley": {
       "repository": "appleweiping/newroad-valley",
-      "open_graph_image_url": "https://opengraph.githubassets.com/4cfcbf311312a77f0bc0150f266cbb19dc1a7deae07f1e1a77917f012d6485df/appleweiping/newroad-valley"
+      "open_graph_image_url": "https://opengraph.githubassets.com/1049b9c6f9ff9d9664fc93050b99d5e648ab6c9a73e58615ccaa50e25409ab5b/appleweiping/newroad-valley"
     },
     "nju-compilers": {
       "repository": "appleweiping/nju-compilers",
-      "open_graph_image_url": "https://opengraph.githubassets.com/33b58b4f3b1f3ce5b5f1d5620c4739169a2ea3c5906b5bb8d003862f7e831bb2/appleweiping/nju-compilers"
+      "open_graph_image_url": "https://opengraph.githubassets.com/38279a6bde3fd5daeb2f15854a7081e00cb41c71181c88dfeeeeee06be5a277c/appleweiping/nju-compilers"
     },
     "nju-os": {
       "repository": "appleweiping/nju-os",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c0e852c4c80d5c73d34b5ccddbde9be40bbd0752573b2a174cecd91b6604ce7f/appleweiping/nju-os"
+      "open_graph_image_url": "https://opengraph.githubassets.com/8fb62f4ee8164a8085fa0ce96db2ab627ab1595fb03cbaa578274383d456f06d/appleweiping/nju-os"
     },
     "nju-software-analysis": {
       "repository": "appleweiping/nju-software-analysis",
-      "open_graph_image_url": "https://opengraph.githubassets.com/f3c1485a23502e9e355362d6546d6c27e5926fb7543e83ed672614f36d6b35c3/appleweiping/nju-software-analysis"
+      "open_graph_image_url": "https://opengraph.githubassets.com/30f2d82e13d89d3329e73622dfa546b734c37e78e55d22c5e4927c7d469d8f24/appleweiping/nju-software-analysis"
     },
     "nyu-dl-2021": {
       "repository": "appleweiping/nyu-dl-2021",
-      "open_graph_image_url": "https://opengraph.githubassets.com/7c25b83f8bcfc2a2d09a79952390908d1182f0e98450294394e0f7c489af5dac/appleweiping/nyu-dl-2021"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f9f93dbed15e1fe31337f7e04433bc572cec0bdcccadc94f8bd34bd2a9a81a95/appleweiping/nyu-dl-2021"
+    },
+    "openram": {
+      "repository": "appleweiping/OpenRAM",
+      "open_graph_image_url": "https://opengraph.githubassets.com/306ab4f34f701a3e2eb73495fa232e31ae705bae20520d78284a92748100008c/appleweiping/OpenRAM"
+    },
+    "orchidrec": {
+      "repository": "appleweiping/OrchidRec",
+      "open_graph_image_url": "https://opengraph.githubassets.com/bf85f18aa053b1d9d58b7b3b571c2c3987c10a354f47234917bd582758b78ade/appleweiping/OrchidRec"
     },
     "os-project": {
       "repository": "appleweiping/OS-project",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9f97d9f95e4080d3eb8270b8beb0d981ef1892dbea630ce77893c85b910c2b05/appleweiping/OS-project"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d7c7ab4ad4892bea79145e912f2c9b0e3a9f3efe6802f858781e39def1f26c38/appleweiping/OS-project"
     },
     "overdrive-city": {
       "repository": "appleweiping/overdrive-city",
-      "open_graph_image_url": "https://opengraph.githubassets.com/7ec827368bc80fbb44b1e17625693d94cb2c06e96fda15d714128b84e0441d66/appleweiping/overdrive-city"
+      "open_graph_image_url": "https://opengraph.githubassets.com/8dd8b4d2f3101bfa50bd024406ad25c64bfa37860434df57d6145b69fe166b65/appleweiping/overdrive-city"
     },
     "pams-rac-reproduction": {
       "repository": "appleweiping/pams-rac-reproduction",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c24e6fb84d665a6cfd0068c151e7d668e8ea54276b643b21a6d50993f94bbea0/appleweiping/pams-rac-reproduction"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f7209478e2503987002362b86747a830c688fe58ac24e549506ec3b1ce3a2d27/appleweiping/pams-rac-reproduction"
     },
     "paradise-isle": {
       "repository": "appleweiping/paradise-isle",
-      "open_graph_image_url": "https://opengraph.githubassets.com/61527eae639ff4552d6c9748d6d8b6fb5a77662ed0a9688959b63da42a2fdf96/appleweiping/paradise-isle"
+      "open_graph_image_url": "https://opengraph.githubassets.com/3a75a2668b01450785b56624e006d1b2eb5603499595a10794a0ab6fe010320a/appleweiping/paradise-isle"
+    },
+    "payload-palette": {
+      "repository": "appleweiping/payload-palette",
+      "open_graph_image_url": "https://opengraph.githubassets.com/7c5e1eef163da870b8180cb743cc1249bdd0e2ec66d9f9d9797a30ccc85ac4b1/appleweiping/payload-palette"
+    },
+    "peermatchlab": {
+      "repository": "appleweiping/PeerMatchLab",
+      "open_graph_image_url": "https://opengraph.githubassets.com/1da217ddd4b6d35b77f7efd06fc41b061f26ecf3c01110fd6c09cb32a75618a1/appleweiping/PeerMatchLab"
     },
     "periodic-motion-language": {
       "repository": "appleweiping/periodic-motion-language",
-      "open_graph_image_url": "https://opengraph.githubassets.com/192715e2c56c20b7480c13922cdb64ef8af9d25a7c42d45e6f7a23842e6250d8/appleweiping/periodic-motion-language"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e27d236ec1421c5a69f2c9c7968197b7eac8d8d68f8acccbb7851464248e7125/appleweiping/periodic-motion-language"
     },
     "phaseset-multiperson-motion-language": {
       "repository": "appleweiping/phaseset-multiperson-motion-language",
-      "open_graph_image_url": "https://opengraph.githubassets.com/6d2be16aa54ff3432f78d060ae1cf9af6e9379216a51ccabe593df978aa8198d/appleweiping/phaseset-multiperson-motion-language"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f64b0d6e5cc5f433c4d16d637d60ed61df3ea2d10867f893d0789f24383203d6/appleweiping/phaseset-multiperson-motion-language"
+    },
+    "pisa": {
+      "repository": "appleweiping/pisa",
+      "open_graph_image_url": "https://opengraph.githubassets.com/90f0d548f0c134c7ef4c4f40cc5916ed06fd5650c9fa4659789f6b19819667fd/appleweiping/pisa"
     },
     "pku-software-analysis": {
       "repository": "appleweiping/pku-software-analysis",
-      "open_graph_image_url": "https://opengraph.githubassets.com/e925444f42ff585adf1913828f1ff8d6d05a59a3b2c7ae1e6d4a5cce69de5117/appleweiping/pku-software-analysis"
+      "open_graph_image_url": "https://opengraph.githubassets.com/bcf8af27cc4d2941a2a2f4621642dc33fa41639bc885414ec9134ae4be7f0c76/appleweiping/pku-software-analysis"
     },
     "pku-sysy-compiler": {
       "repository": "appleweiping/pku-sysy-compiler",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c60e0652b9bafce0e6066ad9a0864831dd40087925794fff34914360c671d14d/appleweiping/pku-sysy-compiler"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d1ee2cdb3be27bbff8e915a8fd967b99b76f6a79039498cb04195888d3e0dbad/appleweiping/pku-sysy-compiler"
     },
     "pokeverse": {
       "repository": "appleweiping/pokeverse",
-      "open_graph_image_url": "https://opengraph.githubassets.com/64bca400af415127e0d05d33695c011bbf8be10d5ddfe8378cde178c23d22ad1/appleweiping/pokeverse"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d1db713b21b0cbcef43b31bc84431a8c8bf880d2dcc94a84edf99c6da24e0eb8/appleweiping/pokeverse"
     },
     "power-grid-model": {
       "repository": "appleweiping/power-grid-model",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9dec8c5556dd199a9fdde0254a6436ba147271e0ab751306b2fd3eb1eb757ed6/appleweiping/power-grid-model"
+      "open_graph_image_url": "https://opengraph.githubassets.com/693cf30bc3f6fa37123c06c6fb61b68bc9368c1fe6c26fea9d6c09811b0e862d/appleweiping/power-grid-model"
     },
     "princeton-algorithms": {
       "repository": "appleweiping/princeton-algorithms",
-      "open_graph_image_url": "https://opengraph.githubassets.com/557c3e599b3054329d87021b31e1b7c328e94ec794c1d2c11fbba6980147f15d/appleweiping/princeton-algorithms"
+      "open_graph_image_url": "https://opengraph.githubassets.com/bc45dcd8b4c0d085aabd39016474e26f44b696e1ff113e936fc832b5ec3b7ddc/appleweiping/princeton-algorithms"
+    },
+    "processors": {
+      "repository": "appleweiping/processors",
+      "open_graph_image_url": "https://opengraph.githubassets.com/137a07723b9a6adabc7fba2194a5d296f9519c0f6e1f0f48454e929358507ecd/appleweiping/processors"
+    },
+    "promptwitness": {
+      "repository": "appleweiping/promptwitness",
+      "open_graph_image_url": "https://opengraph.githubassets.com/d8d68acbfb1bce8559aceae58ca9b70eae0fa6d22266dac8725509039af51f96/appleweiping/promptwitness"
+    },
+    "pyserini": {
+      "repository": "appleweiping/pyserini",
+      "open_graph_image_url": "https://opengraph.githubassets.com/2ea0a7adca6c570eeea38b8f5e27d19a6ae75df1d2862f0e0fd7044d838feb30/appleweiping/pyserini"
+    },
+    "pyterrier": {
+      "repository": "appleweiping/pyterrier",
+      "open_graph_image_url": "https://opengraph.githubassets.com/6fa32f30fa9b3312a8c89198276b1c7e084198bdc8570df4ca4268333e135dad/appleweiping/pyterrier"
     },
     "red-horizon-rts": {
       "repository": "appleweiping/red-horizon-rts",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b7632577dcc29e789c2f478c7da3d61e6b2a95d56672e5dda561348e4d36b336/appleweiping/red-horizon-rts"
+      "open_graph_image_url": "https://opengraph.githubassets.com/bec50b91d1a07a1df43bcf5e92aa89b705ca706c93524d9d8e69911c338fed76/appleweiping/red-horizon-rts"
+    },
+    "regressistor": {
+      "repository": "appleweiping/Regressistor",
+      "open_graph_image_url": "https://opengraph.githubassets.com/7ae3a89a0c52c8b1cdedc087bd6ebc1b92d482c61902d693686febcae4328bb7/appleweiping/Regressistor"
     },
     "resynthesis-watermark-limits": {
       "repository": "appleweiping/resynthesis-watermark-limits",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ed37573a9ed26e696f45be32e4fc49a98f59baac8aad34dfe433143f8de1609d/appleweiping/resynthesis-watermark-limits"
+      "open_graph_image_url": "https://opengraph.githubassets.com/464c756cf0cd3c488f3c8b15200ed1a10a551ceb4b932be575dab401d196de0e/appleweiping/resynthesis-watermark-limits"
     },
     "riskcal-rlvr": {
       "repository": "appleweiping/riskcal-rlvr",
-      "open_graph_image_url": "https://opengraph.githubassets.com/d4f0771acf978a459bfab882e6266c3272da6a35151ae5903ea404fc2f2b9dd8/appleweiping/riskcal-rlvr"
+      "open_graph_image_url": "https://opengraph.githubassets.com/38874927ec13fc5c249cbfcb9002f49980eb008350d3e6080d9b39045dbe423e/appleweiping/riskcal-rlvr"
+    },
+    "room-replica": {
+      "repository": "appleweiping/room-replica",
+      "open_graph_image_url": "https://opengraph.githubassets.com/808e76645f4f882e0a4bb15a914e784c9ce88df09dec8355c7493e743dc22250/appleweiping/room-replica"
+    },
+    "schematicairlock": {
+      "repository": "appleweiping/SchematicAirlock",
+      "open_graph_image_url": "https://opengraph.githubassets.com/09eec425e0d6d9083534d2936a6443d6eadde38bb37808f5a8e8451bae9fb6d8/appleweiping/SchematicAirlock"
     },
     "security-helper": {
       "repository": "appleweiping/Security-helper",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9dd12f302c4d8b74849199548335809ad02e8f7d7d648718e631734020b128d6/appleweiping/Security-helper"
+      "open_graph_image_url": "https://opengraph.githubassets.com/723846df8845018802ffc4934a0b4022542c8fa0e5b8e97d7821dfc4e6b1053e/appleweiping/Security-helper"
     },
     "seed-labs": {
       "repository": "appleweiping/seed-labs",
-      "open_graph_image_url": "https://opengraph.githubassets.com/5edd0f425ea83ef488432029832ab1140b2e808ad2f593f98a6aa7948ebf1ec2/appleweiping/seed-labs"
+      "open_graph_image_url": "https://opengraph.githubassets.com/da25d8550a878ba07449f8f3ea7a5562992ba32fb577cabdfe73d010d0a6d3b4/appleweiping/seed-labs"
+    },
+    "simcairn": {
+      "repository": "appleweiping/SimCairn",
+      "open_graph_image_url": "https://opengraph.githubassets.com/baf4aa7a9c09be0a672ee8561aac13c21ed831b34375593a772f3a790e7582f1/appleweiping/SimCairn"
     },
     "sjtu-compilers": {
       "repository": "appleweiping/sjtu-compilers",
-      "open_graph_image_url": "https://opengraph.githubassets.com/a6fd0616e0c792dc6c2c6708abc75f5ce51227c2e604f2d4dca1a48972201e08/appleweiping/sjtu-compilers"
+      "open_graph_image_url": "https://opengraph.githubassets.com/533bc9a99d1c7827be37c10a50587512d05c308f785eb6c5b93827256f9a922a/appleweiping/sjtu-compilers"
     },
     "spec2gds-agent": {
       "repository": "appleweiping/spec2gds-agent",
-      "open_graph_image_url": "https://opengraph.githubassets.com/743014f935347daabe4e8e6324d9e762d2f7d56e6fec50792531cff45df5d254/appleweiping/spec2gds-agent"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f7b4cbd52b4f14b41704b745fbe879de9215591870292cddf58b70dde4e15b4a/appleweiping/spec2gds-agent"
+    },
+    "spicetrellis": {
+      "repository": "appleweiping/SpiceTrellis",
+      "open_graph_image_url": "https://opengraph.githubassets.com/b8a6121d6b719751d81a013b7d011d897ecbf7baefec852e6a5b86652b92f650/appleweiping/SpiceTrellis"
+    },
+    "splitproof": {
+      "repository": "appleweiping/splitproof",
+      "open_graph_image_url": "https://opengraph.githubassets.com/2357157882c50b2920b2ab45e4bbfec78a07b655be35e499476094bfb7680fdb/appleweiping/splitproof"
+    },
+    "spydrnet": {
+      "repository": "appleweiping/spydrnet",
+      "open_graph_image_url": "https://opengraph.githubassets.com/e0cecdedff97ae0b41ea8d23dabe9316a84ddacc6e930fa403ab58dba0a89345/appleweiping/spydrnet"
     },
     "sta4273-min-expectations": {
       "repository": "appleweiping/sta4273-min-expectations",
-      "open_graph_image_url": "https://opengraph.githubassets.com/a8fd3f52b00504d0a41f360e010575293b8669cf8c1810a1707e91b52969080c/appleweiping/sta4273-min-expectations"
+      "open_graph_image_url": "https://opengraph.githubassets.com/da92f25ebb3518301de384747edb4f7613aff8b8a3bdd59c9cb0b562fa33a0be/appleweiping/sta4273-min-expectations"
     },
     "stanford-cs110-syscore": {
       "repository": "appleweiping/stanford-cs110-syscore",
-      "open_graph_image_url": "https://opengraph.githubassets.com/c65d0f1becb170c6af19623a7fbc6a3ea539d1de8e5cb26db63488bd5507693d/appleweiping/stanford-cs110-syscore"
+      "open_graph_image_url": "https://opengraph.githubassets.com/b75053d4720012cb3b6b20b94d8ffdcd71339c9cdaee38f21f896ac415d534ed/appleweiping/stanford-cs110-syscore"
     },
     "stanford-cs142": {
       "repository": "appleweiping/stanford-cs142",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b7386d42209076ff9e602946f6cdcf38ca625bcdc7a9df2b099861edc0606381/appleweiping/stanford-cs142"
+      "open_graph_image_url": "https://opengraph.githubassets.com/bb21ae99e722182c7fe05b9da4990746d77b3424243dd2e449812b76a46c037b/appleweiping/stanford-cs142"
     },
     "stanford-cs143-cool": {
       "repository": "appleweiping/stanford-cs143-cool",
-      "open_graph_image_url": "https://opengraph.githubassets.com/b02b148bf3000a55544aec6278f65fb02682f1a257a161504055663d5b7f2aaf/appleweiping/stanford-cs143-cool"
+      "open_graph_image_url": "https://opengraph.githubassets.com/1b2ea58c90d0c4dd32e774f3c76236e2c4eabd756a97442e2a33f77c84a40c67/appleweiping/stanford-cs143-cool"
     },
     "stanford-cs148": {
       "repository": "appleweiping/stanford-cs148",
-      "open_graph_image_url": "https://opengraph.githubassets.com/057392a01191dab0fdf0ee361e3511480b837503f3483f90ca62821308099048/appleweiping/stanford-cs148"
+      "open_graph_image_url": "https://opengraph.githubassets.com/25eaa2d81f7154df44a943ab8d0d1b5e5dab9e99415fe0903cbd8f33f9548658/appleweiping/stanford-cs148"
     },
     "stanford-cs242": {
       "repository": "appleweiping/stanford-cs242",
-      "open_graph_image_url": "https://opengraph.githubassets.com/6812861f74bbf3f4085339c02f68c35e6bc04bb7d985e3977dd72a494f85e986/appleweiping/stanford-cs242"
+      "open_graph_image_url": "https://opengraph.githubassets.com/0be5252272c2d9f756805ae8598cb7798d973585b1d60476b36b6bc60ec29531/appleweiping/stanford-cs242"
     },
     "stanford-cs346-db": {
       "repository": "appleweiping/stanford-cs346-db",
-      "open_graph_image_url": "https://opengraph.githubassets.com/51bdcb672e7832506710abe6f68781d627b308c5de5b2ae2b91f045012d6509f/appleweiping/stanford-cs346-db"
+      "open_graph_image_url": "https://opengraph.githubassets.com/92f80f5202f107ecaf8fd469471be863deeb7740853035fad5b50adfd7cafae6/appleweiping/stanford-cs346-db"
     },
     "stanford-ee364a-convex": {
       "repository": "appleweiping/stanford-ee364a-convex",
-      "open_graph_image_url": "https://opengraph.githubassets.com/020c41a4146fa516e571af07c1277894d43bdc37fbfc24f23e386b755ea6901b/appleweiping/stanford-ee364a-convex"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e334f404089dfe77659942834201cde97f34c371d9b4b56090b574156498d174/appleweiping/stanford-ee364a-convex"
     },
     "stat8201-dgm": {
       "repository": "appleweiping/stat8201-dgm",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9089f8c4d3b29bb8a2355c00cda43d90bae63e7bd88341a947a860d8b99c9f48/appleweiping/stat8201-dgm"
+      "open_graph_image_url": "https://opengraph.githubassets.com/da8469c3260784ffb4cf781853eccb8d0e3c54de98518335c3345074b3d8274c/appleweiping/stat8201-dgm"
+    },
+    "stream-quilt": {
+      "repository": "appleweiping/stream-quilt",
+      "open_graph_image_url": "https://opengraph.githubassets.com/89c39644e9bd5cb1483d2e3a00bc910c7f6409f83fe231028c72a9a177f8e74f/appleweiping/stream-quilt"
+    },
+    "swe-bench": {
+      "repository": "appleweiping/SWE-bench",
+      "open_graph_image_url": "https://opengraph.githubassets.com/e65313aa92fdfb990cf0271fd6dd70a9700a102fd872637f7a61f3f7438563bf/appleweiping/SWE-bench"
     },
     "sysadmin-decal": {
       "repository": "appleweiping/sysadmin-decal",
-      "open_graph_image_url": "https://opengraph.githubassets.com/046f34246c6e99ddcfdf6017e346af574572bdabe4411bb52d7230f95520dd93/appleweiping/sysadmin-decal"
+      "open_graph_image_url": "https://opengraph.githubassets.com/55fdda5db2ff0d5ef4b06ad5377e2f0edba3eeeb3d5aff5842456b44fd658b5e/appleweiping/sysadmin-decal"
     },
     "terraria-doc": {
       "repository": "appleweiping/TERRARIA_DOC",
-      "open_graph_image_url": "https://opengraph.githubassets.com/4404bb2ee145a93d19f0a1109bb4d077d02f81fbd6dca6c2789fc066803596fc/appleweiping/TERRARIA_DOC"
+      "open_graph_image_url": "https://opengraph.githubassets.com/dc966d29508b992e9078f5ad460cf07b8e223e856c10c33df9240968799dd190/appleweiping/TERRARIA_DOC"
     },
     "tgl-rec": {
       "repository": "appleweiping/TGL-Rec",
-      "open_graph_image_url": "https://opengraph.githubassets.com/a39ca13b5035132f5a690a1a53068a219ca587ebeb5410ebd81c4ae22a6f241a/appleweiping/TGL-Rec"
+      "open_graph_image_url": "https://opengraph.githubassets.com/6796558f206c991ba5363b2bcf89f0cdcb18ce421bf211ccd19669e2a1182531/appleweiping/TGL-Rec"
     },
     "tinyml-efficient-dl": {
       "repository": "appleweiping/tinyml-efficient-dl",
-      "open_graph_image_url": "https://opengraph.githubassets.com/6e4f388b49969c472b7a8d0c9ddc201348c4b41d72570b85bfaee883351fabfd/appleweiping/tinyml-efficient-dl"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f3ad4ce6fc09145c8c1f455bda48fd72943e8a2a2c8e90ebac11347059c47310/appleweiping/tinyml-efficient-dl"
     },
     "top-down-labs": {
       "repository": "appleweiping/top-down-labs",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9375f30758da6fb92484081b835018ef02fc59519d55a72a4fc393f73e358076/appleweiping/top-down-labs"
+      "open_graph_image_url": "https://opengraph.githubassets.com/7aab1f0a161047cdcf95d7319a9d1a6444d5906bd54a5f742bab147ef9c94e2c/appleweiping/top-down-labs"
     },
     "topo-flow-limits": {
       "repository": "appleweiping/topo-flow-limits",
-      "open_graph_image_url": "https://opengraph.githubassets.com/a59572965fad875bf632bd62f16a58fe43925452042d968286d5001fd0e732c1/appleweiping/topo-flow-limits"
+      "open_graph_image_url": "https://opengraph.githubassets.com/5ae94dc6a205c1fbc69d7e9c2a4faa36ed0c64e5acc4d26a3d2827288254a36b/appleweiping/topo-flow-limits"
+    },
+    "topologylantern": {
+      "repository": "appleweiping/TopologyLantern",
+      "open_graph_image_url": "https://opengraph.githubassets.com/96708e2487c0026c6b56025df964fead349d70c543d93de7ee2ad96aef42c3c9/appleweiping/TopologyLantern"
     },
     "tracecausal": {
       "repository": "appleweiping/tracecausal",
-      "open_graph_image_url": "https://opengraph.githubassets.com/d4f0771acf978a459bfab882e6266c3272da6a35151ae5903ea404fc2f2b9dd8/appleweiping/tracecausal"
+      "open_graph_image_url": "https://opengraph.githubassets.com/38874927ec13fc5c249cbfcb9002f49980eb008350d3e6080d9b39045dbe423e/appleweiping/tracecausal"
+    },
+    "transcribe-critic": {
+      "repository": "appleweiping/transcribe-critic",
+      "open_graph_image_url": "https://opengraph.githubassets.com/e0cecdedff97ae0b41ea8d23dabe9316a84ddacc6e930fa403ab58dba0a89345/appleweiping/transcribe-critic"
     },
     "truce-rec": {
       "repository": "appleweiping/TRUCE-Rec",
-      "open_graph_image_url": "https://opengraph.githubassets.com/f33d0755d038c04995aafdf1d67c0d654d2f6936338fd7cf32fb70da2a037c82/appleweiping/TRUCE-Rec"
+      "open_graph_image_url": "https://opengraph.githubassets.com/5228b4b5b1666f1353b0cf9b6d0a2aa1727e2a4de23fb65a3ce6d2f9e39e3fd3/appleweiping/TRUCE-Rec"
+    },
+    "turnscope": {
+      "repository": "appleweiping/turnscope",
+      "open_graph_image_url": "https://opengraph.githubassets.com/ee4947a3b74fd8821f82b983d8b86068603965f2252b6a9bcf59d2a31b6d92d3/appleweiping/turnscope"
     },
     "ucb-cs126": {
       "repository": "appleweiping/ucb-cs126",
-      "open_graph_image_url": "https://opengraph.githubassets.com/f4c85c00faeeee556000c00d73effaabedfebe28f3f64e043274aaf6fdade666/appleweiping/ucb-cs126"
+      "open_graph_image_url": "https://opengraph.githubassets.com/beac8c211ca500596967b58c35090e45e0deb9df51ff3f20289c5ccb0a8482eb/appleweiping/ucb-cs126"
     },
     "ucb-cs161": {
       "repository": "appleweiping/ucb-cs161",
-      "open_graph_image_url": "https://opengraph.githubassets.com/9eb32a3e743887d7021a653634884119089dc5dba4f8f660cf1b05da77d3f299/appleweiping/ucb-cs161"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e8ef2283726a2bd18cf04a3995e82e9bd7f98348a7dc85bfa304bc60ad043678/appleweiping/ucb-cs161"
     },
     "ucb-cs70": {
       "repository": "appleweiping/ucb-cs70",
-      "open_graph_image_url": "https://opengraph.githubassets.com/52936847ecbd81aa2336c703c1ecd9c30a6cf76da4bc63d922a9a4cb98dcaeab/appleweiping/ucb-cs70"
+      "open_graph_image_url": "https://opengraph.githubassets.com/4f848aa1c267feb5b3cb170310c1bab75e7a1fd54f22a260bf890b5db2d6bae7/appleweiping/ucb-cs70"
     },
     "ucb-data100": {
       "repository": "appleweiping/ucb-data100",
-      "open_graph_image_url": "https://opengraph.githubassets.com/0b0a234a0edff1926ea41bbe4bd5a1d236a57f9843e923da6b95361a4ded4c2b/appleweiping/ucb-data100"
+      "open_graph_image_url": "https://opengraph.githubassets.com/8a6e33f76c71900961ef5a456ff006828fb936b9a90b0c8907616f22dfc983d1/appleweiping/ucb-data100"
     },
     "ucb-ee120-signals": {
       "repository": "appleweiping/ucb-ee120-signals",
-      "open_graph_image_url": "https://opengraph.githubassets.com/1cbfe6d5b2bec665d6973996f800f591c45d04561969b047bc295dd0c101112a/appleweiping/ucb-ee120-signals"
+      "open_graph_image_url": "https://opengraph.githubassets.com/daaa1ead8310b74bd388c3068f090620bfc8e499a0cbb9ceb0fc9f6d77826ab0/appleweiping/ucb-ee120-signals"
     },
     "ucb-ee16ab": {
       "repository": "appleweiping/ucb-ee16ab",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ff5ec3702f06c3cb52f9599a3a5628d8dd380dabf91d084c6447fccd5b3ffb3f/appleweiping/ucb-ee16ab"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d4e29b2239f8b7cbb93d86abc86d0321742d911d9edc0f2e5effbace882684bf/appleweiping/ucb-ee16ab"
     },
     "uml-class-diagram-tool": {
       "repository": "appleweiping/uml-class-diagram-tool",
-      "open_graph_image_url": "https://opengraph.githubassets.com/aca2bdbbf386be3b674d92bcab1c186b912fe7a9a4e4a766dc9dbdc5cb4435dc/appleweiping/uml-class-diagram-tool"
+      "open_graph_image_url": "https://opengraph.githubassets.com/aebd0b10609365defda58bbce63a88376f5912596342e0e07f538a4ff0d2f907/appleweiping/uml-class-diagram-tool"
     },
     "umn-gopher-assistant": {
       "repository": "appleweiping/umn-gopher-assistant",
-      "open_graph_image_url": "https://opengraph.githubassets.com/1e950355e9b66a3d26610f483231ff88070bc948d9f0c33fa1ddf555242476ab/appleweiping/umn-gopher-assistant"
+      "open_graph_image_url": "https://opengraph.githubassets.com/d9a35f36d7dbc62df1c46262a2c8ab1e54f4fe6a4a14c1c1505bb8b2741710ba/appleweiping/umn-gopher-assistant"
     },
     "undergraduate-study-netherlands": {
       "repository": "appleweiping/UNDERGRADUATE_STUDY_NETHERLANDS",
-      "open_graph_image_url": "https://opengraph.githubassets.com/84d9e85dbdf73af707c21ce0e40d29057f5c9f579f7150a4321c94492aeed7b9/appleweiping/UNDERGRADUATE_STUDY_NETHERLANDS"
+      "open_graph_image_url": "https://opengraph.githubassets.com/27016a748d3258b54f779124d0d0a33ba845a778ab24bdb718ec58f0e4de1997/appleweiping/UNDERGRADUATE_STUDY_NETHERLANDS"
     },
     "ustc-cg": {
       "repository": "appleweiping/ustc-cg",
-      "open_graph_image_url": "https://opengraph.githubassets.com/8b8341fee4ac9e74dca6dfda3260164e53fdfb70f0a5de04bfaba277c0cf5d7e/appleweiping/ustc-cg"
+      "open_graph_image_url": "https://opengraph.githubassets.com/f0aa32b1cf4cc43c87a5d655b293c1f7a91b1a862ac86ccfdf98fb0c19696662/appleweiping/ustc-cg"
     },
     "ustc-compilers": {
       "repository": "appleweiping/ustc-compilers",
-      "open_graph_image_url": "https://opengraph.githubassets.com/33b1f08f8eb294009773275d727be20ededa820d85a53ab894404f6936e307d9/appleweiping/ustc-compilers"
+      "open_graph_image_url": "https://opengraph.githubassets.com/c679da3d589f4f275e05e0d6570b9650d8c5a5833f1c465faede1b7be4a5693b/appleweiping/ustc-compilers"
     },
     "venus-basestation": {
       "repository": "appleweiping/venus-basestation",
-      "open_graph_image_url": "https://opengraph.githubassets.com/11e1fecb597e099186add37f09077cbb6f76c3f9f07c1712ef0e92f3fa496f66/appleweiping/venus-basestation"
+      "open_graph_image_url": "https://opengraph.githubassets.com/def8efc50ef70e35fb1dc53d5db6184f7be513baf24dde84b7be767bba253c55/appleweiping/venus-basestation"
+    },
+    "vila": {
+      "repository": "appleweiping/VILA",
+      "open_graph_image_url": "https://opengraph.githubassets.com/df20ebc1d041d09b033595e44d6199be342d97b92a62a88b371fa93b1d1dfed8/appleweiping/VILA"
     },
     "visa-lark": {
       "repository": "appleweiping/visa-lark",
-      "open_graph_image_url": "https://opengraph.githubassets.com/1f0e3f2e61ff4b6688380d948365fabead5aefaef2981d19415100979ee86a12/appleweiping/visa-lark"
+      "open_graph_image_url": "https://opengraph.githubassets.com/e08c8695e8fbe4e8bf6077415d80cf3283172adbf16e05c343904b2a23b1aa4d/appleweiping/visa-lark"
     },
     "weiping-council": {
       "repository": "appleweiping/WEIPING_COUNCIL",
-      "open_graph_image_url": "https://opengraph.githubassets.com/3ee719a93454bb9167f206cb4bb7ebe6532e30d8da6adc6c6517b9c7c612fb71/appleweiping/WEIPING_COUNCIL"
+      "open_graph_image_url": "https://opengraph.githubassets.com/015385952a8894125b81523eb8956b0ffdecc89423ca6e97efc7170552749bc4/appleweiping/WEIPING_COUNCIL"
     },
     "weiping-lab": {
       "repository": "appleweiping/WEIPING_LAB",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ba918400842c014302d1ced768cb31bfa3eb2c243e68fb927193acc81c8ee750/appleweiping/WEIPING_LAB"
+      "open_graph_image_url": "https://opengraph.githubassets.com/1daa9c2bb9b1bf710d58bc61a5023390d68cd53a8b29442d1d58b5421aa3365e/appleweiping/WEIPING_LAB"
     },
     "weiping-whale": {
       "repository": "appleweiping/WEIPING_WHALE",
-      "open_graph_image_url": "https://opengraph.githubassets.com/948d7141703ef836a8cd09fc892eb56153c66ab74a88203f46484d4586851f72/appleweiping/WEIPING_WHALE"
+      "open_graph_image_url": "https://opengraph.githubassets.com/3880061ebf72454abd37f0255884376dfb83aa25aae86e3eb18c69d0740499bd/appleweiping/WEIPING_WHALE"
     },
     "weiping-wiki": {
       "repository": "appleweiping/WEIPING_WIKI",
-      "open_graph_image_url": "https://opengraph.githubassets.com/ff8768d175af9f64da8a999c0d9994cede828d4288c19e1355ba22ea41812976/appleweiping/WEIPING_WIKI"
+      "open_graph_image_url": "https://opengraph.githubassets.com/a13999f92512d3afed2dba3af2da931ac97f9dd9e4c8939e28cc78a834f194a2/appleweiping/WEIPING_WIKI"
     },
     "xv6-labs": {
       "repository": "appleweiping/xv6-labs",
-      "open_graph_image_url": "https://opengraph.githubassets.com/10732b87ce673e200d4dcc5dd8a59bb670538b0ac23955b7289919309d3a300b/appleweiping/xv6-labs"
+      "open_graph_image_url": "https://opengraph.githubassets.com/67cfd154b01a29ddbf11d631ef7b835f664009a39523c4cba527fb7b01c4cc23/appleweiping/xv6-labs"
     }
   }
 }

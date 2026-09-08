@@ -887,6 +887,170 @@
     "xv6-labs": {
       "zh": "基于麻省理工学院 6.S081/6.1810 与 xv6 公开材料的操作系统自学实验，涵盖系统调用、虚拟内存、陷阱、写时复制、网络、同步、文件系统与 mmap。",
       "ja": "MIT 6.S081/6.1810 に基づいた自習用の xv6 ラボ。システム コール、仮想メモリ、トラップ、コピーオンライト、ネットワーキング、同期、ファイルシステム、mmap をカバーします。"
+    },
+    "allo": {
+      "zh": "Cornell Allo 加速器设计与编程框架的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "Cornell の accelerator 設計・プログラミング framework Allo の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "anserini": {
+      "zh": "Castorini 基于 Lucene 的可复现信息检索工具 Anserini 的公开 fork；截至 2026-09-08 审计，无本地领先提交，落后上游一个提交。",
+      "ja": "Castorini の Lucene ベース再現可能情報検索 toolkit Anserini の公開 fork。2026-09-08 の監査時点で local ahead は0、上流より1 commit behind でした。"
+    },
+    "biasweave": {
+      "zh": "面向模拟电路尺寸优化的确定性混合变量 Pareto 优化工具。",
+      "ja": "アナログ回路 sizing のための、決定論的な混合変数 Pareto 最適化ツール。"
+    },
+    "charlib": {
+      "zh": "开源标准单元库表征工具链 CharLib 的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "オープンソース標準セル characterization toolchain CharLib の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "convokit": {
+      "zh": "Cornell NLP ConvoKit 对话分析工具与数据集的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "Cornell NLP の会話分析 toolkit・dataset ConvoKit の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "corpusledger": {
+      "zh": "为 NLP 语料库生成内容寻址清单、可审计差异与来源记录，并支持 Ed25519 签名。",
+      "ja": "NLP corpus の content-addressed manifest、監査可能な diff、provenance、Ed25519 署名を提供します。"
+    },
+    "evidence-braid": {
+      "zh": "以确定性方式融合多模态证据，并输出可审计的升级、拒绝或复核决策。",
+      "ja": "マルチモーダル証拠を決定論的に統合し、監査可能な escalation・reject・review 判断を出力します。"
+    },
+    "facetroute": {
+      "zh": "在声明的候选大模型之间进行离线优先、可解释的个性化路由。",
+      "ja": "宣言済み LLM 候補間で、offline-first かつ説明可能な個別 routing を行います。"
+    },
+    "frame-quorum": {
+      "zh": "面向图像序列的可解释、内容感知关键帧选择工具。",
+      "ja": "画像シーケンス向けの、説明可能で content-aware な key-frame 選択ツール。"
+    },
+    "github": {
+      "zh": "trec-auto-judge 组织元数据与基础设施资料的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "trec-auto-judge の組織 metadata・infrastructure profile の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "graph-sail": {
+      "zh": "为异构多模态有向无环图提供确定性的设备放置与调度。",
+      "ja": "異種マルチモーダル DAG の決定論的な placement と scheduling を行います。"
+    },
+    "highwayvlm": {
+      "zh": "UMN Choi Lab 高速公路相机安全系统的公开 fork，结合 CV 优先升级、视觉语言分析、SQLite 与 FastAPI 看板；截至 2026-09-08 默认分支与上游一致，另有尚未合并的 draft PR #3。",
+      "ja": "CV-first escalation、視覚言語解析、SQLite、FastAPI dashboard を組み合わせた UMN Choi Lab の高速道路カメラ安全システムの公開 fork。2026-09-08 時点で default branch は上流と同一で、別途 draft PR #3 は未マージです。"
+    },
+    "indexsail": {
+      "zh": "使用安全 Rust 实现 BM25、WAND、block-max WAND 与 TREC 实验的确定性信息检索工具包。",
+      "ja": "safe Rust による BM25、WAND、block-max WAND、TREC 実験向けの決定論的 IR toolkit。"
+    },
+    "lkpy": {
+      "zh": "LensKit 推荐工具包的公开 fork；虽然截至 2026-09-08 默认分支没有本地领先提交，但闫维平针对 ItemKNN 未知用户警告的修复与测试已通过 PR #1209 合并到上游。",
+      "ja": "LensKit 推薦 toolkit の公開 fork。2026-09-08 時点で default branch の local ahead は0ですが、Weiping Yan による ItemKNN の未知ユーザー警告修正と test は upstream PR #1209 でマージ済みです。"
+    },
+    "metricguard": {
+      "zh": "基于合同的 NLP 指标、配对统计比较与回归门控工具。",
+      "ja": "contract-driven NLP metric、paired statistical comparison、regression gate を提供します。"
+    },
+    "mmengine": {
+      "zh": "OpenMMLab 深度学习训练基础库 MMEngine 的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "OpenMMLab の深層学習 training 基盤 MMEngine の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "mosaicfeed": {
+      "zh": "可解释、关注多样性的离线信息流排序实验室。",
+      "ja": "説明可能で diversity-aware な offline feed ranking laboratory。"
+    },
+    "mstar": {
+      "zh": "任意输入到任意输出模型服务框架 M* 的公开 fork；截至 2026-09-08 默认分支没有本地领先提交，闫维平的 base64 音频校验与错误映射修复已通过 PR #235 合并到上游。",
+      "ja": "any-to-any model serving framework M* の公開 fork。2026-09-08 時点で default branch の local ahead は0ですが、Weiping Yan の base64 audio validation・error mapping 修正は upstream PR #235 でマージ済みです。"
+    },
+    "mtap": {
+      "zh": "基于 gRPC 与微服务的分布式文本分析框架 MTAP 的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "gRPC・microservice ベースの分散テキスト解析 framework MTAP の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "openram": {
+      "zh": "VLSIDA OpenRAM SRAM 版图与表征工件编译器的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "SRAM layout・characterization artifact を生成する VLSIDA OpenRAM compiler の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "orchidrec": {
+      "zh": "无第三方依赖、面向可复现推荐实验的完整工具包。",
+      "ja": "再現可能な推薦実験のための dependency-free toolkit。"
+    },
+    "payload-palette": {
+      "zh": "把多模态消息载荷校验并归一化为确定性、策略感知的清单。",
+      "ja": "マルチモーダル message payload を検証し、決定論的で policy-aware な manifest に正規化します。"
+    },
+    "peermatchlab": {
+      "zh": "在容量与资格约束下，将文档全局匹配给专家并输出可审计证据。",
+      "ja": "capacity・qualification 制約下で文書を専門家へ割り当てる、監査可能な global matching toolkit。"
+    },
+    "pisa": {
+      "zh": "高性能学术搜索索引工具 PISA 的公开 fork；截至 2026-09-08 默认分支没有本地领先提交，闫维平的 WAND 作用域枚举改动已通过 PR #641 合并到上游。",
+      "ja": "高性能 academic search-index toolkit PISA の公開 fork。2026-09-08 時点で default branch の local ahead は0ですが、Weiping Yan の scoped-enum WAND 構成変更は upstream PR #641 でマージ済みです。"
+    },
+    "processors": {
+      "zh": "CLU Lab Natural Language Processors 自然语言处理库的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "CLU Lab Natural Language Processors library の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "promptwitness": {
+      "zh": "提供提示词结构差异、模型提供商适配、策略门控与 SARIF 报告。",
+      "ja": "prompt の構造 diff、provider adapter、policy gate、SARIF report を提供します。"
+    },
+    "pyserini": {
+      "zh": "Castorini Pyserini 稀疏与稠密可复现信息检索工具的完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "再現可能な sparse・dense 情報検索 toolkit Castorini Pyserini の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "pyterrier": {
+      "zh": "用于声明式信息检索实验的 PyTerrier 框架完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "宣言的な情報検索実験 framework PyTerrier の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "regressistor": {
+      "zh": "与仿真器无关的模拟电路规格检查与持续集成回归门。",
+      "ja": "simulator-neutral なアナログ仕様検査と継続的 integration regression gate。"
+    },
+    "room-replica": {
+      "zh": "由真实居住照片指导的学生房间 Blender 重建，包含可编辑资产、Cycles 渲染与双语 Three.js 演示。",
+      "ja": "実際の居住写真を基にした学生室の Blender 再構成。編集可能 asset、Cycles render、二言語 Three.js demo を含みます。"
+    },
+    "schematicairlock": {
+      "zh": "针对生成式 SPICE 工件的离线安全与结构审计闸门。",
+      "ja": "生成された SPICE artifact のための offline safety・structural audit gate。"
+    },
+    "simcairn": {
+      "zh": "用于可复现 SPICE 参数扫描的崩溃可恢复、内容寻址编排器。",
+      "ja": "再現可能な SPICE sweep のための、crash-resumable かつ content-addressed な orchestration tool。"
+    },
+    "spicetrellis": {
+      "zh": "保留来源的 SPICE 解析、诊断、格式化与层级展开工具。",
+      "ja": "provenance を保持する SPICE parsing、diagnostics、formatting、hierarchy flattening toolkit。"
+    },
+    "splitproof": {
+      "zh": "确定性、防泄漏的加权与多标签数据集划分，并生成可验证清单。",
+      "ja": "leakage-resistant な weighted・multilabel dataset split を決定論的に行い、検証可能 manifest を生成します。"
+    },
+    "spydrnet": {
+      "zh": "用于分析与转换 FPGA 网表的 BYU CCL SpyDrNet 框架完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "FPGA netlist を解析・変換する BYU CCL SpyDrNet framework の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "stream-quilt": {
+      "zh": "面向多模态事件流的确定性时间对齐与 watermark 处理。",
+      "ja": "マルチモーダル event stream の決定論的な時刻 alignment と watermark 処理を行います。"
+    },
+    "swe-bench": {
+      "zh": "用于评估大模型解决真实 GitHub issue 能力的 SWE-bench 基准完整公开 fork；截至 2026-09-08 审计，默认分支没有领先上游的提交。",
+      "ja": "実際の GitHub issue 解決能力を LLM で評価する SWE-bench benchmark の完全な公開 fork。2026-09-08 の監査時点で default branch に上流より ahead の commit はありません。"
+    },
+    "topologylantern": {
+      "zh": "以可解释、确定性的方式生成模拟电路拓扑候选。",
+      "ja": "アナログ回路 topology candidate を説明可能かつ決定論的に生成します。"
+    },
+    "transcribe-critic": {
+      "zh": "transcribe-critic 的完整公开 fork；该工具通过大模型裁决合并多份语音转录，并支持说话人分离与摘要；截至 2026-09-08 默认分支没有领先上游的提交。",
+      "ja": "複数の音声 transcript を LLM adjudication で統合し、speaker diarization・要約を行う transcribe-critic の完全な公開 fork。2026-09-08 時点で default branch に上流より ahead の commit はありません。"
+    },
+    "turnscope": {
+      "zh": "为 NLP 与大模型工作流提供确定性会话上下文重建、审计与提供商适配器。",
+      "ja": "NLP・LLM workflow 向けに、決定論的な会話 context 再構成、audit、provider adapter を提供します。"
+    },
+    "vila": {
+      "zh": "NVIDIA VILA 视觉语言模型家族的完整公开 fork，覆盖端侧、数据中心与云端多模态任务；截至 2026-09-08 默认分支没有领先上游的提交。",
+      "ja": "edge・data center・cloud のマルチモーダル task 向け NVIDIA VILA 視覚言語 model family の完全な公開 fork。2026-09-08 時点で default branch に上流より ahead の commit はありません。"
     }
   }
 }

@@ -2,6 +2,13 @@
 {% assign repository_description = include.description %}
 {% assign source_label = include.source_label %}
 {% assign repository_cover = site.data.repository_covers.covers[repository.slug] %}
+{% assign repository_detail_routes = site.data.translation_routes[repository.slug] %}
+{% assign repository_card_url = repository.source_url %}
+{% assign repository_card_external = true %}
+{% if repository_detail_routes and repository_detail_routes[current_lang] %}
+  {% assign repository_card_url = repository_detail_routes[current_lang] %}
+  {% assign repository_card_external = false %}
+{% endif %}
 {% if current_lang == 'zh-CN' %}
   {% capture repository_cover_alt %}{{ repository.title }} 仓库封面{% endcapture %}
 {% elsif current_lang == 'ja' %}
@@ -13,10 +20,15 @@
 <div class="col" id="{{ repository.slug | escape }}" style="scroll-margin-top: 5rem">
   <a
     class="d-block h-100"
-    href="{{ repository.source_url | escape }}"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="{{ strings.catalog.view_source_prefix }} {{ repository.title | escape }} {{ strings.catalog.view_source_suffix }}"
+    {% if repository_card_external %}
+      href="{{ repository_card_url | escape }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="{{ strings.catalog.view_source_prefix }} {{ repository.title | escape }} {{ strings.catalog.view_source_suffix }}"
+    {% else %}
+      href="{{ repository_card_url | relative_url | escape }}"
+      aria-label="{{ strings.catalog.open_details_prefix }} {{ repository.title | escape }} {{ strings.catalog.open_details_suffix }}"
+    {% endif %}
   >
     <article class="card h-100 hoverable" data-portfolio-project-card data-repository-cover-card>
       {% if repository_cover and repository_cover.path %}

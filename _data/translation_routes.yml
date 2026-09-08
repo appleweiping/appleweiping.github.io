@@ -68,10 +68,30 @@ inr-aliasing-limits:
   zh-CN: /zh/projects/inr-aliasing-limits/
   ja: /ja/projects/inr-aliasing-limits/
 
+highwayvlm:
+  en: /projects/highwayvlm/
+  zh-CN: /zh/projects/highwayvlm/
+  ja: /ja/projects/highwayvlm/
+
+lkpy:
+  en: /projects/lkpy/
+  zh-CN: /zh/projects/lkpy/
+  ja: /ja/projects/lkpy/
+
 lumen-rec:
   en: /projects/lumen-rec/
   zh-CN: /zh/projects/lumen-rec/
   ja: /ja/projects/lumen-rec/
+
+mstar:
+  en: /projects/mstar/
+  zh-CN: /zh/projects/mstar/
+  ja: /ja/projects/mstar/
+
+pisa:
+  en: /projects/pisa/
+  zh-CN: /zh/projects/pisa/
+  ja: /ja/projects/pisa/
 
 topo-flow-limits:
   en: /projects/topo-flow-limits/

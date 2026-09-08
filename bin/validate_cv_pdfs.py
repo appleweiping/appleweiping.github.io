@@ -24,9 +24,14 @@ CANONICAL_PDFS = {
 COMPATIBILITY_PDF = PDF_DIRECTORY / "Weiping_Yan_CV.pdf"
 
 EXPECTED_TEXT = {
-    "en": ["Weiping Yan", "Program starts 2026-09-08", "randomly generated/synthetic data"],
-    "zh-CN": ["闫维平", "项目于 2026-09-08 开始", "随机生成/合成数据"],
-    "ja": ["Weiping Yan", "プログラム開始", "ランダム生成された合成データ"],
+    "en": [
+        "Weiping Yan",
+        "Program starts 2026-09-08",
+        "randomly generated/synthetic data",
+        "TU/e Honors Academy",
+    ],
+    "zh-CN": ["闫维平", "项目于 2026-09-08 开始", "随机生成/合成数据", "TU/e Honors Academy"],
+    "ja": ["Weiping Yan", "プログラム開始", "ランダム生成された合成データ", "TU/e Honors Academy"],
 }
 EXPECTED_FONT = {
     "en": "SourceSans3",
@@ -47,6 +52,7 @@ COMMON_URIS = {
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing",
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics",
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation",
+    "https://educationguide.tue.nl/programs/honors-academy",
 }
 EXPECTED_WEBSITE = {
     "en": "https://appleweiping.github.io/",

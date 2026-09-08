@@ -28,7 +28,7 @@ CORE_TRANSLATION_KEYS = %w[
 ].to_set.freeze
 
 EXPECTED_COUNTS = {
-  "projects" => 12,
+  "projects" => 16,
   "news" => 10
 }.freeze
 
