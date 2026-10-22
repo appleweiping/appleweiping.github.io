@@ -1,125 +1,93 @@
 cv:
   name: 闫维平
-  headline: 本科研究者
   email:
     - yan00944@umn.edu
     - vipinapple986@gmail.com
   website: https://appleweiping.github.io/zh/
-
-  social_networks:
-    - network: GitHub
-      username: appleweiping
-    - network: LinkedIn
-      username: weiping-yan-b62567383
-    - network: Google Scholar
-      username: gK6JtzsAAAAJ
-    - network: X
-      username: VipinYan14431
-    - network: Instagram
-      username: weipingappleapple
+  custom_connections:
+    - placeholder: github.com/appleweiping
+      url: https://github.com/appleweiping
+      fontawesome_icon: github
+    - placeholder: LinkedIn
+      url: https://www.linkedin.com/in/weiping-yan-b62567383
+      fontawesome_icon: linkedin
+    - placeholder: Google Scholar
+      url: https://scholar.google.com/citations?user=gK6JtzsAAAAJ
+      fontawesome_icon: graduation-cap
 
   sections:
-    个人简介:
-      - bullet: >-
-          闫维平（Weiping Yan）是一名本科研究者，研究兴趣包括人工智能、自然语言处理、
-          微电子学与电子设计自动化。
-
     教育经历:
-      - institution: University of Minnesota
-        location: 美国明尼苏达州明尼阿波利斯
-        url: https://cse.umn.edu/
-        area: 电气工程与计算机科学，College of Science and Engineering
-        degree: 本科
+      - institution: 明尼苏达大学双城分校（University of Minnesota, Twin Cities）
+        location: 美国明尼阿波利斯
+        area: 电气工程与计算机科学，科学与工程学院
         start_date: 2026-09
         end_date: present
-        highlights:
-          - >-
-            电气工程与计算机科学本科生；[2026 年秋季课程于 9 月 8 日开始](https://asr.umn.edu/2026-27-twin-cities-and-rochester-calendar)。
 
-      - institution: Delft University of Technology × Eindhoven University of Technology
-        location: 荷兰代尔夫特与埃因霍温
-        url: https://www.tudelft.nl/en/
-        area: 计算机科学与工程、电气工程及应用物理
-        degree: 本科
+      - institution: 代尔夫特理工大学 × 埃因霍温理工大学
+        location: 荷兰代尔夫特 / 埃因霍温
+        area: 并行修读计算机科学与工程、电气工程、应用物理
         start_date: 2024-09
         end_date: 2026-08
         highlights:
-          - 转入 University of Minnesota 前，并行学习经历记录至 2026 年 8 月。
           - >-
-            [TU/e Honors Academy — Honors Bachelor Program](https://educationguide.tue.nl/programs/honors-academy)
-            参与者（2025—2026；转学前参与）。
-          - >-
-            [TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）](https://www.tudelft.nl/en/student/eemcs-student-portal/education/honours-programme)
-            参与者（2025—2026；转学前参与）。
+            **荣誉项目：**[TU/e Honors Academy](https://educationguide.tue.nl/programs/honors-academy) 荣誉学士项目；
+            [TU Delft 荣誉学士项目（HPB）](https://www.tudelft.nl/en/student/eemcs-student-portal/education/honours-programme)（2025—2026）
 
-      - institution: 杭州师范大学附属中学
-        location: 中国杭州
-        area: 语文、数学、英语、物理、化学与技术
-        degree: 高中
+      - institution: 杭州师范大学附属中学 · 上海外国语大学附属外国语学校
+        location: 中国杭州 / 上海
+        area: 高中，理工方向
         start_date: 2021-09
         end_date: 2024-08
 
-      - institution: 上海外国语大学附属外国语学校
-        location: 中国上海
-        area: 理工方向
-        degree: 中学
-        start_date: 2023-07
-        end_date: 2024-08
-
     经历:
-      - company: University of Minnesota — Minnesota NLP Group
-        position: 自然语言处理研究实习生
-        location: 美国明尼苏达州明尼阿波利斯
-        url: https://nlp.umn.edu/
+      - company: 明尼苏达大学 Minnesota NLP Group
+        position: NLP 研究实习生
+        location: 美国明尼阿波利斯
         start_date: 2026-07
         end_date: present
-        summary: 参与自然语言处理方向的本科研究实习。
+        highlights:
+          - 开发经用户同意才开始记录的 **Chrome 扩展**，采集去隐私化的交互轨迹，用于在相同任务上对比人类与**计算机使用智能体（computer-use agent）**的行为。
+          - 编写校验轨迹、提取 23 项行为特征并做留一任务评估的 **Python 命令行工具**；**5 个 PR** 合并进实验室仓库。
+
+      - company: 香港中文大学
+        position: 研究助理
+        location: 中国香港
+        start_date: 2026-03
+        end_date: present
+        highlights:
+          - 研究**基于大语言模型的推荐（LLM4Rec）**与自然语言处理。
 
       - company: Veylora Labs
         position: 联合创始人
+        location: 远程
         start_date: 2026-05
         end_date: present
-        summary: 开发面向组织决策支持的管理智能系统。
+        highlights:
+          - 探索辅助组织决策的高管信息系统。
 
-      - company: The Chinese University of Hong Kong
-        position: 研究助理
-        location: 中国香港
-        url: https://www.cuhk.edu.hk/english/
-        start_date: 2026-03
-        end_date: present
-        summary: 开展大语言模型推荐（LLM4Rec）与自然语言处理方向的研究工作。
-
-      - company: Eindhoven University of Technology
-        position: 教学助理
+      - company: 埃因霍温理工大学
+        position: 助教，微积分与逻辑和集合论
         location: 荷兰埃因霍温
-        url: https://www.tue.nl/en/
         start_date: 2025-09
         end_date: 2025-11
-        summary: 协助本科微积分与逻辑/集合论课程教学。
         highlights:
-          - 组织习题课、指导问题求解，并对数学推理提供结构化反馈。
+          - 带**习题课**，指导学生解题，并对数学推理给出书面反馈。
 
-      - company: Zhangjiang Laboratory
-        position: 研究助理
+      - company: 张江实验室
+        position: 研究助理，集成电路设计
         location: 中国上海
         start_date: 2025-07
         end_date: 2025-09
-        summary: 研究半导体集成电路设计流程与 EDA 工具链。
         highlights:
-          - 覆盖原理图与预布局仿真、DRC/LVS 验证及面向 MPW 的流片准备；不宣称已完成流片。
+          - 在工业级 **EDA 工具**上学习模拟集成电路流程：原理图、前仿真、**DRC/LVS** 验证及 MPW 流片准备。
 
-      - company: 独立研究项目
-        position: 学生研究者 — PM2.5 与呼吸系统疾病发病率
+      - company: 独立研究项目，指导：Soummya Kar 教授（CMU）、高强副教授（东南大学）
+        position: 学生研究者，PM2.5 与呼吸系统疾病
         location: 中国北京
         start_date: 2023-09
         end_date: 2024-02
-        summary: >-
-          在 Carnegie Mellon University 的 Soummya Kar 教授与 Southeast University
-          的高强副教授共同指导下，研究 PM2.5 暴露与呼吸系统疾病发病率的关系。
         highlights:
-          - 使用 Python 进行探索性分析、统计推断与可视化。
-          - 这是独立研究项目，并非在 Carnegie Mellon University 任职。
-          - 已发表分析使用随机生成/合成数据，并非真实世界临床或环境数据集。
+          - 用 **Python** 在合成数据上完成分析与可视化，论文发表于 *Theoretical and Natural Science*。
 
     论文:
       - title: "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars"
@@ -127,65 +95,46 @@ cv:
           - Xiang Wang
           - Xu Yan
           - Letian Pei
-          - "*Weiping Yan*"
-        journal: 已投稿至 DAI 2026
+          - "**Weiping Yan**"
+        journal: 已投稿 DAI 2026，评审中
         date: 2026
         url: https://openreview.net/forum?id=UV2UJ4VHf7
-        summary: >-
-          共同作者论文；修订版已发布于 OpenReview。已投稿至 DAI 2026，录用决定尚未公布，尚未录用或发表。
+        summary: "Xiang Wang, Xu Yan, Letian Pei, **Weiping Yan**. 已投稿 DAI 2026，评审中."
 
       - title: "Effect of PM2.5 air pollution on the incidence of respiratory diseases: A Python-based data analysis"
         authors:
-          - "*Weiping Yan*"
-        journal: Theoretical and Natural Science, 8(1), 70–75
-        date: 2023-11-13
-        url: https://doi.org/10.54254/2753-8818/8/20240361
-        summary: >-
-          已发表研究论文。研究使用随机生成/合成数据，不宣称使用真实世界临床或环境数据集。
+          - "**Weiping Yan**"
+        journal: Theoretical and Natural Science 8(1), 70–75
+        date: 2023-11
+        doi: 10.54254/2753-8818/8/20240361
+        summary: "**Weiping Yan**. Theoretical and Natural Science 8(1), 70–75. [doi:10.54254/2753-8818/8/20240361](https://doi.org/10.54254/2753-8818/8/20240361)"
 
-    精选开源贡献:
+    开源贡献:
       - bullet: >-
-          2026 年 8—9 月共有 6 个上游拉取请求被合并：[Power Grid Model #1516](https://github.com/PowerGridModel/power-grid-model/pull/1516)、
-          [#1518](https://github.com/PowerGridModel/power-grid-model/pull/1518)与
-          [#1540](https://github.com/PowerGridModel/power-grid-model/pull/1540)，
-          [LensKit #1209](https://github.com/lenskit/lkpy/pull/1209)，
-          [M* #235](https://github.com/mstar-project/mstar/pull/235)及
-          [PISA #641](https://github.com/pisa-engine/pisa/pull/641)；内容涉及验证与传感器语义、性能文档、
-          推荐系统警告、媒体解码与错误处理，以及检索类型安全。
+          **向 12 个由他人维护的开源项目合并了 20 个 pull request**（2026 年 8—10 月）。
+          *芯片设计：*OpenRAM、CharLib、HighTide、COmPOSER、ALIGN；
+          *电力系统：*Power Grid Model、power-grid-model-io；
+          *检索与推荐：*PISA、Pyserini、LensKit；
+          *语音与语言：*M*、clulab processors。
 
-    主要荣誉与奖项:
+    荣誉与奖项:
       - bullet: >-
-          [**Kaggle 铜牌**](https://www.kaggle.com/certification/competitions/weipingyan/santa-2025)，
-          [Santa 2025 - Christmas Tree Packing Challenge](https://www.kaggle.com/competitions/santa-2025)，
-          3,357 支队伍中排名第 186（2026 年 1 月 31 日）。
-      - bullet: >-
-          **一等奖**，CTSS 大学生创新创业竞赛，参赛所属院校列为 TU/e（2025 年 7 月）。
-      - bullet: >-
-          **一等奖**，2025 全国大学生数学能力挑战赛（2025 年 12 月）。
-      - bullet: >-
-          **全国一等奖**，2025 “科创杯”大学生数学建模竞赛数学建模知识竞赛赛道
-          （2025 年 12 月）。
+          **Kaggle 铜牌**，[Santa 2025 圣诞树装箱挑战赛](https://www.kaggle.com/certification/competitions/weipingyan/santa-2025)：
+          3,357 支队伍中第 186 名（2026.01）
+      - bullet: "**全国一等奖**，2025“科创杯”大学生数学建模竞赛，数学建模知识竞赛赛道（2025.12）"
+      - bullet: "**一等奖**，2025 全国大学生数学能力挑战赛（2025.12）"
+      - bullet: "**一等奖**，CTSS 大学生创新创业竞赛（2025.07）"
 
-    技术能力:
-      - label: 研究与分析
-        details: 统计推断、数据分析、数据可视化、机器学习、科学计算、科研软件工程
+    技能:
       - label: 编程语言
-        details: Python、C、C++、Java、MATLAB、Verilog
-      - label: 科学与工程工具
-        details: NumPy、pandas、Matplotlib、Git、LTspice、Origin
-
-    语言能力:
-      - label: 普通话
-        details: 母语
-      - label: 杭州方言
-        details: 能够口语交流
-      - label: 英语
-        details: C1
-
-    研究兴趣:
-      - label: 方向
+        details: Python、C、C++、Java、Rust、TypeScript/JavaScript、MATLAB、Verilog
+      - label: 工具
+        details: Git、NumPy、pandas、Matplotlib、PyTorch、ngspice、LTspice、Origin、Linux
+      - label: 研究兴趣
         details: >-
           [人工智能](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence)、
           [自然语言处理](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing)、
-          [微电子学](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics)与
+          [微电子学](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics)、
           [电子设计自动化](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation)
+      - label: 语言
+        details: 普通话（母语）、杭州话、英语（C1）

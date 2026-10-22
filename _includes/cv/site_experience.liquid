@@ -1,6 +1,7 @@
 {% comment %}
   Locale-aware variant of al_folio_cv v1.0.0 cv/experience.liquid.
   It preserves the upstream DOM and classes while localizing "present".
+  It also renders RenderCV normal entries (name instead of position), e.g. Projects.
 {% endcomment %}
 
 <ul class="card-text font-weight-light list-group list-group-flush">
@@ -45,12 +46,13 @@
           </table>
         </div>
         <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+          {% assign entry_title = entry.position | default: entry.name %}
           {% if entry.url %}
             <h6 class="title font-weight-bold ml-1 ml-md-4">
-              <a href="{{ entry.url }}">{{ entry.position }}</a>
+              <a href="{{ entry.url }}">{{ entry_title }}</a>
             </h6>
-          {% elsif entry.position %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.position }}</h6>
+          {% elsif entry_title %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry_title }}</h6>
           {% endif %}
           {% if entry.company %}
             <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ entry.company }}</h6>

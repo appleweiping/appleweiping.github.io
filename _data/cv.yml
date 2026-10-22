@@ -1,128 +1,94 @@
 cv:
   name: Weiping Yan
-  headline: Undergraduate Researcher
   email:
     - yan00944@umn.edu
     - vipinapple986@gmail.com
   website: https://appleweiping.github.io/
-
-  social_networks:
-    - network: GitHub
-      username: appleweiping
-    - network: LinkedIn
-      username: weiping-yan-b62567383
-    - network: Google Scholar
-      username: gK6JtzsAAAAJ
-    - network: X
-      username: VipinYan14431
-    - network: Instagram
-      username: weipingappleapple
+  custom_connections:
+    - placeholder: github.com/appleweiping
+      url: https://github.com/appleweiping
+      fontawesome_icon: github
+    - placeholder: LinkedIn
+      url: https://www.linkedin.com/in/weiping-yan-b62567383
+      fontawesome_icon: linkedin
+    - placeholder: Google Scholar
+      url: https://scholar.google.com/citations?user=gK6JtzsAAAAJ
+      fontawesome_icon: graduation-cap
 
   sections:
-    Profile:
-      - bullet: >-
-          Weiping Yan (闫维平) is an undergraduate researcher interested in artificial
-          intelligence, natural language processing, microelectronics, and electronic
-          design automation.
-
     Education:
-      - institution: University of Minnesota
-        location: Minneapolis, Minnesota, USA
-        url: https://cse.umn.edu/
+      - institution: University of Minnesota, Twin Cities
+        location: Minneapolis, MN
         area: Electrical Engineering and Computer Science, College of Science and Engineering
-        degree: UG
         start_date: 2026-09
         end_date: present
-        highlights:
-          - >-
-            Electrical Engineering and Computer Science student; [Fall 2026 classes began
-            September 8, 2026](https://asr.umn.edu/2026-27-twin-cities-and-rochester-calendar).
 
-      - institution: Delft University of Technology × Eindhoven University of Technology
-        location: Delft and Eindhoven, the Netherlands
-        url: https://www.tudelft.nl/en/
-        area: Computer Science & Engineering, Electrical Engineering, and Applied Physics
-        degree: UG
+      - institution: Delft University of Technology and Eindhoven University of Technology
+        location: Delft & Eindhoven, NL
+        area: Concurrent study in Computer Science & Engineering, Electrical Engineering, Applied Physics
         start_date: 2024-09
         end_date: 2026-08
         highlights:
-          - Concurrent study period recorded through August 2026 before transferring to the University of Minnesota.
           - >-
-            [TU/e Honors Academy — Honors Bachelor Program](https://educationguide.tue.nl/programs/honors-academy)
-            participant (2025–2026; participation before transfer).
-          - >-
-            [TU Delft — Honours Programme Bachelor (HPB)](https://www.tudelft.nl/en/student/eemcs-student-portal/education/honours-programme)
-            participant (2025–2026; participation before transfer).
+            **Honors:** [TU/e Honors Academy](https://educationguide.tue.nl/programs/honors-academy) Honors Bachelor Program;
+            [TU Delft Honours Programme Bachelor (HPB)](https://www.tudelft.nl/en/student/eemcs-student-portal/education/honours-programme)
+            (2025–2026)
 
-      - institution: The Affiliated High School to Hangzhou Normal University
-        location: Hangzhou, China
-        area: Chinese, Mathematics, English, Physics, Chemistry, and Technology
-        degree: HS
+      - institution: Hangzhou Normal University Affiliated High School · Shanghai Foreign Language School
+        location: Hangzhou & Shanghai
+        area: High school, science and engineering
         start_date: 2021-09
         end_date: 2024-08
 
-      - institution: Shanghai Foreign Language School Affiliated to SISU
-        location: Shanghai, China
-        area: Science and Engineering
-        degree: HS
-        start_date: 2023-07
-        end_date: 2024-08
-
     Experience:
-      - company: University of Minnesota — Minnesota NLP Group
+      - company: Minnesota NLP Group, University of Minnesota
         position: NLP Research Intern
-        location: Minneapolis, Minnesota, USA
-        url: https://nlp.umn.edu/
+        location: Minneapolis, MN
         start_date: 2026-07
         end_date: present
-        summary: Undergraduate research internship in natural language processing.
-
-      - company: Veylora Labs
-        position: Co-Founder
-        start_date: 2026-05
-        end_date: present
-        summary: Developing executive-intelligence systems for organizational decision support.
+        highlights:
+          - Built a consent-first **Chrome extension** that records privacy-reduced interaction traces, so people and **computer-use agents** can be compared on the same tasks.
+          - Wrote the **Python CLI** that validates traces, extracts 23 behavioral features, and runs leave-one-task-out evaluation; **5 PRs** merged into the lab repository.
 
       - company: The Chinese University of Hong Kong
         position: Research Assistant
         location: Hong Kong
-        url: https://www.cuhk.edu.hk/english/
         start_date: 2026-03
         end_date: present
-        summary: Research activity in large language models for recommendation (LLM4Rec) and natural language processing.
+        highlights:
+          - Research on **large language models for recommendation (LLM4Rec)** and natural language processing.
+
+      - company: Veylora Labs
+        position: Co-Founder
+        location: Remote
+        start_date: 2026-05
+        end_date: present
+        highlights:
+          - Exploring executive-intelligence systems that support organizational decision-making.
 
       - company: Eindhoven University of Technology
-        position: Teaching Assistant
-        location: Eindhoven, the Netherlands
-        url: https://www.tue.nl/en/
+        position: Teaching Assistant, Calculus and Logic & Set Theory
+        location: Eindhoven, NL
         start_date: 2025-09
         end_date: 2025-11
-        summary: Supported undergraduate teaching in calculus and logic/set theory.
         highlights:
-          - Led tutorials, guided problem solving, and provided structured feedback on mathematical reasoning.
+          - Led **tutorial sessions**, guided problem solving, and gave written feedback on students' mathematical reasoning.
 
       - company: Zhangjiang Laboratory
-        position: Research Assistant
+        position: Research Assistant, IC Design
         location: Shanghai, China
         start_date: 2025-07
         end_date: 2025-09
-        summary: Studied semiconductor IC design workflows and EDA toolchains.
         highlights:
-          - Covered schematic and pre-layout simulation, DRC/LVS verification, and MPW-oriented tape-out preparation; no completed tape-out is claimed.
+          - "Learned the analog IC flow on industry **EDA tools**: schematic, pre-layout simulation, **DRC/LVS**, and MPW tape-out preparation."
 
-      - company: Independent Research Project
-        position: Student Researcher — PM2.5 and Respiratory Disease Incidence
+      - company: Independent project, advised by Prof. Soummya Kar (CMU) and Assoc. Prof. Qiang Gao (SEU)
+        position: Student Researcher, PM2.5 and Respiratory Disease
         location: Beijing, China
         start_date: 2023-09
         end_date: 2024-02
-        summary: >-
-          Investigated PM2.5 exposure and respiratory-disease incidence under the joint
-          supervision of Prof. Soummya Kar (Carnegie Mellon University) and Associate
-          Prof. Qiang Gao (Southeast University).
         highlights:
-          - Used Python for exploratory analysis, statistical inference, and visualization.
-          - This was an independent research project, not an appointment at Carnegie Mellon University.
-          - The published analysis used randomly generated/synthetic data, not a real-world clinical or environmental dataset.
+          - Wrote a **Python** analysis and visualization pipeline on synthetic data; published in *Theoretical and Natural Science*.
 
     Publications:
       - title: "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars"
@@ -130,71 +96,46 @@ cv:
           - Xiang Wang
           - Xu Yan
           - Letian Pei
-          - "*Weiping Yan*"
-        journal: Submitted to DAI 2026
+          - "**Weiping Yan**"
+        journal: Submitted to DAI 2026, under review
         date: 2026
         url: https://openreview.net/forum?id=UV2UJ4VHf7
-        summary: >-
-          Co-authored manuscript; revised version posted on OpenReview. Submitted to DAI 2026;
-          the decision is pending, and it is not yet accepted or published.
+        summary: "Xiang Wang, Xu Yan, Letian Pei, **Weiping Yan**. Submitted to DAI 2026, under review."
 
       - title: "Effect of PM2.5 air pollution on the incidence of respiratory diseases: A Python-based data analysis"
         authors:
-          - "*Weiping Yan*"
-        journal: Theoretical and Natural Science, 8(1), 70–75
-        date: 2023-11-13
-        url: https://doi.org/10.54254/2753-8818/8/20240361
-        summary: >-
-          Published research article. The study reports analysis of randomly generated/synthetic
-          data and does not claim a real-world clinical or environmental dataset.
+          - "**Weiping Yan**"
+        journal: Theoretical and Natural Science 8(1), 70–75
+        date: 2023-11
+        doi: 10.54254/2753-8818/8/20240361
+        summary: "**Weiping Yan**. Theoretical and Natural Science 8(1), 70–75. [doi:10.54254/2753-8818/8/20240361](https://doi.org/10.54254/2753-8818/8/20240361)"
 
-    Selected Open-Source Contributions:
+    Open-Source Contributions:
       - bullet: >-
-          Six merged upstream pull requests across [Power Grid Model #1516](https://github.com/PowerGridModel/power-grid-model/pull/1516),
-          [#1518](https://github.com/PowerGridModel/power-grid-model/pull/1518), and
-          [#1540](https://github.com/PowerGridModel/power-grid-model/pull/1540);
-          [LensKit #1209](https://github.com/lenskit/lkpy/pull/1209);
-          [M* #235](https://github.com/mstar-project/mstar/pull/235); and
-          [PISA #641](https://github.com/pisa-engine/pisa/pull/641) (August–September 2026),
-          covering validation and sensor semantics, performance documentation, recommender warnings,
-          media decoding and error handling, and retrieval type safety.
+          **20 pull requests merged into 12 projects maintained by others** (Aug–Oct 2026).
+          *Chip design:* OpenRAM, CharLib, HighTide, COmPOSER, ALIGN.
+          *Power systems:* Power Grid Model, power-grid-model-io.
+          *Search and recommendation:* PISA, Pyserini, LensKit.
+          *Speech and NLP:* M*, clulab processors.
 
-    Selected Honors and Awards:
+    Honors and Awards:
       - bullet: >-
-          [**Kaggle Bronze Medal**](https://www.kaggle.com/certification/competitions/weipingyan/santa-2025),
-          [Santa 2025 - Christmas Tree Packing Challenge](https://www.kaggle.com/competitions/santa-2025) — 186th of
-          3,357 teams (January 31, 2026).
-      - bullet: >-
-          **First Prize**, CTSS College Student Innovation and Entrepreneurship
-          Competition — TU/e listed as the affiliated institution (July 2025).
-      - bullet: >-
-          **First Prize**, 2025 National College Student Mathematics Ability Challenge
-          (December 2025).
-      - bullet: >-
-          **National First Prize**, 2025 “Science and Innovation Cup” College Student
-          Mathematical Modeling Competition, Mathematical Modeling Knowledge Competition
-          track (December 2025).
+          **Kaggle Bronze Medal**, [Santa 2025 Christmas Tree Packing Challenge](https://www.kaggle.com/certification/competitions/weipingyan/santa-2025):
+          186th of 3,357 teams (Jan 2026)
+      - bullet: "**National First Prize**, Science and Innovation Cup Mathematical Modeling Competition, knowledge track (Dec 2025)"
+      - bullet: "**First Prize**, National College Student Mathematics Ability Challenge (Dec 2025)"
+      - bullet: "**First Prize**, CTSS College Student Innovation and Entrepreneurship Competition (Jul 2025)"
 
     Technical Skills:
-      - label: Research and analysis
-        details: Statistical inference, data analysis, data visualization, machine learning, scientific computing, research software engineering
-      - label: Programming
-        details: Python, C, C++, Java, MATLAB, Verilog
-      - label: Scientific and engineering tools
-        details: NumPy, pandas, Matplotlib, Git, LTspice, Origin
-
-    Language Proficiency:
-      - label: Chinese (Mandarin)
-        details: Native
-      - label: Hangzhou dialect
-        details: Spoken
-      - label: English
-        details: C1
-
-    Research Interests:
-      - label: Areas
+      - label: Languages
+        details: Python, C, C++, Java, Rust, TypeScript/JavaScript, MATLAB, Verilog
+      - label: Tools
+        details: Git, NumPy, pandas, Matplotlib, PyTorch, ngspice, LTspice, Origin, Linux
+      - label: Interests
         details: >-
           [Artificial intelligence](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence),
           [natural language processing](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing),
           [microelectronics](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics),
-          and [electronic design automation](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation)
+          [electronic design automation](https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:electronic_design_automation)
+      - label: Spoken
+        details: Mandarin Chinese (native), English (C1)

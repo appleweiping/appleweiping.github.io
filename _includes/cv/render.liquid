@@ -36,7 +36,7 @@
       {% assign cv = cv_dataset.cv %}
 
       {% if cv %}
-        {% if cv.name or cv.headline or cv.email or cv.website or cv.social_networks %}
+        {% if cv.name or cv.headline or cv.email or cv.website or cv.social_networks or cv.custom_connections %}
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">{{ page.cv_labels.contact }}</h3>
             <table class="table table-cv table-sm table-borderless">
@@ -112,6 +112,23 @@
                   </td>
                 </tr>
               {% endif %}
+              {% if cv.custom_connections %}
+                <tr>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b>{{ page.cv_labels.profiles }}</b>
+                  </td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    {% for connection in cv.custom_connections %}
+                      {% if connection.url %}
+                        <a href="{{ connection.url }}" target="_blank" rel="noopener noreferrer">{{ connection.placeholder }}</a>
+                      {% else %}
+                        {{ connection.placeholder }}
+                      {% endif %}
+                      {%- unless forloop.last %} · {% endunless %}
+                    {% endfor %}
+                  </td>
+                </tr>
+              {% endif %}
             </table>
           </div>
         {% endif %}
@@ -132,6 +149,10 @@
               {% elsif section_title == page.cv_sections.publications %}
                 {% assign entries = section_entries %}
                 {% include cv/publications.liquid %}
+              {% elsif section_entries.first.name %}
+                {% comment %} RenderCV normal entries, e.g. Projects {% endcomment %}
+                {% assign entries = section_entries %}
+                {% include cv/site_experience.liquid %}
               {% else %}
                 {% for entry in section_entries %}
                   {% if entry.bullet %}

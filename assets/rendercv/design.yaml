@@ -1,10 +1,93 @@
-# for more options, see https://docs.rendercv.com/user_guide/yaml_input_structure/design/
+# Jake's-Resume-style layout (black, serif, small-caps section rules).
+# TeX Gyre Termes is vendored under _data/fonts (GUST Font License).
+# For more options, see https://docs.rendercv.com/user_guide/yaml_input_structure/design/
 design:
   theme: classic
   page:
-    size: a4
+    size: us-letter
+    top_margin: 0.4in
+    bottom_margin: 0.4in
+    left_margin: 0.5in
+    right_margin: 0.5in
     show_footer: false
     show_top_note: false
+  colors:
+    body: rgb(0,0,0)
+    name: rgb(0,0,0)
+    headline: rgb(0,0,0)
+    connections: rgb(0,0,0)
+    section_titles: rgb(0,0,0)
+    links: rgb(0,0,0)
   typography:
+    line_spacing: 0.38em
     alignment: left
-    font_family: Source Sans 3
+    font_family: TeX Gyre Termes
+    font_size:
+      body: 10pt
+      name: 24pt
+      headline: 10pt
+      connections: 9.5pt
+      section_titles: 1.2em
+    small_caps:
+      name: true
+      headline: false
+      connections: false
+      section_titles: true
+    bold:
+      name: true
+      headline: false
+      connections: false
+      section_titles: false
+  links:
+    underline: false
+    show_external_link_icon: false
+  header:
+    alignment: center
+    space_below_name: 0.12cm
+    space_below_headline: 0.1cm
+    space_below_connections: 0.1cm
+    connections:
+      hyperlink: true
+      show_icons: false
+      display_urls_instead_of_usernames: false
+      separator: "|"
+      space_between_connections: 0.18cm
+  section_titles:
+    type: with_full_line
+    line_thickness: 0.5pt
+    space_above: 0.28cm
+    space_below: 0.14cm
+  sections:
+    space_between_regular_entries: 0.32em
+    space_between_text_based_entries: 0.12em
+    show_time_spans_in: []
+  entries:
+    date_and_location_width: 4.1cm
+    side_space: 0.12cm
+    space_between_columns: 0.1cm
+    short_second_row: false
+    summary:
+      space_above: 0.02cm
+    highlights:
+      bullet: "•"
+      nested_bullet: "◦"
+      space_left: 0.3cm
+      space_above: 0.03cm
+      space_between_items: 0.02cm
+      space_between_bullet_and_text: 0.35em
+  templates:
+    single_date: "MONTH_ABBREVIATION YEAR"
+    date_range: "START_DATE – END_DATE"
+    education_entry:
+      main_column: "**INSTITUTION**\n*AREA*\nSUMMARY\nHIGHLIGHTS"
+      degree_column: null
+      date_and_location_column: "**DATE**\n*LOCATION*"
+    experience_entry:
+      main_column: "**POSITION**\n*COMPANY*\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: "**DATE**\n*LOCATION*"
+    normal_entry:
+      main_column: "**NAME** | *SUMMARY*\nHIGHLIGHTS"
+      date_and_location_column: "**DATE**"
+    publication_entry:
+      main_column: "**TITLE**\nAUTHORS. *JOURNAL*. URL"
+      date_and_location_column: "**DATE**"

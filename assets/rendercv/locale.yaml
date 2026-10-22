@@ -1,3 +1,5 @@
 # for more options, see https://docs.rendercv.com/user_guide/yaml_input_structure/locale/
 locale:
   language: english
+  present: Present
+  month_abbreviations: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the three localized CV PDFs and rasterize all six canonical pages."""
+"""Validate the three localized one-page CV PDFs and rasterize every page."""
 
 from __future__ import annotations
 
@@ -26,57 +26,45 @@ COMPATIBILITY_PDF = PDF_DIRECTORY / "Weiping_Yan_CV.pdf"
 EXPECTED_TEXT = {
     "en": [
         "Weiping Yan",
-        "Electrical Engineering and Computer Science student",
-        "Fall 2026 classes began September 8, 2026",
+        "Electrical Engineering and Computer Science",
         "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
-        "Submitted to DAI 2026",
-        "the decision is pending",
-        "not yet accepted or published",
-        "Selected Open-Source Contributions",
-        "Six merged upstream pull requests",
+        "Submitted to DAI 2026, under review",
+        "20 pull requests merged into 12 projects maintained by others",
         "Power Grid Model",
         "LensKit",
-        "M*",
         "PISA",
-        "randomly generated/synthetic data",
+        "OpenRAM",
+        "synthetic data",
         "TU/e Honors Academy",
-        "TU Delft — Honours Programme Bachelor (HPB) participant (2025–2026; participation before transfer).",
+        "TU Delft Honours Programme Bachelor (HPB)",
     ],
     "zh-CN": [
         "闫维平",
-        "电气工程与计算机科学本科生",
-        "2026 年秋季课程于 9 月 8 日开始",
+        "电气工程与计算机科学",
         "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
-        "已投稿至 DAI 2026",
-        "录用决定尚未公布",
-        "尚未录用或发表",
-        "精选开源贡献",
-        "6 个上游拉取请求被合并",
+        "已投稿 DAI 2026，评审中",
+        "向 12 个由他人维护的开源项目合并了 20 个 pull request",
         "Power Grid Model",
         "LensKit",
-        "M*",
         "PISA",
-        "随机生成/合成数据",
+        "OpenRAM",
+        "合成数据",
         "TU/e Honors Academy",
-        "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）参与者（2025—2026；转学前参与）",
+        "TU Delft 荣誉学士项目（HPB）",
     ],
     "ja": [
         "Weiping Yan",
-        "電気工学・コンピュータサイエンスを学ぶ学部生",
-        "2026年秋学期の授業は9月8日に開始",
+        "電気工学・コンピュータサイエンス",
         "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
-        "DAI 2026 に投稿済み",
-        "採否は未決定",
-        "未採択・未発表",
-        "主なオープンソース貢献",
-        "6件の上流プルリクエストがマージされました",
+        "DAI 2026 に投稿、査読中",
+        "他の方が保守する 12 のプロジェクトに 20 件の pull request がマージ",
         "Power Grid Model",
         "LensKit",
-        "M*",
         "PISA",
-        "ランダム生成された合成データ",
+        "OpenRAM",
+        "合成データ",
         "TU/e Honors Academy",
-        "TU Delft Honours Programme Bachelor（HPB）参加（2025–2026年、編入前）",
+        "TU Delft Honours Programme Bachelor（HPB）",
     ],
 }
 FORBIDDEN_TEXT = {
@@ -85,29 +73,26 @@ FORBIDDEN_TEXT = {
     "ja": ["未確定の専攻", "特定の専攻が確定したとは記載せず"],
 }
 EXPECTED_FONT = {
-    "en": "SourceSans3",
+    "en": "TeXGyreTermes",
     "zh-CN": "NotoSansSC",
     "ja": "NotoSansJP",
 }
+# English uses US Letter (the Jake's Resume default); Chinese and Japanese use A4.
+EXPECTED_PAGE_SIZE = {
+    "en": (612.0, 792.0),
+    "zh-CN": (595.28, 841.89),
+    "ja": (595.28, 841.89),
+}
+EXPECTED_PAGES = 1
 COMMON_URIS = {
     "mailto:yan00944@umn.edu",
     "mailto:vipinapple986@gmail.com",
     "https://github.com/appleweiping",
-    "https://linkedin.com/in/weiping-yan-b62567383",
+    "https://www.linkedin.com/in/weiping-yan-b62567383",
     "https://scholar.google.com/citations?user=gK6JtzsAAAAJ",
-    "https://x.com/VipinYan14431",
-    "https://instagram.com/weipingappleapple",
     "https://doi.org/10.54254/2753-8818/8/20240361",
-    "https://www.kaggle.com/competitions/santa-2025",
     "https://www.kaggle.com/certification/competitions/weipingyan/santa-2025",
-    "https://asr.umn.edu/2026-27-twin-cities-and-rochester-calendar",
     "https://openreview.net/forum?id=UV2UJ4VHf7",
-    "https://github.com/PowerGridModel/power-grid-model/pull/1516",
-    "https://github.com/PowerGridModel/power-grid-model/pull/1518",
-    "https://github.com/PowerGridModel/power-grid-model/pull/1540",
-    "https://github.com/lenskit/lkpy/pull/1209",
-    "https://github.com/mstar-project/mstar/pull/235",
-    "https://github.com/pisa-engine/pisa/pull/641",
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:artificial_intelligence",
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:natural_language_processing",
     "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:microelectronics",
@@ -193,11 +178,11 @@ def rasterize(locale: str, path: Path, directory: Path) -> int:
         raise ValidationError(f"pdftoppm failed for {path.name}: {process.stderr.strip()}")
 
     screenshots = sorted(directory.glob(f"{locale}-*.png"))
-    if len(screenshots) != 2:
-        raise ValidationError(f"{path.name} should rasterize to 2 pages, found {len(screenshots)}")
+    if len(screenshots) != EXPECTED_PAGES:
+        raise ValidationError(f"{path.name} should rasterize to {EXPECTED_PAGES} page(s), found {len(screenshots)}")
     for screenshot in screenshots:
         width, height = png_dimensions(screenshot)
-        if width < 800 or height < 1100:
+        if width < 800 or height < 1000:
             raise ValidationError(f"{screenshot.name} is unexpectedly small: {width}x{height}")
     return len(screenshots)
 
@@ -211,14 +196,15 @@ def validate_pdf(locale: str, path: Path) -> tuple[int, int, list[str]]:
     reader = PdfReader(str(path))
     if reader.is_encrypted:
         raise ValidationError(f"{path.name} must not be encrypted")
-    if len(reader.pages) != 2:
-        raise ValidationError(f"{path.name} should contain 2 pages, found {len(reader.pages)}")
+    if len(reader.pages) != EXPECTED_PAGES:
+        raise ValidationError(f"{path.name} should contain {EXPECTED_PAGES} page(s), found {len(reader.pages)}")
 
     first_page = reader.pages[0]
     width = float(first_page.mediabox.width)
     height = float(first_page.mediabox.height)
-    if abs(width - 595.28) > 1.0 or abs(height - 841.89) > 1.0:
-        raise ValidationError(f"{path.name} is not A4: {width:.2f}x{height:.2f} pt")
+    expected_width, expected_height = EXPECTED_PAGE_SIZE[locale]
+    if abs(width - expected_width) > 1.0 or abs(height - expected_height) > 1.0:
+        raise ValidationError(f"{path.name} has page size {width:.2f}x{height:.2f} pt, expected {expected_width}x{expected_height}")
 
     text = "\n".join(page.extract_text() or "" for page in reader.pages)
     if len(text.strip()) < 1_500:
