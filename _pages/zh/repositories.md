@@ -5,20 +5,27 @@ title: 代码仓库
 lang: zh-CN
 locale: zh
 translation_key: repositories
-description: 闫维平的 GitHub 置顶仓库，以及标注来源与归属的全部公开仓库目录。
+description: GitHub 置顶仓库，以及合并进他人开源项目的 pull request。
 nav: true
 nav_order: 4
 ---
 
-以下是我目前在 GitHub 置顶的仓库。如需查看完整账号内容，请浏览
-[标注来源与归属的完整仓库目录]({{ site.data.translation_routes['repository-catalog']['zh-CN'] | relative_url }})，或前往
-[GitHub 查看全部公开仓库](https://github.com/appleweiping?tab=repositories)。
+{% include site_i18n/repo_styles.liquid %}
 
-{% if site.data.repositories.github_repos %}
+## GitHub 置顶仓库
 
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-    {% for repo in site.data.repositories.github_repos %}
-      {% include site_i18n/repository_cards.liquid repository=repo %}
-    {% endfor %}
-  </div>
-{% endif %}
+<div class="row row-cols-1 row-cols-md-2">
+  {% for repo in site.data.repositories.github_repos %}
+    {% include site_i18n/repo_pin.liquid repository=repo %}
+  {% endfor %}
+</div>
+
+## 开源贡献
+
+{% include site_i18n/contributions.liquid %}
+
+## 其他仓库
+
+全部 {{ site.data.repository_catalog.public_count }} 个公开仓库（包括派生仓库和公开课自学作业）列在
+[仓库目录]({{ site.data.translation_routes['repository-catalog']['zh-CN'] | relative_url }})中，也可以直接在
+[GitHub](https://github.com/appleweiping?tab=repositories) 上浏览。

@@ -1,0 +1,41 @@
+{% comment %}
+  GitHub-style "pinned repository" card, rendered from _data/repository_catalog.json
+  instead of the github-readme-stats image service, so it works offline and in both themes.
+  Usage: {% include site_i18n/repo_pin.liquid repository="owner/name" %}
+{% endcomment %}
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign current_locale = site.data.locales | where: 'code', current_lang | first %}
+{% assign catalog_locale = current_locale.data_key %}
+{% assign repository = site.data.repository_catalog.repositories | where: 'repository', include.repository | first %}
+{% if repository %}
+  {% assign description = repository.description %}
+  {% if catalog_locale != 'en' and site.data.repository_catalog_i18n.repositories[repository.slug][catalog_locale] %}
+    {% assign localized = site.data.repository_catalog_i18n.repositories[repository.slug][catalog_locale] %}
+    {% assign description = localized.description | default: localized %}
+  {% endif %}
+  {% assign language = repository.languages | first %}
+  {% assign language_color = site.data.language_colors[language] | default: '#8b949e' %}
+  <div class="col mb-3">
+    <div class="repo-pin h-100">
+      <a class="repo-pin-name" href="{{ repository.source_url | escape }}" target="_blank" rel="noopener noreferrer">
+        <i class="fa-regular fa-bookmark" aria-hidden="true"></i>
+        {{ repository.title | escape }}
+      </a>
+      <p class="repo-pin-description">{{ description | escape }}</p>
+      <p class="repo-pin-meta">
+        {% if language %}
+          <span><span class="repo-pin-language-dot" style="background-color: {{ language_color }}"></span>{{ language | escape }}</span>
+        {% endif %}
+        {% if repository.stars and repository.stars > 0 %}
+          <span><i class="fa-regular fa-star" aria-hidden="true"></i> {{ repository.stars }}</span>
+        {% endif %}
+        {% if repository.forks and repository.forks > 0 %}
+          <span><i class="fa-solid fa-code-fork" aria-hidden="true"></i> {{ repository.forks }}</span>
+        {% endif %}
+        {% if repository.demo_url %}
+          <a href="{{ repository.demo_url | escape }}" target="_blank" rel="noopener noreferrer">demo</a>
+        {% endif %}
+      </p>
+    </div>
+  </div>
+{% endif %}

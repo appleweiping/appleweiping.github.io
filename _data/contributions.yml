@@ -1,0 +1,90 @@
+# Merged pull requests to projects maintained by other people.
+# Regenerate the list with:
+#   gh api -X GET search/issues -f q='author:appleweiping is:pr is:merged -user:appleweiping'
+# Lab-internal work (minnesotanlp/cu-detector) is listed under Experience on the CV instead.
+updated: 2026-10-21
+groups:
+  - area: Chip design and EDA
+    area_zh: 芯片设计与 EDA
+    area_ja: チップ設計と EDA
+    projects:
+      - name: OpenRAM
+        repo: VLSIDA/OpenRAM
+        about: Open-source SRAM compiler
+        prs:
+          - { number: 306, merged: 2026-10-16, title: "Do not emit an input max_transition below the library default" }
+          - { number: 313, merged: 2026-10-02, title: "Fix numeric comparison against the second file" }
+      - name: HighTide
+        repo: VLSIDA/HighTide
+        about: Open-source RTL-to-GDS design benchmarks
+        prs:
+          - { number: 241, merged: 2026-10-18, title: "Fix sky130 LitePCI clock period parsing" }
+      - name: CharLib
+        repo: stineje/CharLib
+        about: Open-source standard-cell library characterizer
+        prs:
+          - { number: 123, merged: 2026-09-22, title: "Show the cause of invalid CharLib configurations" }
+          - { number: 122, merged: 2026-09-22, title: "Make C2Q delay growth threshold configurable" }
+          - { number: 119, merged: 2026-09-08, title: "Add a configurable charge integration capacitance criterion" }
+      - name: COmPOSER
+        repo: UMN-EDA/COmPOSER
+        about: End-to-end RF/mm-wave IC synthesizer
+        prs:
+          - { number: 18, merged: 2026-09-28, title: "Document the tested Python environment and public GDS smoke path" }
+      - name: ALIGN
+        repo: ALIGN-analoglayout/ALIGN-public
+        about: Analog layout generator from SPICE netlists
+        prs:
+          - { number: 1400, merged: 2026-09-15, title: "Docs: update the minimum Python version" }
+  - area: Power systems
+    area_zh: 电力系统
+    area_ja: 電力系統
+    projects:
+      - name: Power Grid Model
+        repo: PowerGridModel/power-grid-model
+        about: Python/C++ library for distribution power-system analysis
+        prs:
+          - { number: 1540, merged: 2026-08-25, title: "Fix sensor output for disconnected measured components" }
+          - { number: 1518, merged: 2026-08-11, title: "Document performance scalability" }
+          - { number: 1516, merged: 2026-08-04, title: "Fix validation of updates for missing components" }
+      - name: power-grid-model-io
+        repo: PowerGridModel/power-grid-model-io
+        about: Converters between grid data formats and Power Grid Model
+        prs:
+          - { number: 500, merged: 2026-10-12, title: "Scope Vision GUID fragmentation warnings to library conversion" }
+  - area: Search and recommendation
+    area_zh: 检索与推荐
+    area_ja: 検索と推薦
+    projects:
+      - name: PISA
+        repo: pisa-engine/pisa
+        about: Performant indexes and search for academia
+        prs:
+          - { number: 642, merged: 2026-09-13, title: "Update moved submodule URLs" }
+          - { number: 641, merged: 2026-09-08, title: "Use enum for algorithm WAND requirements" }
+      - name: Pyserini
+        repo: castorini/pyserini
+        about: Reproducible information-retrieval research toolkit
+        prs:
+          - { number: 2674, merged: 2026-09-08, title: "Fix BRIGHT end timestamp" }
+      - name: LensKit
+        repo: lenskit/lkpy
+        about: Python recommendation toolkit
+        prs:
+          - { number: 1210, merged: 2026-09-14, title: "Convert numeric interaction timestamps" }
+          - { number: 1209, merged: 2026-09-04, title: "Warn about a missing history component only when one could be missing" }
+  - area: Speech and language
+    area_zh: 语音与语言
+    area_ja: 音声と言語
+    projects:
+      - name: M*
+        repo: mstar-project/mstar
+        about: Serving framework for any-to-any models
+        prs:
+          - { number: 245, merged: 2026-09-09, title: "api: return 400 for malformed model kwargs" }
+          - { number: 235, merged: 2026-09-07, title: "api: accept unpadded base64 in input_audio.data" }
+      - name: processors
+        repo: clulab/processors
+        about: Natural-language processors from the CLU Lab
+        prs:
+          - { number: 853, merged: 2026-09-25, title: "Add a closeable parallelizer" }

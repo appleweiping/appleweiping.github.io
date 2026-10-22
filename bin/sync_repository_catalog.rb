@@ -132,6 +132,8 @@ def build_entry(api_repository, curated)
     "fork" => api_repository.fetch("fork"),
     "visibility" => api_repository.fetch("visibility"),
     "size_kb" => api_repository.fetch("size"),
+    "stars" => api_repository.fetch("stargazers_count", 0),
+    "forks" => api_repository.fetch("forks_count", 0),
     "default_branch" => api_repository.fetch("default_branch"),
     "curation_status" => curated_value(curated, "curation_status", "curationStatus") || "metadata-only",
     "attribution" => attribution

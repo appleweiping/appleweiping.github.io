@@ -5,20 +5,27 @@ title: repositories
 lang: en
 locale: en
 translation_key: repositories
-description: Pinned GitHub repositories from Weiping Yan, with a provenance-aware catalog of every public repository.
+description: Pinned repositories and pull requests merged into other people's open-source projects.
 nav: true
 nav_order: 4
 ---
 
-These are my current pinned repositories on GitHub. For the complete account, browse the
-[provenance-aware repository catalog]({{ site.data.translation_routes['repository-catalog']['en'] | relative_url }}) or
-[all public repositories on GitHub](https://github.com/appleweiping?tab=repositories).
+{% include site_i18n/repo_styles.liquid %}
 
-{% if site.data.repositories.github_repos %}
+## Pinned on GitHub
 
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-    {% for repo in site.data.repositories.github_repos %}
-      {% include site_i18n/repository_cards.liquid repository=repo %}
-    {% endfor %}
-  </div>
-{% endif %}
+<div class="row row-cols-1 row-cols-md-2">
+  {% for repo in site.data.repositories.github_repos %}
+    {% include site_i18n/repo_pin.liquid repository=repo %}
+  {% endfor %}
+</div>
+
+## Open-source contributions
+
+{% include site_i18n/contributions.liquid %}
+
+## Everything else
+
+All {{ site.data.repository_catalog.public_count }} public repositories, including forks and self-study course work, are listed in the
+[repository catalog]({{ site.data.translation_routes['repository-catalog']['en'] | relative_url }}) and on
+[GitHub](https://github.com/appleweiping?tab=repositories).

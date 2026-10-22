@@ -5,20 +5,27 @@ title: リポジトリ
 lang: ja
 locale: ja
 translation_key: repositories
-description: Weiping YanのGitHubピン留めリポジトリと、出典・帰属を明記した全公開リポジトリ一覧です。
+description: GitHub でピン留めしているリポジトリと、他の方のオープンソースプロジェクトにマージされた pull request。
 nav: true
 nav_order: 4
 ---
 
-以下は、現在GitHubでピン留めしているリポジトリです。全体を確認するには、
-[出典と帰属を明記した全リポジトリ一覧]({{ site.data.translation_routes['repository-catalog']['ja'] | relative_url }})、または
-[GitHub上の全公開リポジトリ](https://github.com/appleweiping?tab=repositories)をご覧ください。
+{% include site_i18n/repo_styles.liquid %}
 
-{% if site.data.repositories.github_repos %}
+## GitHub のピン留め
 
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-    {% for repo in site.data.repositories.github_repos %}
-      {% include site_i18n/repository_cards.liquid repository=repo %}
-    {% endfor %}
-  </div>
-{% endif %}
+<div class="row row-cols-1 row-cols-md-2">
+  {% for repo in site.data.repositories.github_repos %}
+    {% include site_i18n/repo_pin.liquid repository=repo %}
+  {% endfor %}
+</div>
+
+## オープンソースへの貢献
+
+{% include site_i18n/contributions.liquid %}
+
+## その他のリポジトリ
+
+フォークや公開講座の自習課題を含む全 {{ site.data.repository_catalog.public_count }} 件の公開リポジトリは
+[リポジトリ一覧]({{ site.data.translation_routes['repository-catalog']['ja'] | relative_url }})と
+[GitHub](https://github.com/appleweiping?tab=repositories) で確認できます。

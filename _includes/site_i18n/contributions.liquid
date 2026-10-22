@@ -1,0 +1,58 @@
+{% comment %}
+  Merged pull requests to other people's projects, grouped by area.
+  Data: _data/contributions.yml
+{% endcomment %}
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign contributions = site.data.contributions %}
+{% assign pr_total = 0 %}
+{% assign project_total = 0 %}
+{% for group in contributions.groups %}
+  {% for project in group.projects %}
+    {% assign project_total = project_total | plus: 1 %}
+    {% assign pr_total = pr_total | plus: project.prs.size %}
+  {% endfor %}
+{% endfor %}
+
+<p>
+  {% if current_lang == 'zh-CN' %}
+    截至 {{ contributions.updated | date: '%Y-%m-%d' }}，我向 {{ project_total }} 个由他人维护的开源项目合并了 {{ pr_total }} 个 pull request。
+  {% elsif current_lang == 'ja' %}
+    {{ contributions.updated | date: '%Y-%m-%d' }} 時点で、他の方が保守する {{ project_total }} のオープンソースプロジェクトに {{ pr_total }} 件の
+    pull request がマージされています。
+  {% else %}
+    As of {{ contributions.updated | date: '%B %-d, %Y' }}, {{ pr_total }} of my pull requests have been merged into {{ project_total }} open-source
+    projects maintained by other people.
+  {% endif %}
+</p>
+
+{% for group in contributions.groups %}
+  {% if current_lang == 'zh-CN' %}
+    {% assign area = group.area_zh | default: group.area %}
+  {% elsif current_lang == 'ja' %}
+    {% assign area = group.area_ja | default: group.area %}
+  {% else %}
+    {% assign area = group.area %}
+  {% endif %}
+  <h4 class="mt-4">{{ area | escape }}</h4>
+  <ul class="contribution-list">
+    {% for project in group.projects %}
+      <li>
+        <a href="https://github.com/{{ project.repo | escape }}" target="_blank" rel="noopener noreferrer"
+          ><strong>{{ project.name | escape }}</strong></a
+        >
+        <span class="text-muted">— {{ project.about | escape }}</span>
+        <ul>
+          {% for pr in project.prs %}
+            <li>
+              <a href="https://github.com/{{ project.repo | escape }}/pull/{{ pr.number }}" target="_blank" rel="noopener noreferrer"
+                >#{{ pr.number -}}
+              </a>
+              {{ pr.title | escape }}
+              <span class="text-muted small">({{ pr.merged | date: '%Y-%m-%d' }})</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
