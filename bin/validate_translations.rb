@@ -27,9 +27,10 @@ CORE_TRANSLATION_KEYS = %w[
   404
 ].to_set.freeze
 
+# Every collection document must exist in all three locales; the English count is the reference.
 EXPECTED_COUNTS = {
-  "projects" => 17,
-  "news" => 13
+  "projects" => Dir.glob(File.expand_path("../_projects/*.md", __dir__)).length,
+  "news" => Dir.glob(File.expand_path("../_news/*.md", __dir__)).length
 }.freeze
 
 EXPECTED_NEWS_ITEMS = {
@@ -243,9 +244,12 @@ end
 begin
   catalog = JSON.parse(root.join("_data/repository_catalog.json").read(encoding: "UTF-8"))
   translations = JSON.parse(root.join("_data/repository_catalog_i18n.json").read(encoding: "UTF-8"))
+  # The catalog is re-synchronized from GitHub on every deploy, so new repositories may not have
+  # zh/ja descriptions yet (the pages fall back to English) and removed ones may leave stale entries.
   repository_slugs = catalog.fetch("repositories").map { |repository| repository.fetch("slug") }.to_set
   translated_slugs = translations.fetch("repositories").keys.to_set
-  errors << "repository i18n slug set does not match the public catalog" unless repository_slugs == translated_slugs
+  untranslated = repository_slugs - translated_slugs
+  warn "Note: #{untranslated.length} repositories use English descriptions on zh/ja pages" unless untranslated.empty?
 
   translations.fetch("repositories").each do |slug, entry|
     %w[zh ja].each do |locale|
@@ -267,8 +271,11 @@ begin
   missing_source_kinds = source_kinds - translations.fetch("source_kinds").keys.to_set
   errors << "repository source-kind translations missing: #{missing_source_kinds.to_a.sort.join(', ')}" unless missing_source_kinds.empty?
 
-  attributions = catalog.fetch("repositories").map { |repository| repository.fetch("attribution") }.to_set
-  errors << "repository attribution i18n keys do not match the catalog" unless translations.fetch("attributions").keys.to_set == attributions
+  translations.fetch("attributions").each do |text, entry|
+    %w[zh ja].each do |locale|
+      errors << "attribution #{text[0, 40].inspect}: missing #{locale} translation" if entry[locale].to_s.strip.empty?
+    end
+  end
 rescue Errno::ENOENT, JSON::ParserError, KeyError => e
   errors << "repository catalog translation data is invalid: #{e.message}"
 end

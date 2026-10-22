@@ -201,6 +201,9 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - requirements.txt
   - al-folio-upgrade-report.md
   - bin/
   - CONTRIBUTING.md

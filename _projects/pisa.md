@@ -5,9 +5,9 @@ lang: en
 translation_key: pisa
 title: PISA — accepted upstream contribution
 description: A merged type-safety refactor in PISA, with the high-performance retrieval architecture, maintainer guidance, and contribution evidence documented.
-img: assets/img/repository-covers/pisa.webp
+img: assets/img/projects/pisa.webp
 importance: 9
-category: research
+category: contributions
 related_publications: false
 permalink: /projects/pisa/
 ---
@@ -24,7 +24,7 @@ PISA is a high-performance C++ platform for indexing large text collections, exe
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/pisa.webp" title="PISA repository cover" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/pisa.webp" title="PISA repository cover" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

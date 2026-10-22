@@ -5,9 +5,9 @@ lang: zh-CN
 translation_key: lkpy
 title: LensKit — 已合并的上游贡献
 description: LensKit 中一项已合并的 ItemKNN 正确性修复，清楚区分上游系统、维护者指导、个人实现与证据。
-img: assets/img/repository-covers/lkpy.webp
+img: assets/img/projects/lkpy.webp
 importance: 7
-category: research
+category: contributions
 related_publications: false
 permalink: /zh/projects/lkpy/
 ---
@@ -24,7 +24,7 @@ LensKit 是一个面向可复现推荐系统研究的 Python 工具包，提供�
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/lkpy.webp" title="LensKit 仓库封面" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/lkpy.webp" title="LensKit 仓库封面" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

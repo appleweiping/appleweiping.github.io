@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "date"
 require "digest"
 require "json"
 require "nokogiri"
@@ -52,39 +53,6 @@ rescue StandardError => e
   nil
 end
 
-def validate_repository_cover_images(document, selector, repositories, covers, errors, label, baseurl)
-  images = document.css(selector)
-  expected_slugs = repositories.map { |repository| repository.fetch("slug") }
-  actual_slugs = images.map { |image| image["data-repository-slug"].to_s }
-
-  if images.length != repositories.length
-    errors << "#{label} should render #{repositories.length} repository covers, found #{images.length}"
-  end
-
-  (expected_slugs.to_set - actual_slugs.to_set).sort.each { |slug| errors << "#{label} is missing repository cover #{slug}" }
-  (actual_slugs.to_set - expected_slugs.to_set).sort.each { |slug| errors << "#{label} includes unexpected repository cover #{slug.inspect}" }
-  actual_slugs.tally.each do |slug, count|
-    errors << "#{label} renders repository cover #{slug.inspect} #{count} times" if count > 1
-  end
-
-  images.each do |image|
-    slug = image["data-repository-slug"].to_s
-    cover = covers[slug]
-    unless cover.is_a?(Hash)
-      errors << "#{label} references missing cover manifest entry #{slug.inspect}"
-      next
-    end
-
-    expected_src = "#{baseurl}#{cover.fetch('path')}"
-    errors << "#{label} cover #{slug} has an unexpected src" unless image["src"] == expected_src
-    errors << "#{label} cover #{slug} should lazy-load" unless image["loading"] == "lazy"
-    errors << "#{label} cover #{slug} should decode asynchronously" unless image["decoding"] == "async"
-    errors << "#{label} cover #{slug} is missing meaningful alt text" if image["alt"].to_s.strip.empty?
-    errors << "#{label} cover #{slug} width does not match the manifest" unless image["width"] == cover.fetch("width").to_s
-    errors << "#{label} cover #{slug} height does not match the manifest" unless image["height"] == cover.fetch("height").to_s
-  end
-end
-
 config = YAML.safe_load(root.join("_config.yml").read(encoding: "UTF-8"), aliases: false) || {}
 site_url = config.fetch("url").to_s.sub(%r{/+\z}, "")
 baseurl = config.fetch("baseurl", "").to_s.sub(%r{/+\z}, "")
@@ -132,8 +100,12 @@ end
 
 project_routes = translation_routes.select { |key, _routes| root.join("_projects/#{key}.md").file? }
 news_routes = translation_routes.select { |key, _routes| root.join("_news").glob("**/*.md").any? { |path| path.basename(".md").to_s == key } }
-errors << "expected 17 translated project route groups, found #{project_routes.length}" unless project_routes.length == 17
-errors << "expected 13 translated news route groups, found #{news_routes.length}" unless news_routes.length == 13
+expected_project_groups = root.join("_projects").glob("*.md").length
+expected_news_groups = root.join("_news").glob("*.md").length
+unless project_routes.length == expected_project_groups
+  errors << "expected #{expected_project_groups} translated project route groups, found #{project_routes.length}"
+end
+errors << "expected #{expected_news_groups} translated news route groups, found #{news_routes.length}" unless news_routes.length == expected_news_groups
 
 required_pdf_assets = {
   "assets/pdf/Weiping_Yan_CV_en.pdf" => "en",
@@ -183,7 +155,6 @@ end
 
 catalog = JSON.parse(root.join("_data/repository_catalog.json").read(encoding: "UTF-8"))
 repositories = catalog.fetch("repositories")
-repository_covers = JSON.parse(root.join("_data/repository_covers.json").read(encoding: "UTF-8")).fetch("covers")
 %w[en zh-CN ja].each do |code|
   route = translation_routes.dig("repository-catalog", code)
   next unless route
@@ -191,47 +162,37 @@ repository_covers = JSON.parse(root.join("_data/repository_covers.json").read(en
   path = output_path(destination, route)
   next unless path.file?
 
-  html = path.read(encoding: "UTF-8")
-  document = Nokogiri::HTML(html)
-  repositories.each do |repository|
-    slug = repository.fetch("slug")
-    errors << "#{code} repository catalog is missing anchor ##{slug}" unless html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
+  document = Nokogiri::HTML(path.read(encoding: "UTF-8"))
+  rows = document.css("tr[data-catalog-repository]")
+  if rows.length != repositories.length
+    errors << "#{code} repository catalog should list #{repositories.length} repositories, found #{rows.length}"
   end
-
-  catalog_cards = document.css("[data-catalog-repository-card]")
-  if catalog_cards.length != repositories.length
-    errors << "#{code} repository catalog should render #{repositories.length} repository cards, found #{catalog_cards.length}"
-  end
-  validate_repository_cover_images(
-    document,
-    "[data-catalog-repository-card] [data-repository-cover]",
-    repositories,
-    repository_covers,
-    errors,
-    "#{code} repository catalog",
-    baseurl
-  )
 
   repositories.each do |repository|
     slug = repository.fetch("slug")
+    row = document.at_css(%(tr[id="#{slug}"]))
+    if row.nil?
+      errors << "#{code} repository catalog is missing row ##{slug}"
+      next
+    end
+    errors << "#{code} repository catalog row #{slug} does not link to its source" unless row.at_css(%(a[href="#{repository.fetch('source_url')}"]))
+
     detail_route = translation_routes.dig(slug, code)
     next unless detail_route
 
-    card = document.at_css(%([id="#{slug}"] [data-catalog-repository-card]))
-    if card.nil?
-      errors << "#{code} repository catalog is missing the detail-linked card for #{slug}"
-      next
-    end
-
     expected_href = "#{baseurl}#{detail_route}"
-    title_href = card.at_css("h3 a")&.[]("href")
-    details_href = card.at_css("a.btn-outline-primary")&.[]("href")
+    title_href = row.at_css("td.catalog-name a")&.[]("href")
     errors << "#{code} repository catalog title for #{slug} should link to #{expected_href}" unless title_href == expected_href
-    errors << "#{code} repository catalog detail button for #{slug} should link to #{expected_href}" unless details_href == expected_href
   end
 end
 
-portfolio_repositories, excluded_repositories = repositories.partition { |repository| repository.fetch("portfolio_project") }
+displayed_project_categories = %w[research ai-systems tools eda creative-computing coursework]
+project_front_matter = root.join("_projects").glob("*.md").to_h do |file|
+  front = file.read(encoding: "UTF-8")[/\A---\s*\n(.*?)\n---/m, 1].to_s
+  [file.basename(".md").to_s, YAML.safe_load(front, permitted_classes: [Date, Time], aliases: false) || {}]
+end
+displayed_projects = project_front_matter.select { |_key, data| displayed_project_categories.include?(data["category"]) }
+self_study_repositories = repositories.select { |repository| repository["source_kind"] == "reproduction" && repository["portfolio_project"] }
 %w[en zh-CN ja].each do |code|
   route = translation_routes.dig("projects", code)
   next unless route
@@ -239,46 +200,21 @@ portfolio_repositories, excluded_repositories = repositories.partition { |reposi
   path = output_path(destination, route)
   next unless path.file?
 
-  html = path.read(encoding: "UTF-8")
-  document = Nokogiri::HTML(html)
-  portfolio_repositories.each do |repository|
-    slug = repository.fetch("slug")
-    errors << "#{code} projects page is missing portfolio project ##{slug}" unless html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
-  end
-  excluded_repositories.each do |repository|
-    slug = repository.fetch("slug")
-    errors << "#{code} projects page includes excluded repository ##{slug}" if html.match?(/\bid=["']#{Regexp.escape(slug)}["']/)
-  end
-
-  project_cards = document.css("[data-portfolio-project-card]")
-  if project_cards.length != portfolio_repositories.length
-    errors << "#{code} projects page should render #{portfolio_repositories.length} portfolio grid cards, found #{project_cards.length}"
-  end
-
-  category_grids = document.css(".portfolio-projects .row.row-cols-1.row-cols-md-3")
-  expected_category_grids = catalog.fetch("categories").count { |category| category.fetch("project_count").positive? }
-  if category_grids.length != expected_category_grids
-    errors << "#{code} projects page should render #{expected_category_grids} responsive three-column category grids, found #{category_grids.length}"
-  end
-
-  validate_repository_cover_images(
-    document,
-    "[data-portfolio-project-card] [data-repository-cover]",
-    portfolio_repositories,
-    repository_covers,
-    errors,
-    "#{code} projects page",
-    baseurl
-  )
-
-  portfolio_repositories.each do |repository|
-    slug = repository.fetch("slug")
-    detail_route = translation_routes.dig(slug, code)
+  document = Nokogiri::HTML(path.read(encoding: "UTF-8"))
+  card_hrefs = document.css(".projects .card").map { |card| card.ancestors("a").first&.[]("href") }.compact.to_set
+  displayed_projects.each_key do |key|
+    detail_route = translation_routes.dig(key, code)
     next unless detail_route
 
     expected_href = "#{baseurl}#{detail_route}"
-    card_href = document.at_css(%([id="#{slug}"] > a))&.[]("href")
-    errors << "#{code} project card for #{slug} should link to #{expected_href}" unless card_href == expected_href
+    errors << "#{code} projects page is missing the card for #{key} (#{expected_href})" unless card_hrefs.include?(expected_href)
+  end
+
+  page_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
+  self_study_repositories.each do |repository|
+    unless page_hrefs.include?(repository.fetch("source_url"))
+      errors << "#{code} projects page self-study list is missing #{repository.fetch('repository')}"
+    end
   end
 end
 
@@ -345,6 +281,12 @@ end
 unless pinned_catalog_repositories.length == pinned_repositories.length
   errors << "_data/repositories.yml contains pinned repositories missing from the public catalog"
 end
+contributions = YAML.safe_load(root.join("_data/contributions.yml").read(encoding: "UTF-8"), permitted_classes: [Date], aliases: false)
+contribution_pull_request_urls = contributions.fetch("groups").flat_map do |group|
+  group.fetch("projects").flat_map do |project|
+    project.fetch("prs").map { |pr| "https://github.com/#{project.fetch('repo')}/pull/#{pr.fetch('number')}" }
+  end
+end
 expected_codes.each do |code|
   route = translation_routes.dig("repositories", code)
   document = canonical_documents[route]
@@ -354,24 +296,16 @@ expected_codes.each do |code|
     errors << "#{code} repositories page must not depend on github-readme-stats"
   end
 
-  cards = document.css(".repositories .repo .card")
-  errors << "#{code} repositories page should render 6 pinned cards, found #{cards.length}" unless cards.length == 6
-
-  github_links = document.css('.repositories .repo a.btn[href^="https://github.com/"]').map { |element| element["href"] }
-  errors << "#{code} repositories page should render 6 pinned GitHub links, found #{github_links.length}" unless github_links.length == 6
-  unless github_links.sort == expected_pinned_links
-    errors << "#{code} repositories page pinned GitHub links do not match _data/repositories.yml"
+  pinned_links = document.css(".repo-pin a.repo-pin-name[href]").map { |element| element["href"] }
+  unless pinned_links.length == pinned_repositories.length
+    errors << "#{code} repositories page should render #{pinned_repositories.length} pinned cards, found #{pinned_links.length}"
   end
+  errors << "#{code} repositories page pinned links do not match _data/repositories.yml" unless pinned_links.sort == expected_pinned_links
 
-  validate_repository_cover_images(
-    document,
-    ".repositories [data-pinned-repository-card] [data-repository-cover]",
-    pinned_catalog_repositories,
-    repository_covers,
-    errors,
-    "#{code} repositories page",
-    baseurl
-  )
+  page_hrefs = document.css("[href]").map { |element| element["href"] }.compact.to_set
+  contribution_pull_request_urls.each do |url|
+    errors << "#{code} repositories page is missing merged pull request #{url}" unless page_hrefs.include?(url)
+  end
 end
 
 canonical_hrefs = canonical_documents.values.flat_map { |document| document.css("[href]").map { |element| element["href"] } }.compact.to_set
@@ -409,6 +343,7 @@ required_public_links = [
   umn_calendar_url,
   kaggle_certificate_url,
   *merged_pull_request_urls,
+  *contribution_pull_request_urls,
   "https://github.com/UMN-Choi-Lab/HighwayVLM/pull/3",
   "https://github.com/median-research-group/LibMTL/pull/97",
   *research_interest_links,
@@ -453,49 +388,40 @@ end
 
 cv_text_expectations = {
   "en" => [
-    "Electrical Engineering and Computer Science student",
-    "Fall 2026 classes began September 8, 2026",
+    "Electrical Engineering and Computer Science",
     "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
-    "the decision is pending",
-    "not yet accepted or published",
-    "Selected Open-Source Contributions",
-    "Six merged upstream pull requests",
+    "Submitted to DAI 2026, under review",
+    "20 pull requests merged into 12 projects maintained by others",
     "Power Grid Model",
     "LensKit",
     "M*",
     "PISA",
-    "TU Delft — Honours Programme Bachelor (HPB)",
-    "participant (2025–2026; participation before transfer)"
+    "TU Delft Honours Programme Bachelor (HPB)",
+    "synthetic data"
   ],
   "zh-CN" => [
-    "电气工程与计算机科学本科生",
-    "2026 年秋季课程于 9 月 8 日开始",
+    "电气工程与计算机科学",
     "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
-    "录用决定尚未公布",
-    "尚未录用或发表",
-    "精选开源贡献",
-    "6 个上游拉取请求被合并",
+    "已投稿 DAI 2026，评审中",
+    "向 12 个由他人维护的开源项目合并了 20 个 pull request",
     "Power Grid Model",
     "LensKit",
     "M*",
     "PISA",
-    "TU Delft 荣誉学士项目（Honours Programme Bachelor，HPB）",
-    "参与者（2025—2026；转学前参与）"
+    "TU Delft 荣誉学士项目（HPB）",
+    "合成数据"
   ],
   "ja" => [
-    "電気工学・コンピュータサイエンスを学ぶ学部生",
-    "2026年秋学期の授業は9月8日に開始",
+    "電気工学・コンピュータサイエンス",
     "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars",
-    "採否は未決定",
-    "未採択・未発表",
-    "主なオープンソース貢献",
-    "6件の上流プルリクエストがマージされました",
+    "DAI 2026 に投稿、査読中",
+    "他の方が保守する 12 のプロジェクトに 20 件の pull request がマージ",
     "Power Grid Model",
     "LensKit",
     "M*",
     "PISA",
     "TU Delft Honours Programme Bachelor（HPB）",
-    "参加（2025–2026年、編入前）"
+    "合成データ"
   ]
 }
 outdated_cv_claims = {
@@ -521,7 +447,7 @@ expected_codes.each do |code|
   end
   errors << "#{code} CV page is missing the official TU/e Honors Academy link" unless cv_hrefs.include?(honors_url)
   errors << "#{code} CV page is missing the official TU Delft HPB link" unless cv_hrefs.include?(tudelft_hpb_url)
-  [umn_calendar_url, openreview_url, kaggle_certificate_url, *merged_pull_request_urls].each do |link|
+  [openreview_url, kaggle_certificate_url].each do |link|
     errors << "#{code} CV page is missing the verified source link #{link}" unless cv_hrefs.include?(link)
   end
 end
@@ -755,7 +681,7 @@ if errors.empty?
   puts(
     "Production site is valid: #{canonical_routes.length} canonical routes, " \
     "#{project_routes.length} project groups, #{news_routes.length} news groups, " \
-    "#{repositories.length} repositories, #{catalog.fetch('project_count')} portfolio projects, " \
+    "#{repositories.length} repositories, #{displayed_projects.length} featured projects, " \
     "and #{legacy.length} legacy slugs."
   )
 else

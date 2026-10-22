@@ -5,9 +5,9 @@ lang: zh-CN
 translation_key: highwayvlm
 title: HighwayVLM
 description: 对高速公路相机安全系统的开源参与与来源审计；系统结合 CV 门控、视觉语言分析和运营看板。
-img: assets/img/repository-covers/highwayvlm.webp
+img: assets/img/projects/highwayvlm.webp
 importance: 6
-category: research
+category: contributions
 related_publications: false
 permalink: /zh/projects/highwayvlm/
 ---
@@ -24,7 +24,7 @@ HighwayVLM 面向交通安全运营，监测公共高速公路相机快照。它
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/highwayvlm.webp" title="HighwayVLM 走廊监测看板" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/highwayvlm.webp" title="HighwayVLM 走廊监测看板" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

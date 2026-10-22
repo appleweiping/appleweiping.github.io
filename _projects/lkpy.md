@@ -5,9 +5,9 @@ lang: en
 translation_key: lkpy
 title: LensKit — accepted upstream contribution
 description: A merged ItemKNN correctness fix in LensKit, with the upstream system, maintainer guidance, implementation, and evidence separated clearly.
-img: assets/img/repository-covers/lkpy.webp
+img: assets/img/projects/lkpy.webp
 importance: 7
-category: research
+category: contributions
 related_publications: false
 permalink: /projects/lkpy/
 ---
@@ -24,7 +24,7 @@ LensKit is a Python toolkit for reproducible recommender-system research. It sup
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/lkpy.webp" title="LensKit repository cover" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/lkpy.webp" title="LensKit repository cover" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

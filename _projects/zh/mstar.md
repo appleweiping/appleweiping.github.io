@@ -5,9 +5,9 @@ lang: zh-CN
 translation_key: mstar
 title: "M* — 已合并的上游贡献"
 description: M* 多模态服务框架中一项已合并的媒体输入可靠性修复，同时记录系统架构与维护者评审链路。
-img: assets/img/repository-covers/mstar.webp
+img: assets/img/projects/mstar.webp
 importance: 8
-category: research
+category: contributions
 related_publications: false
 permalink: /zh/projects/mstar/
 ---
@@ -24,7 +24,7 @@ M\* 是一个面向任意输入／输出模态模型的高性能服务框架，�
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/mstar.webp" title="M-star 仓库封面" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/mstar.webp" title="M-star 仓库封面" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

@@ -5,9 +5,9 @@ lang: en
 translation_key: mstar
 title: "M* — accepted upstream contribution"
 description: A merged media-input reliability fix in the M* multimodal serving framework, documented with its architecture and maintainer-review trail.
-img: assets/img/repository-covers/mstar.webp
+img: assets/img/projects/mstar.webp
 importance: 8
-category: research
+category: contributions
 related_publications: false
 permalink: /projects/mstar/
 ---
@@ -24,7 +24,7 @@ M\* is a high-performance serving framework for models with arbitrary input and 
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/mstar.webp" title="M-star repository cover" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/mstar.webp" title="M-star repository cover" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

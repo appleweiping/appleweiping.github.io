@@ -5,9 +5,9 @@ lang: en
 translation_key: highwayvlm
 title: HighwayVLM
 description: Source-audited open-source participation in a freeway-camera safety system that combines CV gating, vision-language analysis, and an operator dashboard.
-img: assets/img/repository-covers/highwayvlm.webp
+img: assets/img/projects/highwayvlm.webp
 importance: 6
-category: research
+category: contributions
 related_publications: false
 permalink: /projects/highwayvlm/
 ---
@@ -24,7 +24,7 @@ HighwayVLM monitors public freeway-camera snapshots for transportation-safety op
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/highwayvlm.webp" title="HighwayVLM corridor dashboard" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/highwayvlm.webp" title="HighwayVLM corridor dashboard" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

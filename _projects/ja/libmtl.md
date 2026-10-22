@@ -5,9 +5,9 @@ lang: ja
 translation_key: libmtl
 title: LibMTL — review 中の上流貢献
 description: LibMTL の CLI help 修正について、完全 fork の境界、上流の帰属、機能・構成、未マージの状態を明示します。
-img: assets/img/repository-covers/libmtl.webp
+img: assets/img/projects/libmtl.webp
 importance: 8
-category: research
+category: contributions
 related_publications: false
 permalink: /ja/projects/libmtl/
 ---
@@ -28,7 +28,7 @@ LibMTL はマルチタスク学習向けの PyTorch library です。共有／ta
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/libmtl.webp" title="LibMTL Overall Framework" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/libmtl.webp" title="LibMTL Overall Framework" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

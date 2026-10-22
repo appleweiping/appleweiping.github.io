@@ -5,9 +5,9 @@ lang: zh-CN
 translation_key: libmtl
 title: LibMTL — 审核中的上游贡献
 description: 对 LibMTL 的一项命令行帮助修复，明确区分精确 fork、上游归属、项目功能与架构，以及尚未合并的贡献状态。
-img: assets/img/repository-covers/libmtl.webp
+img: assets/img/projects/libmtl.webp
 importance: 8
-category: research
+category: contributions
 related_publications: false
 permalink: /zh/projects/libmtl/
 ---
@@ -28,7 +28,7 @@ LibMTL 是面向多任务学习的 PyTorch 库。它用统一接口组合共享�
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/libmtl.webp" title="LibMTL Overall Framework" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/libmtl.webp" title="LibMTL Overall Framework" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

@@ -5,13 +5,19 @@ permalink: /projects/
 lang: en
 locale: en
 translation_key: projects
-description: A complete, categorized index of Weiping Yan's reviewed GitHub projects.
+description: Things I have built, grouped by kind. Self-study course work is listed at the bottom.
 nav: true
 nav_order: 3
+display_categories: [research, ai-systems, tools, eda, creative-computing, coursework]
+horizontal: false
 ---
 
-<!-- pages/projects.md -->
+{% include site_i18n/projects_grid.liquid %}
 
-## Complete GitHub project index
+## Self-study course work
 
-{% include site_i18n/repository_catalog.liquid projects_only=true %}
+Alongside my degree I work through public course materials from other universities. These repositories hold my own solutions to
+those assignments; they are listed for completeness rather than as original projects. Everything else, including forks, is in the
+[repository catalog]({{ site.data.translation_routes['repository-catalog']['en'] | relative_url }}).
+
+{% include site_i18n/selfstudy_list.liquid %}

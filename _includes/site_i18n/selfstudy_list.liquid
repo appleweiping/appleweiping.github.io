@@ -1,0 +1,54 @@
+{% comment %}
+  Compact, collapsible list of self-study course reproductions (source_kind: reproduction)
+  from _data/repository_catalog.json, grouped by catalog category.
+{% endcomment %}
+{% assign current_lang = page.lang | default: site.lang %}
+{% assign current_locale = site.data.locales | where: 'code', current_lang | first %}
+{% assign catalog_locale = current_locale.data_key %}
+{% assign catalog = site.data.repository_catalog %}
+{% assign catalog_i18n = site.data.repository_catalog_i18n %}
+{% assign reproductions = catalog.repositories | where: 'source_kind', 'reproduction' | where: 'portfolio_project', true %}
+
+{% for category in catalog.categories %}
+  {% assign items = reproductions | where: 'category', category.slug | sort: 'title' %}
+  {% if items.size == 0 %}
+    {% continue %}
+  {% endif %}
+  {% assign category_title = category.title %}
+  {% if catalog_locale != 'en' and catalog_i18n.categories[category.slug][catalog_locale].title %}
+    {% assign category_title = catalog_i18n.categories[category.slug][catalog_locale].title %}
+  {% endif %}
+  <details class="selfstudy-group">
+    <summary>
+      {{ category_title | escape }}
+      <span class="text-muted">({{ items.size }})</span>
+    </summary>
+    <ul>
+      {% for repository in items %}
+        {% assign description = repository.description %}
+        {% if catalog_locale != 'en' and catalog_i18n.repositories[repository.slug][catalog_locale] %}
+          {% assign localized = catalog_i18n.repositories[repository.slug][catalog_locale] %}
+          {% assign description = localized.description | default: localized %}
+        {% endif %}
+        <li>
+          <a href="{{ repository.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ repository.title | escape }}</a>
+          <span class="text-muted">— {{ description | escape }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </details>
+{% endfor %}
+
+<style>
+  .selfstudy-group {
+    margin-bottom: 0.6rem;
+  }
+  .selfstudy-group > summary {
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .selfstudy-group ul {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+  }
+</style>

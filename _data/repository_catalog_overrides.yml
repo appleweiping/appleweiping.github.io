@@ -125,13 +125,15 @@ repositories:
     attribution: Forked repository; original authorship belongs to the upstream project. Consult the repository for local changes.
     portfolio_project: false
 
-  - repository: appleweiping/pams-rac-reproduction
-    description: Placeholder repository for a planned PAMS repetitive-action-counting reproduction; the default branch does not yet contain an implementation artifact.
-    source_kind: metadata-only
-    category: new-acquisitions
-    curation_status: metadata-only
-    attribution: Listed from public GitHub metadata; authorship and contribution details have not been independently curated.
-    portfolio_project: false
+  - repository: appleweiping/TempoRAC
+    slug: temporac
+    description: >-
+      TempoRAC: identity-indexed local tempo routing for multi-person repetitive action counting, with a partial reproduction of PAMS. Research code; no efficacy result yet.
+    source_kind: research
+    category: ai4s-research
+    curation_status: curated
+    attribution: Research repository; consult its documentation for collaborators, data sources, and contribution details.
+    portfolio_project: true
 
   - repository: appleweiping/periodic-motion-language
     description: >-
@@ -142,14 +144,12 @@ repositories:
     attribution: Historical redirect repository; active implementation and its preserved PhasePair milestone are documented in the linked PhaseSet repository.
     portfolio_project: false
 
-  - repository: appleweiping/phaseset-multiperson-motion-language
+  - repository: appleweiping/STaR-Body
+    slug: star-body
     description: >-
-      Data-free research implementation of streamed, permutation-invariant periodic relation tokens for multi-person motion-language retrieval, with reproducible code, tests, and release contracts; it does not yet report real-data results.
+      STaR-Body: spatial-temporal attentive refinement for camera-space SMPL body reconstruction from monocular video (3DPW). Research code with provisional validation records.
     source_kind: research
     category: ai4s-research
-    languages:
-      - Python
-      - TeX
     curation_status: curated
     attribution: Research repository; consult its documentation for collaborators, data sources, and contribution details.
     portfolio_project: true
@@ -555,4 +555,74 @@ repositories:
       - C++
       - Shell
     curation_status: curated
+    portfolio_project: false
+
+  - repository: appleweiping/ComputerUseAgent
+    source_kind: research
+    category: ai4s-research
+    curation_status: curated
+    attribution: Research repository from the owner's Minnesota NLP internship work; consult its documentation for collaborators and contribution details.
+    portfolio_project: true
+
+  - repository: appleweiping/prism-stage
+    source_kind: original
+    category: creative-computing
+    curation_status: curated
+    attribution: Independent project by Weiping Yan unless the repository documentation credits collaborators or upstream components.
+    portfolio_project: true
+
+  - repository: appleweiping/power-grid-model-io
+    source_kind: fork
+    category: robotics-hardware
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
+    portfolio_project: false
+
+  - repository: appleweiping/sglang-omni
+    source_kind: fork
+    category: ai-agents
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
+    portfolio_project: false
+
+  - repository: appleweiping/tianshou
+    source_kind: fork
+    category: models-data
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
+    portfolio_project: false
+
+  - repository: appleweiping/AgentBench
+    source_kind: fork
+    category: ai-agents
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
+    portfolio_project: false
+
+  - repository: appleweiping/COmPOSER
+    source_kind: fork
+    category: robotics-hardware
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
+    portfolio_project: false
+
+  - repository: appleweiping/Time-Series-Library
+    source_kind: fork
+    category: models-data
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
+    portfolio_project: false
+
+  - repository: appleweiping/HighTide
+    source_kind: fork
+    category: robotics-hardware
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
+    portfolio_project: false
+
+  - repository: appleweiping/miles
+    source_kind: fork
+    category: ai-agents
+    curation_status: curated
+    attribution: Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.
     portfolio_project: false

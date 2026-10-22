@@ -173,6 +173,14 @@
     "Competition artifact by Weiping Yan; repository documentation attributes upstream solvers and distinguishes integration, validation, and reporting work from algorithm authorship.": {
       "zh": "闫维平整理的竞赛成果仓库；仓库文档对上游求解器作出署名，并明确区分集成、验证、报告工作与算法原创。",
       "ja": "Weiping Yan による競技成果リポジトリ。上流ソルバーを明記し、統合・検証・報告作業とアルゴリズムの原著性を区別している。"
+    },
+    "Forked repository used to prepare an upstream contribution; original authorship belongs to the upstream project.": {
+      "zh": "为准备上游贡献而派生的仓库；原作者身份归属上游项目。",
+      "ja": "上流への貢献を準備するためにフォークしたリポジトリです。原著作権は上流プロジェクトに帰属します。"
+    },
+    "Research repository from the owner's Minnesota NLP internship work; consult its documentation for collaborators and contribution details.": {
+      "zh": "来自作者在明尼苏达大学 NLP 组实习期间的研究仓库；合作者与贡献细节请见仓库文档。",
+      "ja": "ミネソタ大学 NLP グループでのインターンシップに由来する研究リポジトリです。共同研究者と貢献の詳細はリポジトリの文書を参照してください。"
     }
   },
   "repositories": {
@@ -688,17 +696,9 @@
       "zh": "原创浏览器海岛生活模拟，包含种植、钓鱼、战斗、装扮与程序化美术。",
       "ja": "農業、釣り、戦闘、カスタマイズ、プロシージャル アートを備えたオリジナルのブラウザー島生活シミュレーション。"
     },
-    "pams-rac-reproduction": {
-      "zh": "计划开展 PAMS 重复动作计数复现的占位仓库；默认分支目前尚无实现成果。",
-      "ja": "PAMS 反復動作カウント再現の計画用プレースホルダー。既定ブランチには現時点で実装成果がない。"
-    },
     "periodic-motion-language": {
       "zh": "语言对齐周期运动研究的已归档历史起点；活跃开发已迁移到 PhaseSet，其中经审计的双人 PhasePair 里程碑作为不可变的 v0.1.0 版本保留。",
       "ja": "言語整合型周期モーション研究のアーカイブ済みの出発点。開発は PhaseSet に移行し、監査済みの2者 PhasePair マイルストーンは不変の v0.1.0 リリースとして保存されている。"
-    },
-    "phaseset-multiperson-motion-language": {
-      "zh": "面向多人动作—语言检索的无数据研究实现：以流式、置换不变的周期关系 token 建模群体动作，并提供可复现代码、测试与发布契约；目前尚无真实数据实验结果。",
-      "ja": "複数人物のモーション・言語検索に向け、ストリーミング型・置換不変の周期関係トークンを実装したデータフリー研究コード。再現用コード、テスト、リリース契約を含むが、実データ結果はまだ報告していない。"
     },
     "pku-software-analysis": {
       "zh": "基于北京大学软件分析公开材料的自学作业，涵盖静态与动态分析、数据流和符号执行。",
@@ -707,10 +707,6 @@
     "pku-sysy-compiler": {
       "zh": "基于北京大学编译实践公开材料的 SysY 编译器自学实现，将类 C 语言经 Koopa IR 降至 RISC-V 汇编。",
       "ja": "北京大学の資料に基づいた自習用の SysY コンパイラ。Koopa IR を介して C ライクな言語を RISC-V アセンブリに落とし込みました。"
-    },
-    "pokeverse": {
-      "zh": "粉丝创作的浏览器像素角色扮演游戏，包含大型生物图鉴、回合战斗、点对点联机与原创芯片音乐。",
-      "ja": "ファンメイドのブラウザ ピクセル RPG で、豊富なクリーチャー インデックス、ターン制バトル、ピアツーピア マルチプレイヤー、オリジナルのチップチューン ミュージックを備えています。"
     },
     "power-grid-model": {
       "zh": "LF Energy 配电系统分析库 Power Grid Model 的完全公开派生仓库；当前没有领先上游的本地提交。",
@@ -731,10 +727,6 @@
     "riskcal-rlvr": {
       "zh": "探索 RLVR 推理模型中的风险敏感校准奖励。",
       "ja": "RLVR 推論モデルにおけるリスク感応型キャリブレーション報酬を検討する研究コード。"
-    },
-    "security-helper": {
-      "zh": "根据输入学号生成令牌的小型课程工具。",
-      "ja": "提供された学生番号からトークンを取得する小規模なコースワーク ユーティリティ。"
     },
     "seed-labs": {
       "zh": "基于雪城大学 SEED Labs 公开材料的安全自学练习，涵盖部分软件、密码学、网络与 Web 安全主题。",
@@ -1055,6 +1047,54 @@
     "vila": {
       "zh": "NVIDIA VILA 视觉语言模型家族的完整公开 fork，覆盖端侧、数据中心与云端多模态任务；截至 2026-09-08 默认分支没有领先上游的提交。",
       "ja": "edge・data center・cloud のマルチモーダル task 向け NVIDIA VILA 視覚言語 model family の完全な公開 fork。2026-09-08 時点で default branch に上流より ahead の commit はありません。"
+    },
+    "temporac": {
+      "zh": "TempoRAC：面向多人重复动作计数的身份索引局部节奏路由，并包含对 PAMS 的部分复现。研究代码，尚无有效性结论。",
+      "ja": "TempoRAC：複数人の反復動作カウントのための、個人ごとの局所テンポ・ルーティング。PAMS の部分的な再現を含む研究コードで、有効性の結果はまだありません。"
+    },
+    "star-body": {
+      "zh": "STaR-Body：基于时空注意力的单目视频相机坐标系 SMPL 人体重建细化方法（3DPW）。研究代码，附带初步验证记录。",
+      "ja": "STaR-Body：単眼動画からのカメラ座標系 SMPL 人体復元を時空間アテンションで改善する研究コード（3DPW）。暫定的な検証記録付き。"
+    },
+    "computeruseagent": {
+      "zh": "经同意后才开始记录的浏览器与 X11 交互轨迹记录器，以及用于比较人类与计算机使用智能体的防泄漏评估工具（Chrome 扩展 + Python 命令行）。",
+      "ja": "同意を得てから記録するブラウザ・X11 操作ログ記録ツールと、人とコンピュータ操作エージェントを比較するリーク対策済みの評価ツール（Chrome 拡張 + Python CLI）。"
+    },
+    "prism-stage": {
+      "zh": "在浏览器里用摄像头或视频驱动丝带、物理小球和剪影世界的本地运行动作艺术工作室。",
+      "ja": "カメラや動画の動きでリボン、物理演算の球、シルエットの世界を描く、ブラウザで動くローカルのモーションアート・スタジオ。"
+    },
+    "agentbench": {
+      "zh": "AgentBench 的派生仓库：评估大语言模型作为智能体能力的基准（ICLR'24），用于准备上游贡献。",
+      "ja": "AgentBench のフォーク。LLM のエージェント能力を評価するベンチマーク（ICLR'24）で、上流への貢献の準備に使用。"
+    },
+    "composer": {
+      "zh": "COmPOSER 的派生仓库：开源端到端射频 / 毫米波集成电路综合工具，用于准备上游贡献。",
+      "ja": "COmPOSER のフォーク。オープンソースのエンドツーエンド RF／ミリ波 IC 合成ツールで、上流への貢献の準備に使用。"
+    },
+    "hightide": {
+      "zh": "HighTide 的派生仓库：开源 RTL 到 GDS 设计基准，用于准备上游贡献。",
+      "ja": "HighTide のフォーク。オープンソースの RTL-to-GDS 設計ベンチマークで、上流への貢献の準備に使用。"
+    },
+    "miles": {
+      "zh": "miles 的派生仓库：面向大语言模型与视觉语言模型后训练的强化学习框架，用于准备上游贡献。",
+      "ja": "miles のフォーク。LLM・VLM の事後学習向け強化学習フレームワークで、上流への貢献の準備に使用。"
+    },
+    "power-grid-model-io": {
+      "zh": "power-grid-model-io 的派生仓库：在多种电网数据格式与 Power Grid Model 之间转换，用于准备上游贡献。",
+      "ja": "power-grid-model-io のフォーク。各種の電力系統データ形式と Power Grid Model の相互変換ツールで、上流への貢献の準備に使用。"
+    },
+    "sglang-omni": {
+      "zh": "SGLang-Omni 的派生仓库：面向语音模型（TTS、ASR）和统一多模态模型的高性能推理服务框架，用于准备上游贡献。",
+      "ja": "SGLang-Omni のフォーク。音声モデル（TTS・ASR）と統合マルチモーダルモデル向けの高性能推論サービング基盤で、上流への貢献の準備に使用。"
+    },
+    "tianshou": {
+      "zh": "Tianshou 的派生仓库：基于 PyTorch 的深度强化学习库，用于准备上游贡献。",
+      "ja": "Tianshou のフォーク。PyTorch ベースの深層強化学習ライブラリで、上流への貢献の準備に使用。"
+    },
+    "time-series-library": {
+      "zh": "Time-Series-Library 的派生仓库：通用时间序列分析的深度模型库，用于准备上游贡献。",
+      "ja": "Time-Series-Library のフォーク。汎用的な時系列解析のための深層モデル・ライブラリで、上流への貢献の準備に使用。"
     }
   }
 }

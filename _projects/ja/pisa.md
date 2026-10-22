@@ -5,9 +5,9 @@ lang: ja
 translation_key: pisa
 title: PISA — 上流に採用された貢献
 description: PISA にマージされた型安全性の refactor を、高性能検索アーキテクチャ、メンテナの指針、貢献証拠とともに示します。
-img: assets/img/repository-covers/pisa.webp
+img: assets/img/projects/pisa.webp
 importance: 9
-category: research
+category: contributions
 related_publications: false
 permalink: /ja/projects/pisa/
 ---
@@ -24,7 +24,7 @@ PISA は、大規模テキスト集合の indexing、検索アルゴリズムの
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/pisa.webp" title="PISA リポジトリカバー" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/pisa.webp" title="PISA リポジトリカバー" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

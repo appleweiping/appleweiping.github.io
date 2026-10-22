@@ -5,9 +5,9 @@ lang: zh-CN
 translation_key: pisa
 title: PISA — 已合并的上游贡献
 description: PISA 中一项已合并的类型安全重构，同时记录高性能检索架构、维护者指导与贡献证据。
-img: assets/img/repository-covers/pisa.webp
+img: assets/img/projects/pisa.webp
 importance: 9
-category: research
+category: contributions
 related_publications: false
 permalink: /zh/projects/pisa/
 ---
@@ -24,7 +24,7 @@ PISA 是一个用 C++ 构建的高性能平台，用于为大规模文本集合�
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/pisa.webp" title="PISA 仓库封面" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/pisa.webp" title="PISA 仓库封面" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

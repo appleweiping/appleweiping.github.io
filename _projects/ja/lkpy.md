@@ -5,9 +5,9 @@ lang: ja
 translation_key: lkpy
 title: LensKit — 上流に採用された貢献
 description: LensKit にマージされた ItemKNN の正当性修正について、上流システム、メンテナの指針、実装、証拠を明確に区別します。
-img: assets/img/repository-covers/lkpy.webp
+img: assets/img/projects/lkpy.webp
 importance: 7
-category: research
+category: contributions
 related_publications: false
 permalink: /ja/projects/lkpy/
 ---
@@ -24,7 +24,7 @@ LensKit は、再現可能な推薦システム研究のための Python ツー�
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/lkpy.webp" title="LensKit リポジトリカバー" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/lkpy.webp" title="LensKit リポジトリカバー" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

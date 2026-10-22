@@ -5,9 +5,9 @@ lang: ja
 translation_key: mstar
 title: "M* — 上流に採用された貢献"
 description: M* マルチモーダル serving framework にマージされた media input の信頼性修正を、構成とメンテナレビューの証跡とともに示します。
-img: assets/img/repository-covers/mstar.webp
+img: assets/img/projects/mstar.webp
 importance: 8
-category: research
+category: contributions
 related_publications: false
 permalink: /ja/projects/mstar/
 ---
@@ -24,7 +24,7 @@ M\* は任意の入力・出力モダリティを持つモデル向けの高性�
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/mstar.webp" title="M-star リポジトリカバー" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/mstar.webp" title="M-star リポジトリカバー" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

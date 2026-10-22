@@ -5,9 +5,9 @@ lang: en
 translation_key: libmtl
 title: LibMTL — open upstream contribution
 description: An open CLI-help contribution to LibMTL, with the exact-fork boundary, upstream ownership, project function, architecture, and evidence stated explicitly.
-img: assets/img/repository-covers/libmtl.webp
+img: assets/img/projects/libmtl.webp
 importance: 8
-category: research
+category: contributions
 related_publications: false
 permalink: /projects/libmtl/
 ---
@@ -28,7 +28,7 @@ LibMTL is a PyTorch library for multi-task learning. It provides a consistent wa
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-9 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/libmtl.webp" title="LibMTL overall framework" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/libmtl.webp" title="LibMTL overall framework" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

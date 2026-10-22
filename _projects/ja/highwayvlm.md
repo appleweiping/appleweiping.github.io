@@ -5,9 +5,9 @@ lang: ja
 translation_key: highwayvlm
 title: HighwayVLM
 description: CV ゲート、視覚言語解析、運用ダッシュボードを組み合わせた高速道路カメラ安全システムへの、出典監査済みオープンソース参加。
-img: assets/img/repository-covers/highwayvlm.webp
+img: assets/img/projects/highwayvlm.webp
 importance: 6
-category: research
+category: contributions
 related_publications: false
 permalink: /ja/projects/highwayvlm/
 ---
@@ -24,7 +24,7 @@ HighwayVLM は、交通安全運用のために公開高速道路カメラのス
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/repository-covers/highwayvlm.webp" title="HighwayVLM コリドー監視ダッシュボード" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/projects/highwayvlm.webp" title="HighwayVLM コリドー監視ダッシュボード" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 <div class="caption">

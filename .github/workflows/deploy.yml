@@ -98,7 +98,6 @@ jobs:
           npm run test:translations
           npm run test:redirects
           npm run test:catalog-policy
-          npm run test:covers
 
       - name: Audit the al-folio upgrade boundary
         run: |

@@ -32,10 +32,12 @@ en:
     filter_placeholder: Type to filter
   projects:
     categories:
-      research: Research
-      ai-systems: AI systems
-      creative-computing: Creative computing
-      coursework: Coursework
+      research: Research code
+      ai-systems: Agent systems
+      tools: Apps and tools
+      eda: Analog EDA tools
+      creative-computing: Games and interactive
+      coursework: University coursework
     thumbnail_alt: Project thumbnail
     code_repository: Code repository
     github_stars: GitHub stars
@@ -104,10 +106,12 @@ zh-CN:
     filter_placeholder: 输入关键词筛选
   projects:
     categories:
-      research: 研究
-      ai-systems: AI 系统
-      creative-computing: 创意计算
-      coursework: 课程项目
+      research: 研究代码
+      ai-systems: 智能体系统
+      tools: 应用与工具
+      eda: 模拟电路 EDA 工具
+      creative-computing: 游戏与交互作品
+      coursework: 大学课程项目
     thumbnail_alt: 项目缩略图
     code_repository: 代码仓库
     github_stars: GitHub 星标
@@ -176,10 +180,12 @@ ja:
     filter_placeholder: キーワードで絞り込む
   projects:
     categories:
-      research: 研究
-      ai-systems: AI システム
-      creative-computing: クリエイティブ・コンピューティング
-      coursework: 授業プロジェクト
+      research: 研究コード
+      ai-systems: エージェントシステム
+      tools: アプリとツール
+      eda: アナログ EDA ツール
+      creative-computing: ゲームとインタラクティブ作品
+      coursework: 大学の授業プロジェクト
     thumbnail_alt: プロジェクトのサムネイル
     code_repository: コードリポジトリ
     github_stars: GitHub スター
