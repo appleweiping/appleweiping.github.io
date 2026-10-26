@@ -40,30 +40,39 @@ cv:
         end_date: 2024-08
 
     经历:
+      - company: 宁波东方理工大学
+        position: 研究实习生，大语言模型赋能电子设计自动化（LLM for EDA）
+        location: 中国宁波
+        start_date: 2026-07
+        end_date: 2026-09
+        highlights:
+          - 独立设计并完成一个 **LLM for EDA** 项目，探索大语言模型在电路理解与 AI 辅助设计中的应用，覆盖问题定义、数据准备、基于 LLM 的处理与输出评估全流程。
+          - 参与课题组**电路设计数据**的整理、标注、清洗与质量检查，为模型开发与评估准备结构化数据集。
+
       - company: 明尼苏达大学 Minnesota NLP Group
         position: NLP 研究实习生
         location: 美国明尼阿波利斯
         start_date: 2026-07
-        end_date: present
+        end_date: 2026-09
         highlights:
-          - 开发经用户同意才开始记录的 **Chrome 扩展**，采集去隐私化的交互轨迹，用于在相同任务上对比人类与**计算机使用智能体（computer-use agent）**的行为。
+          - 搭建从去隐私化浏览器交互轨迹中识别**计算机使用智能体（computer-use agent）**的实验流程：受控智能体评测、已发表检测方法复现，以及经过测试、经用户同意才开始记录的 **Chrome 扩展**。
           - 编写校验轨迹、提取 23 项行为特征并做留一任务评估的 **Python 命令行工具**；**5 个 PR** 合并进实验室仓库。
-
-      - company: 香港中文大学
-        position: 研究助理
-        location: 中国香港
-        start_date: 2026-03
-        end_date: present
-        highlights:
-          - 研究**基于大语言模型的推荐（LLM4Rec）**与自然语言处理。
 
       - company: Veylora Labs
         position: 联合创始人
-        location: 远程
+        location: 美国明尼阿波利斯
         start_date: 2026-05
         end_date: present
         highlights:
-          - 探索辅助组织决策的高管信息系统。
+          - 构建高管智能（Executive Intelligence）系统，从组织的报表与数据中发现规律，转化为清晰、可执行的决策信息。
+
+      - company: 香港中文大学
+        position: 研究助理
+        location: 中国深圳
+        start_date: 2026-03
+        end_date: 2026-08
+        highlights:
+          - 研究面向生成式推荐的**不确定性感知大语言模型**；基于 **Qwen3-8B/LoRA** 搭建置信度校准、候选重排与选择性推荐流程，在多领域 Amazon 基准上实验。
 
       - company: 埃因霍温理工大学
         position: 助教，微积分与逻辑和集合论
@@ -71,25 +80,63 @@ cv:
         start_date: 2025-09
         end_date: 2025-11
         highlights:
-          - 带**习题课**，指导学生解题，并对数学推理给出书面反馈。
+          - 带**习题课**，讲解极限、导数、积分、形式推理与集合运算，并对学生的数学推理给出书面反馈。
 
       - company: 张江实验室
-        position: 研究助理，集成电路设计
+        position: 研究助理
         location: 中国上海
         start_date: 2025-07
         end_date: 2025-09
         highlights:
-          - 在工业级 **EDA 工具**上学习模拟集成电路流程：原理图、前仿真、**DRC/LVS** 验证及 MPW 流片准备。
+          - 梳理并记录集成电路设计流程与 **EDA 工具链**：从原理图设计、前仿真到 **DRC/LVS** 签核，并整理 MPW 流片流程概览。
 
-      - company: 独立研究项目，指导：Soummya Kar 教授（CMU）、高强副教授（东南大学）
-        position: 学生研究者，PM2.5 与呼吸系统疾病
+      - company: 自主学习：MIT OpenCourseWare 等公开课程
+        position: 独立开发者，计算机科学项目
+        location: 远程
+        start_date: 2024-05
+        end_date: present
+        highlights:
+          - 用 Go 实现 **Raft** 与分片键值服务，扩展 **xv6** 内核（写时复制、mmap），用 C++ 实现 **TCP/IP** 协议栈，完成 **BusTub** 数据库组件（哈希、算子、MVCC）与 **Needle** 自动微分和张量框架（非学分课程）。
+
+      - company: 远程研究项目，指导：Soummya Kar 教授（卡内基梅隆大学）、高强副教授（东南大学）
+        position: 学生研究者
         location: 中国北京
         start_date: 2023-09
         end_date: 2024-02
         highlights:
-          - 用 **Python** 在合成数据上完成分析与可视化，论文发表于 *Theoretical and Natural Science*。
+          - 用 **Python** 搭建 PM2.5 暴露与呼吸系统疾病发病率的分析与可视化流程（基于合成数据），论文发表于 *Theoretical and Natural Science*。
 
     论文:
+      - title: "TempoRAC: Identity-Indexed Local Tempo Routing for Multi-Person Repetitive Action Counting"
+        authors:
+          - '**Weiping Yan**\*'
+          - 'Jiayu Zhu\*'
+          - 'Xu Yan\*'
+        journal: 已投稿 ICASSP 2027，评审中（共同一作）
+        date: 2026-09
+        url: https://github.com/appleweiping/TempoRAC
+        summary: '**Weiping Yan**\*, Jiayu Zhu\*, Xu Yan\*. 已投稿 ICASSP 2027，评审中（共同一作）.'
+
+      - title: "VCH-SegFormer for Street-View Vegetation Mapping and Assessing the Associations Between Urban Vegetation and PM2.5"
+        authors:
+          - Xiaoyan Fei
+          - "**Weiping Yan**"
+          - Qi Zhu
+          - Xu Yan
+          - Zherong Wu
+        journal: 已投稿 IEEE Transactions on Geoscience and Remote Sensing，评审中
+        date: 2026-10
+        summary: "Xiaoyan Fei, **Weiping Yan**, Qi Zhu, Xu Yan, Zherong Wu. 已投稿 IEEE Transactions on Geoscience and Remote Sensing，评审中."
+
+      - title: "RACER-T: Temporal Density Modeling for Pose-Based Repetitive Action Counting"
+        authors:
+          - Shuoran Wang
+          - "**Weiping Yan**"
+          - Xiang Wang
+        journal: 已投稿 Signal, Image and Video Processing，评审中；Research Square In Review 预印本
+        date: 2026-10
+        summary: "Shuoran Wang, **Weiping Yan**, Xiang Wang. 已投稿 Signal, Image and Video Processing，评审中；Research Square In Review 预印本."
+
       - title: "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars"
         authors:
           - Xiang Wang
@@ -124,6 +171,15 @@ cv:
       - bullet: "**全国一等奖**，2025“科创杯”大学生数学建模竞赛，数学建模知识竞赛赛道（2025.12）"
       - bullet: "**一等奖**，2025 全国大学生数学能力挑战赛（2025.12）"
       - bullet: "**一等奖**，CTSS 大学生创新创业竞赛（2025.07）"
+
+    证书:
+      - bullet: >-
+          **[Deep Learning 专项课程证书](https://www.coursera.org/account/accomplishments/specialization/I7V2KZDNTW5I)**，DeepLearning.AI（2026 年 10 月）：共五门课程，从 Neural Networks and Deep Learning 到 Convolutional Neural Networks 与 Sequence Models
+      - bullet: >-
+          **Machine Learning 专项课程**，Stanford Online 与 DeepLearning.AI（2026 年 9—10 月）：
+          [Supervised Machine Learning: Regression and Classification](https://www.coursera.org/account/accomplishments/verify/OCLIYMX7LMFP)；
+          [Advanced Learning Algorithms](https://www.coursera.org/account/accomplishments/verify/YNU1OCT06EB8)；
+          [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/account/accomplishments/verify/7LKD329AG51Y)
 
     技能:
       - label: 编程语言

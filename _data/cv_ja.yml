@@ -40,56 +40,103 @@ cv:
         end_date: 2024-08
 
     経歴:
+      - company: 寧波東方理工大学（Eastern Institute of Technology, Ningbo）
+        position: リサーチインターン、LLM for EDA（電子設計自動化）
+        location: 中国寧波
+        start_date: 2026-07
+        end_date: 2026-09
+        highlights:
+          - 大規模言語モデルによる回路理解と AI 支援設計を探る **LLM for EDA** プロジェクトを独自に設計・開発。問題設定、データ準備、LLM による処理、出力評価までを一通り担当。
+          - 研究グループの **回路設計データ**の整理、アノテーション、クリーニング、品質チェックを担当し、モデル開発と評価用の構造化データセットを準備。
+
       - company: ミネソタ大学 Minnesota NLP Group
         position: NLP リサーチインターン
         location: 米国ミネアポリス
         start_date: 2026-07
-        end_date: present
+        end_date: 2026-09
         highlights:
-          - 同意を得てから記録を始める **Chrome 拡張機能**を開発し、プライバシーに配慮した操作ログを収集。同じタスクで人と**コンピュータ操作エージェント**の行動を比較できるようにした。
+          - プライバシーに配慮したブラウザ操作ログから**コンピュータ操作エージェント**を検出する実験パイプラインを構築。制御されたエージェント評価、既存手法の再現、同意を得てから記録を始めるテスト済みの **Chrome 拡張機能**を含む。
           - ログの検証、23 種類の行動特徴の抽出、タスク単位の交差検証を行う **Python CLI** を作成。研究室リポジトリに **5 件の PR** がマージ。
-
-      - company: 香港中文大学
-        position: リサーチアシスタント
-        location: 香港
-        start_date: 2026-03
-        end_date: present
-        highlights:
-          - "**大規模言語モデルによる推薦（LLM4Rec）**と自然言語処理の研究。"
 
       - company: Veylora Labs
         position: 共同創業者
-        location: リモート
+        location: 米国ミネアポリス
         start_date: 2026-05
         end_date: present
         highlights:
-          - 組織の意思決定を支えるエグゼクティブ向け情報システムを探索。
+          - 組織のレポートやデータからパターンを見つけ、意思決定者に明確で実行可能な情報を届けるエグゼクティブ・インテリジェンスシステムを構築中。
+
+      - company: 香港中文大学
+        position: リサーチアシスタント
+        location: 中国深圳
+        start_date: 2026-03
+        end_date: 2026-08
+        highlights:
+          - "**生成型推薦のための不確実性を考慮した LLM** を研究。**Qwen3-8B/LoRA** で信頼度キャリブレーション、候補の再ランキング、選択的推薦のパイプラインを構築し、複数ドメインの Amazon ベンチマークで評価。"
 
       - company: アイントホーフェン工科大学
-        position: ティーチングアシスタント（微積分、論理と集合論）
-        location: オランダ
+        position: ティーチングアシスタント（微分積分、論理と集合論）
+        location: オランダ・アイントホーフェン
         start_date: 2025-09
         end_date: 2025-11
         highlights:
-          - "**演習**を担当し、問題解決を指導し、数学的推論に書面でフィードバック。"
+          - 極限、微分、積分、形式的推論、集合演算の**演習授業**を担当し、学生の数学的推論に書面でフィードバック。
 
       - company: 張江実験室
-        position: リサーチアシスタント（集積回路設計）
-        location: 中国・上海
+        position: リサーチアシスタント
+        location: 中国上海
         start_date: 2025-07
         end_date: 2025-09
         highlights:
-          - 商用 **EDA ツール**でアナログ IC の設計フローを習得：回路図、プリレイアウト・シミュレーション、**DRC/LVS** 検証、MPW テープアウト準備。
+          - 回路図設計とプリレイアウトシミュレーションから **DRC/LVS** サインオフまでの IC 設計フローと **EDA ツールチェーン**を調査・文書化し、MPW テープアウトの流れをまとめた。
 
-      - company: 独立研究プロジェクト（指導：Soummya Kar 教授〔CMU〕、Qiang Gao 准教授〔東南大学〕）
-        position: 学生研究者（PM2.5 と呼吸器疾患）
-        location: 中国・北京
+      - company: MIT OpenCourseWare などの公開講座による自主学習
+        position: 個人開発者（コンピュータサイエンスのプロジェクト）
+        location: リモート
+        start_date: 2024-05
+        end_date: present
+        highlights:
+          - Go で **Raft** とシャード化キーバリューサービス、**xv6** カーネル拡張（コピーオンライト、mmap）、C++ で **TCP/IP** スタック、**BusTub** データベース部品（ハッシュ、演算子、MVCC）、**Needle** 自動微分・テンソルフレームワークを実装（単位なし）。
+
+      - company: リモート研究プロジェクト（指導：Soummya Kar 教授〔カーネギーメロン大学〕、高強准教授〔東南大学〕）
+        position: 学生研究者
+        location: 中国北京
         start_date: 2023-09
         end_date: 2024-02
         highlights:
-          - 合成データを用いた **Python** による分析・可視化を行い、*Theoretical and Natural Science* に論文を発表。
+          - PM2.5 曝露と呼吸器疾患の発症に関する **Python** の分析・可視化パイプラインを合成データで作成し、*Theoretical and Natural Science* に掲載。
 
     論文:
+      - title: "TempoRAC: Identity-Indexed Local Tempo Routing for Multi-Person Repetitive Action Counting"
+        authors:
+          - '**Weiping Yan**\*'
+          - 'Jiayu Zhu\*'
+          - 'Xu Yan\*'
+        journal: ICASSP 2027 に投稿、査読中（共同筆頭著者）
+        date: 2026-09
+        url: https://github.com/appleweiping/TempoRAC
+        summary: '**Weiping Yan**\*, Jiayu Zhu\*, Xu Yan\*. ICASSP 2027 に投稿、査読中（共同筆頭著者）.'
+
+      - title: "VCH-SegFormer for Street-View Vegetation Mapping and Assessing the Associations Between Urban Vegetation and PM2.5"
+        authors:
+          - Xiaoyan Fei
+          - "**Weiping Yan**"
+          - Qi Zhu
+          - Xu Yan
+          - Zherong Wu
+        journal: IEEE Transactions on Geoscience and Remote Sensing に投稿、査読中
+        date: 2026-10
+        summary: "Xiaoyan Fei, **Weiping Yan**, Qi Zhu, Xu Yan, Zherong Wu. IEEE Transactions on Geoscience and Remote Sensing に投稿、査読中."
+
+      - title: "RACER-T: Temporal Density Modeling for Pose-Based Repetitive Action Counting"
+        authors:
+          - Shuoran Wang
+          - "**Weiping Yan**"
+          - Xiang Wang
+        journal: Signal, Image and Video Processing に投稿、査読中；Research Square In Review プレプリント
+        date: 2026-10
+        summary: "Shuoran Wang, **Weiping Yan**, Xiang Wang. Signal, Image and Video Processing に投稿、査読中；Research Square In Review プレプリント."
+
       - title: "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars"
         authors:
           - Xiang Wang
@@ -124,6 +171,15 @@ cv:
       - bullet: "**National First Prize**、2025 “Science and Innovation Cup” 大学生数学モデリングコンテスト、知識部門（2025年12月）"
       - bullet: "**First Prize**、2025 全国大学生数学能力チャレンジ（2025年12月）"
       - bullet: "**First Prize**、CTSS 大学生イノベーション・起業コンテスト（2025年7月）"
+
+    修了証:
+      - bullet: >-
+          **[Deep Learning 専門講座修了証](https://www.coursera.org/account/accomplishments/specialization/I7V2KZDNTW5I)**、DeepLearning.AI（2026年10月）：Neural Networks and Deep Learning から Convolutional Neural Networks、Sequence Models までの全5講座
+      - bullet: >-
+          **Machine Learning 専門講座の各講座**、Stanford Online・DeepLearning.AI（2026年9–10月）：
+          [Supervised Machine Learning: Regression and Classification](https://www.coursera.org/account/accomplishments/verify/OCLIYMX7LMFP)、
+          [Advanced Learning Algorithms](https://www.coursera.org/account/accomplishments/verify/YNU1OCT06EB8)、
+          [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/account/accomplishments/verify/7LKD329AG51Y)
 
     スキル:
       - label: プログラミング言語

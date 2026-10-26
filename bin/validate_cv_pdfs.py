@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the three localized one-page CV PDFs and rasterize every page."""
+"""Validate the three localized two-page CV PDFs and rasterize every page."""
 
 from __future__ import annotations
 
@@ -83,7 +83,7 @@ EXPECTED_PAGE_SIZE = {
     "zh-CN": (595.28, 841.89),
     "ja": (595.28, 841.89),
 }
-EXPECTED_PAGES = 1
+EXPECTED_PAGES = 2
 COMMON_URIS = {
     "mailto:yan00944@umn.edu",
     "mailto:vipinapple986@gmail.com",

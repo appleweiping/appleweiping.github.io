@@ -41,30 +41,39 @@ cv:
         end_date: 2024-08
 
     Experience:
+      - company: Eastern Institute of Technology, Ningbo
+        position: Research Intern, LLM for Electronic Design Automation (EDA)
+        location: Ningbo, China
+        start_date: 2026-07
+        end_date: 2026-09
+        highlights:
+          - Designed and built an independent **LLM-for-EDA** project on circuit understanding and AI-assisted design, from problem formulation and data preparation to LLM-based processing and output evaluation.
+          - Curated, annotated, cleaned, and quality-checked **circuit-design data** for the group's LLM-for-EDA research, and prepared structured datasets for model development and evaluation.
+
       - company: Minnesota NLP Group, University of Minnesota
         position: NLP Research Intern
         location: Minneapolis, MN
         start_date: 2026-07
-        end_date: present
+        end_date: 2026-09
         highlights:
-          - Built a consent-first **Chrome extension** that records privacy-reduced interaction traces, so people and **computer-use agents** can be compared on the same tasks.
+          - Built a pipeline for detecting **computer-use agents** from privacy-preserving browser traces, combining controlled agent runs, reproduction of published detectors, and a tested consent-first **Chrome extension** recorder.
           - Wrote the **Python CLI** that validates traces, extracts 23 behavioral features, and runs leave-one-task-out evaluation; **5 PRs** merged into the lab repository.
-
-      - company: The Chinese University of Hong Kong
-        position: Research Assistant
-        location: Hong Kong
-        start_date: 2026-03
-        end_date: present
-        highlights:
-          - Research on **large language models for recommendation (LLM4Rec)** and natural language processing.
 
       - company: Veylora Labs
         position: Co-Founder
-        location: Remote
+        location: Minneapolis, MN
         start_date: 2026-05
         end_date: present
         highlights:
-          - Exploring executive-intelligence systems that support organizational decision-making.
+          - Building executive-intelligence systems that find patterns across an organization's reports and data and turn them into clear, actionable signals for decision makers.
+
+      - company: The Chinese University of Hong Kong
+        position: Research Assistant
+        location: Shenzhen, China
+        start_date: 2026-03
+        end_date: 2026-08
+        highlights:
+          - Researched **uncertainty-aware LLMs for generative recommendation**; built **Qwen3-8B/LoRA** pipelines for confidence calibration, candidate reranking, and selective recommendation on multi-domain Amazon benchmarks.
 
       - company: Eindhoven University of Technology
         position: Teaching Assistant, Calculus and Logic & Set Theory
@@ -72,25 +81,63 @@ cv:
         start_date: 2025-09
         end_date: 2025-11
         highlights:
-          - Led **tutorial sessions**, guided problem solving, and gave written feedback on students' mathematical reasoning.
+          - Led **tutorial sessions** on limits, derivatives, integrals, formal reasoning, and set operations, and gave structured feedback on students' mathematical reasoning.
 
       - company: Zhangjiang Laboratory
-        position: Research Assistant, IC Design
+        position: Research Assistant
         location: Shanghai, China
         start_date: 2025-07
         end_date: 2025-09
         highlights:
-          - "Learned the analog IC flow on industry **EDA tools**: schematic, pre-layout simulation, **DRC/LVS**, and MPW tape-out preparation."
+          - "Studied and documented the IC design flow and **EDA toolchain**, from schematic design and pre-layout simulation to **DRC/LVS** sign-off and an MPW tape-out workflow overview."
 
-      - company: Independent project, advised by Prof. Soummya Kar (CMU) and Assoc. Prof. Qiang Gao (SEU)
-        position: Student Researcher, PM2.5 and Respiratory Disease
+      - company: Self-directed study with MIT OpenCourseWare and other open courses
+        position: Independent Developer, Computer Science Projects
+        location: Remote
+        start_date: 2024-05
+        end_date: present
+        highlights:
+          - "Implemented **Raft** and sharded key-value services in Go, **xv6** kernel extensions (copy-on-write, mmap), a **TCP/IP** stack in C++, **BusTub** database components (hashing, operators, MVCC), and the **Needle** autodiff and tensor framework (non-credit)."
+
+      - company: Remote project supervised by Prof. Soummya Kar (Carnegie Mellon University) and Assoc. Prof. Qiang Gao (Southeast University)
+        position: Student Researcher
         location: Beijing, China
         start_date: 2023-09
         end_date: 2024-02
         highlights:
-          - Wrote a **Python** analysis and visualization pipeline on synthetic data; published in *Theoretical and Natural Science*.
+          - Built a **Python** analysis and visualization pipeline on PM2.5 exposure and respiratory-disease incidence using synthetic data; published in *Theoretical and Natural Science*.
 
     Publications:
+      - title: "TempoRAC: Identity-Indexed Local Tempo Routing for Multi-Person Repetitive Action Counting"
+        authors:
+          - '**Weiping Yan**\*'
+          - 'Jiayu Zhu\*'
+          - 'Xu Yan\*'
+        journal: Submitted to ICASSP 2027, under review (equal contribution)
+        date: 2026-09
+        url: https://github.com/appleweiping/TempoRAC
+        summary: '**Weiping Yan**\*, Jiayu Zhu\*, Xu Yan\*. Submitted to ICASSP 2027, under review (equal contribution).'
+
+      - title: "VCH-SegFormer for Street-View Vegetation Mapping and Assessing the Associations Between Urban Vegetation and PM2.5"
+        authors:
+          - Xiaoyan Fei
+          - "**Weiping Yan**"
+          - Qi Zhu
+          - Xu Yan
+          - Zherong Wu
+        journal: Submitted to IEEE Transactions on Geoscience and Remote Sensing, under review
+        date: 2026-10
+        summary: "Xiaoyan Fei, **Weiping Yan**, Qi Zhu, Xu Yan, Zherong Wu. Submitted to IEEE Transactions on Geoscience and Remote Sensing, under review."
+
+      - title: "RACER-T: Temporal Density Modeling for Pose-Based Repetitive Action Counting"
+        authors:
+          - Shuoran Wang
+          - "**Weiping Yan**"
+          - Xiang Wang
+        journal: Submitted to Signal, Image and Video Processing, under review; In Review preprint on Research Square
+        date: 2026-10
+        summary: "Shuoran Wang, **Weiping Yan**, Xiang Wang. Submitted to Signal, Image and Video Processing, under review; In Review preprint on Research Square."
+
       - title: "OAM-GA: Reliability-Guided Motion Completion for Occlusion-RobustGaussian Avatars"
         authors:
           - Xiang Wang
@@ -125,6 +172,15 @@ cv:
       - bullet: "**National First Prize**, Science and Innovation Cup Mathematical Modeling Competition, knowledge track (Dec 2025)"
       - bullet: "**First Prize**, National College Student Mathematics Ability Challenge (Dec 2025)"
       - bullet: "**First Prize**, CTSS College Student Innovation and Entrepreneurship Competition (Jul 2025)"
+
+    Certifications:
+      - bullet: >-
+          **[Deep Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/I7V2KZDNTW5I)**, DeepLearning.AI (Oct 2026): five courses, from Neural Networks and Deep Learning to Convolutional Neural Networks and Sequence Models
+      - bullet: >-
+          **Machine Learning Specialization courses**, Stanford Online and DeepLearning.AI (Sep–Oct 2026):
+          [Supervised Machine Learning: Regression and Classification](https://www.coursera.org/account/accomplishments/verify/OCLIYMX7LMFP) ·
+          [Advanced Learning Algorithms](https://www.coursera.org/account/accomplishments/verify/YNU1OCT06EB8) ·
+          [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/account/accomplishments/verify/7LKD329AG51Y)
 
     Technical Skills:
       - label: Languages

@@ -468,7 +468,8 @@ publication_expectations.each do |code, phrases|
   end
 
   publication_entries = document.css(".publications ol.bibliography > li")
-  errors << "#{code} publications page should render 2 entries, found #{publication_entries.length}" unless publication_entries.length == 2
+  expected_entries = File.read(File.join(options[:root], "_bibliography", "papers.bib")).scan(/^@\w+\{/).length
+  errors << "#{code} publications page should render #{expected_entries} entries, found #{publication_entries.length}" unless publication_entries.length == expected_entries
   year_headings = document.css(".publications h2.bibliography").map { |heading| heading.text.strip }
   unless year_headings == ["2026", "2023"]
     errors << "#{code} publications page should order year groups as 2026 then 2023, found #{year_headings.inspect}"
